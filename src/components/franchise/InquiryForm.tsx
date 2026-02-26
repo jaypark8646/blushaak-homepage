@@ -12,6 +12,11 @@ interface FormState {
   phone: string;
   preferredArea: string;
   estimatedBudget: string;
+  preferredSize: string;
+  ageGroup: string;
+  hasFranchiseExp: string;
+  openYear: string;
+  openMonth: string;
   hasStore: string;
   referralSource: string;
   locationType: string;
@@ -24,6 +29,11 @@ const initialState: FormState = {
   phone: "",
   preferredArea: "",
   estimatedBudget: "",
+  preferredSize: "10평대",
+  ageGroup: "30대",
+  hasFranchiseExp: "없음",
+  openYear: "",
+  openMonth: "",
   hasStore: "없음",
   referralSource: "",
   locationType: "일반상권",
@@ -182,6 +192,69 @@ export default function InquiryForm() {
                   <span className="absolute right-4 top-1/2 -translate-y-1/2 text-sm text-gray-400">
                     만원
                   </span>
+                </div>
+              </div>
+
+              {/* 창업희망 평수 */}
+              <div>
+                <label className={labelClasses}>창업희망 평수</label>
+                <ToggleButton
+                  options={["10평미만", "10평대", "20평대", "30평대 이상"]}
+                  value={form.preferredSize}
+                  onChange={(val) => setForm((prev) => ({ ...prev, preferredSize: val }))}
+                />
+              </div>
+
+              {/* 연령대 */}
+              <div>
+                <label className={labelClasses}>연령대</label>
+                <ToggleButton
+                  options={["20대", "30대", "40대", "50대 이상"]}
+                  value={form.ageGroup}
+                  onChange={(val) => setForm((prev) => ({ ...prev, ageGroup: val }))}
+                />
+              </div>
+
+              {/* 프랜차이즈 경험 */}
+              <div>
+                <label className={labelClasses}>프랜차이즈 경험</label>
+                <ToggleButton
+                  options={["있음", "없음"]}
+                  value={form.hasFranchiseExp}
+                  onChange={(val) => setForm((prev) => ({ ...prev, hasFranchiseExp: val }))}
+                />
+              </div>
+
+              {/* 창업 오픈희망 시기 */}
+              <div>
+                <label className={labelClasses}>창업 오픈희망 시기</label>
+                <div className="flex items-center gap-3">
+                  <div className="relative flex-1">
+                    <select
+                      name="openYear"
+                      value={form.openYear}
+                      onChange={handleChange}
+                      className={inputClasses}
+                    >
+                      <option value="">년도</option>
+                      {[2026, 2027, 2028, 2029, 2030].map((y) => (
+                        <option key={y} value={String(y)}>{y}년</option>
+                      ))}
+                    </select>
+                  </div>
+                  <div className="relative flex-1">
+                    <select
+                      name="openMonth"
+                      value={form.openMonth}
+                      onChange={handleChange}
+                      className={inputClasses}
+                    >
+                      <option value="">월</option>
+                      {Array.from({ length: 12 }, (_, i) => i + 1).map((m) => (
+                        <option key={m} value={String(m)}>{m}월</option>
+                      ))}
+                    </select>
+                  </div>
                 </div>
               </div>
 

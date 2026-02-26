@@ -1,7 +1,7 @@
 "use client";
 
 interface ToggleButtonProps {
-  options: [string, string];
+  options: string[];
   value: string;
   onChange: (value: string) => void;
   className?: string;
