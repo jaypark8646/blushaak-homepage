@@ -83,6 +83,18 @@ export default function FranchiseIntro() {
           </p>
         </motion.div>
 
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.5 }}
+          className="mt-6"
+        >
+          <p className="text-sm sm:text-base text-white/50 leading-relaxed max-w-2xl mx-auto">
+            오랫동안 가맹 시스템 위에 커피 스페셜티 카페의 아이덴티와 포지션을 잡아낸
+            블루샥만의 새로운 기준을 경험해 보세요.
+          </p>
+        </motion.div>
+
         {/* 4 Strength icons */}
         <motion.div
           variants={container}

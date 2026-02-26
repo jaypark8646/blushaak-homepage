@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const HERO_SLIDES = [
   {
@@ -103,30 +104,16 @@ export default function BrandHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
+            className="mb-8"
           >
-            <svg
-              width="64"
-              height="56"
-              viewBox="0 0 36 32"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+            <Image
+              src="/images/logo/logo-icon.png"
+              alt=""
+              width={64}
+              height={60}
+              className="h-14 w-auto"
               aria-hidden="true"
-              className="mb-8"
-            >
-              <path
-                d="M18 2C18 2 8 14 4 20C2 23 1 25 2 27C3 29 6 30 10 30H30C32 30 34 29 34 27C34 25 32 22 28 18C24 14 18 2 18 2Z"
-                fill="#1A73B5"
-                opacity="0.9"
-              />
-              <path
-                d="M2 26C6 24 10 25 14 24C18 23 22 22 26 23C30 24 33 26 34 27"
-                stroke="#1A73B5"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                fill="none"
-                opacity="0.6"
-              />
-            </svg>
+            />
           </motion.div>
 
           {/* Slogan */}

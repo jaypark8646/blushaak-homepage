@@ -77,6 +77,39 @@ export function Footer() {
         </div>
       </div>
 
+      {/* Family Brand */}
+      <div className="mx-auto max-w-[1200px] px-6 pb-6 lg:px-10">
+        <div className="border-t border-white/10 pt-6">
+          <p className="text-[11px] font-semibold tracking-widest text-gray-500 uppercase mb-3">
+            Family Brand
+          </p>
+          <Link
+            href="https://photosignature.co.kr/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-[13px] text-gray-300 transition-colors hover:text-white"
+          >
+            <span className="font-medium">포토시그니처</span>
+            <span className="text-gray-500">PHOTO SIGNATURE</span>
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 12 12"
+              fill="none"
+              className="text-gray-500"
+            >
+              <path
+                d="M3.5 2.5H9.5V8.5M9.5 2.5L2.5 9.5"
+                stroke="currentColor"
+                strokeWidth="1.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </Link>
+        </div>
+      </div>
+
       {/* Copyright */}
       <div className="mx-auto max-w-[1200px] px-6 pb-10 lg:px-10">
         <div className="border-t border-white/5 pt-6">

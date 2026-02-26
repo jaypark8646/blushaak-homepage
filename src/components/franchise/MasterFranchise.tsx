@@ -183,9 +183,8 @@ export default function MasterFranchise() {
                 Master Franchise란?
               </h3>
               <p className="text-blu-600/80 text-sm sm:text-base leading-relaxed">
-                마스터 프랜차이즈는 해외 특정 지역에 대한 독점적 사업권을 파트너에게 부여하는 글로벌 확장 모델입니다.
-                현지 파트너가 해당 국가/지역의 블루샥 브랜드 운영, 매장 개설, 하위 가맹점 관리를 총괄하며,
-                본사는 브랜드 표준, 원두 공급, 교육 시스템을 지원합니다.
+                브랜드 소유자(기업)가 진출하고 싶은 해외 현지 기업에게 독점적 사업 권한을 부여하여
+                해당 지역에서 매장을 개설하고 운영할 수 있는 권한을 부여하는 방식입니다.
               </p>
             </div>
           </div>

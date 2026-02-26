@@ -32,13 +32,8 @@ export default function DriveThru() {
                 스페셜티 최초 DT
               </h3>
               <p className="text-gray-500 text-sm sm:text-base leading-relaxed mb-4">
-                블루샥은 스페셜티 프랜차이즈 최초로 드라이브 스루(Drive-Thru) 매장을 운영합니다.
-                고품질 스페셜티 커피를 차에서 내리지 않고 편리하게 즐길 수 있는 새로운 경험을 제공하며,
-                드라이브 스루 매장은 일반 매장 대비 높은 회전율과 추가 매출을 기대할 수 있습니다.
-              </p>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                차량 이용 고객의 편의성을 극대화하여 출퇴근 시간대 피크 매출을 확보하고,
-                테이크아웃 중심의 효율적인 운영이 가능합니다.
+                스페셜티 커피 프랜차이즈 최초로 블루샥 스페셜티 전용 드라이브스루 매장을 오픈하였습니다.
+                브랜드와 가맹점의 동반 성장을 위해 블루샥은 끊임없이 혁신하고 도전합니다.
               </p>
             </div>
           </ScrollReveal>
@@ -140,9 +135,8 @@ export default function DriveThru() {
                 공간 설계 역량
               </h3>
               <p className="text-gray-500 text-sm sm:text-base leading-relaxed mb-6">
-                블루샥 본사는 DT 매장의 효율적인 동선 설계 노하우를 보유하고 있습니다.
-                입장에서 퇴장까지 원활한 차량 흐름을 고려한 S-커브 동선으로
-                고객 편의성과 매장 효율성을 동시에 확보합니다.
+                차량 동시 최대 진입대수 당 2~5대 설계를 통해
+                복합시설 및 특수상권에서도 높은 안정성의 매출 구현이 가능합니다.
               </p>
 
               {/* 3 small circular photos */}

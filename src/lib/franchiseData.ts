@@ -46,14 +46,14 @@ export const WHY_BLU_SHAAK = [
     number: "02",
     title: "시그니처 메뉴의 파워",
     description:
-      '4시간 숙성 수제 "샥크림"을 활용한 시그니처 라떼와 마스카르포네 크림 등 SNS 카페에도 없는 특별한 경험 제공. 한 번 먹어보면 팬이 될 맛',
+      '4시간 숙성 수제 "샥크림"을 활용한 시그니처라떼와 마스카르포네 크림 등 SNS 카페에도 없는 특별한 경험 제공. 한 번 먹어보면 팬이 될 맛입니다.',
     image: "/images/franchise/why-2.jpg",
   },
   {
     number: "03",
     title: "하이엔드 원재료 전략",
     description:
-      "원유와 마가린을 비롯해 각 제품에 사용하는 원재료를 엄선하여 블루샥만의 높은 신선도와 프리미엄 레시피를 전합니다",
+      "원유와 그라스페드버터를 비롯해 각 제품에 사용하는 원재료를 엄선하여 블루샥만의 높은 신선도와 프리미엄 레시피를 전합니다",
     image: "/images/franchise/why-3.jpg",
   },
   {
@@ -82,7 +82,7 @@ export const HQ_SUPPORT = {
     {
       title: "전문가 그룹의 밀착 케어",
       description:
-        "영업, 제조, QC(품질관리) 시스템을 체계적으로 구축. 개별 슈퍼바이저가 주기적으로 방문하여 교육 및 실전 관리로 통해 매장별 균일화된 고품질 서비스 실현",
+        "영업, 제조, QC(품질관리) 시스템을 체계적으로 구축. 개별 슈퍼바이저가 주기적으로 방문하여 교육 및 실전 관리를 통해 매장별 균일화된 고품질 서비스 실현",
       icon: "care",
     },
     {
@@ -188,7 +188,7 @@ export const COST_TABLE: CostItem[] = [
     category: "인테리어",
     cost10: "32,000,000",
     cost15: "44,500,000",
-    note: "전면 W3.5m × H4m 기준, 별도공사비 1,500~2,000만원 예상",
+    note: "별도공사(파사드, 철거, 스피커 등) 10평 전면 3~4m 기준으로 평균 별도 공사비 1천5백~2천 예상",
   },
   {
     category: "전기증설/에어컨",
@@ -211,13 +211,13 @@ export const COST_TABLE: CostItem[] = [
     category: "가구",
     cost10: "-",
     cost15: "-",
-    note: "약 100만원 (의자 4개, 테이블 1개 기준)",
+    note: "100만원(의자 4개, 테이블 1개 기준), 10평 이하 매장은 테이블 X, 15평 기준 테이블 3~4개 가능",
   },
   {
     category: "포스/키오스크",
     cost10: "-",
     cost15: "-",
-    note: "일시불 및 할부가능 (포스 약 100만, 키오스크 약 200만)",
+    note: "일시불 및 할부가능(일시불시 대략 포스 100만원, 키오스크 200만원 측정)",
   },
   {
     category: "CCTV/인터넷/세스코/세무사",
@@ -238,7 +238,7 @@ export const PIE_CHART_DATA = [
 
 export const REVENUE_TABLE = {
   title: "월매출 25,000,000원 기준",
-  subtitle: "15평 매장 기준 / 인원급여 매출",
+  subtitle: "*15평 매장 기준 / 인건비급여 매출",
   items: [
     { label: "순수익", percentage: 30, amount: "7,500,000", color: "#1A73B5" },
     { label: "식자재", percentage: 35, amount: "8,750,000", color: "#3DCBA8" },
@@ -254,7 +254,7 @@ export const GLOBAL_LOCATIONS: GlobalLocation[] = [
     flag: "🇮🇩",
     city: "Jakarta",
     description:
-      "자카르타의 랜드마크를 선점한 스페셜티의 자력. 글로벌 복합문화공간인 자카르타 Central Park Mall에 첫 해외 매장 오픈.",
+      "자카르타의 랜드마크를 선점한 스페셜티의 자력. 블루샥은 인도네시아 글로벌 복합문화공간인 자카르타 Central Park Mall에 첫 해외 매장을 오픈하였습니다. 현지 고객들에게 블루샥만의 프리미엄 커피 경험을 전하고 있습니다.",
     lat: -6.1751,
     lng: 106.79,
   },
@@ -264,7 +264,7 @@ export const GLOBAL_LOCATIONS: GlobalLocation[] = [
     flag: "🇨🇦",
     city: "Toronto",
     description:
-      "북미 시장의 중심, 캐나다 토론토에 상륙한 블루샥. 토론토 중심의 Yonge Street에 첫 북미 매장 오픈.",
+      "북미 시장의 중심, 캐나다 토론토에 상륙한 블루샥. 블루샥은 캐나다 토론토 번화가인 Yonge Street 부근에 첫 북미 매장을 오픈하였습니다. 현지 시장에서 한국 스페셜티 커피와 디저트를 선보이며 경쟁력을 입증하고 있습니다.",
     lat: 43.6532,
     lng: -79.3832,
   },

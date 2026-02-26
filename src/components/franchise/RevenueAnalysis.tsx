@@ -248,8 +248,7 @@ export default function RevenueAnalysis() {
                   3WAY 매출 모델
                 </h3>
                 <p className="text-sm text-gray-500 leading-relaxed">
-                  매장 + 배달 + DT(드라이브스루), 세 가지 채널을 통한 복합 매출
-                  구조로 안정적인 수익을 확보합니다.
+                  홀, 테이크아웃, 배달 서비스의 최적화된 동선 설계로 최소 인력 운영 가능
                 </p>
               </div>
               <div className="bg-white rounded-xl p-5 border border-gray-100">
@@ -257,8 +256,7 @@ export default function RevenueAnalysis() {
                   안정적인 수익
                 </h3>
                 <p className="text-sm text-gray-500 leading-relaxed">
-                  검증된 매출 구조와 본사의 지속적인 지원을 통해 점주님의 안정적인
-                  수익 창출을 도와드립니다.
+                  저가 브랜드 대비 높은 객단가와 퀄리티로 월 매출 기준 약 30% 내외의 순수익 구조 지향
                 </p>
               </div>
             </div>
