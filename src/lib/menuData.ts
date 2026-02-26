@@ -1,0 +1,171 @@
+import { MenuItem, MenuCategoryInfo } from "@/types";
+
+export const MENU_CATEGORIES: MenuCategoryInfo[] = [
+  { id: "new-best", label: "New & Best", labelKo: "신메뉴 & 베스트" },
+  { id: "coffee", label: "Coffee", labelKo: "커피" },
+  { id: "beverage", label: "Beverage", labelKo: "음료" },
+  { id: "blended", label: "Blended", labelKo: "블렌디드" },
+  { id: "bottle", label: "Bottle", labelKo: "보틀" },
+  { id: "bakery", label: "Bakery", labelKo: "베이커리" },
+  { id: "ice-cream", label: "Ice-cream", labelKo: "아이스크림" },
+  { id: "md", label: "MD", labelKo: "MD 상품" },
+];
+
+export const MENU_ITEMS: MenuItem[] = [
+  // New & Best
+  {
+    id: "shaak-latte",
+    name: "Shaak Latte",
+    nameKo: "샥라떼",
+    category: "new-best",
+    image: "/images/menu/shaak-latte.jpg",
+    description: "4시간 숙성 수제 샥크림을 올린 블루샥 시그니처 라떼",
+    isNew: false,
+    isBest: true,
+  },
+  {
+    id: "ice-americano",
+    name: "Ice Americano",
+    nameKo: "아이스 아메리카노",
+    category: "new-best",
+    image: "/images/menu/ice-americano.jpg",
+    description: "깊고 깨끗한 스페셜티 원두의 풍미를 담은 아메리카노",
+    isBest: true,
+  },
+  {
+    id: "cafe-latte",
+    name: "Cafe Latte",
+    nameKo: "카페라떼",
+    category: "new-best",
+    image: "/images/menu/cafe-latte.jpg",
+    description: "부드러운 우유와 에스프레소의 조화",
+    isBest: true,
+  },
+  // Coffee
+  {
+    id: "hot-americano",
+    name: "Hot Americano",
+    nameKo: "핫 아메리카노",
+    category: "coffee",
+    image: "/images/menu/hot-americano.jpg",
+    description: "스페셜티 원두로 내린 진한 아메리카노",
+  },
+  {
+    id: "espresso",
+    name: "Espresso",
+    nameKo: "에스프레소",
+    category: "coffee",
+    image: "/images/menu/espresso.jpg",
+    description: "깊은 풍미의 에스프레소 한 잔",
+  },
+  {
+    id: "cold-brew",
+    name: "Cold Brew",
+    nameKo: "콜드브루",
+    category: "coffee",
+    image: "/images/menu/cold-brew.jpg",
+    description: "12시간 저온 추출한 부드러운 콜드브루",
+  },
+  {
+    id: "vanilla-latte",
+    name: "Vanilla Latte",
+    nameKo: "바닐라 라떼",
+    category: "coffee",
+    image: "/images/menu/vanilla-latte.jpg",
+    description: "바닐라 시럽과 에스프레소의 달콤한 조화",
+  },
+  // Beverage
+  {
+    id: "blueberry-yogurt",
+    name: "Blueberry Yogurt",
+    nameKo: "블루베리 요거트",
+    category: "beverage",
+    image: "/images/menu/blueberry-yogurt.jpg",
+    description: "신선한 블루베리와 요거트의 상큼한 만남",
+  },
+  {
+    id: "strawberry-latte",
+    name: "Strawberry Latte",
+    nameKo: "딸기라떼",
+    category: "beverage",
+    image: "/images/menu/strawberry-latte.jpg",
+    description: "달콤한 딸기와 부드러운 우유의 조화",
+  },
+  {
+    id: "green-tea-latte",
+    name: "Green Tea Latte",
+    nameKo: "그린티 라떼",
+    category: "beverage",
+    image: "/images/menu/green-tea-latte.jpg",
+    description: "깊은 말차의 풍미를 담은 라떼",
+  },
+  // Blended
+  {
+    id: "mint-choco-frappe",
+    name: "Mint Choco Frappe",
+    nameKo: "민트 초코 프라페",
+    category: "blended",
+    image: "/images/menu/mint-choco-frappe.jpg",
+    description: "시원한 민트와 초콜릿의 달콤한 프라페",
+  },
+  {
+    id: "oreo-frappe",
+    name: "Oreo Frappe",
+    nameKo: "오레오 프라페",
+    category: "blended",
+    image: "/images/menu/oreo-frappe.jpg",
+    description: "오레오 쿠키가 듬뿍 들어간 프라페",
+  },
+  // Bottle
+  {
+    id: "cold-brew-bottle",
+    name: "Cold Brew Bottle",
+    nameKo: "콜드브루 보틀",
+    category: "bottle",
+    image: "/images/menu/cold-brew-bottle.jpg",
+    description: "언제 어디서나 즐기는 프리미엄 콜드브루",
+  },
+  // Bakery
+  {
+    id: "walnut-choco-cookie",
+    name: "Walnut Choco Cookie",
+    nameKo: "월넛 초코 쿠키",
+    category: "bakery",
+    image: "/images/menu/walnut-choco-cookie.jpg",
+    description: "호두와 초콜릿 칩이 가득한 수제 쿠키",
+  },
+  {
+    id: "canele",
+    name: "Canelé",
+    nameKo: "까눌레",
+    category: "bakery",
+    image: "/images/menu/canele.jpg",
+    description: "겉은 바삭, 속은 쫀득한 프랑스 전통 디저트",
+  },
+  {
+    id: "croissant",
+    name: "Croissant",
+    nameKo: "크루아상",
+    category: "bakery",
+    image: "/images/menu/croissant.jpg",
+    description: "결결이 바삭한 프리미엄 버터 크루아상",
+  },
+  // Ice-cream
+  {
+    id: "vanilla-gelato",
+    name: "Vanilla Gelato",
+    nameKo: "바닐라 젤라또",
+    category: "ice-cream",
+    image: "/images/menu/vanilla-gelato.jpg",
+    description: "진한 바닐라빈으로 만든 이탈리안 젤라또",
+  },
+  // MD
+  {
+    id: "tumbler",
+    name: "Blu Shaak Tumbler",
+    nameKo: "블루샥 텀블러",
+    category: "md",
+    image: "/images/menu/tumbler.jpg",
+    description: "블루샥 시그니처 디자인 텀블러",
+  },
+];

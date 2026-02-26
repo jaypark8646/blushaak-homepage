@@ -1,0 +1,283 @@
+"use client";
+
+import { useState, FormEvent } from "react";
+import Button from "@/components/ui/Button";
+import ToggleButton from "@/components/ui/ToggleButton";
+import ScrollReveal from "@/components/ui/ScrollReveal";
+import { REFERRAL_SOURCES } from "@/lib/constants";
+
+interface FormState {
+  name: string;
+  phone: string;
+  preferredArea: string;
+  estimatedBudget: string;
+  hasStore: string;
+  referralSource: string;
+  locationType: string;
+  details: string;
+  agreePrivacy: boolean;
+}
+
+const initialState: FormState = {
+  name: "",
+  phone: "",
+  preferredArea: "",
+  estimatedBudget: "",
+  hasStore: "없음",
+  referralSource: "",
+  locationType: "일반상권",
+  details: "",
+  agreePrivacy: false,
+};
+
+export default function InquiryForm() {
+  const [form, setForm] = useState<FormState>(initialState);
+  const [errors, setErrors] = useState<Partial<Record<keyof FormState, string>>>({});
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    const { name, value, type } = e.target;
+    if (type === "checkbox") {
+      const checked = (e.target as HTMLInputElement).checked;
+      setForm((prev) => ({ ...prev, [name]: checked }));
+    } else {
+      setForm((prev) => ({ ...prev, [name]: value }));
+    }
+    // Clear error on change
+    if (errors[name as keyof FormState]) {
+      setErrors((prev) => ({ ...prev, [name]: undefined }));
+    }
+  };
+
+  const validate = (): boolean => {
+    const newErrors: Partial<Record<keyof FormState, string>> = {};
+
+    if (!form.name.trim()) newErrors.name = "성함을 입력해 주세요.";
+    if (!form.phone.trim()) {
+      newErrors.phone = "연락처를 입력해 주세요.";
+    } else if (!/^[\d-]{10,13}$/.test(form.phone.replace(/\s/g, ""))) {
+      newErrors.phone = "올바른 전화번호 형식을 입력해 주세요.";
+    }
+    if (!form.preferredArea.trim()) newErrors.preferredArea = "창업희망지역을 입력해 주세요.";
+    if (!form.agreePrivacy) newErrors.agreePrivacy = "개인정보취급방침에 동의해 주세요.";
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    if (!validate()) return;
+
+    console.log("Franchise Inquiry Form Data:", form);
+    alert("문의가 접수되었습니다");
+    setForm(initialState);
+  };
+
+  const inputClasses =
+    "w-full px-4 py-3 rounded-lg border border-gray-200 text-sm text-dark-800 placeholder:text-gray-400 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blu-500 focus:border-transparent bg-white";
+
+  const labelClasses = "block text-sm font-medium text-dark-700 mb-1.5";
+
+  return (
+    <section id="inquiry" className="py-24 md:py-32 bg-warm-50">
+      <div className="max-w-2xl mx-auto px-4">
+        {/* Title */}
+        <ScrollReveal>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-dark-800 text-center mb-4">
+            가맹 문의 신청
+          </h2>
+          <p className="text-gray-400 text-center mb-12 md:mb-16">
+            아래 양식을 작성하시면 빠른 시일 내에 담당자가 연락드리겠습니다.
+          </p>
+        </ScrollReveal>
+
+        <ScrollReveal delay={0.1}>
+          <form
+            onSubmit={handleSubmit}
+            className="bg-white rounded-2xl p-6 sm:p-8 md:p-10 shadow-sm border border-gray-100"
+            noValidate
+          >
+            <div className="space-y-6">
+              {/* 성함 */}
+              <div>
+                <label htmlFor="name" className={labelClasses}>
+                  성함 <span className="text-cta-500">*</span>
+                </label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  value={form.name}
+                  onChange={handleChange}
+                  placeholder="홍길동"
+                  className={`${inputClasses} ${errors.name ? "ring-2 ring-cta-500 border-transparent" : ""}`}
+                />
+                {errors.name && (
+                  <p className="mt-1 text-xs text-cta-500">{errors.name}</p>
+                )}
+              </div>
+
+              {/* 연락처 */}
+              <div>
+                <label htmlFor="phone" className={labelClasses}>
+                  연락처 <span className="text-cta-500">*</span>
+                </label>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  value={form.phone}
+                  onChange={handleChange}
+                  placeholder="010-1234-5678"
+                  className={`${inputClasses} ${errors.phone ? "ring-2 ring-cta-500 border-transparent" : ""}`}
+                />
+                {errors.phone ? (
+                  <p className="mt-1 text-xs text-cta-500">{errors.phone}</p>
+                ) : (
+                  <p className="mt-1 text-xs text-gray-400">
+                    하이픈(-) 포함 입력 (예: 010-1234-5678)
+                  </p>
+                )}
+              </div>
+
+              {/* 창업희망지역 */}
+              <div>
+                <label htmlFor="preferredArea" className={labelClasses}>
+                  창업희망지역 <span className="text-cta-500">*</span>
+                </label>
+                <input
+                  id="preferredArea"
+                  name="preferredArea"
+                  type="text"
+                  value={form.preferredArea}
+                  onChange={handleChange}
+                  placeholder="예: 서울 강남구"
+                  className={`${inputClasses} ${errors.preferredArea ? "ring-2 ring-cta-500 border-transparent" : ""}`}
+                />
+                {errors.preferredArea && (
+                  <p className="mt-1 text-xs text-cta-500">
+                    {errors.preferredArea}
+                  </p>
+                )}
+              </div>
+
+              {/* 예상창업비용 */}
+              <div>
+                <label htmlFor="estimatedBudget" className={labelClasses}>
+                  예상창업비용
+                </label>
+                <div className="relative">
+                  <input
+                    id="estimatedBudget"
+                    name="estimatedBudget"
+                    type="number"
+                    value={form.estimatedBudget}
+                    onChange={handleChange}
+                    placeholder="5000"
+                    className={`${inputClasses} pr-12`}
+                  />
+                  <span className="absolute right-4 top-1/2 -translate-y-1/2 text-sm text-gray-400">
+                    만원
+                  </span>
+                </div>
+              </div>
+
+              {/* 점포보유유무 */}
+              <div>
+                <label className={labelClasses}>점포보유유무</label>
+                <ToggleButton
+                  options={["없음", "있음"]}
+                  value={form.hasStore}
+                  onChange={(val) => setForm((prev) => ({ ...prev, hasStore: val }))}
+                />
+              </div>
+
+              {/* 유입경로 */}
+              <div>
+                <label htmlFor="referralSource" className={labelClasses}>
+                  유입경로
+                </label>
+                <select
+                  id="referralSource"
+                  name="referralSource"
+                  value={form.referralSource}
+                  onChange={handleChange}
+                  className={inputClasses}
+                >
+                  <option value="">선택해 주세요</option>
+                  {REFERRAL_SOURCES.map((source) => (
+                    <option key={source} value={source}>
+                      {source}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              {/* 예상상권타입 */}
+              <div>
+                <label className={labelClasses}>예상상권타입</label>
+                <ToggleButton
+                  options={["일반상권", "특수상권"]}
+                  value={form.locationType}
+                  onChange={(val) =>
+                    setForm((prev) => ({ ...prev, locationType: val }))
+                  }
+                />
+              </div>
+
+              {/* 상세내용 */}
+              <div>
+                <label htmlFor="details" className={labelClasses}>
+                  상세내용
+                </label>
+                <textarea
+                  id="details"
+                  name="details"
+                  value={form.details}
+                  onChange={handleChange}
+                  rows={4}
+                  placeholder="문의하실 내용을 자유롭게 작성해 주세요."
+                  className={`${inputClasses} resize-none`}
+                />
+              </div>
+
+              {/* Privacy agreement */}
+              <div>
+                <label className="flex items-start gap-3 cursor-pointer group">
+                  <input
+                    type="checkbox"
+                    name="agreePrivacy"
+                    checked={form.agreePrivacy}
+                    onChange={handleChange}
+                    className="mt-0.5 w-4 h-4 rounded border-gray-300 text-blu-500 focus:ring-blu-500 cursor-pointer"
+                  />
+                  <span className="text-sm text-gray-600 group-hover:text-dark-800 transition-colors">
+                    개인정보취급방침을 읽었으며 이에 동의합니다.{" "}
+                    <span className="text-cta-500">*</span>
+                  </span>
+                </label>
+                {errors.agreePrivacy && (
+                  <p className="mt-1 text-xs text-cta-500 ml-7">
+                    {errors.agreePrivacy}
+                  </p>
+                )}
+              </div>
+
+              {/* Submit */}
+              <Button
+                type="submit"
+                variant="cta"
+                size="lg"
+                className="w-full sm:w-auto sm:min-w-[200px] mx-auto block"
+              >
+                문의하기
+              </Button>
+            </div>
+          </form>
+        </ScrollReveal>
+      </div>
+    </section>
+  );
+}
