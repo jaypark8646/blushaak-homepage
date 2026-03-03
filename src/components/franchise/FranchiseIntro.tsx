@@ -62,7 +62,7 @@ export default function FranchiseIntro() {
             프랜차이즈 카페의 한계,
             <br />
             <span className="text-blu-300 font-extrabold">블루샥</span>이 그
-            경계를 이끕니다.
+            경계를 허뭅니다.
           </h1>
         </motion.div>
 
@@ -90,7 +90,7 @@ export default function FranchiseIntro() {
           className="mt-6"
         >
           <p className="text-sm sm:text-base text-white/50 leading-relaxed max-w-2xl mx-auto">
-            오랫동안 가맹 시스템 위에 커피 스페셜티 카페의 아이덴티와 포지션을 잡아낸
+            체계적인 가맹 시스템 위에 개인 스페셜티 카페 이상의 원재료 품질을 담아낸
             블루샥만의 새로운 기준을 경험해 보세요.
           </p>
         </motion.div>
@@ -100,7 +100,7 @@ export default function FranchiseIntro() {
           variants={container}
           initial="hidden"
           animate="show"
-          className="mt-16 sm:mt-20 grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-6"
+          className="mt-16 sm:mt-20 grid grid-cols-2 sm:grid-cols-3 gap-8 sm:gap-6"
         >
           {FRANCHISE_STRENGTHS.map((strength) => (
             <motion.div

@@ -9,12 +9,12 @@ const EDUCATION_CARDS = [
   {
     title: "전담 바이저 밀착 케어",
     description:
-      "전담 슈퍼바이저의 세심한 관리로, 매장 용품 및 제품 퀄리티를 일정하게 유지합니다.",
+      "전담 슈퍼바이저의 세심한 관리로, 매장 품질 및 제품 퀄리티를 일정하게 유지합니다.",
   },
   {
     title: "위생 및 교육 시스템",
     description:
-      "본 이론과 지식, 실전에서 매우 필수적인 커피교육프로그램은 아래와 같이 나누어지게 됩니다. 식품 위생업 기반의 철저한 위생 교육과 함께, 최적의 결과를 추구하는 통합 제조스킬을 갖출 수 있습니다.",
+      "커피 이론과 지식, 실제 메뉴 제조까지 블루샥만의 노하우를 아낌없이 나누어 드립니다. 식품 위생법 기반의 철저한 위생 교육과 함께, 희망 점주님께는 월별 체크리스트를 송부하여 체계적인 피드백을 제공합니다.",
   },
 ];
 
@@ -23,7 +23,6 @@ const stepGradients = [
   "linear-gradient(135deg, #1A73B5, #2E9CDF)",
   "linear-gradient(135deg, #5C3D2E, #8B6542)",
   "linear-gradient(135deg, #3DCBA8, #1A73B5)",
-  "linear-gradient(135deg, #D4A574, #8B6542)",
 ];
 
 export default function TrainingSystem() {
@@ -73,7 +72,7 @@ export default function TrainingSystem() {
               />
             </div>
 
-            <div className="relative z-10 grid grid-cols-5 gap-4">
+            <div className="relative z-10 grid grid-cols-4 gap-4">
               {TRAINING_STEPS.map((step, index) => (
                 <motion.div
                   key={step.step}

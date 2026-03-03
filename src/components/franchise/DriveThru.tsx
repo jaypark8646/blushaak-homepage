@@ -135,8 +135,8 @@ export default function DriveThru() {
                 공간 설계 역량
               </h3>
               <p className="text-gray-500 text-sm sm:text-base leading-relaxed mb-6">
-                차량 동시 최대 진입대수 당 2~5대 설계를 통해
-                복합시설 및 특수상권에서도 높은 안정성의 매출 구현이 가능합니다.
+                차량 동선 최적화 및 주문 구조 설계를 통해
+                복합시설 및 특수상권에서도 높은 완성도의 매장 구현이 가능합니다.
               </p>
 
               {/* 3 small circular photos */}

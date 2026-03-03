@@ -60,6 +60,7 @@ export interface NewsItem {
   category: "notice" | "event" | "support";
   thumbnail?: string;
   excerpt: string;
+  content?: string;
 }
 
 // Franchise types
