@@ -33,17 +33,61 @@ function buildCityId(): string {
   return `city-${Date.now()}-${Math.floor(Math.random() * 10000)}`;
 }
 
+function parseImportedCity(input: unknown): CalibrationCity | null {
+  if (!input || typeof input !== "object") return null;
+
+  const city = input as Partial<CalibrationCity>;
+  const category = city.category;
+
+  if (
+    category !== "blushaak-done" &&
+    category !== "blushaak-wip" &&
+    category !== "photo-done" &&
+    category !== "photo-wip"
+  ) {
+    return null;
+  }
+
+  const lat = Number(city.lat);
+  const lng = Number(city.lng);
+  const mapX = Number(city.mapX);
+  const mapY = Number(city.mapY);
+
+  if (
+    Number.isNaN(lat) ||
+    Number.isNaN(lng) ||
+    Number.isNaN(mapX) ||
+    Number.isNaN(mapY)
+  ) {
+    return null;
+  }
+
+  return {
+    id: typeof city.id === "string" && city.id.trim() ? city.id : buildCityId(),
+    name: typeof city.name === "string" ? city.name : "",
+    nameKo: typeof city.nameKo === "string" ? city.nameKo : "",
+    category,
+    lat: roundTwo(lat),
+    lng: roundTwo(lng),
+    mapX: roundTwo(clamp(mapX, 0, 100)),
+    mapY: roundTwo(clamp(mapY, 0, 100)),
+  };
+}
+
 export default function MapCalibrationPage() {
   const mapRef = useRef<HTMLDivElement>(null);
   const dragState = useRef<{ cityId: string; moved: boolean } | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const [cities, setCities] = useState<CalibrationCity[]>([]);
   const [selectedCityId, setSelectedCityId] = useState<string | null>(null);
+  const [importMessage, setImportMessage] = useState<string>("");
 
   const selectedCity = useMemo(
     () => cities.find((city) => city.id === selectedCityId) ?? null,
     [cities, selectedCityId]
   );
+  const citiesJson = useMemo(() => JSON.stringify(cities, null, 2), [cities]);
 
   const getMapPercentFromClient = (clientX: number, clientY: number) => {
     const rect = mapRef.current?.getBoundingClientRect();
@@ -134,6 +178,52 @@ export default function MapCalibrationPage() {
     setSelectedCityId(null);
   };
 
+  const handleDownloadJson = () => {
+    const blob = new Blob([citiesJson], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const anchor = document.createElement("a");
+    anchor.href = url;
+    anchor.download = `map-calibration-${new Date().toISOString().slice(0, 10)}.json`;
+    document.body.appendChild(anchor);
+    anchor.click();
+    anchor.remove();
+    URL.revokeObjectURL(url);
+  };
+
+  const handleImportButtonClick = () => {
+    fileInputRef.current?.click();
+  };
+
+  const handleJsonFileChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    event.target.value = "";
+    if (!file) return;
+
+    try {
+      const text = await file.text();
+      const parsed = JSON.parse(text) as unknown;
+
+      if (!Array.isArray(parsed)) {
+        throw new Error("JSON 루트는 배열이어야 합니다.");
+      }
+
+      const imported = parsed
+        .map((item) => parseImportedCity(item))
+        .filter((item): item is CalibrationCity => item !== null);
+
+      if (imported.length !== parsed.length) {
+        throw new Error("일부 항목 형식이 올바르지 않습니다.");
+      }
+
+      setCities(imported);
+      setSelectedCityId(imported[0]?.id ?? null);
+      setImportMessage(`${imported.length}개 마커를 불러왔습니다.`);
+    } catch (error) {
+      const message = error instanceof Error ? error.message : "JSON 파싱에 실패했습니다.";
+      setImportMessage(`불러오기 실패: ${message}`);
+    }
+  };
+
   return (
     <main className="min-h-screen bg-slate-50 px-4 py-6 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
@@ -197,6 +287,31 @@ export default function MapCalibrationPage() {
               <span>선택 후 드래그로 위치 이동</span>
               <span>클릭 시 새 마커 추가</span>
             </div>
+
+            <div className="mt-4 flex flex-wrap gap-2">
+              <button
+                type="button"
+                onClick={handleDownloadJson}
+                className="rounded-lg bg-slate-900 px-3 py-2 text-sm font-semibold text-white transition-colors hover:bg-slate-800"
+              >
+                JSON 다운로드
+              </button>
+              <button
+                type="button"
+                onClick={handleImportButtonClick}
+                className="rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm font-semibold text-slate-900 transition-colors hover:bg-slate-50"
+              >
+                JSON 불러오기
+              </button>
+              <input
+                ref={fileInputRef}
+                type="file"
+                accept="application/json,.json"
+                className="hidden"
+                onChange={handleJsonFileChange}
+              />
+            </div>
+            {importMessage && <p className="mt-2 text-xs text-slate-600">{importMessage}</p>}
           </section>
 
           <aside className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
@@ -297,6 +412,13 @@ export default function MapCalibrationPage() {
                 </div>
               </div>
             )}
+
+            <div className="mt-6 border-t border-slate-200 pt-4">
+              <p className="mb-2 text-xs font-semibold text-slate-700">현재 데이터 (JSON)</p>
+              <pre className="max-h-80 overflow-auto rounded-lg border border-slate-200 bg-slate-50 p-3 text-[11px] leading-5 text-slate-700">
+                {citiesJson}
+              </pre>
+            </div>
           </aside>
         </div>
       </div>
