@@ -22,10 +22,10 @@ export default function BrandDirection() {
       {/* Block 1 - Coffee (Image Left, Text Right) */}
       <div className="w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-          {/* Image */}
+          {/* Image - Certificates */}
           <ScrollReveal direction="left">
-            <div className="w-full aspect-[4/3] lg:aspect-auto lg:h-[500px] overflow-hidden">
-              <img src="/images/brand/roasting.jpg" alt="스페셜티 커피 로스팅" className="w-full h-full object-cover" />
+            <div className="w-full aspect-[4/3] lg:aspect-auto lg:h-[500px] overflow-hidden bg-warm-50 flex items-center justify-center p-8">
+              <img src="/images/brand/coffee-certificates.png" alt="스페셜티 커피 인증서" className="w-full h-auto object-contain max-h-full" />
             </div>
           </ScrollReveal>
 
@@ -57,7 +57,7 @@ export default function BrandDirection() {
                   <div className="flex items-center gap-2">
                     <div className="w-8 h-8 rounded-full bg-blu-500/10 flex items-center justify-center">
                       <span className="text-blu-500 text-xs font-bold font-[family-name:var(--font-dm-sans)]">
-                        4
+                        3
                       </span>
                     </div>
                     <span className="text-xs text-gray-500">Bean Varieties</span>
@@ -133,7 +133,7 @@ export default function BrandDirection() {
           {/* Image */}
           <ScrollReveal direction="right">
             <div className="w-full aspect-[4/3] lg:aspect-auto lg:h-[500px] order-1 lg:order-2 overflow-hidden">
-              <img src="/images/brand/bakery.jpg" alt="인스토어 베이커리" className="w-full h-full object-cover" />
+              <img src="/images/brand/bakery.png" alt="인스토어 베이커리" className="w-full h-full object-cover" />
             </div>
           </ScrollReveal>
         </div>

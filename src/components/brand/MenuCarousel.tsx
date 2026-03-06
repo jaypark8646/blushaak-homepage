@@ -6,7 +6,7 @@ import { MENU_ITEMS, MENU_CATEGORIES } from "@/lib/menuData";
 import { useDragScroll } from "@/hooks/useDragScroll";
 
 export default function MenuCarousel() {
-  const [activeCategory, setActiveCategory] = useState<string>("new-best");
+  const [activeCategory, setActiveCategory] = useState<string>("coffee");
   const { ref, isDragging, handlers } = useDragScroll();
 
   const filteredItems = MENU_ITEMS.filter(

@@ -41,7 +41,6 @@ export const NAV_ITEMS: NavItem[] = [
     label: "MENU",
     href: "/menu",
     submenu: [
-      { label: "New & Best", href: "/menu?category=new-best" },
       { label: "Coffee", href: "/menu?category=coffee" },
       { label: "Beverage", href: "/menu?category=beverage" },
       { label: "Blended", href: "/menu?category=blended" },

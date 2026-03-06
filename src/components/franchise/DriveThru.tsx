@@ -18,7 +18,7 @@ export default function DriveThru() {
           {/* Image placeholder */}
           <ScrollReveal direction="left">
             <div className="h-[280px] sm:h-[320px] rounded-2xl shadow-lg overflow-hidden">
-              <img src="/images/franchise/dt-store.jpg" alt="블루샥 드라이브 스루 매장" className="w-full h-full object-cover" />
+              <img src="/images/franchise/dt-store.png" alt="블루샥 드라이브 스루 매장" className="w-full h-full object-cover" />
             </div>
           </ScrollReveal>
 
@@ -41,74 +41,126 @@ export default function DriveThru() {
 
         {/* Row 2: Space Design */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
-          {/* SVG S-curve path diagram */}
+          {/* SVG DT Flow Diagram with car animation */}
           <ScrollReveal direction="left">
             <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-100">
               <h4 className="text-lg font-bold text-dark-800 mb-6 text-center">
                 DT 동선 설계
               </h4>
               <svg
-                viewBox="0 0 400 200"
+                viewBox="0 0 400 240"
                 className="w-full h-auto"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 {/* Road background */}
                 <path
-                  d="M40 160 C40 160, 100 160, 140 120 C180 80, 220 40, 280 40 C340 40, 360 80, 360 80"
+                  d="M40 180 C40 180, 100 180, 140 140 C180 100, 220 60, 280 60 C340 60, 360 100, 360 100"
                   stroke="#E5E7EB"
-                  strokeWidth="24"
+                  strokeWidth="28"
                   strokeLinecap="round"
                 />
 
                 {/* Road center line (dashed) */}
                 <path
-                  d="M40 160 C40 160, 100 160, 140 120 C180 80, 220 40, 280 40 C340 40, 360 80, 360 80"
+                  d="M40 180 C40 180, 100 180, 140 140 C180 100, 220 60, 280 60 C340 60, 360 100, 360 100"
                   stroke="#1A73B5"
                   strokeWidth="2"
                   strokeDasharray="8 6"
                   strokeLinecap="round"
                 />
 
+                {/* DT Store between station 2 and 3 */}
+                <g transform="translate(185, 90)">
+                  {/* Store building */}
+                  <rect x="0" y="0" width="110" height="80" rx="5" fill="#1A73B5" opacity="0.08" stroke="#1A73B5" strokeWidth="1.5" />
+                  {/* Roof */}
+                  <rect x="0" y="-8" width="110" height="10" rx="3" fill="#1A73B5" opacity="0.2" />
+                  {/* Windows row */}
+                  <rect x="10" y="14" width="22" height="16" rx="2" fill="#87CEEB" opacity="0.5" />
+                  <rect x="38" y="14" width="22" height="16" rx="2" fill="#87CEEB" opacity="0.5" />
+                  <rect x="66" y="14" width="22" height="16" rx="2" fill="#87CEEB" opacity="0.5" />
+                  {/* Door */}
+                  <rect x="93" y="20" width="10" height="60" rx="2" fill="#1A73B5" opacity="0.25" />
+                  {/* BLU SHAAK label */}
+                  <text x="55" y="52" textAnchor="middle" fill="#1A73B5" fontSize="9" fontWeight="bold" fontFamily="'DM Sans', sans-serif">
+                    BLU SHAAK
+                  </text>
+                  {/* DT label */}
+                  <text x="55" y="70" textAnchor="middle" fill="#6B7280" fontSize="11" fontWeight="600" fontFamily="'Pretendard', sans-serif">
+                    블루샥 DT점
+                  </text>
+                </g>
+
+                {/* Animated car path */}
+                <path
+                  id="carPath"
+                  d="M40 180 C40 180, 100 180, 140 140 C180 100, 220 60, 280 60 C340 60, 360 100, 360 100"
+                  stroke="none"
+                  fill="none"
+                />
+
+                {/* Animated car */}
+                <g>
+                  <animateMotion
+                    dur="5s"
+                    repeatCount="indefinite"
+                    rotate="auto"
+                  >
+                    <mpath href="#carPath" />
+                  </animateMotion>
+                  {/* Car body */}
+                  <rect x="-14" y="-6" width="28" height="12" rx="4" fill="#1A73B5" />
+                  {/* Car top */}
+                  <rect x="-8" y="-10" width="16" height="6" rx="2" fill="#3B9AE1" />
+                  {/* Wheels */}
+                  <circle cx="-8" cy="6" r="3" fill="#2A2A2A" />
+                  <circle cx="8" cy="6" r="3" fill="#2A2A2A" />
+                  <circle cx="-8" cy="6" r="1.5" fill="#6B7280" />
+                  <circle cx="8" cy="6" r="1.5" fill="#6B7280" />
+                  {/* Headlight */}
+                  <rect x="12" y="-3" width="3" height="3" rx="1" fill="#FFD700" opacity="0.8" />
+                </g>
+
                 {/* Station markers */}
                 {/* Entry */}
-                <circle cx="40" cy="160" r="14" fill="#1A73B5" />
-                <text x="40" y="164" textAnchor="middle" fill="white" fontSize="10" fontWeight="bold">
+                <circle cx="40" cy="180" r="14" fill="#1A73B5" />
+                <text x="40" y="184" textAnchor="middle" fill="white" fontSize="10" fontWeight="bold">
                   1
                 </text>
-                <text x="40" y="186" textAnchor="middle" fill="#2A2A2A" fontSize="11" fontWeight="600">
+                <text x="40" y="206" textAnchor="middle" fill="#2A2A2A" fontSize="11" fontWeight="600">
                   입장
                 </text>
 
                 {/* Order */}
-                <circle cx="150" cy="112" r="14" fill="#3DCBA8" />
-                <text x="150" y="116" textAnchor="middle" fill="white" fontSize="10" fontWeight="bold">
+                <circle cx="150" cy="132" r="14" fill="#3DCBA8" />
+                <text x="150" y="136" textAnchor="middle" fill="white" fontSize="10" fontWeight="bold">
                   2
                 </text>
-                <text x="150" y="100" textAnchor="middle" fill="#2A2A2A" fontSize="11" fontWeight="600">
+                <text x="150" y="120" textAnchor="middle" fill="#2A2A2A" fontSize="11" fontWeight="600">
                   주문
                 </text>
 
                 {/* Pickup */}
-                <circle cx="270" cy="40" r="14" fill="#F59E0B" />
-                <text x="270" y="44" textAnchor="middle" fill="white" fontSize="10" fontWeight="bold">
+                <circle cx="280" cy="60" r="14" fill="#F59E0B" />
+                <text x="280" y="64" textAnchor="middle" fill="white" fontSize="10" fontWeight="bold">
                   3
                 </text>
-                <text x="270" y="28" textAnchor="middle" fill="#2A2A2A" fontSize="11" fontWeight="600">
+                <text x="280" y="48" textAnchor="middle" fill="#2A2A2A" fontSize="11" fontWeight="600">
                   수령
                 </text>
 
                 {/* Exit */}
-                <circle cx="360" cy="80" r="14" fill="#D42B2B" />
-                <text x="360" y="84" textAnchor="middle" fill="white" fontSize="10" fontWeight="bold">
+                <circle cx="360" cy="100" r="14" fill="#D42B2B" />
+                <text x="360" y="104" textAnchor="middle" fill="white" fontSize="10" fontWeight="bold">
                   4
                 </text>
-                <text x="360" y="106" textAnchor="middle" fill="#2A2A2A" fontSize="11" fontWeight="600">
+                <text x="360" y="126" textAnchor="middle" fill="#2A2A2A" fontSize="11" fontWeight="600">
                   퇴장
                 </text>
 
                 {/* Direction arrows */}
-                <path d="M58 158 L80 150" stroke="#1A73B5" strokeWidth="1.5" markerEnd="url(#arrowhead)" />
+                <path d="M58 178 L80 170" stroke="#1A73B5" strokeWidth="1.5" markerEnd="url(#arrowhead)" />
                 <defs>
                   <marker
                     id="arrowhead"
@@ -139,13 +191,9 @@ export default function DriveThru() {
                 복합시설 및 특수상권에서도 높은 완성도의 매장 구현이 가능합니다.
               </p>
 
-              {/* 3 small circular photos */}
-              <div className="flex gap-4">
-                {["/images/franchise/strength-1.jpg", "/images/franchise/strength-2.jpg", "/images/franchise/strength-3.jpg"].map((src, i) => (
-                  <div key={i} className="w-16 h-16 sm:w-20 sm:h-20 rounded-full shadow-md flex-shrink-0 overflow-hidden">
-                    <img src={src} alt="" className="w-full h-full object-cover" />
-                  </div>
-                ))}
+              {/* Space design image */}
+              <div className="rounded-xl overflow-hidden shadow-md">
+                <img src="/images/franchise/space-design.png" alt="공간 설계 역량" className="w-full h-auto object-cover" />
               </div>
             </div>
           </ScrollReveal>

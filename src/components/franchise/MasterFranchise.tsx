@@ -1,163 +1,22 @@
 "use client";
 
-import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { GLOBAL_LOCATIONS } from "@/lib/franchiseData";
 
-function WorldMap() {
-  return (
-    <div className="relative w-full max-w-4xl mx-auto">
-      <svg
-        viewBox="0 0 800 400"
-        className="w-full h-auto"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        {/* Simplified world map - continent outlines */}
-        {/* North America */}
-        <path
-          d="M80 80 C100 60, 140 50, 180 55 C200 58, 220 70, 230 90 C240 110, 235 130, 220 150 C210 160, 190 170, 170 175 C150 178, 130 175, 120 165 C100 155, 85 140, 80 120 Z"
-          fill="#E8F4FC"
-          stroke="#B8DEF5"
-          strokeWidth="1"
-        />
-        {/* Central America */}
-        <path
-          d="M150 175 C155 180, 160 190, 155 200 C150 210, 145 215, 140 220 C138 225, 142 228, 148 230"
-          fill="#E8F4FC"
-          stroke="#B8DEF5"
-          strokeWidth="1"
-        />
-        {/* South America */}
-        <path
-          d="M148 230 C165 235, 185 250, 195 270 C205 290, 200 310, 190 330 C180 345, 170 355, 160 360 C150 355, 145 340, 145 320 C142 300, 138 280, 140 260 C142 245, 145 235, 148 230 Z"
-          fill="#E8F4FC"
-          stroke="#B8DEF5"
-          strokeWidth="1"
-        />
-        {/* Europe */}
-        <path
-          d="M350 60 C370 55, 390 58, 410 65 C420 70, 425 80, 420 90 C415 100, 405 105, 395 110 C380 115, 365 112, 355 105 C345 98, 340 85, 345 72 Z"
-          fill="#E8F4FC"
-          stroke="#B8DEF5"
-          strokeWidth="1"
-        />
-        {/* Africa */}
-        <path
-          d="M370 130 C385 125, 405 128, 420 140 C435 155, 440 175, 435 200 C430 225, 420 250, 410 270 C400 285, 390 290, 380 285 C370 275, 365 260, 365 240 C365 220, 360 200, 358 180 C356 160, 360 140, 370 130 Z"
-          fill="#E8F4FC"
-          stroke="#B8DEF5"
-          strokeWidth="1"
-        />
-        {/* Asia */}
-        <path
-          d="M430 55 C460 48, 500 50, 540 55 C580 60, 620 70, 650 85 C670 95, 680 110, 675 125 C670 140, 650 150, 630 155 C610 160, 580 158, 560 150 C540 145, 520 140, 500 135 C480 130, 460 120, 450 105 C440 90, 430 75, 430 55 Z"
-          fill="#E8F4FC"
-          stroke="#B8DEF5"
-          strokeWidth="1"
-        />
-        {/* Korea */}
-        <circle cx="625" cy="115" r="5" fill="#1A73B5" opacity="0.3" />
-        {/* Southeast Asia / Indonesia */}
-        <path
-          d="M560 190 C575 185, 595 188, 610 195 C625 200, 640 210, 650 220 C660 230, 665 240, 660 245 C650 250, 635 248, 620 240 C605 232, 590 222, 575 215 C565 210, 558 200, 560 190 Z"
-          fill="#E8F4FC"
-          stroke="#B8DEF5"
-          strokeWidth="1"
-        />
-        {/* Australia */}
-        <path
-          d="M600 290 C620 280, 660 278, 690 285 C710 290, 720 305, 715 320 C710 335, 695 345, 675 348 C655 350, 630 345, 615 335 C600 325, 590 310, 595 298 Z"
-          fill="#E8F4FC"
-          stroke="#B8DEF5"
-          strokeWidth="1"
-        />
+const Globe3D = dynamic(() => import("./Globe3D"), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full max-w-[600px] mx-auto aspect-square rounded-full bg-gray-100 animate-pulse" />
+  ),
+});
 
-        {/* Jakarta marker (Indonesia) - approximate position */}
-        <g>
-          <motion.circle
-            cx="608"
-            cy="225"
-            r="12"
-            fill="#1A73B5"
-            opacity={0.15}
-            animate={{
-              r: [12, 20, 12],
-              opacity: [0.15, 0.05, 0.15],
-            }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          />
-          <motion.circle
-            cx="608"
-            cy="225"
-            r="6"
-            fill="#1A73B5"
-            animate={{
-              scale: [1, 1.2, 1],
-            }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          />
-          <text x="608" y="250" textAnchor="middle" fill="#1A73B5" fontSize="11" fontWeight="600">
-            Jakarta
-          </text>
-        </g>
-
-        {/* Toronto marker (Canada) - approximate position */}
-        <g>
-          <motion.circle
-            cx="185"
-            cy="95"
-            r="12"
-            fill="#D42B2B"
-            opacity={0.15}
-            animate={{
-              r: [12, 20, 12],
-              opacity: [0.15, 0.05, 0.15],
-            }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-          />
-          <motion.circle
-            cx="185"
-            cy="95"
-            r="6"
-            fill="#D42B2B"
-            animate={{
-              scale: [1, 1.2, 1],
-            }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-          />
-          <text x="185" y="120" textAnchor="middle" fill="#D42B2B" fontSize="11" fontWeight="600">
-            Toronto
-          </text>
-        </g>
-
-        {/* Korea home marker */}
-        <g>
-          <circle cx="625" cy="115" r="4" fill="#1A73B5" />
-          <text x="625" y="140" textAnchor="middle" fill="#1A73B5" fontSize="9" fontWeight="600">
-            HQ
-          </text>
-        </g>
-
-        {/* Connection lines from Korea */}
-        <path
-          d="M625 115 Q600 170, 608 225"
-          stroke="#1A73B5"
-          strokeWidth="1"
-          strokeDasharray="4 4"
-          opacity="0.4"
-        />
-        <path
-          d="M625 115 Q400 80, 185 95"
-          stroke="#D42B2B"
-          strokeWidth="1"
-          strokeDasharray="4 4"
-          opacity="0.4"
-        />
-      </svg>
-    </div>
-  );
-}
+const WorldMap = dynamic(() => import("./WorldMap"), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-[300px] bg-gray-50 rounded-2xl animate-pulse" />
+  ),
+});
 
 export default function MasterFranchise() {
   return (
@@ -190,22 +49,37 @@ export default function MasterFranchise() {
           </div>
         </ScrollReveal>
 
-        {/* World Map */}
+        {/* 3D Globe */}
         <ScrollReveal delay={0.15}>
+          <div className="mb-16 md:mb-20 bg-white rounded-3xl py-8 sm:py-12">
+            <Globe3D />
+            <p className="text-center text-gray-400 text-xs mt-4">
+              드래그하여 지구본을 회전할 수 있습니다
+            </p>
+          </div>
+        </ScrollReveal>
+
+        {/* World Map Visualization */}
+        <ScrollReveal delay={0.2}>
           <div className="mb-16 md:mb-20">
-            <WorldMap />
+            <h3 className="text-xl sm:text-2xl font-bold text-dark-800 text-center mb-8">
+              글로벌 진출 현황
+            </h3>
+            <div className="bg-white rounded-2xl p-4 sm:p-8 border border-gray-100 shadow-sm overflow-hidden">
+              <WorldMap />
+            </div>
           </div>
         </ScrollReveal>
 
         {/* Overseas store cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
           {GLOBAL_LOCATIONS.map((location, index) => (
             <ScrollReveal key={location.country} delay={0.1 * index}>
               <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-shadow duration-300">
                 {/* Store image */}
                 <div className="h-[250px] sm:h-[300px] relative overflow-hidden">
                   <img
-                    src={location.country === "Indonesia" ? "/images/franchise/global-indonesia.jpg" : "/images/franchise/global-canada.jpg"}
+                    src={location.country === "Indonesia" ? "/images/franchise/global-indonesia.png" : location.country === "Indonesia2" ? "/images/franchise/global-indonesia-2.jpg" : "/images/franchise/global-canada.png"}
                     alt={location.countryKo}
                     className="w-full h-full object-cover"
                   />

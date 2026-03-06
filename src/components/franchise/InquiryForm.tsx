@@ -344,9 +344,9 @@ export default function InquiryForm() {
                 type="submit"
                 variant="cta"
                 size="lg"
-                className="w-full sm:w-auto sm:min-w-[200px] mx-auto block"
+                className="w-full mx-auto block text-lg sm:text-xl py-5 sm:py-6 font-extrabold tracking-wide shadow-lg shadow-cta-300/50 hover:scale-[1.02] transition-transform"
               >
-                문의하기
+                🚀 창업 상담 문의하기
               </Button>
             </div>
           </form>

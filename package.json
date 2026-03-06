@@ -10,6 +10,8 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@react-google-maps/api": "^2.20.8",
+    "cobe": "^0.6.5",
     "framer-motion": "^12.34.3",
     "next": "16.1.6",
     "playwright": "^1.58.2",

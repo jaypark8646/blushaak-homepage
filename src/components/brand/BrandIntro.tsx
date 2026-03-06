@@ -51,54 +51,34 @@ export default function BrandIntro() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {/* Brand Story Card */}
           <ScrollReveal delay={0.1}>
-            <div className="group relative overflow-hidden rounded-2xl">
-              <img src="/images/brand/brand-story.jpg" alt="Blu Shaak brand story" className="w-full aspect-[16/9] object-cover transition-transform duration-500 group-hover:scale-105" />
-              <div className="absolute inset-0 bg-black/30 transition-colors duration-300 group-hover:bg-black/40" />
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8">
-                <p className="text-white/60 text-xs font-[family-name:var(--font-dm-sans)] tracking-[0.3em] uppercase mb-3">
-                  Since 2019
-                </p>
+            <Link href="/brand#story" className="block">
+              <div className="group relative overflow-hidden rounded-2xl bg-[#1a7abf] aspect-[16/9] flex flex-col items-center justify-center text-center p-8 transition-all duration-300 hover:bg-[#1568a5] cursor-pointer">
                 <h3 className="text-white text-2xl md:text-3xl font-bold font-[family-name:var(--font-dm-sans)] tracking-wide">
                   BRAND STORY
                 </h3>
-                <p className="text-white/70 text-sm mt-3 max-w-xs">
-                  바다를 닮은 공간, 휴가 같은 커피 한 잔의 이야기
-                </p>
                 <div className="mt-6">
-                  <Link href="/brand#story">
-                    <Button variant="outline" size="sm" className="!border-white !text-white hover:!bg-white hover:!text-dark-800">
-                      MORE
-                    </Button>
-                  </Link>
+                  <Button variant="outline" size="sm" className="!border-white !text-white hover:!bg-white hover:!text-dark-800">
+                    MORE
+                  </Button>
                 </div>
               </div>
-            </div>
+            </Link>
           </ScrollReveal>
 
           {/* Brand Vision Card */}
           <ScrollReveal delay={0.25}>
-            <div className="group relative overflow-hidden rounded-2xl">
-              <img src="/images/brand/brand-vision.jpg" alt="Blu Shaak brand vision" className="w-full aspect-[16/9] object-cover transition-transform duration-500 group-hover:scale-105" />
-              <div className="absolute inset-0 bg-black/30 transition-colors duration-300 group-hover:bg-black/40" />
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8">
-                <p className="text-white/60 text-xs font-[family-name:var(--font-dm-sans)] tracking-[0.3em] uppercase mb-3">
-                  Our Philosophy
-                </p>
+            <Link href="/brand#vision" className="block">
+              <div className="group relative overflow-hidden rounded-2xl bg-[#2a2a2a] aspect-[16/9] flex flex-col items-center justify-center text-center p-8 transition-all duration-300 hover:bg-[#1a1a1a] cursor-pointer">
                 <h3 className="text-white text-2xl md:text-3xl font-bold font-[family-name:var(--font-dm-sans)] tracking-wide">
                   BRAND VISION
                 </h3>
-                <p className="text-white/70 text-sm mt-3 max-w-xs">
-                  최상의 재료로 정성껏, Crafted with Better Ingredients
-                </p>
                 <div className="mt-6">
-                  <Link href="/brand#vision">
-                    <Button variant="outline" size="sm" className="!border-white !text-white hover:!bg-white hover:!text-dark-800">
-                      MORE
-                    </Button>
-                  </Link>
+                  <Button variant="outline" size="sm" className="!border-white !text-white hover:!bg-white hover:!text-dark-800">
+                    MORE
+                  </Button>
                 </div>
               </div>
-            </div>
+            </Link>
           </ScrollReveal>
         </div>
       </div>

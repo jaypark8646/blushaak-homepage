@@ -7,23 +7,18 @@ import Image from "next/image";
 const HERO_SLIDES = [
   {
     image: "/images/brand/hero-1.jpg",
-    label: "Ocean Blue Horizon",
-    labelKo: "푸른 바다의 수평선",
+    label: "Signature Latte",
+    labelKo: "시그니처 라떼",
   },
   {
     image: "/images/brand/hero-2.jpg",
-    label: "Warm Coffee Roast",
-    labelKo: "따뜻한 커피 로스팅",
+    label: "Specialty Coffee",
+    labelKo: "스페셜티 커피",
   },
   {
     image: "/images/brand/hero-3.jpg",
-    label: "Bakery Golden Hour",
-    labelKo: "베이커리의 황금빛 오후",
-  },
-  {
-    image: "/images/brand/hero-4.jpg",
-    label: "Cafe Interior",
-    labelKo: "카페 인테리어",
+    label: "Crafted with Care",
+    labelKo: "정성을 담은 한 잔",
   },
 ];
 

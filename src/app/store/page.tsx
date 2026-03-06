@@ -1,11 +1,24 @@
 "use client";
 
 import { useState } from "react";
+import dynamic from "next/dynamic";
 import { GNB, Footer, FloatingSidebar } from "@/components/layout";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import Button from "@/components/ui/Button";
 import { useScrollPosition } from "@/hooks/useScrollPosition";
 import { Store } from "@/types";
+
+const StoreMap = dynamic(() => import("@/components/store/StoreMap"), {
+  ssr: false,
+  loading: () => (
+    <div className="flex h-[60vh] items-center justify-center rounded-2xl bg-gray-50">
+      <div className="flex flex-col items-center gap-3">
+        <div className="h-8 w-8 animate-spin rounded-full border-2 border-gray-200 border-t-blu-500" />
+        <p className="text-sm text-gray-400">지도를 불러오는 중...</p>
+      </div>
+    </div>
+  ),
+});
 
 const SAMPLE_STORES: Store[] = [
   {
@@ -41,6 +54,7 @@ const SAMPLE_STORES: Store[] = [
 export default function StorePage() {
   const { isScrolled } = useScrollPosition();
   const [searchQuery, setSearchQuery] = useState("");
+  const [selectedStoreId, setSelectedStoreId] = useState<string | undefined>();
 
   const filteredStores = SAMPLE_STORES.filter(
     (store) =>
@@ -100,52 +114,14 @@ export default function StorePage() {
             </div>
           </ScrollReveal>
 
-          {/* Map placeholder */}
+          {/* Google Map */}
           <ScrollReveal delay={0.2}>
-            <div className="relative mb-12 flex h-[60vh] items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-blu-50 via-sky-50 to-slate-100">
-              {/* Grid pattern overlay */}
-              <div
-                className="absolute inset-0 opacity-[0.03]"
-                style={{
-                  backgroundImage:
-                    "linear-gradient(rgba(0,0,0,1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,1) 1px, transparent 1px)",
-                  backgroundSize: "40px 40px",
-                }}
+            <div className="mb-12">
+              <StoreMap
+                stores={filteredStores}
+                selectedStoreId={selectedStoreId}
+                onStoreSelect={setSelectedStoreId}
               />
-
-              <div className="flex flex-col items-center gap-4 text-center">
-                {/* Map pin SVG */}
-                <svg
-                  width="56"
-                  height="56"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  className="text-blu-400"
-                >
-                  <path
-                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"
-                    fill="currentColor"
-                    opacity="0.2"
-                  />
-                  <path
-                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    fill="none"
-                  />
-                  <circle
-                    cx="12"
-                    cy="9"
-                    r="2.5"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    fill="none"
-                  />
-                </svg>
-                <p className="text-base font-medium text-gray-400">
-                  지도 영역 (Google Maps API 연동 예정)
-                </p>
-              </div>
             </div>
           </ScrollReveal>
 

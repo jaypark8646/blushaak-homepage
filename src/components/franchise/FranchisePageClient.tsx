@@ -10,6 +10,7 @@ import HQSupport from "@/components/franchise/HQSupport";
 import TrainingSystem from "@/components/franchise/TrainingSystem";
 import DriveThru from "@/components/franchise/DriveThru";
 import MasterFranchise from "@/components/franchise/MasterFranchise";
+import FranchiseHistory from "@/components/franchise/FranchiseHistory";
 import RevenueAnalysis from "@/components/franchise/RevenueAnalysis";
 import OpeningProcedure from "@/components/franchise/OpeningProcedure";
 import CostTable from "@/components/franchise/CostTable";
@@ -31,6 +32,7 @@ export default function FranchisePageClient() {
         <div id="global">
           <MasterFranchise />
         </div>
+        <FranchiseHistory />
         <RevenueAnalysis />
         <OpeningProcedure />
         <CostTable />

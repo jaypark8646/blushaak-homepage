@@ -27,7 +27,7 @@ export default function CoffeeBeans() {
 
         {/* Bean cards */}
         <ScrollReveal delay={0.15}>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid grid-cols-3 gap-6 md:gap-8 max-w-3xl mx-auto">
             {COFFEE_BEANS.map((bean) => (
               <div
                 key={bean.id}
@@ -116,16 +116,25 @@ export default function CoffeeBeans() {
           </div>
         </ScrollReveal>
 
-        {/* Bottom text */}
+        {/* Beyond Specialty — A Champion's Pick */}
         <ScrollReveal delay={0.3}>
-          <div className="text-center mt-16 md:mt-20">
-            <div className="h-px w-12 bg-blu-300 mx-auto mb-8" />
-            <h3 className="font-[family-name:var(--font-playfair-display)] text-xl md:text-2xl text-dark-800 italic">
-              Beyond Specialty — A Champion&apos;s Pick
-            </h3>
-            <p className="text-sm text-gray-500 mt-3 leading-relaxed">
-              세계 바리스타 <span className="font-semibold font-[family-name:var(--font-dm-sans)]">JACK</span> &amp; 커피 프로듀서 <span className="font-semibold font-[family-name:var(--font-dm-sans)]">JONATHAN</span>
-            </p>
+          <div className="mt-20 md:mt-28 grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-2xl overflow-hidden">
+            {/* Left - Photo */}
+            <div className="relative w-full aspect-[3/4] lg:aspect-auto lg:min-h-[600px]">
+              <img
+                src="/images/brand/champions-pick-1.png"
+                alt="세계 챔피언이 선택한 농장"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            {/* Right - Text on dark background */}
+            <div className="relative w-full aspect-[3/4] lg:aspect-auto lg:min-h-[600px]">
+              <img
+                src="/images/brand/champions-pick-2.jpg"
+                alt="BLU SHAAK SPECIAL BEAN"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </ScrollReveal>
       </div>

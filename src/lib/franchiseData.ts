@@ -245,7 +245,7 @@ export const PIE_CHART_DATA = [
 
 export const REVENUE_TABLE = {
   title: "월매출 25,000,000원 기준",
-  subtitle: "*15평 매장 기준 / 인건비급여 매출",
+  subtitle: "*15평 매장 기준",
   items: [
     { label: "순수익", percentage: 30, amount: "7,500,000", color: "#1A73B5" },
     { label: "식자재", percentage: 35, amount: "8,750,000", color: "#3DCBA8" },
@@ -257,13 +257,23 @@ export const REVENUE_TABLE = {
 export const GLOBAL_LOCATIONS: GlobalLocation[] = [
   {
     country: "Indonesia",
-    countryKo: "인도네시아",
+    countryKo: "인도네시아 1호점",
+    flag: "🇮🇩",
+    city: "Jakarta · Central Park Mall",
+    description:
+      "블루샥은 인도네시아의 대표적인 랜드마크이자 핵심 상권인 자카르타 센트럴 파크몰(Central Park Mall)에 성공적으로 진출하며 글로벌 시장에 이름을 알렸습니다. 현지 고객들의 폭발적인 반응에 힘입어 자카르타 1호점의 성공적 런칭을 기록하였으며, 이를 발판 삼아 현재 자카르타 2호점까지 오픈하여 안정적으로 운영 중에 있습니다.",
+    lat: -6.1751,
+    lng: 106.79,
+  },
+  {
+    country: "Indonesia2",
+    countryKo: "인도네시아 2호점",
     flag: "🇮🇩",
     city: "Jakarta",
     description:
-      "자카르타의 랜드마크를 선점한 스페셜티의 자력. 블루샥은 인도네시아 글로벌 복합문화공간인 자카르타 Central Park Mall에 첫 해외 매장을 오픈하였습니다. 현지 고객들에게 블루샥만의 프리미엄 커피 경험을 전하고 있습니다.",
-    lat: -6.1751,
-    lng: 106.79,
+      "블루샥 인도네시아 2호점. 현지에서의 성공적인 안착을 바탕으로 두 번째 매장을 오픈하며 인도네시아 시장에서의 브랜드 입지를 더욱 확고히 하고 있습니다.",
+    lat: -6.2,
+    lng: 106.82,
   },
   {
     country: "Canada",

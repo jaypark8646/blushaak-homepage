@@ -22,29 +22,10 @@ export default function OpeningProcedure() {
           </h2>
         </ScrollReveal>
 
-        {/* Desktop: S-curve flowchart */}
-        <div ref={pathRef} className="hidden md:block relative">
-          {/* SVG S-curve connector */}
-          <svg
-            className="absolute inset-0 w-full h-full pointer-events-none"
-            viewBox="0 0 1000 460"
-            preserveAspectRatio="none"
-            fill="none"
-          >
-            <motion.path
-              d="M60 100 H320 Q380 100 380 160 V260 Q380 320 440 320 H940"
-              stroke="#1A73B5"
-              strokeWidth="2"
-              strokeDasharray="6 4"
-              initial={{ pathLength: 0 }}
-              animate={isInView ? { pathLength: 1 } : { pathLength: 0 }}
-              transition={{ duration: 2, ease: "easeInOut", delay: 0.3 }}
-              opacity={0.3}
-            />
-          </svg>
-
+        {/* Desktop: clean grid layout */}
+        <div ref={pathRef} className="hidden md:block">
           {/* Top row: Steps 1-4 */}
-          <div className="grid grid-cols-4 gap-5 mb-10">
+          <div className="grid grid-cols-4 gap-5 mb-6">
             {topRow.map((step, index) => (
               <motion.div
                 key={step.step}
@@ -57,26 +38,6 @@ export default function OpeningProcedure() {
             ))}
           </div>
 
-          {/* Curved connector visual indicator */}
-          <div className="flex justify-center mb-10">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-              transition={{ duration: 0.5, delay: 0.7 }}
-            >
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                <path
-                  d="M24 8v32M16 32l8 8 8-8"
-                  stroke="#1A73B5"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  opacity="0.4"
-                />
-              </svg>
-            </motion.div>
-          </div>
-
           {/* Bottom row: Steps 5-8 */}
           <div className="grid grid-cols-4 gap-5">
             {bottomRow.map((step, index) => (
@@ -84,7 +45,7 @@ export default function OpeningProcedure() {
                 key={step.step}
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ duration: 0.5, delay: 0.8 + 0.15 * index }}
+                transition={{ duration: 0.5, delay: 0.6 + 0.15 * index }}
               >
                 <StepCard step={step} />
               </motion.div>
@@ -92,11 +53,11 @@ export default function OpeningProcedure() {
           </div>
         </div>
 
-        {/* Mobile: vertical list */}
-        <div className="md:hidden space-y-4">
+        {/* Mobile: compact 2-column grid */}
+        <div className="md:hidden grid grid-cols-2 gap-3">
           {OPENING_STEPS.map((step, index) => (
-            <ScrollReveal key={step.step} delay={0.08 * index}>
-              <StepCard step={step} />
+            <ScrollReveal key={step.step} delay={0.06 * index}>
+              <StepCard step={step} compact />
             </ScrollReveal>
           ))}
         </div>
@@ -105,12 +66,14 @@ export default function OpeningProcedure() {
   );
 }
 
-function StepCard({ step }: { step: (typeof OPENING_STEPS)[number] }) {
+function StepCard({ step, compact }: { step: (typeof OPENING_STEPS)[number]; compact?: boolean }) {
   const isHighlighted = step.isHighlighted;
 
   return (
     <div
-      className={`rounded-2xl p-5 sm:p-6 h-full transition-shadow duration-300 ${
+      className={`rounded-2xl h-full transition-shadow duration-300 ${
+        compact ? "p-4" : "p-5 sm:p-6"
+      } ${
         isHighlighted
           ? "bg-cta-500 text-white shadow-lg shadow-cta-500/20"
           : "bg-white border border-gray-100 shadow-sm hover:shadow-md"
@@ -118,7 +81,9 @@ function StepCard({ step }: { step: (typeof OPENING_STEPS)[number] }) {
     >
       {/* Step number */}
       <div
-        className={`inline-flex items-center justify-center w-8 h-8 rounded-full text-sm font-bold mb-3 font-[family-name:var(--font-dm-sans)] ${
+        className={`inline-flex items-center justify-center rounded-full font-bold font-[family-name:var(--font-dm-sans)] ${
+          compact ? "w-6 h-6 text-xs mb-2" : "w-8 h-8 text-sm mb-3"
+        } ${
           isHighlighted
             ? "bg-white/20 text-white"
             : "bg-blu-500/10 text-blu-500"
@@ -129,21 +94,21 @@ function StepCard({ step }: { step: (typeof OPENING_STEPS)[number] }) {
 
       {/* Title */}
       <h3
-        className={`text-base sm:text-lg font-bold mb-3 ${
-          isHighlighted ? "text-white" : "text-dark-800"
-        }`}
+        className={`font-bold ${
+          compact ? "text-sm mb-2" : "text-base sm:text-lg mb-3"
+        } ${isHighlighted ? "text-white" : "text-dark-800"}`}
       >
         {step.title}
       </h3>
 
       {/* Details */}
-      <ul className="space-y-1.5">
+      <ul className={compact ? "space-y-1" : "space-y-1.5"}>
         {step.details.map((detail) => (
           <li
             key={detail}
-            className={`flex items-start gap-2 text-xs sm:text-sm leading-relaxed ${
-              isHighlighted ? "text-white/80" : "text-gray-500"
-            }`}
+            className={`flex items-start gap-1.5 leading-relaxed ${
+              compact ? "text-[11px]" : "text-xs sm:text-sm"
+            } ${isHighlighted ? "text-white/80" : "text-gray-500"}`}
           >
             <span
               className={`w-1 h-1 rounded-full mt-1.5 flex-shrink-0 ${
