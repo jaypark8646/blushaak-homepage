@@ -52,7 +52,7 @@ export const NAV_ITEMS: NavItem[] = [
   },
   {
     label: "FRANCHISE",
-    href: "/brand?tab=franchise",
+    href: "/brand#franchise",
   },
   {
     label: "STORE",
@@ -91,8 +91,8 @@ export const BRAND_SIDEBAR_ITEMS = [
 
 export const FRANCHISE_SIDEBAR_ITEMS = [
   { label: "가맹문의", sublabel: "1644-8067", href: "tel:1644-8067", icon: "phone" },
-  { label: "창업 상담 문의", href: "/franchise#inquiry", icon: "consult" },
-  { label: "해외사업 문의", href: "/franchise#global", icon: "global" },
+  { label: "창업 상담 문의", href: "/brand#inquiry", icon: "consult" },
+  { label: "해외사업 문의", href: "/brand#global", icon: "global" },
 ];
 
 export const REFERRAL_SOURCES = [
