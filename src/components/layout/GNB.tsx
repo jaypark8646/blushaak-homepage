@@ -141,7 +141,13 @@ export function GNB({ isScrolled, variant = "default" }: GNBProps) {
             {renderNavItems(rightItems, "dark", true)}
           </ul>
 
-          <div className="w-6 md:hidden" />
+          {/* Mobile CTA button — 가맹문의 */}
+          <a
+            href="#inquiry"
+            className="md:hidden flex items-center px-3 py-1.5 rounded-full text-[12px] font-semibold tracking-wide bg-blu-500 text-white whitespace-nowrap font-[family-name:var(--font-dm-sans)]"
+          >
+            가맹문의
+          </a>
         </nav>
 
         {/* Light overlay: white text, clipped to dark background regions */}
@@ -172,7 +178,12 @@ export function GNB({ isScrolled, variant = "default" }: GNBProps) {
               {renderNavItems(rightItems, "light", false)}
             </ul>
 
-            <div className="w-6 md:hidden" />
+            {/* Mobile CTA button — light overlay version */}
+            <div
+              className="md:hidden flex items-center px-3 py-1.5 rounded-full text-[12px] font-semibold tracking-wide bg-white text-blu-500 whitespace-nowrap font-[family-name:var(--font-dm-sans)]"
+            >
+              가맹문의
+            </div>
           </nav>
         )}
       </header>
