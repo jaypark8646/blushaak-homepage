@@ -3,17 +3,14 @@
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
+import type { CalibrationCity, LocationCategory } from "@/types";
 
-interface CountryDot {
-  name: string;
-  nameKo: string;
-  x: number;
-  y: number;
-  category: "blushaak-done" | "blushaak-wip" | "photo-done" | "photo-wip";
+interface WorldMapProps {
+  cities?: CalibrationCity[];
 }
 
-function latlngToPercent(lat: number, lng: number): { x: number; y: number } {
-  const x = ((lng + 180) / 360) * 100;
+function latlngToPercent(lat: number, lng: number): { mapX: number; mapY: number } {
+  const mapX = ((lng + 180) / 360) * 100;
   // world-map-clean.png (1280×712, aspect 1.798) displayed with object-cover
   // in inner container (aspect 3.657 = 16×1.6/7). Scale = 3.657/1.798 = 2.034
   // → top/bottom 25.42% of image is cropped; only middle 49.16% is visible
@@ -21,48 +18,44 @@ function latlngToPercent(lat: number, lng: number): { x: number; y: number } {
   const Y_CROP = 0.2542;
   const Y_SCALE = 0.4916;
   const y_img = (90 - lat) / 180;
-  const y = Math.max(0, Math.min(100, (y_img - Y_CROP) / Y_SCALE * 100));
-  return { x, y };
+  const mapY = Math.max(0, Math.min(100, (y_img - Y_CROP) / Y_SCALE * 100));
+  return { mapX, mapY };
 }
 
-const COUNTRIES: CountryDot[] = [
-  { name: "Indonesia", nameKo: "인도네시아", ...latlngToPercent(-2, 118), category: "blushaak-done" },
-  { name: "Canada", nameKo: "캐나다", ...latlngToPercent(56, -106), category: "blushaak-done" },
-  { name: "China", nameKo: "중국", ...latlngToPercent(35, 105), category: "blushaak-done" },
-  { name: "Japan", nameKo: "일본", ...latlngToPercent(36, 138), category: "blushaak-wip" },
-  { name: "USA", nameKo: "미국", ...latlngToPercent(38, -97), category: "blushaak-wip" },
-  { name: "Vietnam", nameKo: "베트남", ...latlngToPercent(14, 108), category: "photo-done" },
-  { name: "Australia", nameKo: "호주", ...latlngToPercent(-25, 134), category: "photo-done" },
-  { name: "India", nameKo: "인도", ...latlngToPercent(20, 79), category: "photo-done" },
-  { name: "Brunei", nameKo: "브루나이", ...latlngToPercent(4.5, 114.7), category: "photo-done" },
-  { name: "Philippines", nameKo: "필리핀", ...latlngToPercent(13, 122), category: "photo-done" },
-  { name: "Argentina", nameKo: "아르헨티나", ...latlngToPercent(-34, -64), category: "photo-done" },
-  { name: "Kazakhstan", nameKo: "카자흐스탄", ...latlngToPercent(48, 68), category: "photo-wip" },
-  { name: "Kyrgyzstan", nameKo: "키르기스스탄", ...latlngToPercent(41, 75), category: "photo-wip" },
+const FALLBACK_COUNTRIES: CalibrationCity[] = [
+  { id: "indonesia-country", name: "Indonesia", nameKo: "인도네시아", ...latlngToPercent(-2, 118), lat: -2, lng: 118, category: "blushaak-done" },
+  { id: "canada-country", name: "Canada", nameKo: "캐나다", ...latlngToPercent(56, -106), lat: 56, lng: -106, category: "blushaak-done" },
+  { id: "china-country", name: "China", nameKo: "중국", ...latlngToPercent(35, 105), lat: 35, lng: 105, category: "blushaak-done" },
+  { id: "japan-country", name: "Japan", nameKo: "일본", ...latlngToPercent(36, 138), lat: 36, lng: 138, category: "blushaak-wip" },
+  { id: "usa-country", name: "USA", nameKo: "미국", ...latlngToPercent(38, -97), lat: 38, lng: -97, category: "blushaak-wip" },
+  { id: "vietnam-country", name: "Vietnam", nameKo: "베트남", ...latlngToPercent(14, 108), lat: 14, lng: 108, category: "photo-done" },
+  { id: "australia-country", name: "Australia", nameKo: "호주", ...latlngToPercent(-25, 134), lat: -25, lng: 134, category: "photo-done" },
+  { id: "india-country", name: "India", nameKo: "인도", ...latlngToPercent(20, 79), lat: 20, lng: 79, category: "photo-done" },
+  { id: "brunei-country", name: "Brunei", nameKo: "브루나이", ...latlngToPercent(4.5, 114.7), lat: 4.5, lng: 114.7, category: "photo-done" },
+  { id: "philippines-country", name: "Philippines", nameKo: "필리핀", ...latlngToPercent(13, 122), lat: 13, lng: 122, category: "photo-done" },
+  { id: "argentina-country", name: "Argentina", nameKo: "아르헨티나", ...latlngToPercent(-34, -64), lat: -34, lng: -64, category: "photo-done" },
+  { id: "kazakhstan-country", name: "Kazakhstan", nameKo: "카자흐스탄", ...latlngToPercent(48, 68), lat: 48, lng: 68, category: "photo-wip" },
+  { id: "kyrgyzstan-country", name: "Kyrgyzstan", nameKo: "키르기스스탄", ...latlngToPercent(41, 75), lat: 41, lng: 75, category: "photo-wip" },
 ];
 
-const CATEGORY_COLORS: Record<string, string> = {
+const CATEGORY_COLORS: Record<LocationCategory, string> = {
   "blushaak-done": "#1A73B5",
   "blushaak-wip": "#87CEEB",
   "photo-done": "#4B5563",
   "photo-wip": "#9CA3AF",
 };
 
-const COUNTRY_SUMMARY = [
-  { key: "blushaak-done", label: "블루샥 완료", color: "#1A73B5", countries: "인도네시아, 캐나다, 중국" },
-  { key: "blushaak-wip", label: "블루샥 논의중", color: "#87CEEB", countries: "일본, 미국" },
-  {
-    key: "photo-done",
-    label: "포토시그니처 완료",
-    color: "#4B5563",
-    countries: "일본, 베트남, 호주, 인도, 브루나이, 필리핀, 인도네시아, 아르헨티나, 캐나다",
-  },
-  { key: "photo-wip", label: "포토시그니처 논의중", color: "#9CA3AF", countries: "카자흐스탄, 키르기스스탄" },
-];
+const CATEGORY_LABELS: Record<LocationCategory, string> = {
+  "blushaak-done": "블루샥 완료",
+  "blushaak-wip": "블루샥 논의중",
+  "photo-done": "포토시그니처 완료",
+  "photo-wip": "포토시그니처 논의중",
+};
 
-export default function WorldMap() {
+export default function WorldMap({ cities }: WorldMapProps) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const mapCities = cities && cities.length > 0 ? cities : FALLBACK_COUNTRIES;
 
   // offsetX: percentage shift of the 160%-wide inner map.
   // Korea HQ is at SVG x = hq.x * 1.6 = 85.27 * 1.6 = 136.43
@@ -72,6 +65,17 @@ export default function WorldMap() {
   const lastPointerX = useRef(0);
 
   const hq = latlngToPercent(37.5665, 126.978);
+  const countrySummary = (Object.keys(CATEGORY_LABELS) as LocationCategory[]).map((key) => {
+    const names = Array.from(new Set(mapCities.filter((city) => city.category === key).map((city) => city.nameKo)));
+    const preview = names.slice(0, 4).join(", ");
+    const tail = names.length > 4 ? ` 외 ${names.length - 4}곳` : "";
+    return {
+      key,
+      label: CATEGORY_LABELS[key],
+      color: CATEGORY_COLORS[key],
+      countries: names.length > 0 ? `${preview}${tail}` : "-",
+    };
+  });
 
   const handlePointerDown = (e: React.PointerEvent) => {
     isDragging.current = true;
@@ -138,22 +142,22 @@ export default function WorldMap() {
             </defs>
 
             {/* Connection lines from HQ */}
-            {COUNTRIES.map((country, idx) => {
+            {mapCities.map((country, idx) => {
               const color = CATEGORY_COLORS[country.category];
               const isBlushaak = country.category.startsWith("blushaak");
-              const cx = country.x * 1.6;
-              const hqx = hq.x * 1.6;
+              const cx = country.mapX * 1.6;
+              const hqx = hq.mapX * 1.6;
               const midX = hqx + (cx - hqx) * 0.5;
-              const midY = hq.y + (country.y - hq.y) * 0.5 - Math.abs(cx - hqx) * 0.05;
+              const midY = hq.mapY + (country.mapY - hq.mapY) * 0.5 - Math.abs(cx - hqx) * 0.05;
               return (
                 <motion.g
-                  key={`line-${country.name}`}
+                  key={`line-${country.id}`}
                   initial={{ opacity: 0 }}
                   animate={isInView ? { opacity: 1 } : { opacity: 0 }}
                   transition={{ duration: 0.8, delay: 0.3 + idx * 0.06 }}
                 >
                   <path
-                    d={`M${hqx},${hq.y} Q${midX},${midY} ${cx},${country.y}`}
+                    d={`M${hqx},${hq.mapY} Q${midX},${midY} ${cx},${country.mapY}`}
                     fill="none"
                     stroke={color}
                     strokeWidth={isBlushaak ? 0.2 : 0.15}
@@ -165,28 +169,28 @@ export default function WorldMap() {
             })}
 
             {/* Country markers */}
-            {COUNTRIES.map((country, idx) => {
+            {mapCities.map((country, idx) => {
               const color = CATEGORY_COLORS[country.category];
               const isBlushaak = country.category.startsWith("blushaak");
               const glowR = isBlushaak ? 2.5 : 1.8;
-              const cx = country.x * 1.6;
+              const cx = country.mapX * 1.6;
               return (
                 <motion.g
-                  key={country.name}
+                  key={country.id}
                   initial={{ opacity: 0, scale: 0 }}
                   animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }}
                   transition={{ duration: 0.5, delay: 0.1 + idx * 0.05 }}
                 >
-                  <circle cx={cx} cy={country.y} r={glowR} fill={`url(#glow-2d-${country.category})`}>
+                  <circle cx={cx} cy={country.mapY} r={glowR} fill={`url(#glow-2d-${country.category})`}>
                     <animate attributeName="r" values={`${glowR};${glowR + 1};${glowR}`} dur="3s" repeatCount="indefinite" begin={`${idx * 0.3}s`} />
                   </circle>
-                  <circle cx={cx} cy={country.y} r={isBlushaak ? 0.6 : 0.4} fill={color}>
+                  <circle cx={cx} cy={country.mapY} r={isBlushaak ? 0.6 : 0.4} fill={color}>
                     <animate attributeName="r" values={isBlushaak ? "0.6;0.8;0.6" : "0.4;0.55;0.4"} dur="2s" repeatCount="indefinite" begin={`${idx * 0.2}s`} />
                   </circle>
-                  <circle cx={cx} cy={country.y} r={isBlushaak ? 0.22 : 0.15} fill="white" opacity="0.8" />
+                  <circle cx={cx} cy={country.mapY} r={isBlushaak ? 0.22 : 0.15} fill="white" opacity="0.8" />
                   <text
                     x={cx}
-                    y={country.y - (isBlushaak ? 1.8 : 1.4)}
+                    y={country.mapY - (isBlushaak ? 1.8 : 1.4)}
                     textAnchor="middle"
                     fill={color}
                     fontSize={isBlushaak ? "1.5" : "1.2"}
@@ -205,14 +209,14 @@ export default function WorldMap() {
               animate={isInView ? { opacity: 1 } : { opacity: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <circle cx={hq.x * 1.6} cy={hq.y} r="3.5" fill="url(#hq-glow-2d)">
+              <circle cx={hq.mapX * 1.6} cy={hq.mapY} r="3.5" fill="url(#hq-glow-2d)">
                 <animate attributeName="r" values="3.5;5;3.5" dur="2s" repeatCount="indefinite" />
               </circle>
-              <circle cx={hq.x * 1.6} cy={hq.y} r="0.8" fill="#1A73B5" />
-              <circle cx={hq.x * 1.6} cy={hq.y} r="0.35" fill="white" opacity="0.9" />
+              <circle cx={hq.mapX * 1.6} cy={hq.mapY} r="0.8" fill="#1A73B5" />
+              <circle cx={hq.mapX * 1.6} cy={hq.mapY} r="0.35" fill="white" opacity="0.9" />
               <text
-                x={hq.x * 1.6}
-                y={hq.y - 2}
+                x={hq.mapX * 1.6}
+                y={hq.mapY - 2}
                 textAnchor="middle"
                 fill="#1A73B5"
                 fontSize="1.6"
@@ -228,7 +232,7 @@ export default function WorldMap() {
         {/* Bottom-left: country text summary */}
         <div className="absolute bottom-2 left-2 sm:bottom-3 sm:left-3 bg-white/90 backdrop-blur-sm rounded-xl p-2 sm:p-3 max-w-[165px] sm:max-w-[240px] shadow-md pointer-events-none z-10">
           <p className="text-[8px] sm:text-[10px] font-bold text-gray-700 mb-1.5">진출 현황 요약</p>
-          {COUNTRY_SUMMARY.map((info) => (
+          {countrySummary.map((info) => (
             <div key={info.key} className="mb-1">
               <div className="flex items-center gap-1 mb-0.5">
                 <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: info.color }} />

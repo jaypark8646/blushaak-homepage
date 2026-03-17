@@ -1,8 +1,10 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { GLOBAL_LOCATIONS } from "@/lib/franchiseData";
+import type { CalibrationCity } from "@/types";
 
 const Globe3D = dynamic(() => import("./Globe3D"), {
   ssr: false,
@@ -19,6 +21,32 @@ const WorldMap = dynamic(() => import("./WorldMap"), {
 });
 
 export default function MasterFranchise() {
+  const [cities, setCities] = useState<CalibrationCity[] | null>(null);
+
+  useEffect(() => {
+    let active = true;
+
+    const loadCalibrationCities = async () => {
+      try {
+        const response = await fetch("/data/calibration-cities.json", { cache: "no-store" });
+        if (!response.ok) return;
+        const json = await response.json();
+        if (!Array.isArray(json)) return;
+        if (active) {
+          setCities(json as CalibrationCity[]);
+        }
+      } catch {
+        // Ignore: components keep their internal fallback data.
+      }
+    };
+
+    loadCalibrationCities();
+
+    return () => {
+      active = false;
+    };
+  }, []);
+
   return (
     <section id="global" className="py-24 md:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-4">
@@ -52,7 +80,7 @@ export default function MasterFranchise() {
         {/* 3D Globe */}
         <ScrollReveal delay={0.15}>
           <div className="mb-16 md:mb-20 bg-white rounded-3xl py-8 sm:py-12">
-            <Globe3D />
+            <Globe3D cities={cities ?? undefined} />
             <p className="text-center text-gray-400 text-xs mt-4">
               드래그하여 지구본을 회전할 수 있습니다
             </p>
@@ -66,7 +94,7 @@ export default function MasterFranchise() {
               글로벌 진출 현황
             </h3>
             <div className="bg-white rounded-2xl p-4 sm:p-8 border border-gray-100 shadow-sm overflow-hidden">
-              <WorldMap />
+              <WorldMap cities={cities ?? undefined} />
             </div>
           </div>
         </ScrollReveal>

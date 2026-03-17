@@ -2,19 +2,10 @@
 
 import { useEffect, useRef, useState } from "react";
 import createGlobe from "cobe";
+import type { CalibrationCity, LocationCategory } from "@/types";
 
 // ── Location categories ──────────────────────────────────────
 const KOREA = { lat: 37.5665, lng: 126.978 };
-
-type LocationCategory = "blushaak-done" | "blushaak-wip" | "photo-done" | "photo-wip";
-
-interface CategorizedLocation {
-  lat: number;
-  lng: number;
-  name: string;
-  nameKo: string;
-  category: LocationCategory;
-}
 
 // Colors per category
 const CATEGORY_COLORS: Record<LocationCategory, string> = {
@@ -25,28 +16,39 @@ const CATEGORY_COLORS: Record<LocationCategory, string> = {
 };
 
 // Unique display locations for the globe (one per major city/country)
-const GLOBE_LOCATIONS: CategorizedLocation[] = [
+const FALLBACK_GLOBE_LOCATIONS: CalibrationCity[] = [
   // 블루샥 완료 (파란색)
-  { lat: -6.1751, lng: 106.845, name: "Jakarta", nameKo: "자카르타", category: "blushaak-done" },
-  { lat: 43.6532, lng: -79.3832, name: "Toronto", nameKo: "토론토", category: "blushaak-done" },
-  { lat: 23.1291, lng: 113.2644, name: "Guangzhou", nameKo: "광저우", category: "blushaak-done" },
+  { id: "jakarta", lat: -6.1751, lng: 106.845, name: "Jakarta", nameKo: "자카르타", category: "blushaak-done", mapX: 79.68, mapY: 56.09 },
+  { id: "toronto", lat: 43.6532, lng: -79.3832, name: "Toronto", nameKo: "토론토", category: "blushaak-done", mapX: 27.95, mapY: 14.94 },
+  { id: "guangzhou", lat: 23.1291, lng: 113.2644, name: "Guangzhou", nameKo: "광저우", category: "blushaak-done", mapX: 81.46, mapY: 29.65 },
   // 블루샥 논의중 (하늘색)
-  { lat: 35.6762, lng: 139.6503, name: "Tokyo", nameKo: "도쿄", category: "blushaak-wip" },
-  { lat: 34.0522, lng: -118.2437, name: "Los Angeles", nameKo: "LA", category: "blushaak-wip" },
+  { id: "tokyo", lat: 35.6762, lng: 139.6503, name: "Tokyo", nameKo: "도쿄", category: "blushaak-wip", mapX: 88.79, mapY: 20.62 },
+  { id: "los-angeles", lat: 34.0522, lng: -118.2437, name: "Los Angeles", nameKo: "LA", category: "blushaak-wip", mapX: 17.15, mapY: 23.92 },
   // 포토시그니처 완료 (진회색)
-  { lat: 10.8231, lng: 106.6297, name: "Ho Chi Minh", nameKo: "호치민", category: "photo-done" },
-  { lat: 10.2270, lng: 103.9567, name: "Phu Quoc", nameKo: "푸꾸옥", category: "photo-done" },
-  { lat: -33.8688, lng: 151.2093, name: "Sydney", nameKo: "시드니", category: "photo-done" },
-  { lat: -27.4698, lng: 153.0251, name: "Brisbane", nameKo: "브리즈번", category: "photo-done" },
-  { lat: 28.4744, lng: 77.5040, name: "Greater Noida", nameKo: "그레이터노이다", category: "photo-done" },
-  { lat: 4.9404, lng: 114.9481, name: "Rimba", nameKo: "림바", category: "photo-done" },
-  { lat: 14.6507, lng: 121.1029, name: "Manila Area", nameKo: "마닐라", category: "photo-done" },
-  { lat: -6.9175, lng: 107.6191, name: "Bandung", nameKo: "반둥", category: "photo-done" },
-  { lat: -34.6037, lng: -58.3816, name: "Buenos Aires", nameKo: "부에노스아이레스", category: "photo-done" },
+  { id: "ho-chi-minh", lat: 10.8231, lng: 106.6297, name: "Ho Chi Minh", nameKo: "호치민", category: "photo-done", mapX: 79.62, mapY: 42.2 },
+  { id: "phu-quoc", lat: 10.227, lng: 103.9567, name: "Phu Quoc", nameKo: "푸꾸옥", category: "photo-done", mapX: 78.88, mapY: 42.87 },
+  { id: "sydney", lat: -33.8688, lng: 151.2093, name: "Sydney", nameKo: "시드니", category: "photo-done", mapX: 92, mapY: 92.27 },
+  { id: "brisbane", lat: -27.4698, lng: 153.0251, name: "Brisbane", nameKo: "브리즈번", category: "photo-done", mapX: 92.51, mapY: 85.1 },
+  { id: "greater-noida", lat: 28.4744, lng: 77.504, name: "Greater Noida", nameKo: "그레이터노이다", category: "photo-done", mapX: 71.53, mapY: 23.45 },
+  { id: "rimba", lat: 4.9404, lng: 114.9481, name: "Rimba", nameKo: "림바", category: "photo-done", mapX: 81.93, mapY: 48.82 },
+  { id: "manila-area", lat: 14.6507, lng: 121.1029, name: "Manila Area", nameKo: "마닐라", category: "photo-done", mapX: 83.64, mapY: 37.91 },
+  { id: "bandung", lat: -6.9175, lng: 107.6191, name: "Bandung", nameKo: "반둥", category: "photo-done", mapX: 79.89, mapY: 56.92 },
+  { id: "buenos-aires", lat: -34.6037, lng: -58.3816, name: "Buenos Aires", nameKo: "부에노스아이레스", category: "photo-done", mapX: 33.78, mapY: 93.08 },
   // 포토시그니처 논의중 (회색)
-  { lat: 51.1694, lng: 71.4491, name: "Astana", nameKo: "아스타나", category: "photo-wip" },
-  { lat: 42.8746, lng: 74.5698, name: "Bishkek", nameKo: "비슈케크", category: "photo-wip" },
+  { id: "astana", lat: 51.1694, lng: 71.4491, name: "Astana", nameKo: "아스타나", category: "photo-wip", mapX: 69.85, mapY: 6.5 },
+  { id: "bishkek", lat: 42.8746, lng: 74.5698, name: "Bishkek", nameKo: "비슈케크", category: "photo-wip", mapX: 70.71, mapY: 15.79 },
 ];
+
+const CATEGORY_LABELS: Record<LocationCategory, string> = {
+  "blushaak-done": "블루샥 완료",
+  "blushaak-wip": "블루샥 논의중",
+  "photo-done": "포토시그니처 완료",
+  "photo-wip": "포토시그니처 논의중",
+};
+
+interface Globe3DProps {
+  cities?: CalibrationCity[];
+}
 
 // ── Math helpers ───────────────────────────────────────────
 const DEG2RAD = Math.PI / 180;
@@ -129,7 +131,7 @@ function drawVisiblePath(
 }
 
 // ── Component ──────────────────────────────────────────────
-export default function Globe3D() {
+export default function Globe3D({ cities }: Globe3DProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const overlayRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -142,7 +144,7 @@ export default function Globe3D() {
   const [webglFailed, setWebglFailed] = useState(false);
 
   // All locations get arcs (both Blu Shaak and Photo Signature)
-  const allLocations = GLOBE_LOCATIONS;
+  const allLocations = cities && cities.length > 0 ? cities : FALLBACK_GLOBE_LOCATIONS;
 
   useEffect(() => {
     if (!canvasRef.current || !overlayRef.current || !containerRef.current) return;
@@ -179,7 +181,7 @@ export default function Globe3D() {
         glowColor: [0.85, 0.9, 1.0],
         markers: [
           { location: [KOREA.lat, KOREA.lng], size: 0.1 },
-          ...GLOBE_LOCATIONS.map((d) => ({
+          ...allLocations.map((d) => ({
             location: [d.lat, d.lng] as [number, number],
             size: d.category.startsWith("blushaak") ? 0.06 : 0.03,
           })),
@@ -280,7 +282,7 @@ export default function Globe3D() {
           });
 
           // Draw glowing markers for ALL locations
-          GLOBE_LOCATIONS.forEach((loc) => {
+          allLocations.forEach((loc) => {
             const p = projectPoint(loc.lat, loc.lng, overlayPhi, thetaVal, cx, cy, r);
             if (!p.visible) return;
 
@@ -350,7 +352,7 @@ export default function Globe3D() {
           }
 
           // City name labels for visible locations
-          GLOBE_LOCATIONS.forEach((loc) => {
+          allLocations.forEach((loc) => {
             const p = projectPoint(loc.lat, loc.lng, overlayPhi, thetaVal, cx, cy, r);
             if (!p.visible) return;
 
@@ -373,7 +375,7 @@ export default function Globe3D() {
         },
       });
     } catch {
-      setWebglFailed(true);
+      setTimeout(() => setWebglFailed(true), 0);
       return;
     }
 
@@ -382,8 +384,7 @@ export default function Globe3D() {
     c.style.height = "100%";
 
     return () => { try { globe?.destroy(); } catch {} };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [allLocations]);
 
   // Pointer interaction
   useEffect(() => {
@@ -429,16 +430,16 @@ export default function Globe3D() {
     );
   }
 
-  const GLOBE_CITY_SUMMARY = [
-    { label: "블루샥 완료", color: "#1A73B5", cities: "자카르타, 토론토, 광저우" },
-    { label: "블루샥 논의중", color: "#87CEEB", cities: "도쿄, LA" },
-    {
-      label: "포토시그니처 완료",
-      color: "#4B5563",
-      cities: "호치민, 푸꾸옥, 시드니, 브리즈번, 그레이터노이다, 림바, 마리키나·퀘존, 반둥, 부에노스아이레스",
-    },
-    { label: "포토시그니처 논의중", color: "#9CA3AF", cities: "아스타나, 비슈케크" },
-  ];
+  const GLOBE_CITY_SUMMARY = (Object.keys(CATEGORY_LABELS) as LocationCategory[]).map((key) => {
+    const names = Array.from(new Set(allLocations.filter((city) => city.category === key).map((city) => city.nameKo)));
+    const preview = names.slice(0, 4).join(", ");
+    const tail = names.length > 4 ? ` 외 ${names.length - 4}곳` : "";
+    return {
+      label: CATEGORY_LABELS[key],
+      color: CATEGORY_COLORS[key],
+      cities: names.length > 0 ? `${preview}${tail}` : "-",
+    };
+  });
 
   return (
     <div className="flex flex-col items-center">

@@ -1,0 +1,292 @@
+[
+  {
+    "id": "jakarta",
+    "lat": -6.1751,
+    "lng": 106.845,
+    "name": "Jakarta",
+    "nameKo": "자카르타",
+    "category": "blushaak-done",
+    "mapX": 79.68,
+    "mapY": 56.98
+  },
+  {
+    "id": "toronto",
+    "lat": 43.6532,
+    "lng": -79.3832,
+    "name": "Toronto",
+    "nameKo": "토론토",
+    "category": "blushaak-done",
+    "mapX": 27.95,
+    "mapY": 0.67
+  },
+  {
+    "id": "guangzhou",
+    "lat": 23.1291,
+    "lng": 113.2644,
+    "name": "Guangzhou",
+    "nameKo": "광저우",
+    "category": "blushaak-done",
+    "mapX": 81.46,
+    "mapY": 23.86
+  },
+  {
+    "id": "tokyo",
+    "lat": 35.6762,
+    "lng": 139.6503,
+    "name": "Tokyo",
+    "nameKo": "도쿄",
+    "category": "blushaak-wip",
+    "mapX": 88.79,
+    "mapY": 9.68
+  },
+  {
+    "id": "los-angeles",
+    "lat": 34.0522,
+    "lng": -118.2437,
+    "name": "Los Angeles",
+    "nameKo": "LA",
+    "category": "blushaak-wip",
+    "mapX": 17.15,
+    "mapY": 11.52
+  },
+  {
+    "id": "ho-chi-minh",
+    "lat": 10.8231,
+    "lng": 106.6297,
+    "name": "Ho Chi Minh",
+    "nameKo": "호치민",
+    "category": "photo-done",
+    "mapX": 79.62,
+    "mapY": 37.77
+  },
+  {
+    "id": "phu-quoc",
+    "lat": 10.227,
+    "lng": 103.9567,
+    "name": "Phu Quoc",
+    "nameKo": "푸꾸옥",
+    "category": "photo-done",
+    "mapX": 78.88,
+    "mapY": 38.44
+  },
+  {
+    "id": "sydney",
+    "lat": -33.8688,
+    "lng": 151.2093,
+    "name": "Sydney",
+    "nameKo": "시드니",
+    "category": "photo-done",
+    "mapX": 92,
+    "mapY": 88.28
+  },
+  {
+    "id": "brisbane",
+    "lat": -27.4698,
+    "lng": 153.0251,
+    "name": "Brisbane",
+    "nameKo": "브리즈번",
+    "category": "photo-done",
+    "mapX": 92.51,
+    "mapY": 81.04
+  },
+  {
+    "id": "greater-noida",
+    "lat": 28.4744,
+    "lng": 77.504,
+    "name": "Greater Noida",
+    "nameKo": "그레이터노이다",
+    "category": "photo-done",
+    "mapX": 71.53,
+    "mapY": 17.82
+  },
+  {
+    "id": "rimba",
+    "lat": 4.9404,
+    "lng": 114.9481,
+    "name": "Rimba",
+    "nameKo": "림바",
+    "category": "photo-done",
+    "mapX": 81.93,
+    "mapY": 44.42
+  },
+  {
+    "id": "manila-area",
+    "lat": 14.6507,
+    "lng": 121.1029,
+    "name": "Manila Area",
+    "nameKo": "마닐라",
+    "category": "photo-done",
+    "mapX": 83.64,
+    "mapY": 33.44
+  },
+  {
+    "id": "bandung",
+    "lat": -6.9175,
+    "lng": 107.6191,
+    "name": "Bandung",
+    "nameKo": "반둥",
+    "category": "photo-done",
+    "mapX": 79.89,
+    "mapY": 57.82
+  },
+  {
+    "id": "buenos-aires",
+    "lat": -34.6037,
+    "lng": -58.3816,
+    "name": "Buenos Aires",
+    "nameKo": "부에노스아이레스",
+    "category": "photo-done",
+    "mapX": 33.78,
+    "mapY": 89.11
+  },
+  {
+    "id": "astana",
+    "lat": 51.1694,
+    "lng": 71.4491,
+    "name": "Astana",
+    "nameKo": "아스타나",
+    "category": "photo-wip",
+    "mapX": 69.85,
+    "mapY": 0
+  },
+  {
+    "id": "bishkek",
+    "lat": 42.8746,
+    "lng": 74.5698,
+    "name": "Bishkek",
+    "nameKo": "비슈케크",
+    "category": "photo-wip",
+    "mapX": 70.71,
+    "mapY": 1.55
+  },
+  {
+    "id": "indonesia-country",
+    "lat": -2,
+    "lng": 118,
+    "name": "Indonesia",
+    "nameKo": "인도네시아",
+    "category": "blushaak-done",
+    "mapX": 82.78,
+    "mapY": 52.26
+  },
+  {
+    "id": "canada-country",
+    "lat": 56,
+    "lng": -106,
+    "name": "Canada",
+    "nameKo": "캐나다",
+    "category": "blushaak-done",
+    "mapX": 20.56,
+    "mapY": 0
+  },
+  {
+    "id": "china-country",
+    "lat": 35,
+    "lng": 105,
+    "name": "China",
+    "nameKo": "중국",
+    "category": "blushaak-done",
+    "mapX": 79.17,
+    "mapY": 10.45
+  },
+  {
+    "id": "japan-country",
+    "lat": 36,
+    "lng": 138,
+    "name": "Japan",
+    "nameKo": "일본",
+    "category": "blushaak-wip",
+    "mapX": 88.33,
+    "mapY": 9.32
+  },
+  {
+    "id": "usa-country",
+    "lat": 38,
+    "lng": -97,
+    "name": "USA",
+    "nameKo": "미국",
+    "category": "blushaak-wip",
+    "mapX": 23.06,
+    "mapY": 7.06
+  },
+  {
+    "id": "vietnam-country",
+    "lat": 14,
+    "lng": 108,
+    "name": "Vietnam",
+    "nameKo": "베트남",
+    "category": "photo-done",
+    "mapX": 80,
+    "mapY": 34.18
+  },
+  {
+    "id": "australia-country",
+    "lat": -25,
+    "lng": 134,
+    "name": "Australia",
+    "nameKo": "호주",
+    "category": "photo-done",
+    "mapX": 87.22,
+    "mapY": 78.25
+  },
+  {
+    "id": "india-country",
+    "lat": 20,
+    "lng": 79,
+    "name": "India",
+    "nameKo": "인도",
+    "category": "photo-done",
+    "mapX": 71.94,
+    "mapY": 27.4
+  },
+  {
+    "id": "brunei-country",
+    "lat": 4.5,
+    "lng": 114.7,
+    "name": "Brunei",
+    "nameKo": "브루나이",
+    "category": "photo-done",
+    "mapX": 81.86,
+    "mapY": 44.91
+  },
+  {
+    "id": "philippines-country",
+    "lat": 13,
+    "lng": 122,
+    "name": "Philippines",
+    "nameKo": "필리핀",
+    "category": "photo-done",
+    "mapX": 83.89,
+    "mapY": 35.31
+  },
+  {
+    "id": "argentina-country",
+    "lat": -34,
+    "lng": -64,
+    "name": "Argentina",
+    "nameKo": "아르헨티나",
+    "category": "photo-done",
+    "mapX": 32.22,
+    "mapY": 88.42
+  },
+  {
+    "id": "kazakhstan-country",
+    "lat": 48,
+    "lng": 68,
+    "name": "Kazakhstan",
+    "nameKo": "카자흐스탄",
+    "category": "photo-wip",
+    "mapX": 68.89,
+    "mapY": 0
+  },
+  {
+    "id": "kyrgyzstan-country",
+    "lat": 41,
+    "lng": 75,
+    "name": "Kyrgyzstan",
+    "nameKo": "키르기스스탄",
+    "category": "photo-wip",
+    "mapX": 70.83,
+    "mapY": 3.67
+  }
+]
