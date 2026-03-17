@@ -52,7 +52,7 @@ export const NAV_ITEMS: NavItem[] = [
   },
   {
     label: "FRANCHISE",
-    href: "/franchise",
+    href: "/brand?tab=franchise",
   },
   {
     label: "STORE",

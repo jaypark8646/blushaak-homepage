@@ -1,16 +1,19 @@
+import { Suspense } from "react";
 import { Footer } from "@/components/layout/Footer";
-import BrandPageClient from "@/components/brand/BrandPageClient";
+import CombinedPageClient from "@/components/combined/CombinedPageClient";
 
 export const metadata = {
-  title: "BRAND | Blu Shaak COFFEE",
+  title: "BRAND & FRANCHISE | Blu Shaak COFFEE",
   description:
-    "블루샥 커피 브랜드 소개 - Vacation in the CITY. 도심 속 작은 바캉스, 스페셜티 커피와 인스토어 베이커리.",
+    "블루샥 커피 브랜드 소개 및 프랜차이즈 창업 안내 - Vacation in the CITY.",
 };
 
 export default function BrandPage() {
   return (
     <>
-      <BrandPageClient />
+      <Suspense fallback={null}>
+        <CombinedPageClient />
+      </Suspense>
       <Footer />
     </>
   );
