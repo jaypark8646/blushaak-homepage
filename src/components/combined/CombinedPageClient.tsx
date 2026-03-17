@@ -47,7 +47,7 @@ export default function CombinedPageClient() {
     <>
       <GNB isScrolled={isScrolled} />
 
-      <main>
+      <main className="pb-20 md:pb-0">
         <BrandHero />
         <BrandIntro />
         <AppStoreCards />

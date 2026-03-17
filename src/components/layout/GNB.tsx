@@ -141,13 +141,7 @@ export function GNB({ isScrolled, variant = "default" }: GNBProps) {
             {renderNavItems(rightItems, "dark", true)}
           </ul>
 
-          {/* Mobile CTA button — 가맹문의 */}
-          <a
-            href="#inquiry"
-            className="md:hidden flex items-center px-3 py-1.5 rounded-full text-[12px] font-semibold tracking-wide bg-blu-500 text-white whitespace-nowrap font-[family-name:var(--font-dm-sans)]"
-          >
-            가맹문의
-          </a>
+          <div className="w-6 md:hidden" />
         </nav>
 
         {/* Light overlay: white text, clipped to dark background regions */}
@@ -178,12 +172,7 @@ export function GNB({ isScrolled, variant = "default" }: GNBProps) {
               {renderNavItems(rightItems, "light", false)}
             </ul>
 
-            {/* Mobile CTA button — light overlay version */}
-            <div
-              className="md:hidden flex items-center px-3 py-1.5 rounded-full text-[12px] font-semibold tracking-wide bg-white text-blu-500 whitespace-nowrap font-[family-name:var(--font-dm-sans)]"
-            >
-              가맹문의
-            </div>
+            <div className="w-6 md:hidden" />
           </nav>
         )}
       </header>
@@ -192,6 +181,21 @@ export function GNB({ isScrolled, variant = "default" }: GNBProps) {
         isOpen={isMobileMenuOpen}
         onClose={() => setIsMobileMenuOpen(false)}
       />
+
+      {/* Floating CTA — 데스크탑: 우측 탭, 모바일: 하단 고정 바 */}
+      <a
+        href="tel:16448067"
+        className={[
+          "fixed z-40 flex items-center justify-center gap-2 bg-blu-500 text-white font-[family-name:var(--font-dm-sans)] shadow-lg transition-opacity",
+          // 데스크탑: 우측 중앙 탭
+          "md:right-0 md:top-1/2 md:-translate-y-1/2 md:flex-col md:px-4 md:py-5 md:rounded-l-xl md:gap-1",
+          // 모바일: 하단 고정 바
+          "max-md:bottom-0 max-md:left-0 max-md:right-0 max-md:w-full max-md:px-6 max-md:py-4 max-md:rounded-none max-md:flex-row",
+        ].join(" ")}
+      >
+        <span className="text-[13px] font-bold tracking-wide leading-tight">가맹문의</span>
+        <span className="md:text-[12px] max-md:text-[14px] font-semibold leading-tight">1644-8067</span>
+      </a>
     </>
   );
 }
