@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
+import Link from "next/link";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { GLOBAL_LOCATIONS } from "@/lib/franchiseData";
 import type { CalibrationCity } from "@/types";
@@ -77,13 +78,56 @@ export default function MasterFranchise() {
           </div>
         </ScrollReveal>
 
-        {/* 3D Globe */}
+        {/* 3D Globe + Family Brand */}
         <ScrollReveal delay={0.15}>
-          <div className="mb-16 md:mb-20 bg-white rounded-3xl py-8 sm:py-12">
-            <Globe3D cities={cities ?? undefined} />
-            <p className="text-center text-gray-400 text-xs mt-4">
-              드래그하여 지구본을 회전할 수 있습니다
-            </p>
+          <div className="mb-16 md:mb-20 bg-white rounded-3xl py-8 sm:py-12 flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+            {/* Globe */}
+            <div className="flex-1 w-full">
+              <Globe3D cities={cities ?? undefined} />
+              <p className="text-center text-gray-400 text-xs mt-4">
+                드래그하여 지구본을 회전할 수 있습니다
+              </p>
+            </div>
+
+            {/* Family Brand Card */}
+            <div className="w-full lg:w-auto lg:max-w-xs shrink-0">
+              <div className="rounded-2xl border border-blu-200 bg-blu-50/30 px-6 py-6 sm:px-8">
+                <div className="flex flex-col gap-4">
+                  <span className="self-start rounded-full bg-blu-500 px-4 py-1.5 text-[12px] font-bold tracking-wider text-white uppercase">
+                    Family Brand
+                  </span>
+                  <p className="text-[15px] text-gray-700 font-medium leading-relaxed">
+                    단디코리아의 또 다른 프랜차이즈{" "}
+                    <Link
+                      href="https://photosignature.co.kr/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-blu-600 underline underline-offset-2 decoration-blu-400 hover:decoration-blu-600 transition-colors"
+                    >
+                      포토시그니처
+                    </Link>
+                    도 함께 만나보세요.
+                  </p>
+                  <Link
+                    href="https://photosignature.co.kr/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 self-start rounded-full bg-blu-500 hover:bg-blu-600 transition-colors px-5 py-2.5 text-[14px] font-bold text-white"
+                  >
+                    바로가기
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <path
+                        d="M4 3H11V10M11 3L3 11"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </ScrollReveal>
 
