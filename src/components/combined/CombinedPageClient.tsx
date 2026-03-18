@@ -7,6 +7,7 @@ import { useScrollPosition } from "@/hooks/useScrollPosition";
 
 // Brand sections
 import BrandHero from "@/components/brand/BrandHero";
+import BrandIntro from "@/components/brand/BrandIntro";
 import CoffeeBeans from "@/components/brand/CoffeeBeans";
 import BrandDirection from "@/components/brand/BrandDirection";
 import CoffeePrinciple from "@/components/brand/CoffeePrinciple";
@@ -48,6 +49,7 @@ export default function CombinedPageClient() {
       <main className="pb-20 md:pb-0">
         <BrandHero />
         <CoffeePrinciple />
+        <BrandIntro />
         <CoffeeBeans />
         <BrandDirection />
         <MenuCarousel />
