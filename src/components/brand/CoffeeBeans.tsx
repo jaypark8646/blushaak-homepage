@@ -116,27 +116,6 @@ export default function CoffeeBeans() {
           </div>
         </ScrollReveal>
 
-        {/* Beyond Specialty — A Champion's Pick */}
-        <ScrollReveal delay={0.3}>
-          <div className="mt-20 md:mt-28 grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-2xl overflow-hidden">
-            {/* Left - Photo */}
-            <div className="relative w-full aspect-[3/4] lg:aspect-auto lg:min-h-[600px]">
-              <img
-                src="/images/brand/champions-pick-1.png"
-                alt="세계 챔피언이 선택한 농장"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            {/* Right - Text on dark background */}
-            <div className="relative w-full aspect-[3/4] lg:aspect-auto lg:min-h-[600px]">
-              <img
-                src="/images/brand/champions-pick-2.jpg"
-                alt="BLU SHAAK SPECIAL BEAN"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-        </ScrollReveal>
       </div>
     </section>
   );
