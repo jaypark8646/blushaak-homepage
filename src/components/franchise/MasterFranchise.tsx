@@ -112,7 +112,7 @@ export default function MasterFranchise() {
                     href="https://photosignature.co.kr/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 self-start rounded-full bg-blu-500 hover:bg-blu-600 transition-colors px-5 py-2.5 text-[14px] font-bold text-white"
+                    className="inline-flex items-center gap-2 self-start rounded-lg border-2 border-blu-500 text-blu-600 hover:bg-blu-500 hover:text-white transition-all duration-200 px-5 py-2 text-[14px] font-bold"
                   >
                     바로가기
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
