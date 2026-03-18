@@ -9,7 +9,6 @@ import BrandIntro from "@/components/brand/BrandIntro";
 import CoffeeBeans from "@/components/brand/CoffeeBeans";
 import BrandDirection from "@/components/brand/BrandDirection";
 import MenuCarousel from "@/components/brand/MenuCarousel";
-import InstagramFeed from "@/components/brand/InstagramFeed";
 import NewsPreview from "@/components/brand/NewsPreview";
 
 export default function BrandPageClient() {
@@ -24,7 +23,6 @@ export default function BrandPageClient() {
         <CoffeeBeans />
         <BrandDirection />
         <MenuCarousel />
-        <InstagramFeed />
         <NewsPreview />
       </main>
       <FloatingSidebar variant="brand" />
