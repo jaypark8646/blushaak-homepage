@@ -1,8 +1,6 @@
 "use client";
 
-import Link from "next/link";
 import ScrollReveal from "@/components/ui/ScrollReveal";
-import Button from "@/components/ui/Button";
 
 export default function BrandIntro() {
   return (
@@ -46,42 +44,6 @@ export default function BrandIntro() {
         </div>
       </div>
 
-      {/* Bottom - Two cards */}
-      <div className="max-w-7xl mx-auto px-4 mt-20 md:mt-28">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-          {/* Brand Story Card */}
-          <ScrollReveal delay={0.1}>
-            <Link href="/brand#story" className="block">
-              <div className="group relative overflow-hidden rounded-2xl bg-[#1a7abf] aspect-[16/9] flex flex-col items-center justify-center text-center p-8 transition-all duration-300 hover:bg-[#1568a5] cursor-pointer">
-                <h3 className="text-white text-2xl md:text-3xl font-bold font-[family-name:var(--font-dm-sans)] tracking-wide">
-                  BRAND STORY
-                </h3>
-                <div className="mt-6">
-                  <Button variant="outline" size="sm" className="!border-white !text-white hover:!bg-white hover:!text-dark-800">
-                    MORE
-                  </Button>
-                </div>
-              </div>
-            </Link>
-          </ScrollReveal>
-
-          {/* Brand Vision Card */}
-          <ScrollReveal delay={0.25}>
-            <Link href="/brand#vision" className="block">
-              <div className="group relative overflow-hidden rounded-2xl bg-[#2a2a2a] aspect-[16/9] flex flex-col items-center justify-center text-center p-8 transition-all duration-300 hover:bg-[#1a1a1a] cursor-pointer">
-                <h3 className="text-white text-2xl md:text-3xl font-bold font-[family-name:var(--font-dm-sans)] tracking-wide">
-                  BRAND VISION
-                </h3>
-                <div className="mt-6">
-                  <Button variant="outline" size="sm" className="!border-white !text-white hover:!bg-white hover:!text-dark-800">
-                    MORE
-                  </Button>
-                </div>
-              </div>
-            </Link>
-          </ScrollReveal>
-        </div>
-      </div>
     </section>
   );
 }
