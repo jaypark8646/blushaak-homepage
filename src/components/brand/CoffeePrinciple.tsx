@@ -108,8 +108,8 @@ function CumulativeChart({ isInView }: { isInView: boolean }) {
         {/* Area fill */}
         <motion.polygon
           points={`${coords[0].x},${h - pad} ${polyline} ${coords[coords.length - 1].x},${h - pad}`}
-          fill="#1A73B5"
-          fillOpacity={0.12}
+          fill="#ffffff"
+          fillOpacity={0.15}
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
@@ -118,7 +118,7 @@ function CumulativeChart({ isInView }: { isInView: boolean }) {
         <motion.polyline
           points={polyline}
           fill="none"
-          stroke="#1A73B5"
+          stroke="#ffffff"
           strokeWidth="2.5"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -131,17 +131,17 @@ function CumulativeChart({ isInView }: { isInView: boolean }) {
           cx={coords[coords.length - 1].x}
           cy={coords[coords.length - 1].y}
           r="5"
-          fill="#1A73B5"
+          fill="#ffffff"
           initial={{ scale: 0 }}
           animate={isInView ? { scale: 1 } : { scale: 0 }}
           transition={{ duration: 0.3, delay: 1.5 }}
           style={{ transformOrigin: `${coords[coords.length - 1].x}px ${coords[coords.length - 1].y}px` }}
         />
         {/* Year labels: first and last */}
-        <text x={coords[0].x} y={h + 14} textAnchor="middle" fill="#9CA3AF" fontSize="9">
+        <text x={coords[0].x} y={h + 14} textAnchor="middle" fill="#B8DEF5" fontSize="9">
           {labels[0]}
         </text>
-        <text x={coords[coords.length - 1].x} y={h + 14} textAnchor="middle" fill="#9CA3AF" fontSize="9">
+        <text x={coords[coords.length - 1].x} y={h + 14} textAnchor="middle" fill="#B8DEF5" fontSize="9">
           {labels[labels.length - 1]}
         </text>
       </svg>
@@ -201,17 +201,17 @@ export default function CoffeePrinciple() {
 
           {/* Cumulative */}
           <ScrollReveal delay={0.2}>
-            <div className="bg-gradient-to-br from-dark-800 to-dark-900 rounded-3xl p-8 border border-dark-700">
-              <p className="text-sm font-semibold text-blu-300 tracking-widest uppercase mb-3">
+            <div className="bg-gradient-to-br from-blu-500 to-blu-700 rounded-3xl p-8 border border-blu-400">
+              <p className="text-sm font-semibold text-blu-100 tracking-widest uppercase mb-3">
                 Cumulative Sales
               </p>
               <div className="flex items-end gap-2 mb-6">
                 <span className="text-5xl sm:text-6xl font-extrabold text-white leading-none tabular-nums">
                   <AnimatedNumber target={3200} suffix="만+" duration={2200} isInView={isInView} />
                 </span>
-                <span className="text-lg sm:text-xl font-bold text-gray-400 mb-1">잔</span>
+                <span className="text-lg sm:text-xl font-bold text-blu-200 mb-1">잔</span>
               </div>
-              <p className="text-sm text-gray-400 mb-6">블루샥 커피 누적 판매량</p>
+              <p className="text-sm text-blu-100 mb-6">블루샥 커피 누적 판매량</p>
               <CumulativeChart isInView={isInView} />
             </div>
           </ScrollReveal>
