@@ -85,6 +85,7 @@ export const FOOTER_LINKS = [
 export const BRAND_SIDEBAR_ITEMS = [
   { label: "가맹문의", sublabel: "1644-8067", href: "tel:1644-8067", icon: "phone" },
   { label: "블루샥 앱 주문", href: "#", icon: "app" },
+  { label: "가까운 매장찾기", href: "/store", icon: "map" },
   { label: "문의/접수", href: "/news?tab=support", icon: "inquiry" },
   { label: "이벤트", href: "/news?tab=event", icon: "event" },
 ];
