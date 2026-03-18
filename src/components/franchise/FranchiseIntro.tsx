@@ -27,7 +27,7 @@ export default function FranchiseIntro() {
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(160deg, #061B31 0%, #0B3152 30%, #104773 60%, #155D94 100%)",
+            "linear-gradient(160deg, #4495D1 0%, #2367A6 45%, #0D4E8B 100%)",
         }}
       />
 
@@ -46,7 +46,7 @@ export default function FranchiseIntro() {
         className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full opacity-10"
         style={{
           background:
-            "radial-gradient(circle, #1A73B5 0%, transparent 70%)",
+            "radial-gradient(circle, #4495D1 0%, transparent 70%)",
         }}
       />
 
