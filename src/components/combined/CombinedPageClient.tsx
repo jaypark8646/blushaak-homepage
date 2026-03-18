@@ -11,7 +11,6 @@ import BrandIntro from "@/components/brand/BrandIntro";
 import CoffeeBeans from "@/components/brand/CoffeeBeans";
 import BrandDirection from "@/components/brand/BrandDirection";
 import MenuCarousel from "@/components/brand/MenuCarousel";
-import InstagramFeed from "@/components/brand/InstagramFeed";
 import NewsPreview from "@/components/brand/NewsPreview";
 
 // Franchise sections
@@ -52,7 +51,6 @@ export default function CombinedPageClient() {
         <CoffeeBeans />
         <BrandDirection />
         <MenuCarousel />
-        <InstagramFeed />
         <NewsPreview />
 
         <div ref={franchiseRef}>
