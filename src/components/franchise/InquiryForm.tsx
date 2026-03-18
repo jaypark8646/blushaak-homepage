@@ -354,18 +354,18 @@ export default function InquiryForm() {
 
         {/* Family Brand */}
         <ScrollReveal delay={0.2}>
-          <div className="mt-10 rounded-2xl border border-blu-100 bg-white px-6 py-5 sm:px-8">
+          <div className="mt-10 rounded-2xl border border-blu-200 bg-blu-50/30 px-6 py-6 sm:px-8">
             <div className="flex flex-col items-center gap-3 sm:flex-row sm:gap-5">
-              <span className="shrink-0 rounded-full bg-blu-50 px-3 py-1 text-[11px] font-bold tracking-wider text-blu-500 uppercase">
+              <span className="shrink-0 rounded-full bg-blu-500 px-4 py-1.5 text-[12px] font-bold tracking-wider text-white uppercase">
                 Family Brand
               </span>
-              <p className="text-[13px] text-gray-500 text-center sm:text-left">
+              <p className="text-[15px] text-gray-700 font-medium text-center sm:text-left">
                 단디코리아의 또 다른 프랜차이즈{" "}
                 <Link
                   href="https://photosignature.co.kr/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-semibold text-dark-800 underline underline-offset-2 decoration-blu-200 hover:decoration-blu-500 transition-colors"
+                  className="font-bold text-blu-600 underline underline-offset-2 decoration-blu-400 hover:decoration-blu-600 transition-colors"
                 >
                   포토시그니처
                 </Link>
@@ -375,7 +375,7 @@ export default function InquiryForm() {
                 href="https://photosignature.co.kr/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="shrink-0 inline-flex items-center gap-1 text-[13px] font-medium text-blu-500 hover:text-blu-600 transition-colors"
+                className="shrink-0 inline-flex items-center gap-1 text-[14px] font-bold text-blu-600 hover:text-blu-700 transition-colors"
               >
                 바로가기
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
