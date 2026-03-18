@@ -26,7 +26,6 @@ function AnimatedNumber({
     const step = (now: number) => {
       const elapsed = now - startTime;
       const progress = Math.min(elapsed / duration, 1);
-      // ease out cubic
       const eased = 1 - Math.pow(1 - progress, 3);
       setCurrent(Math.floor(eased * target));
       if (progress < 1) requestAnimationFrame(step);
@@ -45,7 +44,6 @@ function AnimatedNumber({
 
 /* ──────────── Daily Sales Bar ──────────── */
 function DailySalesChart({ isInView }: { isInView: boolean }) {
-  // 일평균 커피 판매량 (잔) — 막대 시각화
   const days = ["월", "화", "수", "목", "금", "토", "일"];
   const values = [420, 390, 445, 410, 510, 620, 580];
   const maxVal = Math.max(...values);
@@ -71,7 +69,7 @@ function DailySalesChart({ isInView }: { isInView: boolean }) {
         ))}
       </div>
       <div className="flex gap-2 mt-2">
-        {days.map((day, i) => (
+        {days.map((day) => (
           <p key={day} className="flex-1 text-center text-[10px] text-gray-400">
             {day}
           </p>
@@ -105,7 +103,6 @@ function CumulativeChart({ isInView }: { isInView: boolean }) {
         className="overflow-visible"
         preserveAspectRatio="none"
       >
-        {/* Area fill */}
         <motion.polygon
           points={`${coords[0].x},${h - pad} ${polyline} ${coords[coords.length - 1].x},${h - pad}`}
           fill="#ffffff"
@@ -114,7 +111,6 @@ function CumulativeChart({ isInView }: { isInView: boolean }) {
           animate={isInView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
         />
-        {/* Line */}
         <motion.polyline
           points={polyline}
           fill="none"
@@ -126,7 +122,6 @@ function CumulativeChart({ isInView }: { isInView: boolean }) {
           animate={isInView ? { pathLength: 1, opacity: 1 } : { pathLength: 0, opacity: 0 }}
           transition={{ duration: 1.4, delay: 0.2, ease: "easeOut" }}
         />
-        {/* Last dot */}
         <motion.circle
           cx={coords[coords.length - 1].x}
           cy={coords[coords.length - 1].y}
@@ -137,7 +132,6 @@ function CumulativeChart({ isInView }: { isInView: boolean }) {
           transition={{ duration: 0.3, delay: 1.5 }}
           style={{ transformOrigin: `${coords[coords.length - 1].x}px ${coords[coords.length - 1].y}px` }}
         />
-        {/* Year labels: first and last */}
         <text x={coords[0].x} y={h + 14} textAnchor="middle" fill="#B8DEF5" fontSize="9">
           {labels[0]}
         </text>
@@ -149,6 +143,43 @@ function CumulativeChart({ isInView }: { isInView: boolean }) {
   );
 }
 
+/* ──────────── Key Stat Item ──────────── */
+function KeyStat({
+  value,
+  unit,
+  label,
+  isInView,
+  animTarget,
+  animSuffix,
+  delay,
+}: {
+  value?: string;
+  unit?: string;
+  label: string;
+  isInView: boolean;
+  animTarget?: number;
+  animSuffix?: string;
+  delay?: number;
+}) {
+  return (
+    <ScrollReveal delay={delay ?? 0}>
+      <div className="text-center py-8 px-4 border-r border-blu-100 last:border-r-0">
+        <div className="flex items-end justify-center gap-1 mb-2">
+          <span className="text-4xl sm:text-5xl font-extrabold text-dark-800 leading-none tabular-nums">
+            {animTarget !== undefined ? (
+              <AnimatedNumber target={animTarget} suffix={animSuffix ?? ""} duration={1800} isInView={isInView} />
+            ) : (
+              value
+            )}
+          </span>
+          {unit && <span className="text-base font-semibold text-gray-400 mb-1">{unit}</span>}
+        </div>
+        <p className="text-sm text-gray-500">{label}</p>
+      </div>
+    </ScrollReveal>
+  );
+}
+
 /* ──────────── Main Component ──────────── */
 export default function CoffeePrinciple() {
   const ref = useRef<HTMLDivElement>(null);
@@ -157,6 +188,7 @@ export default function CoffeePrinciple() {
   return (
     <section ref={ref} className="py-24 md:py-32 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
+
         {/* Header */}
         <ScrollReveal>
           <div className="text-center mb-16 md:mb-20">
@@ -180,21 +212,50 @@ export default function CoffeePrinciple() {
           </div>
         </ScrollReveal>
 
+        {/* Key Stats Bar — 3 big numbers */}
+        <ScrollReveal delay={0.05}>
+          <div className="grid grid-cols-3 divide-x divide-blu-100 bg-blu-50 rounded-3xl mb-12 overflow-hidden">
+            <KeyStat
+              animTarget={76}
+              animSuffix="%"
+              label="전체 판매 중 커피 비율"
+              isInView={isInView}
+              delay={0.05}
+            />
+            <KeyStat
+              animTarget={848}
+              animSuffix="만 잔"
+              label="연간 커피 판매량"
+              isInView={isInView}
+              delay={0.1}
+            />
+            <KeyStat
+              animTarget={70}
+              animSuffix="%"
+              label="커피류 평균 마진율"
+              isInView={isInView}
+              delay={0.15}
+            />
+          </div>
+        </ScrollReveal>
+
         {/* Stats + Charts */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+
           {/* Daily avg */}
           <ScrollReveal delay={0.1}>
             <div className="bg-gradient-to-br from-blu-50 to-white rounded-3xl p-8 border border-blu-100">
               <p className="text-sm font-semibold text-blu-500 tracking-widest uppercase mb-3">
                 Daily Average
               </p>
-              <div className="flex items-end gap-2 mb-6">
+              <div className="flex items-end gap-2 mb-1">
                 <span className="text-5xl sm:text-6xl font-extrabold text-dark-800 leading-none tabular-nums">
-                  <AnimatedNumber target={500} suffix="+" duration={1800} isInView={isInView} />
+                  <AnimatedNumber target={23000} suffix="" duration={1800} isInView={isInView} />
                 </span>
                 <span className="text-lg sm:text-xl font-bold text-gray-400 mb-1">잔</span>
               </div>
-              <p className="text-sm text-gray-500 mb-6">매장당 커피 일평균 판매량</p>
+              <p className="text-sm text-gray-500 mb-1">하루 전체 커피 판매량</p>
+              <p className="text-xs text-blu-400 font-medium mb-6">매장별 일 평균 108잔</p>
               <DailySalesChart isInView={isInView} />
             </div>
           </ScrollReveal>
@@ -220,12 +281,16 @@ export default function CoffeePrinciple() {
         {/* Bottom emphasis */}
         <ScrollReveal delay={0.15}>
           <div className="mt-14 text-center">
-            <p className="text-xl sm:text-2xl md:text-3xl font-extrabold text-dark-800">
-              커피로 시작해{" "}
-              <span className="text-blu-500">커피로 증명한</span> 브랜드
+            <p className="text-xl sm:text-2xl md:text-3xl font-extrabold text-dark-800 leading-snug">
+              하루{" "}
+              <span className="text-blu-500">2만 3천 잔</span>,{" "}
+              전체 판매의{" "}
+              <span className="text-blu-500">76%</span>
+              가 커피입니다.
             </p>
           </div>
         </ScrollReveal>
+
       </div>
     </section>
   );
