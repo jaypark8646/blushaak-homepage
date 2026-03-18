@@ -173,7 +173,7 @@ function BarChart() {
   return (
     <div ref={ref}>
       <h4 className="text-base sm:text-lg font-bold text-dark-800 mb-1">
-        카페 프랜차이즈 연평균 매출 비교{" "}
+        카페프랜차이즈별 원가율 비교{" "}
         <span className="text-xs font-normal text-gray-400">(%)</span>
       </h4>
       <p className="text-xs text-gray-400 mb-6">낮을수록 효율적인 수익 구조</p>
