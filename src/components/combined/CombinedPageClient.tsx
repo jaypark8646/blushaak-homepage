@@ -55,7 +55,7 @@ export default function CombinedPageClient() {
         <MenuCarousel />
         <NewsPreview />
 
-        <div ref={franchiseRef}>
+        <div ref={franchiseRef} id="franchise">
           <FranchiseIntro />
         </div>
         <WhyBluShaak />
@@ -68,7 +68,9 @@ export default function CombinedPageClient() {
         <FranchiseHistory />
         <RevenueAnalysis />
         <OpeningProcedure />
-        <CostTable />
+        <div id="cost">
+          <CostTable />
+        </div>
         <div id="inquiry">
           <InquiryForm />
         </div>

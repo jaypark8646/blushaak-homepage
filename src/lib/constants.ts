@@ -35,6 +35,9 @@ export const NAV_ITEMS: NavItem[] = [
       { label: "Brand Vision", href: "/brand#vision" },
       { label: "Store Locator", href: "/store" },
       { label: "Head Office", href: "/brand#office" },
+      { label: "프랜차이즈 소개", href: "/brand#franchise" },
+      { label: "창업 비용", href: "/brand#cost" },
+      { label: "창업 상담 문의", href: "/brand#inquiry" },
     ],
   },
   {
@@ -49,10 +52,6 @@ export const NAV_ITEMS: NavItem[] = [
       { label: "Ice-cream", href: "/menu?category=ice-cream" },
       { label: "MD", href: "/menu?category=md" },
     ],
-  },
-  {
-    label: "FRANCHISE",
-    href: "/brand#franchise",
   },
   {
     label: "STORE",
