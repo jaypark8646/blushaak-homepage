@@ -282,7 +282,7 @@ export default function RevenueAnalysis() {
             <p className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-dark-800 leading-snug">
               어떤 브랜드를 선택하느냐에 따라
               <br />
-              순수익은{" "}
+              순이익은{" "}
               <span className="text-blu-500">2배 차이</span>
             </p>
           </div>
