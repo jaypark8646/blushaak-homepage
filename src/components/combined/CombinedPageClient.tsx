@@ -10,6 +10,7 @@ import BrandHero from "@/components/brand/BrandHero";
 import BrandIntro from "@/components/brand/BrandIntro";
 import CoffeeBeans from "@/components/brand/CoffeeBeans";
 import BrandDirection from "@/components/brand/BrandDirection";
+import CoffeePrinciple from "@/components/brand/CoffeePrinciple";
 import MenuCarousel from "@/components/brand/MenuCarousel";
 import NewsPreview from "@/components/brand/NewsPreview";
 
@@ -48,6 +49,7 @@ export default function CombinedPageClient() {
       <main className="pb-20 md:pb-0">
         <BrandHero />
         <BrandIntro />
+        <CoffeePrinciple />
         <CoffeeBeans />
         <BrandDirection />
         <MenuCarousel />

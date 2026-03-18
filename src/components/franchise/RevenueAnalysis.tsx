@@ -156,13 +156,12 @@ function PieChart() {
   );
 }
 
-/* ──────────── Bar Chart ──────────── */
+/* ──────────── Bar Chart (Horizontal) ──────────── */
 const BAR_DATA = [
-  { label: "블루샥", value: 8500, color: "#1A73B5", highlight: true },
-  { label: "A 브랜드", value: 5200, color: "#B8DEF5" },
-  { label: "B 브랜드", value: 4800, color: "#B8DEF5" },
-  { label: "C 브랜드", value: 4200, color: "#B8DEF5" },
-  { label: "D 브랜드", value: 3800, color: "#B8DEF5" },
+  { label: "블루샥", value: 28, color: "#1A73B5", highlight: true },
+  { label: "A 브랜드", value: 38, color: "#B8DEF5" },
+  { label: "B 브랜드", value: 42, color: "#B8DEF5" },
+  { label: "C 브랜드", value: 45, color: "#B8DEF5" },
 ];
 
 function BarChart() {
@@ -170,58 +169,49 @@ function BarChart() {
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   const maxValue = Math.max(...BAR_DATA.map((d) => d.value));
-  const chartHeight = 220;
 
   return (
     <div ref={ref}>
-      <h4 className="text-base sm:text-lg font-bold text-dark-800 mb-6">
+      <h4 className="text-base sm:text-lg font-bold text-dark-800 mb-1">
         카페 프랜차이즈 연평균 매출 비교{" "}
-        <span className="text-xs font-normal text-gray-400">(만원)</span>
+        <span className="text-xs font-normal text-gray-400">(%)</span>
       </h4>
-      <div className="flex items-end gap-4 sm:gap-6">
-        {BAR_DATA.map((bar, index) => {
-          const barHeight = (bar.value / maxValue) * chartHeight;
-          return (
-            <div key={bar.label} className="flex flex-col items-center flex-1">
-              {/* Value */}
-              <motion.span
-                initial={{ opacity: 0 }}
-                animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-                transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
-                className={`text-xs sm:text-sm font-bold mb-2 ${
-                  bar.highlight ? "text-blu-500" : "text-gray-400"
-                }`}
-              >
-                {bar.value.toLocaleString()}
-              </motion.span>
+      <p className="text-xs text-gray-400 mb-6">낮을수록 효율적인 수익 구조</p>
+      <div className="flex flex-col gap-4">
+        {BAR_DATA.map((bar, index) => (
+          <div key={bar.label} className="flex items-center gap-3">
+            {/* Label */}
+            <span
+              className={`w-16 sm:w-20 text-xs sm:text-sm flex-shrink-0 text-right ${
+                bar.highlight ? "font-bold text-blu-500" : "text-gray-400 font-medium"
+              }`}
+            >
+              {bar.label}
+            </span>
 
-              {/* Bar */}
+            {/* Bar track */}
+            <div className="flex-1 h-8 sm:h-9 bg-gray-100 rounded-lg overflow-hidden">
               <motion.div
-                initial={{ height: 0 }}
-                animate={isInView ? { height: barHeight } : { height: 0 }}
-                transition={{
-                  duration: 0.7,
-                  delay: 0.2 + index * 0.1,
-                  ease: "easeOut",
-                }}
-                className={`w-full rounded-t-lg ${bar.highlight ? "shadow-lg" : ""}`}
-                style={{
-                  backgroundColor: bar.color,
-                  minWidth: "36px",
-                }}
-              />
-
-              {/* Label */}
-              <p
-                className={`mt-3 text-xs sm:text-sm text-center ${
-                  bar.highlight ? "font-bold text-blu-500" : "text-gray-400"
-                }`}
+                initial={{ width: 0 }}
+                animate={isInView ? { width: `${(bar.value / maxValue) * 100}%` } : { width: 0 }}
+                transition={{ duration: 0.7, delay: 0.15 + index * 0.1, ease: "easeOut" }}
+                className={`h-full rounded-lg flex items-center px-3 ${bar.highlight ? "shadow-md" : ""}`}
+                style={{ backgroundColor: bar.color }}
               >
-                {bar.label}
-              </p>
+                <motion.span
+                  initial={{ opacity: 0 }}
+                  animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+                  transition={{ duration: 0.3, delay: 0.6 + index * 0.1 }}
+                  className={`text-xs sm:text-sm font-bold whitespace-nowrap ${
+                    bar.highlight ? "text-white" : "text-blu-700"
+                  }`}
+                >
+                  {bar.value}%
+                </motion.span>
+              </motion.div>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
     </div>
   );
