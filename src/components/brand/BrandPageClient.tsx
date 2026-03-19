@@ -20,8 +20,8 @@ export default function BrandPageClient() {
       <GNB isScrolled={isScrolled} />
       <main>
         <BrandHero />
-        <CoffeePrinciple />
         <BrandIntro />
+        <CoffeePrinciple />
         <CoffeeBeans />
         <BrandDirection />
         <MenuCarousel />
