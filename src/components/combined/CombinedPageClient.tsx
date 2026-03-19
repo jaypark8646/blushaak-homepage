@@ -48,8 +48,8 @@ export default function CombinedPageClient() {
 
       <main className="pb-20 md:pb-0">
         <BrandHero />
-        <CoffeePrinciple />
         <BrandIntro />
+        <CoffeePrinciple />
         <CoffeeBeans />
         <BrandDirection />
         <MenuCarousel />
