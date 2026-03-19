@@ -6,7 +6,6 @@ import { useScrollPosition } from "@/hooks/useScrollPosition";
 
 import BrandHero from "@/components/brand/BrandHero";
 import CoffeePrinciple from "@/components/brand/CoffeePrinciple";
-import BrandIntro from "@/components/brand/BrandIntro";
 import CoffeeBeans from "@/components/brand/CoffeeBeans";
 import BrandDirection from "@/components/brand/BrandDirection";
 import MenuCarousel from "@/components/brand/MenuCarousel";
@@ -20,7 +19,6 @@ export default function BrandPageClient() {
       <GNB isScrolled={isScrolled} />
       <main>
         <BrandHero />
-        <BrandIntro />
         <CoffeePrinciple />
         <CoffeeBeans />
         <BrandDirection />
