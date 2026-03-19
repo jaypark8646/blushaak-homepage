@@ -3,6 +3,9 @@
 import { useRef, useState, useEffect } from "react";
 import { GNB } from "@/components/layout/GNB";
 import { FloatingSidebar } from "@/components/layout/FloatingSidebar";
+import { ScrollProgressBar } from "@/components/layout/ScrollProgressBar";
+import { SectionJumpButtons } from "@/components/layout/SectionJumpButtons";
+import { BrandFranchiseDivider } from "@/components/combined/BrandFranchiseDivider";
 import { useScrollPosition } from "@/hooks/useScrollPosition";
 
 // Brand sections
@@ -44,6 +47,7 @@ export default function CombinedPageClient() {
 
   return (
     <>
+      <ScrollProgressBar currentSection={sidebarVariant} />
       <GNB isScrolled={isScrolled} />
 
       <main className="pb-20 md:pb-0">
@@ -54,6 +58,8 @@ export default function CombinedPageClient() {
         <BrandDirection />
         <MenuCarousel />
         <NewsPreview />
+
+        <BrandFranchiseDivider />
 
         <div ref={franchiseRef} id="franchise">
           <FranchiseIntro />
@@ -77,6 +83,7 @@ export default function CombinedPageClient() {
       </main>
 
       <FloatingSidebar variant={sidebarVariant} />
+      <SectionJumpButtons currentSection={sidebarVariant} />
     </>
   );
 }
