@@ -40,7 +40,7 @@ export default function BrandIntro() {
         <motion.img
           src="/images/brand/coffee-cup.jpg"
           alt="Blu Shaak coffee cup"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-contain object-center"
           initial={{ opacity: 0, scale: 1.08 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: "-100px" }}
