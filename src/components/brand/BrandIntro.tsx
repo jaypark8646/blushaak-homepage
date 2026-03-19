@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function BrandIntro() {
@@ -34,15 +35,17 @@ export default function BrandIntro() {
         </ScrollReveal>
       </div>
 
-      {/* Right side - Static image */}
-      <div className="relative w-full h-[60vh] md:w-1/2 md:h-full bg-warm-50 flex items-center justify-center">
-        <ScrollReveal direction="right">
-          <img
-            src="/images/brand/coffee-cup.jpg"
-            alt="Blu Shaak coffee cup"
-            className="absolute inset-0 w-full h-full object-contain"
-          />
-        </ScrollReveal>
+      {/* Right side - Image with scale zoom reveal */}
+      <div className="relative w-full h-[60vh] md:w-1/2 md:h-full overflow-hidden bg-warm-50">
+        <motion.img
+          src="/images/brand/coffee-cup.jpg"
+          alt="Blu Shaak coffee cup"
+          className="absolute inset-0 w-full h-full object-cover"
+          initial={{ opacity: 0, scale: 1.08 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.9, ease: "easeInOut" }}
+        />
       </div>
     </section>
   );
