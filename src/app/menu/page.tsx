@@ -1,26 +1,37 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useCallback } from "react";
 import { useSearchParams } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { GNB, Footer, FloatingSidebar } from "@/components/layout";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import CategoryTabs from "@/components/menu/CategoryTabs";
 import MenuCard from "@/components/menu/MenuCard";
+import NutritionModal from "@/components/menu/NutritionModal";
 import { MENU_ITEMS, MENU_CATEGORIES } from "@/lib/menuData";
 import { useScrollPosition } from "@/hooks/useScrollPosition";
 import { Suspense } from "react";
+import { MenuItem } from "@/types";
 
 function MenuPageContent() {
   const searchParams = useSearchParams();
   const initialCategory = searchParams.get("category") || "all";
   const [activeCategory, setActiveCategory] = useState(initialCategory);
+  const [selectedItem, setSelectedItem] = useState<MenuItem | null>(null);
   const { isScrolled } = useScrollPosition();
 
   const filteredItems = useMemo(() => {
     if (activeCategory === "all") return MENU_ITEMS;
     return MENU_ITEMS.filter((item) => item.category === activeCategory);
   }, [activeCategory]);
+
+  const handleCardClick = useCallback((item: MenuItem) => {
+    setSelectedItem(item);
+  }, []);
+
+  const handleModalClose = useCallback(() => {
+    setSelectedItem(null);
+  }, []);
 
   return (
     <>
@@ -63,7 +74,7 @@ function MenuPageContent() {
           >
             <AnimatePresence mode="popLayout">
               {filteredItems.map((item) => (
-                <MenuCard key={item.id} item={item} />
+                <MenuCard key={item.id} item={item} onClick={handleCardClick} />
               ))}
             </AnimatePresence>
           </motion.div>
@@ -79,6 +90,7 @@ function MenuPageContent() {
         </section>
       </main>
 
+      <NutritionModal item={selectedItem} onClose={handleModalClose} />
       <FloatingSidebar variant="brand" />
       <Footer />
     </>

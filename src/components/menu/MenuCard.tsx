@@ -5,9 +5,10 @@ import { MenuItem } from "@/types";
 
 interface MenuCardProps {
   item: MenuItem;
+  onClick?: (item: MenuItem) => void;
 }
 
-export default function MenuCard({ item }: MenuCardProps) {
+export default function MenuCard({ item, onClick }: MenuCardProps) {
   return (
     <motion.div
       layout
@@ -16,6 +17,7 @@ export default function MenuCard({ item }: MenuCardProps) {
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ duration: 0.3, ease: "easeOut" }}
       className="group cursor-pointer"
+      onClick={() => onClick?.(item)}
     >
       <div className="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-black/5 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
         {/* Image area */}
@@ -39,6 +41,13 @@ export default function MenuCard({ item }: MenuCardProps) {
               </span>
             )}
           </div>
+
+          {/* Nutrition indicator */}
+          {item.nutrition && (
+            <div className="absolute bottom-3 right-3 rounded-full bg-white/90 backdrop-blur-sm px-2 py-0.5 text-[10px] font-semibold text-blu-600 shadow-sm">
+              영양정보
+            </div>
+          )}
         </div>
 
         {/* Info area */}
