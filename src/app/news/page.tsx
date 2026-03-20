@@ -21,7 +21,10 @@ function NewsPageContent() {
   const { isScrolled } = useScrollPosition();
 
   const filteredNews = useMemo(
-    () => SAMPLE_NEWS.filter((item) => item.category === activeTab),
+    () =>
+      SAMPLE_NEWS.filter((item) => item.category === activeTab).sort(
+        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+      ),
     [activeTab]
   );
 
