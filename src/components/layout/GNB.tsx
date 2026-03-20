@@ -36,8 +36,8 @@ export function GNB({ isScrolled, variant = "default" }: GNBProps) {
     }, 3500);
   }, [ctaExpanded]);
 
-  const leftItems = NAV_ITEMS.slice(0, 3);
-  const rightItems = NAV_ITEMS.slice(3);
+  const leftItems = NAV_ITEMS.slice(0, 2);
+  const rightItems = NAV_ITEMS.slice(2);
 
   const handleMouseEnter = useCallback((label: string) => {
     setActiveDropdown(label);
