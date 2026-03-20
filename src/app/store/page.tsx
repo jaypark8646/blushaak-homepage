@@ -7,6 +7,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 import Button from "@/components/ui/Button";
 import { useScrollPosition } from "@/hooks/useScrollPosition";
 import { Store } from "@/types";
+import { STORES } from "@/data/stores";
 
 const StoreMap = dynamic(() => import("@/components/store/StoreMap"), {
   ssr: false,
@@ -20,43 +21,12 @@ const StoreMap = dynamic(() => import("@/components/store/StoreMap"), {
   ),
 });
 
-const SAMPLE_STORES: Store[] = [
-  {
-    id: "gangnam",
-    name: "블루샥 강남점",
-    address: "서울특별시 강남구 테헤란로 152, 1층",
-    phone: "02-1234-5678",
-    lat: 37.5005,
-    lng: 127.0365,
-    hours: "매일 07:00 - 22:00",
-  },
-  {
-    id: "haeundae",
-    name: "블루샥 해운대점",
-    address: "부산광역시 해운대구 해운대해변로 264, 1층",
-    phone: "051-987-6543",
-    lat: 35.1587,
-    lng: 129.1604,
-    hours: "매일 08:00 - 23:00",
-    hasDriveThru: true,
-  },
-  {
-    id: "hongdae",
-    name: "블루샥 홍대점",
-    address: "서울특별시 마포구 양화로 188, 1층",
-    phone: "02-5678-1234",
-    lat: 37.5563,
-    lng: 126.9237,
-    hours: "매일 07:30 - 22:30",
-  },
-];
-
 export default function StorePage() {
   const { isScrolled } = useScrollPosition();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedStoreId, setSelectedStoreId] = useState<string | undefined>();
 
-  const filteredStores = SAMPLE_STORES.filter(
+  const filteredStores = STORES.filter(
     (store) =>
       store.name.includes(searchQuery) || store.address.includes(searchQuery)
   );

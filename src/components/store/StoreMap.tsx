@@ -31,8 +31,8 @@ interface StoreMapProps {
   onStoreSelect?: (storeId: string) => void;
 }
 
-const DEFAULT_CENTER = { lat: 36.5, lng: 127.8 };
-const DEFAULT_ZOOM = 7;
+const DEFAULT_CENTER = { lat: 37.55, lng: 127.1 };
+const DEFAULT_ZOOM = 10;
 
 export default function StoreMap({ stores, selectedStoreId, onStoreSelect }: StoreMapProps) {
   const { isLoaded, loadError } = useJsApiLoader({
@@ -44,12 +44,7 @@ export default function StoreMap({ stores, selectedStoreId, onStoreSelect }: Sto
 
   const onLoad = useCallback((map: google.maps.Map) => {
     setMap(map);
-    if (stores.length > 0) {
-      const bounds = new google.maps.LatLngBounds();
-      stores.forEach((store) => bounds.extend({ lat: store.lat, lng: store.lng }));
-      map.fitBounds(bounds, 80);
-    }
-  }, [stores]);
+  }, []);
 
   const onUnmount = useCallback(() => {
     setMap(null);
