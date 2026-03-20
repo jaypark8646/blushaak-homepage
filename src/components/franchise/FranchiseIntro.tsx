@@ -104,7 +104,7 @@ export default function FranchiseIntro() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.55 }}
-            className="text-base sm:text-lg text-white/70 leading-relaxed"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/70 leading-relaxed"
           >
             프랜차이즈는{" "}
             <motion.span
@@ -132,7 +132,7 @@ export default function FranchiseIntro() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.65, delay: 0.75, ease: "easeOut" }}
-            className="text-base sm:text-lg text-white/70 leading-relaxed"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/70 leading-relaxed"
           >
             블루샥은 이 두 가지 난제를{" "}
             <motion.span
@@ -153,7 +153,7 @@ export default function FranchiseIntro() {
           transition={{ duration: 0.9, delay: 1.0 }}
           className="mt-6"
         >
-          <p className="text-sm sm:text-base text-white/50 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/50 leading-relaxed max-w-2xl mx-auto">
             체계적인 가맹 시스템 위에 개인 스페셜티 카페 이상의 원재료 품질을 담아낸
             블루샥만의 새로운 기준을 경험해 보세요.
           </p>
