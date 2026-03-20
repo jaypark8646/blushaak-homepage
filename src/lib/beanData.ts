@@ -22,7 +22,7 @@ export const COFFEE_BEANS: CoffeeBean[] = [
     blend: "Colombia",
     roastLevel: "중약배전",
     agtron: "Agtron #58",
-    flavors: ["체리", "자몽", "오렌지", "브라운슈가"],
+    flavors: ["체리", "라일락", "오렌지", "캠벨포도", "머스크"],
     description:
       "화사한 과일 풍미와 부드러운 산미가 조화로운 콜롬비아 싱글 오리진",
     image: "/images/beans/colombian-fruity.png",
