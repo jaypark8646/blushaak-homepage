@@ -24,7 +24,7 @@ export const COFFEE_BEANS: CoffeeBean[] = [
     agtron: "Agtron #58",
     flavors: ["체리", "라일락", "오렌지", "캠벨포도", "머스크"],
     description:
-      "화사한 과일 풍미와 부드러운 산미가 조화로운 콜롬비아 싱글 오리진",
+      "잘 익은 체리의 달콤함과 라일락을 닮은 플로럴 노트가 어우러진 아메리카노.",
     image: "/images/beans/colombian-fruity.png",
   },
   {
