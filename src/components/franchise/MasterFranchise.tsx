@@ -151,7 +151,7 @@ export default function MasterFranchise() {
                 {/* Store image */}
                 <div className="h-[250px] sm:h-[300px] relative overflow-hidden">
                   <img
-                    src={location.country === "Indonesia" ? "/images/franchise/global-indonesia.png" : location.country === "Indonesia2" ? "/images/franchise/global-indonesia-2.jpg" : "/images/franchise/global-canada.png"}
+                    src={location.country === "Indonesia" ? "/images/franchise/global-indonesia.png" : location.country === "Indonesia2" ? "/images/franchise/global-indonesia-2.jpg" : "/images/franchise/global-canada.jpg"}
                     alt={location.countryKo}
                     className="w-full h-full object-cover"
                   />
