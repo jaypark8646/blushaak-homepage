@@ -66,10 +66,6 @@ export const NAV_ITEMS: NavItem[] = [
       { label: "Support", href: "/news?tab=support" },
     ],
   },
-  {
-    label: "STORE OWNER",
-    href: "/store-owner",
-  },
 ];
 
 export const FOOTER_LINKS = [
