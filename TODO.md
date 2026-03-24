@@ -8,4 +8,4 @@
 - [x] Task 002 [codex]: menuData.ts 전체 메뉴에 영양성분 데이터 입력
 - [x] Task 003 [codex]: NutritionModal 컴포넌트 구현 (src/components/menu/NutritionModal.tsx)
 - [x] Task 004 [codex]: MenuCard 클릭 핸들러 + 모달 연동
-- [ ] Task 005 [claude-sonnet]: 빌드 검증 + Vercel 배포
+- [x] Task 005 [claude-sonnet]: 빌드 검증 + Vercel 배포
