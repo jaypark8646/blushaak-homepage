@@ -82,7 +82,6 @@ export const BRAND_SIDEBAR_ITEMS = [
   { label: "블루샥 앱 주문", href: "#", icon: "app" },
   { label: "가까운 매장찾기", href: "/store", icon: "map" },
   { label: "문의/접수", href: "/news?tab=support", icon: "inquiry" },
-  { label: "이벤트", href: "/news?tab=event", icon: "event" },
 ];
 
 export const FRANCHISE_SIDEBAR_ITEMS = [
