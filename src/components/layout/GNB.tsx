@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useRef } from "react";
+import { useState, useCallback } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
@@ -17,24 +17,12 @@ interface GNBProps {
 export function GNB({ isScrolled, variant = "default" }: GNBProps) {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [ctaExpanded, setCtaExpanded] = useState(false);
-  const collapseTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const pathname = usePathname();
   const darkClipPath = useDarkRegions();
 
   const handleCtaClick = useCallback(() => {
-    if (ctaExpanded) {
-      // 펼쳐진 상태에서 탭 → 전화 연결
-      window.location.href = "tel:16448067";
-      return;
-    }
-    // 첫 탭 → 펼치기
-    setCtaExpanded(true);
-    if (collapseTimerRef.current) clearTimeout(collapseTimerRef.current);
-    collapseTimerRef.current = setTimeout(() => {
-      setCtaExpanded(false);
-    }, 3500);
-  }, [ctaExpanded]);
+    window.location.href = "tel:16448067";
+  }, []);
 
   const leftItems = NAV_ITEMS.slice(0, 2);
   const rightItems = NAV_ITEMS.slice(2);
@@ -198,37 +186,18 @@ export function GNB({ isScrolled, variant = "default" }: GNBProps) {
         onClose={() => setIsMobileMenuOpen(false)}
       />
 
-      {/* Floating CTA — 우측 중앙 고정 (PC/모바일 공통) */}
-      {/* 기본: 전화 아이콘만 / 탭: 가맹문의+번호 펼침 / 펼친 상태 탭: 전화 연결 */}
+      {/* Floating CTA — 우측 중앙 고정 (모바일) */}
       <button
         type="button"
         onClick={handleCtaClick}
-        aria-label="가맹문의"
-        className="fixed z-40 right-4 top-1/2 -translate-y-1/2 flex flex-col items-center justify-center bg-blu-500 text-white shadow-xl rounded-2xl overflow-hidden transition-all duration-300 ease-in-out"
-        style={{
-          width: ctaExpanded ? "72px" : "44px",
-          height: ctaExpanded ? "72px" : "44px",
-        }}
+        aria-label="가맹문의 전화"
+        className="md:hidden fixed z-40 right-4 top-1/2 -translate-y-1/2 flex flex-col items-center justify-center bg-blu-500 text-white shadow-xl rounded-2xl overflow-hidden"
+        style={{ width: "72px", height: "72px" }}
       >
-        {ctaExpanded ? (
-          <div className="flex flex-col items-center justify-center gap-0.5 px-2 font-[family-name:var(--font-dm-sans)]">
-            <span className="text-[11px] font-bold tracking-wide leading-tight whitespace-nowrap">가맹문의</span>
-            <span className="text-[10px] font-semibold leading-tight whitespace-nowrap">1644-8067</span>
-          </div>
-        ) : (
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
-          </svg>
-        )}
+        <div className="flex flex-col items-center justify-center gap-0.5 px-2 font-[family-name:var(--font-dm-sans)]">
+          <span className="text-[11px] font-bold tracking-wide leading-tight whitespace-nowrap">가맹문의</span>
+          <span className="text-[10px] font-semibold leading-tight whitespace-nowrap">1644-8067</span>
+        </div>
       </button>
     </>
   );
