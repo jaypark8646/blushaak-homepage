@@ -169,7 +169,7 @@ export function FloatingSidebar({ variant }: FloatingSidebarProps) {
                 href={item.href}
                 className={`flex flex-1 flex-col items-center justify-center gap-1 py-2.5 text-center transition-colors ${
                   isConsult
-                    ? "bg-[#E83E3E] hover:bg-[#D42B2B]"
+                    ? "bg-blu-500 hover:bg-blu-600"
                     : "hover:bg-blu-50"
                 }`}
               >
