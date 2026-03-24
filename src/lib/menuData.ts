@@ -26,7 +26,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "아메리카노",
     category: "coffee",
     image: "/images/menu/americano.jpg",
-    nutrition: null,
+    nutrition: { calories: 16.0, sodium: 0.0, sugar: 0.0, saturatedFat: 0.0, protein: 1.0, caffeine: 219.9, allergens: null },
   },
   {
     id: "peanut-latte",
@@ -902,7 +902,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "두바이 초코 휘낭시에",
     category: "bakery",
     image: "/images/menu/dubai-choco-financier.jpg",
-    nutrition: { calories: 271, sodium: 95, sugar: 17, saturatedFat: 5, protein: 4, caffeine: null, allergens: null },
+    nutrition: { calories: 95, sodium: 4, sugar: 17, saturatedFat: 5, protein: 0, caffeine: null, allergens: null },
   },
   {
     id: "strawberry-donut",
@@ -934,7 +934,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "로스티드 마카다미아 휘낭시에",
     category: "bakery",
     image: "/images/menu/roasted-macadamia-financier.jpg",
-    nutrition: { calories: 234, sodium: 120, sugar: 12, saturatedFat: 2.9, protein: 3, caffeine: null, allergens: null },
+    nutrition: { calories: 120, sodium: 3, sugar: 12, saturatedFat: 2.9, protein: 0, caffeine: null, allergens: null },
   },
   {
     id: "fig-cream-cheese-baton-financier",
@@ -1246,7 +1246,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "펄솔트 휘낭시에",
     category: "bakery",
     image: "/images/menu/pearl-salt-financier.jpg",
-    nutrition: { calories: 122, sodium: 65, sugar: 9, saturatedFat: 2.5, protein: 2, caffeine: null, allergens: null },
+    nutrition: { calories: 65, sodium: 2, sugar: 9, saturatedFat: 2.5, protein: 0, caffeine: null, allergens: null },
   },
   {
     id: "honey-crispy-financier",
@@ -1254,7 +1254,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "허니 크리스피 휘낭시에",
     category: "bakery",
     image: "/images/menu/honey-crispy-financier.jpg",
-    nutrition: { calories: 189, sodium: 65, sugar: 13, saturatedFat: 3.1, protein: 3, caffeine: null, allergens: null },
+    nutrition: { calories: 65, sodium: 3, sugar: 13, saturatedFat: 3.1, protein: 0, caffeine: null, allergens: null },
   },
   // Ice-cream
   {
