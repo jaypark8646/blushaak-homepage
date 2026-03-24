@@ -1,3 +1,14 @@
+// Nutrition types
+export interface NutritionInfo {
+  calories: number | null;
+  sodium: number | null;
+  sugar: number | null;
+  saturatedFat: number | null;
+  protein: number | null;
+  caffeine: number | null;
+  allergens: string | null;
+}
+
 // Menu types
 export interface MenuItem {
   id: string;
@@ -8,6 +19,7 @@ export interface MenuItem {
   description?: string;
   isNew?: boolean;
   isBest?: boolean;
+  nutrition?: NutritionInfo | null;
 }
 
 export type MenuCategory =

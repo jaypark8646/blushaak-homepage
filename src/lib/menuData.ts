@@ -13,34 +13,6 @@ export const MENU_CATEGORIES: MenuCategoryInfo[] = [
 export const MENU_ITEMS: MenuItem[] = [
   // Coffee
   {
-    id: "dolce-latte",
-    name: "Dolce Latte",
-    nameKo: "돌체 라떼",
-    category: "coffee",
-    image: "/images/menu/dolce-latte.jpg",
-  },
-  {
-    id: "dolce-cold-brew-latte",
-    name: "Dolce Cold Brew Latte",
-    nameKo: "돌체 콜드브루 라떼",
-    category: "coffee",
-    image: "/images/menu/dolce-cold-brew-latte.jpg",
-  },
-  {
-    id: "banana-cold-brew-oat-latte",
-    name: "Banana Cold Brew Oat Latte",
-    nameKo: "바나나 콜드브루 오트라떼",
-    category: "coffee",
-    image: "/images/menu/banana-cold-brew-oat-latte.jpg",
-  },
-  {
-    id: "vanilla-bean-latte",
-    name: "Vanilla Bean Latte",
-    nameKo: "바닐라 빈 라떼",
-    category: "coffee",
-    image: "/images/menu/vanilla-bean-latte.jpg",
-  },
-  {
     id: "shaak-latte",
     name: "Shaak Latte",
     nameKo: "샥라떼",
@@ -137,6 +109,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "콜드브루 아메리카노",
     category: "coffee",
     image: "/images/menu/cold-brew-americano.jpg",
+    nutrition: { calories: 150.3, sodium: 78.2, sugar: 14.1, saturatedFat: 5.6, protein: 4.6, caffeine: 85.1, allergens: "우유/대두" },
   },
   {
     id: "peanut-latte",
@@ -144,6 +117,159 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "피넛라떼",
     category: "coffee",
     image: "/images/menu/peanut-latte.jpg",
+    nutrition: { calories: 233.7, sodium: 105.2, sugar: 14.3, saturatedFat: 6.4, protein: 6.4, caffeine: 112.8, allergens: "우유/대두/밀" },
+  },
+  {
+    id: "night-americano",
+    name: "Night Americano",
+    nameKo: "나이트 아메리카노",
+    category: "coffee",
+    image: "/images/menu/americano.jpg",
+    nutrition: { calories: 12.0, sodium: 15.0, sugar: 0.0, saturatedFat: 0.0, protein: 1.0, caffeine: 216.6, allergens: null },
+  },
+  {
+    id: "colombian-fruity-americano",
+    name: "Colombian Fruity Americano",
+    nameKo: "콜롬비안 프루티 아메리카노",
+    category: "coffee",
+    image: "/images/menu/americano.jpg",
+    nutrition: null,
+  },
+  {
+    id: "decaf-americano",
+    name: "Decaf Americano",
+    nameKo: "디카페인 아메리카노",
+    category: "coffee",
+    image: "/images/menu/americano.jpg",
+    nutrition: { calories: 12.0, sodium: 5.0, sugar: 0.0, saturatedFat: 0.0, protein: 0.0, caffeine: 18.0, allergens: null },
+  },
+  {
+    id: "cafe-latte",
+    name: "Cafe Latte",
+    nameKo: "카페 라떼",
+    category: "coffee",
+    image: "/images/menu/cafe-latte.jpg",
+    nutrition: { calories: 143.0, sodium: 116.3, sugar: 10.7, saturatedFat: 5.3, protein: 8.0, caffeine: 99.6, allergens: "우유" },
+  },
+  {
+    id: "vanilla-bean-latte",
+    name: "Vanilla Bean Latte",
+    nameKo: "바닐라 빈 라떼",
+    category: "coffee",
+    image: "/images/menu/vanilla-bean-latte.jpg",
+    nutrition: { calories: 198.9, sodium: 103.9, sugar: 28.0, saturatedFat: 4.4, protein: 7.1, caffeine: 102.7, allergens: "우유" },
+  },
+  {
+    id: "dolce-latte",
+    name: "Dolce Latte",
+    nameKo: "돌체 라떼",
+    category: "coffee",
+    image: "/images/menu/dolce-latte.jpg",
+    nutrition: { calories: 252.2, sodium: 151.8, sugar: 30.7, saturatedFat: 5.8, protein: 8.0, caffeine: 110.4, allergens: "우유/대두" },
+  },
+  {
+    id: "dolce-cold-brew-latte",
+    name: "Dolce Cold Brew Latte",
+    nameKo: "돌체 콜드브루 라떼",
+    category: "coffee",
+    image: "/images/menu/dolce-cold-brew-latte.jpg",
+    nutrition: { calories: 183.5, sodium: 69.5, sugar: 22.0, saturatedFat: 3.6, protein: 3.9, caffeine: 134.1, allergens: "우유/대두" },
+  },
+  {
+    id: "banana-cold-brew-oat-latte",
+    name: "Banana Cold Brew Oat Latte",
+    nameKo: "바나나 콜드브루 오트라떼",
+    category: "coffee",
+    image: "/images/menu/banana-cold-brew-oat-latte.jpg",
+    nutrition: { calories: 203.3, sodium: 94.6, sugar: 23.7, saturatedFat: 0.0, protein: 0.0, caffeine: 86.6, allergens: null },
+  },
+  {
+    id: "cinnamon-cafe-latte",
+    name: "Cinnamon Cafe Latte",
+    nameKo: "시나몬 카페 라떼",
+    category: "coffee",
+    image: "/images/menu/cinnamon-cafe-latte.jpg",
+    nutrition: { calories: 197.1, sodium: 76.4, sugar: 27.5, saturatedFat: 2.2, protein: 6.2, caffeine: 136.3, allergens: "우유" },
+  },
+  {
+    id: "ah-shot-chu",
+    name: "Ah Shot Chu",
+    nameKo: "아샷추",
+    category: "coffee",
+    image: "/images/menu/ah-shot-chu.jpg",
+    nutrition: { calories: 172.3, sodium: 12.4, sugar: 38.2, saturatedFat: 0.0, protein: 0.4, caffeine: 113.2, allergens: "복숭아/아황산류" },
+  },
+  {
+    id: "zero-vanilla-latte",
+    name: "Zero Vanilla Latte",
+    nameKo: "제로 바닐라 라떼",
+    category: "coffee",
+    image: "/images/menu/zero-vanilla-latte.jpg",
+    nutrition: { calories: 201.6, sodium: 74.2, sugar: 10.7, saturatedFat: 3.6, protein: 5.8, caffeine: 199.8, allergens: "우유" },
+  },
+  {
+    id: "jeju-matcha-cafe-latte",
+    name: "Matcha Cafe Latte",
+    nameKo: "말차 카페 라떼",
+    category: "coffee",
+    image: "/images/menu/jeju-matcha-cafe-latte.jpg",
+    nutrition: { calories: 348.9, sodium: 127.9, sugar: 32.9, saturatedFat: 8.4, protein: 13.3, caffeine: 383.6, allergens: "우유/대두" },
+  },
+  {
+    id: "caramel-macchiato",
+    name: "Caramel Macchiato",
+    nameKo: "카라멜 마끼야또",
+    category: "coffee",
+    image: "/images/menu/caramel-macchiato.jpg",
+    nutrition: { calories: 242.0, sodium: 113.7, sugar: 17.8, saturatedFat: 4.9, protein: 7.1, caffeine: 91.8, allergens: "우유/대두" },
+  },
+  {
+    id: "cafe-mocha",
+    name: "Cafe Mocha",
+    nameKo: "카페 모카",
+    category: "coffee",
+    image: "/images/menu/cafe-mocha.jpg",
+    nutrition: { calories: 247.7, sodium: 117.3, sugar: 29.9, saturatedFat: 3.6, protein: 7.2, caffeine: 222.0, allergens: "우유/대두" },
+  },
+  {
+    id: "cold-brew-latte",
+    name: "Cold Brew Latte",
+    nameKo: "콜드브루 라떼",
+    category: "coffee",
+    image: "/images/menu/cold-brew-latte.jpg",
+    nutrition: { calories: 98.8, sodium: 74.2, sugar: 7.2, saturatedFat: 3.9, protein: 4.5, caffeine: 142.8, allergens: "우유" },
+  },
+  {
+    id: "cold-brew-americano",
+    name: "Cold Brew Americano",
+    nameKo: "콜드브루 아메리카노",
+    category: "coffee",
+    image: "/images/menu/cold-brew-americano.jpg",
+    nutrition: { calories: 5.7, sodium: 2.4, sugar: 0.0, saturatedFat: 0.0, protein: 0.2, caffeine: 142.5, allergens: null },
+  },
+  {
+    id: "espresso",
+    name: "Espresso",
+    nameKo: "에스프레소",
+    category: "coffee",
+    image: "/images/menu/espresso.jpg",
+    nutrition: { calories: 2.5, sodium: 6.1, sugar: 0.0, saturatedFat: 0.0, protein: 0.2, caffeine: 124.0, allergens: null },
+  },
+  {
+    id: "cafe-pieno",
+    name: "Cafe Pieno",
+    nameKo: "카페 피에노",
+    category: "coffee",
+    image: "/images/menu/cafe-pieno.jpg",
+    nutrition: { calories: 164.3, sodium: 28.2, sugar: 9.9, saturatedFat: 7.3, protein: 1.5, caffeine: 137.8, allergens: "우유/대두" },
+  },
+  {
+    id: "cafe-citrus",
+    name: "Cafe Citrus",
+    nameKo: "카페 시트러스",
+    category: "coffee",
+    image: "/images/menu/cafe-citrus.jpg",
+    nutrition: { calories: 100.8, sodium: 29.4, sugar: 19.0, saturatedFat: 0.1, protein: 1.3, caffeine: 125.8, allergens: null },
   },
   // Beverage
   {
@@ -152,6 +278,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "골든유자 뷰티 엘릭서",
     category: "beverage",
     image: "/images/menu/golden-yuzu-beauty-elixir.jpg",
+    nutrition: { calories: 180.9, sodium: 12.9, sugar: 34.5, saturatedFat: 0.0, protein: 0.1, caffeine: null, allergens: null },
   },
   {
     id: "honey-grapefruit-tea",
@@ -159,6 +286,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "꿀 자몽 티",
     category: "beverage",
     image: "/images/menu/honey-grapefruit-tea.jpg",
+    nutrition: { calories: 186.0, sodium: 11.1, sugar: 42.6, saturatedFat: 0.0, protein: 0.4, caffeine: null, allergens: null },
   },
   {
     id: "double-choco-latte",
@@ -166,6 +294,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "더블 초코라떼",
     category: "beverage",
     image: "/images/menu/double-choco-latte.jpg",
+    nutrition: { calories: 294.4, sodium: 145.6, sugar: 33.3, saturatedFat: 2.7, protein: 8.0, caffeine: 6.7, allergens: "우유/대두" },
   },
   {
     id: "double-choco-bubble-tea",
@@ -173,6 +302,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "더블 초코 버블티",
     category: "beverage",
     image: "/images/menu/double-choco-bubble-tea.jpg",
+    nutrition: { calories: 296.6, sodium: 120.8, sugar: 31.1, saturatedFat: 5.3, protein: 7.1, caffeine: 5.8, allergens: "우유/대두" },
   },
   {
     id: "strawberry-iced-tea",
@@ -180,6 +310,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "딸기 아이스 티",
     category: "beverage",
     image: "/images/menu/strawberry-iced-tea.jpg",
+    nutrition: { calories: 102.6, sodium: 6.7, sugar: 22.6, saturatedFat: 0.0, protein: 0.0, caffeine: null, allergens: null },
   },
   {
     id: "lemon-earl-grey-tea",
@@ -187,6 +318,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "레몬 얼그레이 티",
     category: "beverage",
     image: "/images/menu/lemon-earl-grey-tea.jpg",
+    nutrition: { calories: 135.0, sodium: 5.8, sugar: 5.5, saturatedFat: 0.0, protein: 30.0, caffeine: 30.9, allergens: null },
   },
   {
     id: "lemon-ade",
@@ -194,6 +326,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "레몬 에이드",
     category: "beverage",
     image: "/images/menu/lemon-ade.jpg",
+    nutrition: { calories: 113.7, sodium: 11.5, sugar: 26.6, saturatedFat: 0.0, protein: 0.0, caffeine: null, allergens: null },
   },
   {
     id: "lemon-yuzu-tea",
@@ -201,6 +334,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "레몬 유자 티",
     category: "beverage",
     image: "/images/menu/lemon-yuzu-tea.jpg",
+    nutrition: { calories: 222.4, sodium: 48.8, sugar: 51.9, saturatedFat: 0.0, protein: 0.0, caffeine: null, allergens: null },
   },
   {
     id: "royal-milk-tea",
@@ -208,6 +342,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "로얄 밀크 티",
     category: "beverage",
     image: "/images/menu/royal-milk-tea.jpg",
+    nutrition: { calories: 212.7, sodium: 97.7, sugar: 29.8, saturatedFat: 1.8, protein: 5.8, caffeine: 18.9, allergens: "우유" },
   },
   {
     id: "real-chocolat",
@@ -215,6 +350,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "리얼 쇼콜라",
     category: "beverage",
     image: "/images/menu/real-chocolat.jpg",
+    nutrition: { calories: 460.9, sodium: 140.3, sugar: 50.2, saturatedFat: 4.0, protein: 10.2, caffeine: 13.5, allergens: "우유/대두" },
   },
   {
     id: "mango-latte",
@@ -222,6 +358,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "망고 라떼",
     category: "beverage",
     image: "/images/menu/mango-latte.jpg",
+    nutrition: { calories: 239.8, sodium: 89.2, sugar: 40.0, saturatedFat: 4.0, protein: 5.3, caffeine: null, allergens: "우유/복숭아" },
   },
   {
     id: "banana-bubble-tea",
@@ -229,6 +366,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "바나나 버블티",
     category: "beverage",
     image: "/images/menu/banana-bubble-tea.jpg",
+    nutrition: { calories: 234.9, sodium: 76.4, sugar: 33.3, saturatedFat: 3.6, protein: 5.3, caffeine: null, allergens: null },
   },
   {
     id: "white-peach-oolong",
@@ -236,6 +374,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "백도 우롱",
     category: "beverage",
     image: "/images/menu/white-peach-oolong.jpg",
+    nutrition: null,
   },
   {
     id: "berry-hibiscus",
@@ -243,6 +382,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "베리 히비스커스",
     category: "beverage",
     image: "/images/menu/berry-hibiscus.jpg",
+    nutrition: { calories: 9.8, sodium: 11.5, sugar: 0.0, saturatedFat: 0.0, protein: 0.0, caffeine: 0.4, allergens: null },
   },
   {
     id: "seolhyang-strawberry-latte",
@@ -250,6 +390,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "설향 딸기 라떼",
     category: "beverage",
     image: "/images/menu/seolhyang-strawberry-latte.jpg",
+    nutrition: { calories: 202.0, sodium: 89.2, sugar: 29.3, saturatedFat: 3.6, protein: 4.4, caffeine: null, allergens: "우유" },
   },
   {
     id: "pure-milk",
@@ -257,6 +398,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "순수 우유",
     category: "beverage",
     image: "/images/menu/pure-milk.jpg",
+    nutrition: { calories: 149.5, sodium: 115.0, sugar: 11.5, saturatedFat: 6.2, protein: 6.9, caffeine: null, allergens: "우유" },
   },
   {
     id: "apple-mango-iced-tea",
@@ -264,6 +406,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "애플망고 아이스 티",
     category: "beverage",
     image: "/images/menu/apple-mango-iced-tea.jpg",
+    nutrition: { calories: 184.7, sodium: 35.5, sugar: 44.4, saturatedFat: 0.0, protein: 0.4, caffeine: null, allergens: "복숭아/아황산류" },
   },
   {
     id: "yeongam-sweet-potato-latte",
@@ -271,6 +414,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "영암 고구마 라떼",
     category: "beverage",
     image: "/images/menu/yeongam-sweet-potato-latte.jpg",
+    nutrition: { calories: 259.7, sodium: 72.8, sugar: 30.2, saturatedFat: 3.6, protein: 5.8, caffeine: null, allergens: "우유/대두" },
   },
   {
     id: "grapefruit-ade",
@@ -278,6 +422,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "자몽 에이드",
     category: "beverage",
     image: "/images/menu/grapefruit-ade.jpg",
+    nutrition: { calories: 175.7, sodium: 18.2, sugar: 37.7, saturatedFat: 0.0, protein: 0.8, caffeine: null, allergens: null },
   },
   {
     id: "zero-peach-iced-tea",
@@ -285,6 +430,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "제로 복숭아 아이스티",
     category: "beverage",
     image: "/images/menu/zero-peach-iced-tea.jpg",
+    nutrition: { calories: 14.0, sodium: 10.2, sugar: 0.4, saturatedFat: 0.0, protein: 0.0, caffeine: 15.1, allergens: "복숭아" },
   },
   {
     id: "jeju-matcha-latte",
@@ -292,6 +438,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "말차 라떼",
     category: "beverage",
     image: "/images/menu/jeju-matcha-latte.jpg",
+    nutrition: { calories: 433.4, sodium: 148.3, sugar: 46.6, saturatedFat: 8.4, protein: 15.1, caffeine: 180.7, allergens: "우유/대두" },
   },
   {
     id: "jeju-misutgaru",
@@ -299,6 +446,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "제주 미숫가루",
     category: "beverage",
     image: "/images/menu/jeju-misutgaru.jpg",
+    nutrition: { calories: 277.1, sodium: 72.8, sugar: 28.9, saturatedFat: 2.7, protein: 8.0, caffeine: null, allergens: "우유/대두" },
   },
   {
     id: "jeju-matcha-bubble-tea",
@@ -306,6 +454,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "말차 버블티",
     category: "beverage",
     image: "/images/menu/jeju-matcha-bubble-tea.jpg",
+    nutrition: { calories: 472.2, sodium: 140.3, sugar: 44.0, saturatedFat: 8.4, protein: 12.0, caffeine: 155.0, allergens: "우유/대두" },
   },
   {
     id: "ginger-pear-tea",
@@ -313,6 +462,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "진저 배 티",
     category: "beverage",
     image: "/images/menu/ginger-pear-tea.jpg",
+    nutrition: { calories: 145.6, sodium: 52.8, sugar: 34.6, saturatedFat: 0.0, protein: 0.4, caffeine: null, allergens: null },
   },
   {
     id: "green-grape-ade",
@@ -320,6 +470,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "청포도 에이드",
     category: "beverage",
     image: "/images/menu/green-grape-ade.jpg",
+    nutrition: { calories: 163.4, sodium: 28.0, sugar: 27.1, saturatedFat: 0.0, protein: 0.4, caffeine: null, allergens: null },
   },
   {
     id: "peach-boy",
@@ -327,6 +478,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "피치보이",
     category: "beverage",
     image: "/images/menu/peach-boy.jpg",
+    nutrition: null,
   },
   {
     id: "honey-chamomile",
@@ -334,6 +486,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "허니 캐모마일",
     category: "beverage",
     image: "/images/menu/honey-chamomile.jpg",
+    nutrition: { calories: 3.6, sodium: 16.0, sugar: 0.0, saturatedFat: 0.0, protein: 0.0, caffeine: null, allergens: null },
   },
   {
     id: "black-sugar-bubble-ice-cream-ic",
@@ -341,6 +494,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "흑당 버블 아이스크림",
     category: "beverage",
     image: "/images/menu/black-sugar-bubble-ice-cream-ic.jpg",
+    nutrition: { calories: 311.2, sodium: 76.2, sugar: 22.4, saturatedFat: 8.3, protein: 4.6, caffeine: null, allergens: "우유/대두" },
   },
   // Blended
   {
@@ -349,6 +503,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "꿀배 스무디",
     category: "blended",
     image: "/images/menu/honey-pear-smoothie.jpg",
+    nutrition: { calories: 284.2, sodium: 87.0, sugar: 57.3, saturatedFat: 0.0, protein: 0.4, caffeine: null, allergens: null },
   },
   {
     id: "strawberry-banana-juice",
@@ -356,6 +511,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "딸기 바나나 주스",
     category: "blended",
     image: "/images/menu/strawberry-banana-juice.jpg",
+    nutrition: { calories: 302.8, sodium: 83.5, sugar: 51.1, saturatedFat: 4.0, protein: 7.5, caffeine: null, allergens: "우유" },
   },
   {
     id: "strawberry-shake",
@@ -363,6 +519,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "딸기 쉐이크",
     category: "blended",
     image: "/images/menu/strawberry-shake.jpg",
+    nutrition: { calories: 444.9, sodium: 213.6, sugar: 49.7, saturatedFat: 5.3, protein: 4.0, caffeine: null, allergens: "우유/대두/아황산류" },
   },
   {
     id: "strawberry-yogurt-smoothie",
@@ -370,6 +527,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "딸기 요거트 스무디",
     category: "blended",
     image: "/images/menu/strawberry-yogurt-smoothie.jpg",
+    nutrition: { calories: 351.2, sodium: 68.4, sugar: 65.3, saturatedFat: 1.8, protein: 5.8, caffeine: null, allergens: "우유" },
   },
   {
     id: "strawberry-yuzu-smoothie",
@@ -377,6 +535,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "딸기 유자 스무디",
     category: "blended",
     image: "/images/menu/strawberry-yuzu-smoothie.jpg",
+    nutrition: { calories: 341.0, sodium: 52.4, sugar: 82.1, saturatedFat: 0.0, protein: 0.4, caffeine: null, allergens: null },
   },
   {
     id: "rice-shake",
@@ -384,6 +543,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "라이스 쉐이크",
     category: "blended",
     image: "/images/menu/rice-shake.jpg",
+    nutrition: { calories: 485.8, sodium: 216.7, sugar: 33.3, saturatedFat: 4.9, protein: 4.4, caffeine: null, allergens: "우유/대두" },
   },
   {
     id: "red-grapefruit-smoothie",
@@ -391,6 +551,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "레드자몽 스무디",
     category: "blended",
     image: "/images/menu/red-grapefruit-smoothie.jpg",
+    nutrition: { calories: 262.9, sodium: 21.8, sugar: 62.2, saturatedFat: 0.0, protein: 0.9, caffeine: null, allergens: null },
   },
   {
     id: "real-watermelon-juice",
@@ -398,6 +559,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "리얼 수박 수즈",
     category: "blended",
     image: "/images/menu/real-watermelon-juice.jpg",
+    nutrition: { calories: 142.1, sodium: 5.8, sugar: 26.2, saturatedFat: 0.0, protein: 1.3, caffeine: null, allergens: null },
   },
   {
     id: "mango-banana-smoothie",
@@ -405,6 +567,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "망고 바나나 스무디",
     category: "blended",
     image: "/images/menu/mango-banana-smoothie.jpg",
+    nutrition: { calories: 220.2, sodium: 22.6, sugar: 51.1, saturatedFat: 0.0, protein: 0.9, caffeine: null, allergens: null },
   },
   {
     id: "mango-yogurt-smoothie",
@@ -412,6 +575,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "망고 요거트 스무디",
     category: "blended",
     image: "/images/menu/mango-yogurt-smoothie.jpg",
+    nutrition: { calories: 349.0, sodium: 67.0, sugar: 62.6, saturatedFat: 1.3, protein: 4.4, caffeine: null, allergens: "우유" },
   },
   {
     id: "mint-choco-frappe",
@@ -419,6 +583,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "민트 초코 프라페",
     category: "blended",
     image: "/images/menu/mint-choco-frappe.jpg",
+    nutrition: { calories: 352.1, sodium: 143.0, sugar: 59.9, saturatedFat: 3.6, protein: 6.7, caffeine: 25.3, allergens: "우유/대두" },
   },
   {
     id: "milk-shake",
@@ -426,6 +591,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "밀크쉐이크",
     category: "blended",
     image: "/images/menu/milk-shake.jpg",
+    nutrition: { calories: 486.6, sodium: 153.2, sugar: 59.9, saturatedFat: 12.0, protein: 3.1, caffeine: null, allergens: "우유/대두" },
   },
   {
     id: "blueberry-yogurt-smoothie",
@@ -433,6 +599,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "블루베리 요거트 스무디",
     category: "blended",
     image: "/images/menu/blueberry-yogurt-smoothie.jpg",
+    nutrition: { calories: 389.8, sodium: 66.2, sugar: 63.9, saturatedFat: 1.8, protein: 5.3, caffeine: null, allergens: "우유" },
   },
   {
     id: "jeju-matcha-frappe",
@@ -440,6 +607,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "말차 프라페",
     category: "blended",
     image: "/images/menu/jeju-matcha-frappe.jpg",
+    nutrition: { calories: 766.9, sodium: 186.9, sugar: 116.3, saturatedFat: 12.9, protein: 14.2, caffeine: 217.6, allergens: "우유/대두" },
   },
   {
     id: "jeju-lemon-smoothie",
@@ -447,6 +615,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "제주 레몬 스무디",
     category: "blended",
     image: "/images/menu/jeju-lemon-smoothie.jpg",
+    nutrition: { calories: 225.6, sodium: 19.5, sugar: 48.8, saturatedFat: 0.0, protein: 1.8, caffeine: null, allergens: null },
   },
   {
     id: "green-grape-smoothie",
@@ -454,6 +623,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "청포도 스무디",
     category: "blended",
     image: "/images/menu/green-grape-smoothie.jpg",
+    nutrition: { calories: 312.6, sodium: 40.0, sugar: 72.8, saturatedFat: 0.0, protein: 0.4, caffeine: null, allergens: null },
   },
   {
     id: "choco-banana-smoothie",
@@ -461,6 +631,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "초코 바나나 스무디",
     category: "blended",
     image: "/images/menu/choco-banana-smoothie.jpg",
+    nutrition: { calories: 342.3, sodium: 129.2, sugar: 48.0, saturatedFat: 6.2, protein: 6.7, caffeine: 7.1, allergens: "우유/대두" },
   },
   {
     id: "choco-shake",
@@ -468,6 +639,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "초코 쉐이크",
     category: "blended",
     image: "/images/menu/choco-shake.jpg",
+    nutrition: { calories: 383.6, sodium: 182.9, sugar: 47.1, saturatedFat: 8.9, protein: 8.0, caffeine: 11.5, allergens: "우유/대두" },
   },
   {
     id: "coffee-shake",
@@ -475,6 +647,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "커피 쉐이크",
     category: "blended",
     image: "/images/menu/coffee-shake.jpg",
+    nutrition: { calories: 323.2, sodium: 103.0, sugar: 63.9, saturatedFat: 3.1, protein: 4.9, caffeine: 215.3, allergens: "우유/대두" },
   },
   {
     id: "cup-bingsu",
@@ -482,6 +655,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "컵빙수",
     category: "blended",
     image: "/images/menu/cup-bingsu.jpg",
+    nutrition: { calories: 413.0, sodium: 139.0, sugar: 61.3, saturatedFat: 4.0, protein: 3.1, caffeine: null, allergens: "우유/대두" },
   },
   {
     id: "plain-yogurt-smoothie",
@@ -489,6 +663,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "플레인 요거트 스무디",
     category: "blended",
     image: "/images/menu/plain-yogurt-smoothie.jpg",
+    nutrition: { calories: 392.5, sodium: 83.0, sugar: 65.7, saturatedFat: 0.9, protein: 5.8, caffeine: null, allergens: "우유" },
   },
   {
     id: "hadong-plum-smoothie",
@@ -496,6 +671,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "하동 매실 스무디",
     category: "blended",
     image: "/images/menu/hadong-plum-smoothie.jpg",
+    nutrition: { calories: 289.5, sodium: 51.5, sugar: 59.5, saturatedFat: 0.0, protein: 1.8, caffeine: null, allergens: null },
   },
   // Bottle
   {
@@ -504,6 +680,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "보틀 꿀 자몽 티",
     category: "bottle",
     image: "/images/menu/bottle-honey-grapefruit-tea.jpg",
+    nutrition: null,
   },
   {
     id: "bottle-double-choco-latte",
@@ -511,6 +688,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "보틀 더블 초코 라떼",
     category: "bottle",
     image: "/images/menu/bottle-double-choco-latte.jpg",
+    nutrition: null,
   },
   {
     id: "bottle-dolce-latte",
@@ -518,6 +696,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "보틀 돌체 라떼",
     category: "bottle",
     image: "/images/menu/bottle-dolce-latte.jpg",
+    nutrition: null,
   },
   {
     id: "bottle-strawberry-iced-tea",
@@ -525,6 +704,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "보틀 딸기 아이스 티",
     category: "bottle",
     image: "/images/menu/bottle-strawberry-iced-tea.jpg",
+    nutrition: null,
   },
   {
     id: "bottle-lemon-earl-grey-tea",
@@ -532,6 +712,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "보틀 레몬 얼그레이 티",
     category: "bottle",
     image: "/images/menu/bottle-lemon-earl-grey-tea.jpg",
+    nutrition: null,
   },
   {
     id: "bottle-lemon-ade",
@@ -539,6 +720,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "보틀 레몬 에이드",
     category: "bottle",
     image: "/images/menu/bottle-lemon-ade.jpg",
+    nutrition: null,
   },
   {
     id: "bottle-lemon-yuzu-tea",
@@ -546,6 +728,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "보틀 레몬 유자 티",
     category: "bottle",
     image: "/images/menu/bottle-lemon-yuzu-tea.jpg",
+    nutrition: null,
   },
   {
     id: "bottle-royal-milk-tea",
@@ -553,6 +736,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "보틀 로얄 밀크 티",
     category: "bottle",
     image: "/images/menu/bottle-royal-milk-tea.jpg",
+    nutrition: null,
   },
   {
     id: "bottle-mango-latte",
@@ -560,6 +744,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "보틀 망고 라떼",
     category: "bottle",
     image: "/images/menu/bottle-mango-latte.jpg",
+    nutrition: null,
   },
   {
     id: "bottle-banana-oat-latte",
@@ -567,6 +752,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "보틀 바나나 오트 라떼",
     category: "bottle",
     image: "/images/menu/bottle-banana-oat-latte.jpg",
+    nutrition: null,
   },
   {
     id: "bottle-vanilla-bean-latte",
@@ -574,6 +760,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "보틀 바닐라 빈 라떼",
     category: "bottle",
     image: "/images/menu/bottle-vanilla-bean-latte.jpg",
+    nutrition: null,
   },
   {
     id: "bottle-valrhona-chocolate",
@@ -581,6 +768,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "보틀 발로나 초콜릿",
     category: "bottle",
     image: "/images/menu/bottle-valrhona-chocolate.jpg",
+    nutrition: null,
   },
   {
     id: "bottle-berry-hibiscus",
@@ -588,6 +776,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "보틀 베리 히비스커스",
     category: "bottle",
     image: "/images/menu/bottle-berry-hibiscus.jpg",
+    nutrition: null,
   },
   {
     id: "bottle-barley-misutgaru",
@@ -595,6 +784,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "보틀 보리 미숫가루",
     category: "bottle",
     image: "/images/menu/bottle-barley-misutgaru.jpg",
+    nutrition: null,
   },
   {
     id: "bottle-seolhyang-strawberry-latte",
@@ -602,6 +792,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "보틀 설향 딸기 라떼",
     category: "bottle",
     image: "/images/menu/bottle-seolhyang-strawberry-latte.jpg",
+    nutrition: null,
   },
   {
     id: "bottle-pure-milk",
@@ -609,6 +800,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "보틀 순수 우유",
     category: "bottle",
     image: "/images/menu/bottle-pure-milk.jpg",
+    nutrition: null,
   },
   {
     id: "bottle-cinnamon-cafe-latte",
@@ -616,6 +808,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "보틀 시나몬 카페 라떼",
     category: "bottle",
     image: "/images/menu/bottle-cinnamon-cafe-latte.jpg",
+    nutrition: null,
   },
   {
     id: "bottle-americano",
@@ -623,6 +816,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "보틀 아메리카노",
     category: "bottle",
     image: "/images/menu/bottle-americano.jpg",
+    nutrition: null,
   },
   {
     id: "bottle-ah-shot-chu",
@@ -630,6 +824,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "보틀 아샷추",
     category: "bottle",
     image: "/images/menu/bottle-ah-shot-chu.jpg",
+    nutrition: null,
   },
   {
     id: "bottle-apple-mango-iced-tea",
@@ -637,6 +832,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "보틀 애플망고 아이스 티",
     category: "bottle",
     image: "/images/menu/bottle-apple-mango-iced-tea.jpg",
+    nutrition: null,
   },
   {
     id: "bottle-earl-grey-vanilla-tea-latte",
@@ -644,6 +840,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "보틀 얼그레이 바닐라 티 라떼",
     category: "bottle",
     image: "/images/menu/bottle-earl-grey-vanilla-tea-latte.jpg",
+    nutrition: null,
   },
   {
     id: "bottle-sweet-potato-latte",
@@ -651,6 +848,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "보틀 영암 고구마 라떼",
     category: "bottle",
     image: "/images/menu/bottle-sweet-potato-latte.jpg",
+    nutrition: null,
   },
   {
     id: "bottle-grapefruit-ade",
@@ -658,6 +856,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "보틀 자몽 에이드",
     category: "bottle",
     image: "/images/menu/bottle-grapefruit-ade.jpg",
+    nutrition: null,
   },
   {
     id: "bottle-jeju-matcha-latte",
@@ -665,6 +864,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "보틀 말차 라떼",
     category: "bottle",
     image: "/images/menu/bottle-jeju-matcha-latte.jpg",
+    nutrition: null,
   },
   {
     id: "bottle-jeju-matcha-cafe-latte",
@@ -672,6 +872,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "보틀 말차 카페 라떼",
     category: "bottle",
     image: "/images/menu/bottle-jeju-matcha-cafe-latte.jpg",
+    nutrition: null,
   },
   {
     id: "bottle-jeju-hojicha",
@@ -679,6 +880,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "보틀 제주 호지차",
     category: "bottle",
     image: "/images/menu/bottle-jeju-hojicha.jpg",
+    nutrition: null,
   },
   {
     id: "bottle-ginger-pear-tea",
@@ -686,6 +888,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "보틀 진저 배 티",
     category: "bottle",
     image: "/images/menu/bottle-ginger-pear-tea.jpg",
+    nutrition: null,
   },
   {
     id: "bottle-green-grape-ade",
@@ -693,6 +896,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "보틀 청포도 에이드",
     category: "bottle",
     image: "/images/menu/bottle-green-grape-ade.jpg",
+    nutrition: null,
   },
   {
     id: "bottle-caramel-macchiato",
@@ -700,6 +904,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "보틀 카라멜 마끼야또",
     category: "bottle",
     image: "/images/menu/bottle-caramel-macchiato.jpg",
+    nutrition: null,
   },
   {
     id: "bottle-cafe-latte",
@@ -707,6 +912,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "보틀 카페 라떼",
     category: "bottle",
     image: "/images/menu/bottle-cafe-latte.jpg",
+    nutrition: null,
   },
   {
     id: "bottle-cafe-mocha",
@@ -714,6 +920,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "보틀 카페 모카",
     category: "bottle",
     image: "/images/menu/bottle-cafe-mocha.jpg",
+    nutrition: null,
   },
   {
     id: "bottle-cold-brew-dolce-latte",
@@ -721,6 +928,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "보틀 콜드 브루 돌체 라떼",
     category: "bottle",
     image: "/images/menu/bottle-cold-brew-dolce-latte.jpg",
+    nutrition: null,
   },
   {
     id: "bottle-cold-brew-americano",
@@ -728,6 +936,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "보틀 콜드 브루 아메리카노",
     category: "bottle",
     image: "/images/menu/bottle-cold-brew-americano.jpg",
+    nutrition: null,
   },
   {
     id: "bottle-cold-brew-cafe-latte",
@@ -735,6 +944,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "보틀 콜드 브루 카페 라떼",
     category: "bottle",
     image: "/images/menu/bottle-cold-brew-cafe-latte.jpg",
+    nutrition: null,
   },
   {
     id: "bottle-toffee-nut-latte",
@@ -742,6 +952,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "보틀 토피넛 라떼",
     category: "bottle",
     image: "/images/menu/bottle-toffee-nut-latte.jpg",
+    nutrition: null,
   },
   {
     id: "bottle-peppermint",
@@ -749,6 +960,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "보틀 페퍼민트",
     category: "bottle",
     image: "/images/menu/bottle-peppermint.jpg",
+    nutrition: null,
   },
   {
     id: "bottle-honey-chamomile",
@@ -756,6 +968,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "보틀 허니 캐모마일",
     category: "bottle",
     image: "/images/menu/bottle-honey-chamomile.jpg",
+    nutrition: null,
   },
   {
     id: "bottle-white-americano",
@@ -763,6 +976,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "보틀 화이트 아메리카노",
     category: "bottle",
     image: "/images/menu/bottle-white-americano.jpg",
+    nutrition: null,
   },
   // Bakery
   {
@@ -771,6 +985,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "까눌레",
     category: "bakery",
     image: "/images/menu/canele.jpg",
+    nutrition: { calories: 288, sodium: 33, sugar: 19, saturatedFat: 1.0, protein: 5, caffeine: null, allergens: "밀/계란/견과류" },
   },
   {
     id: "dubai-choco-financier",
@@ -778,6 +993,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "두바이 초코 휘낭시에",
     category: "bakery",
     image: "/images/menu/dubai-choco-financier.jpg",
+    nutrition: { calories: 271, sodium: 95, sugar: 17, saturatedFat: 5, protein: 4, caffeine: null, allergens: null },
   },
   {
     id: "strawberry-donut",
@@ -785,6 +1001,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "딸기 도넛",
     category: "bakery",
     image: "/images/menu/strawberry-donut.jpg",
+    nutrition: null,
   },
   {
     id: "lemon-donut",
@@ -792,6 +1009,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "레몬 도넛",
     category: "bakery",
     image: "/images/menu/lemon-donut.jpg",
+    nutrition: null,
   },
   {
     id: "lemon-cake",
@@ -799,6 +1017,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "레몬케이크",
     category: "bakery",
     image: "/images/menu/lemon-cake.jpg",
+    nutrition: null,
   },
   {
     id: "roasted-macadamia-financier",
@@ -806,6 +1025,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "로스티드 마카다미아 휘낭시에",
     category: "bakery",
     image: "/images/menu/roasted-macadamia-financier.jpg",
+    nutrition: { calories: 234, sodium: 120, sugar: 12, saturatedFat: 2.9, protein: 3, caffeine: null, allergens: null },
   },
   {
     id: "fig-cream-cheese-baton-financier",
@@ -813,6 +1033,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "무화과크림치즈 바통휘낭시에",
     category: "bakery",
     image: "/images/menu/fig-cream-cheese-baton-financier.jpg",
+    nutrition: null,
   },
   {
     id: "milk-scone",
@@ -820,6 +1041,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "밀크 스콘",
     category: "bakery",
     image: "/images/menu/milk-scone.jpg",
+    nutrition: { calories: 359, sodium: 277, sugar: 12, saturatedFat: 9.0, protein: 5, caffeine: null, allergens: "밀/계란/견과류" },
   },
   {
     id: "vanilla-donut",
@@ -827,6 +1049,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "바닐라 도넛",
     category: "bakery",
     image: "/images/menu/vanilla-donut.jpg",
+    nutrition: null,
   },
   {
     id: "valrhona-smore-cookie",
@@ -834,6 +1057,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "발로나 스모어 쿠키",
     category: "bakery",
     image: "/images/menu/valrhona-smore-cookie.jpg",
+    nutrition: { calories: 622, sodium: 116, sugar: 39, saturatedFat: 10, protein: 6, caffeine: null, allergens: "밀/계란/견과류" },
   },
   {
     id: "bacon-egg-mayo-bread",
@@ -841,6 +1065,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "베이컨 에그마요 빵",
     category: "bakery",
     image: "/images/menu/bacon-egg-mayo-bread.jpg",
+    nutrition: null,
   },
   {
     id: "ssuk-red-bean-smore-cookie",
@@ -848,6 +1073,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "쑥단팥 스모어쿠키",
     category: "bakery",
     image: "/images/menu/ssuk-red-bean-smore-cookie.jpg",
+    nutrition: { calories: 571, sodium: 158, sugar: 38, saturatedFat: 10, protein: 8, caffeine: null, allergens: "밀/계란/견과류" },
   },
   {
     id: "almond-biscotti",
@@ -855,6 +1081,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "아몬드 비스코티",
     category: "bakery",
     image: "/images/menu/almond-biscotti.jpg",
+    nutrition: { calories: 77, sodium: 32, sugar: 3, saturatedFat: 1, protein: 2, caffeine: null, allergens: "밀/계란/견과류" },
   },
   {
     id: "yakgwa-baton-financier",
@@ -862,6 +1089,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "약과 바통휘낭시에",
     category: "bakery",
     image: "/images/menu/yakgwa-baton-financier.jpg",
+    nutrition: null,
   },
   {
     id: "earl-grey-baton-financier",
@@ -869,6 +1097,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "얼그레이 바통휘낭시에",
     category: "bakery",
     image: "/images/menu/earl-grey-baton-financier.jpg",
+    nutrition: null,
   },
   {
     id: "milk-donut",
@@ -876,6 +1105,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "우유 도넛",
     category: "bakery",
     image: "/images/menu/milk-donut.jpg",
+    nutrition: null,
   },
   {
     id: "walnut-choco-cookie",
@@ -883,6 +1113,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "월넛 초코 쿠키",
     category: "bakery",
     image: "/images/menu/walnut-choco-cookie.jpg",
+    nutrition: { calories: 546, sodium: 152, sugar: 24, saturatedFat: 10, protein: 7, caffeine: null, allergens: "밀/계란/견과류" },
   },
   {
     id: "choco-donut",
@@ -890,6 +1121,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "초코 도넛",
     category: "bakery",
     image: "/images/menu/choco-donut.jpg",
+    nutrition: null,
   },
   {
     id: "chocochip-biscotti",
@@ -897,6 +1129,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "초코칩 비스코티",
     category: "bakery",
     image: "/images/menu/chocochip-biscotti.jpg",
+    nutrition: { calories: 76, sodium: 32, sugar: 5, saturatedFat: 2, protein: 1, caffeine: null, allergens: "밀/계란/견과류" },
   },
   {
     id: "churros-baton-financier",
@@ -904,6 +1137,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "츄러스 바통휘낭시에",
     category: "bakery",
     image: "/images/menu/churros-baton-financier.jpg",
+    nutrition: null,
   },
   {
     id: "cookies-cream-donut",
@@ -911,6 +1145,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "쿠키앤 크림 도넛",
     category: "bakery",
     image: "/images/menu/cookies-cream-donut.jpg",
+    nutrition: null,
   },
   {
     id: "famille-kahlua-macchiato",
@@ -918,6 +1153,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "깔루아 마키아토",
     category: "bakery",
     image: "/images/menu/famille-kahlua-macchiato.jpg",
+    nutrition: null,
   },
   {
     id: "famille-ny-cheesecake",
@@ -925,6 +1161,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "뉴욕 치즈케이크",
     category: "bakery",
     image: "/images/menu/famille-ny-cheesecake.jpg",
+    nutrition: null,
   },
   {
     id: "famille-strawberry-granola-cookie",
@@ -932,6 +1169,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "딸기 그래놀라 쫀득쿠키",
     category: "bakery",
     image: "/images/menu/famille-strawberry-granola-cookie.jpg",
+    nutrition: null,
   },
   {
     id: "famille-strawberry-macaron",
@@ -939,6 +1177,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "딸기 마카롱",
     category: "bakery",
     image: "/images/menu/famille-strawberry-macaron.jpg",
+    nutrition: null,
   },
   {
     id: "famille-strawberry-cookies-cream-cookie",
@@ -946,6 +1185,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "딸기 쿠키앤크림 쫀득쿠키",
     category: "bakery",
     image: "/images/menu/famille-strawberry-cookies-cream-cookie.jpg",
+    nutrition: null,
   },
   {
     id: "famille-milk-crepe",
@@ -953,6 +1193,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "밀크 크레이프",
     category: "bakery",
     image: "/images/menu/famille-milk-crepe.jpg",
+    nutrition: null,
   },
   {
     id: "famille-bulgogi-ciabatta",
@@ -960,6 +1201,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "불고기 치아바타",
     category: "bakery",
     image: "/images/menu/famille-bulgogi-ciabatta.jpg",
+    nutrition: null,
   },
   {
     id: "famille-black-forest-cream",
@@ -967,6 +1209,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "블랙 포레스트 생크림",
     category: "bakery",
     image: "/images/menu/famille-black-forest-cream.jpg",
+    nutrition: null,
   },
   {
     id: "famille-cream-castella",
@@ -974,6 +1217,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "생크림 카스테라",
     category: "bakery",
     image: "/images/menu/famille-cream-castella.jpg",
+    nutrition: null,
   },
   {
     id: "famille-devils-choco-cake",
@@ -981,6 +1225,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "악마의 초코 케익",
     category: "bakery",
     image: "/images/menu/famille-devils-choco-cake.jpg",
+    nutrition: null,
   },
   {
     id: "famille-onion-bagel",
@@ -988,6 +1233,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "어니언 베이글",
     category: "bakery",
     image: "/images/menu/famille-onion-bagel.jpg",
+    nutrition: null,
   },
   {
     id: "famille-condensed-milk-morning",
@@ -995,6 +1241,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "연유 밀크 모닝",
     category: "bakery",
     image: "/images/menu/famille-condensed-milk-morning.jpg",
+    nutrition: null,
   },
   {
     id: "famille-original-bun",
@@ -1002,6 +1249,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "오리지날번",
     category: "bakery",
     image: "/images/menu/famille-original-bun.jpg",
+    nutrition: null,
   },
   {
     id: "famille-injeolmi-macaron",
@@ -1009,6 +1257,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "인절미 마카롱",
     category: "bakery",
     image: "/images/menu/famille-injeolmi-macaron.jpg",
+    nutrition: null,
   },
   {
     id: "famille-english-muffin-sandwich",
@@ -1016,6 +1265,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "잉글리쉬 머핀 샌드위치",
     category: "bakery",
     image: "/images/menu/famille-english-muffin-sandwich.jpg",
+    nutrition: null,
   },
   {
     id: "famille-choco-macaron",
@@ -1023,6 +1273,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "초코 마카롱",
     category: "bakery",
     image: "/images/menu/famille-choco-macaron.jpg",
+    nutrition: null,
   },
   {
     id: "famille-cheese-bagel",
@@ -1030,6 +1281,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "치즈 베이글",
     category: "bakery",
     image: "/images/menu/famille-cheese-bagel.jpg",
+    nutrition: null,
   },
   {
     id: "famille-croque-monsieur",
@@ -1037,6 +1289,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "크로크무슈",
     category: "bakery",
     image: "/images/menu/famille-croque-monsieur.jpg",
+    nutrition: null,
   },
   {
     id: "famille-cream-red-bean-bread",
@@ -1044,6 +1297,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "크림 단팥빵",
     category: "bakery",
     image: "/images/menu/famille-cream-red-bean-bread.jpg",
+    nutrition: null,
   },
   {
     id: "famille-creme-brulee-macaron",
@@ -1051,6 +1305,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "크림브륄레 마카롱",
     category: "bakery",
     image: "/images/menu/famille-creme-brulee-macaron.jpg",
+    nutrition: null,
   },
   {
     id: "famille-tiramisu",
@@ -1058,6 +1313,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "티라미수",
     category: "bakery",
     image: "/images/menu/famille-tiramisu.jpg",
+    nutrition: null,
   },
   {
     id: "famille-plain-bagel",
@@ -1065,6 +1321,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "플레인 베이글",
     category: "bakery",
     image: "/images/menu/famille-plain-bagel.jpg",
+    nutrition: null,
   },
   {
     id: "famille-ham-cheese-taiwan-sandwich",
@@ -1072,6 +1329,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "햄치즈 대만 샌드위치",
     category: "bakery",
     image: "/images/menu/famille-ham-cheese-taiwan-sandwich.jpg",
+    nutrition: null,
   },
   {
     id: "pearl-salt-financier",
@@ -1079,6 +1337,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "펄솔트 휘낭시에",
     category: "bakery",
     image: "/images/menu/pearl-salt-financier.jpg",
+    nutrition: { calories: 122, sodium: 65, sugar: 9, saturatedFat: 2.5, protein: 2, caffeine: null, allergens: null },
   },
   {
     id: "honey-crispy-financier",
@@ -1086,6 +1345,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "허니 크리스피 휘낭시에",
     category: "bakery",
     image: "/images/menu/honey-crispy-financier.jpg",
+    nutrition: { calories: 189, sodium: 65, sugar: 13, saturatedFat: 3.1, protein: 3, caffeine: null, allergens: null },
   },
   // Ice-cream
   {
@@ -1094,6 +1354,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "딸기 아이스크림",
     category: "ice-cream",
     image: "/images/menu/strawberry-ice-cream.jpg",
+    nutrition: { calories: 384.8, sodium: 111.4, sugar: 48.9, saturatedFat: 10.4, protein: 5.4, caffeine: null, allergens: "우유/대두" },
   },
   {
     id: "strawberry-cookie-ice-cream-frappe",
@@ -1101,6 +1362,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "딸기 쿠키 아이스크림 프라페",
     category: "ice-cream",
     image: "/images/menu/strawberry-cookie-ice-cream-frappe.jpg",
+    nutrition: { calories: 517.3, sodium: 276.2, sugar: 67.0, saturatedFat: 5.3, protein: 5.3, caffeine: null, allergens: "우유/대두/아황산류" },
   },
   {
     id: "matcha-ice-cream",
@@ -1108,6 +1370,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "말차 아이스크림",
     category: "ice-cream",
     image: "/images/menu/matcha-ice-cream.jpg",
+    nutrition: { calories: 786.4, sodium: 262.8, sugar: 68.4, saturatedFat: 24.4, protein: 13.3, caffeine: 93.2, allergens: "우유/대두" },
   },
   {
     id: "matcha-cookie-ice-cream-frappe",
@@ -1115,6 +1378,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "말차 쿠키 아이스크림 프라페",
     category: "ice-cream",
     image: "/images/menu/matcha-cookie-ice-cream-frappe.jpg",
+    nutrition: { calories: 559.9, sodium: 180.7, sugar: 78.6, saturatedFat: 5.3, protein: 6.7, caffeine: 53.7, allergens: "우유/대두" },
   },
   {
     id: "black-cookie-ice-cream",
@@ -1122,6 +1386,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "블랙쿠키 아이스크림",
     category: "ice-cream",
     image: "/images/menu/black-cookie-ice-cream.jpg",
+    nutrition: { calories: 483.6, sodium: 262.9, sugar: 42.0, saturatedFat: 12.4, protein: 7.0, caffeine: null, allergens: "우유/대두" },
   },
   {
     id: "soft-ice-cream",
@@ -1129,6 +1394,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "소프트 아이스크림",
     category: "ice-cream",
     image: "/images/menu/soft-ice-cream.jpg",
+    nutrition: { calories: 252.0, sodium: 56.0, sugar: 23.8, saturatedFat: 9.8, protein: 5.3, caffeine: null, allergens: "우유/대두" },
   },
   {
     id: "ice-cream-latte",
@@ -1136,6 +1402,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "아이스크림 라떼",
     category: "ice-cream",
     image: "/images/menu/ice-cream-latte.jpg",
+    nutrition: { calories: 362.7, sodium: 119.9, sugar: 42.2, saturatedFat: 10.2, protein: 7.5, caffeine: 147.0, allergens: "우유/대두" },
   },
   {
     id: "apple-mango-ice-cream",
@@ -1143,6 +1410,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "애플망고 아이스크림",
     category: "ice-cream",
     image: "/images/menu/apple-mango-ice-cream.jpg",
+    nutrition: { calories: 390.4, sodium: 124.4, sugar: 47.4, saturatedFat: 11.0, protein: 6.0, caffeine: null, allergens: "우유/대두" },
   },
   {
     id: "espresso-ice-cream",
@@ -1150,6 +1418,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "에스프레소 아이스크림",
     category: "ice-cream",
     image: "/images/menu/espresso-ice-cream.jpg",
+    nutrition: { calories: 255.3, sodium: 64.0, sugar: 17.2, saturatedFat: 8.8, protein: 5.5, caffeine: 124.0, allergens: "우유/대두" },
   },
   {
     id: "injeolmi-ice-cream",
@@ -1157,6 +1426,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "인절미 아이스크림",
     category: "ice-cream",
     image: "/images/menu/injeolmi-ice-cream.jpg",
+    nutrition: { calories: 416.9, sodium: 138.7, sugar: 45.1, saturatedFat: 11.2, protein: 6.8, caffeine: null, allergens: "우유/대두" },
   },
   {
     id: "choco-ice-cream",
@@ -1164,6 +1434,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "초코 아이스크림",
     category: "ice-cream",
     image: "/images/menu/choco-ice-cream.jpg",
+    nutrition: { calories: 359.6, sodium: 132.5, sugar: 35.0, saturatedFat: 12.4, protein: 6.8, caffeine: 3.5, allergens: "우유/대두" },
   },
   {
     id: "black-sugar-bubble-ice-cream-ic",
@@ -1171,5 +1442,6 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "흑당 버블 아이스크림",
     category: "ice-cream",
     image: "/images/menu/black-sugar-bubble-ice-cream-ic.jpg",
+    nutrition: { calories: 311.2, sodium: 76.2, sugar: 22.4, saturatedFat: 8.3, protein: 4.6, caffeine: null, allergens: "우유/대두" },
   },
 ];
