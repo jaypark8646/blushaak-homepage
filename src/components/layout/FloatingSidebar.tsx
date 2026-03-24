@@ -161,25 +161,32 @@ export function FloatingSidebar({ variant }: FloatingSidebarProps) {
       {/* Mobile: fixed bottom bar */}
       <aside className="fixed bottom-0 left-0 right-0 z-40 md:hidden">
         <div className="flex items-stretch border-t border-gray-100 bg-white shadow-[0_-2px_10px_rgba(0,0,0,0.06)]">
-          {items.map((item) => (
-            <Link
-              key={item.label}
-              href={item.href}
-              className="flex flex-1 flex-col items-center justify-center gap-1 py-2.5 text-center transition-colors hover:bg-blu-50"
-            >
-              <span className="text-blu-500">
-                <SidebarIcon name={item.icon} />
-              </span>
-              <span className="text-[10px] font-medium leading-tight text-gray-600">
-                {item.label}
-              </span>
-              {item.sublabel && (
-                <span className="text-[9px] font-bold text-blu-500">
-                  {item.sublabel}
+          {items.map((item) => {
+            const isConsult = item.icon === "consult";
+            return (
+              <Link
+                key={item.label}
+                href={item.href}
+                className={`flex flex-1 flex-col items-center justify-center gap-1 py-2.5 text-center transition-colors ${
+                  isConsult
+                    ? "bg-[#E83E3E] hover:bg-[#D42B2B]"
+                    : "hover:bg-blu-50"
+                }`}
+              >
+                <span className={isConsult ? "text-white" : "text-blu-500"}>
+                  <SidebarIcon name={item.icon} />
                 </span>
-              )}
-            </Link>
-          ))}
+                <span className={`text-[10px] font-medium leading-tight ${isConsult ? "text-white font-bold" : "text-gray-600"}`}>
+                  {item.label}
+                </span>
+                {item.sublabel && (
+                  <span className={`text-[9px] font-bold ${isConsult ? "text-white/80" : "text-blu-500"}`}>
+                    {item.sublabel}
+                  </span>
+                )}
+              </Link>
+            );
+          })}
         </div>
       </aside>
     </>
