@@ -21,11 +21,11 @@ export default function MenuCard({ item, onClick }: MenuCardProps) {
     >
       <div className="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-black/5 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
         {/* Image area */}
-        <div className="relative aspect-square overflow-hidden">
+        <div className="relative aspect-square overflow-hidden bg-warm-50">
           <img
             src={item.image}
             alt={item.nameKo}
-            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            className="absolute inset-0 w-full h-full object-contain p-3 transition-transform duration-500 group-hover:scale-105"
           />
 
           {/* Badges */}

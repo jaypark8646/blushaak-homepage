@@ -169,7 +169,7 @@ export function GNB({ isScrolled, variant = "default" }: GNBProps) {
             </ul>
 
             <div className="mx-4 flex-shrink-0 lg:mx-10">
-              <Logo variant="white" />
+              <Logo variant="color" />
             </div>
 
             <ul className="hidden md:flex md:items-center md:gap-1 lg:gap-6 flex-1">

@@ -84,7 +84,7 @@ export default function MasterFranchise() {
             {/* Globe */}
             <div className="flex-1 w-full">
               <Globe3D cities={cities ?? undefined} />
-              <p className="text-center text-gray-400 text-xs mt-4">
+              <p className="mt-4 text-center text-sm font-medium tracking-[0.08em] text-gray-500 sm:text-base">
                 드래그하여 지구본을 회전할 수 있습니다
               </p>
             </div>
@@ -134,7 +134,7 @@ export default function MasterFranchise() {
         {/* World Map Visualization */}
         <ScrollReveal delay={0.2}>
           <div className="mb-16 md:mb-20">
-            <h3 className="text-xl sm:text-2xl font-bold text-dark-800 text-center mb-8">
+            <h3 className="mb-8 text-center text-2xl font-bold leading-tight tracking-tight text-dark-800 sm:text-3xl md:text-[2rem] [word-break:keep-all]">
               글로벌 진출 현황
             </h3>
             <div className="bg-white rounded-2xl p-4 sm:p-8 border border-gray-100 shadow-sm overflow-hidden">
@@ -147,9 +147,9 @@ export default function MasterFranchise() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
           {GLOBAL_LOCATIONS.map((location, index) => (
             <ScrollReveal key={location.country} delay={0.1 * index}>
-              <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+              <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-shadow duration-300 hover:shadow-lg">
                 {/* Store image */}
-                <div className="h-[250px] sm:h-[300px] relative overflow-hidden">
+                <div className="relative h-[250px] sm:h-[300px] overflow-hidden">
                   <img
                     src={location.country === "Indonesia" ? "/images/franchise/global-indonesia.png" : location.country === "Indonesia2" ? "/images/franchise/global-indonesia-2.jpg" : "/images/franchise/global-canada.jpg"}
                     alt={location.countryKo}
@@ -165,7 +165,7 @@ export default function MasterFranchise() {
                 </div>
 
                 {/* Content */}
-                <div className="p-6 sm:p-8">
+                <div className="flex min-h-[220px] flex-1 flex-col p-6 sm:min-h-[240px] sm:p-8">
                   <div className="flex items-center gap-2 mb-3">
                     <span className="text-2xl">{location.flag}</span>
                     <div>
@@ -177,7 +177,7 @@ export default function MasterFranchise() {
                       </p>
                     </div>
                   </div>
-                  <p className="text-gray-500 text-sm leading-relaxed">
+                  <p className="text-sm leading-relaxed text-gray-500">
                     {location.description}
                   </p>
                 </div>
