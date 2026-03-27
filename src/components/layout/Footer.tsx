@@ -13,7 +13,7 @@ export function Footer() {
       {/* Middle section - Links row */}
       <div className="mx-auto max-w-[1200px] px-6 pb-6 lg:px-10">
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2 border-b border-white/10 pb-6">
-          {FOOTER_LINKS.map((link, index) => (
+          {FOOTER_LINKS.map((link) => (
             <Link
               key={link.label}
               href={link.href}
@@ -31,30 +31,37 @@ export function Footer() {
 
       {/* Contact info */}
       <div className="mx-auto max-w-[1200px] px-6 pb-6 lg:px-10">
-        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-6">
+        <div className="grid gap-3 md:grid-cols-2">
           <div className="flex items-center gap-2">
             <span className="text-[13px] font-semibold text-white">가맹문의</span>
             <Link
-              href="tel:1644-8067"
-              className="text-[15px] font-bold text-blu-400 transition-colors hover:text-blu-300"
-            >
-              {BRAND.phone}
-            </Link>
-          </div>
-          <div className="hidden h-3 w-px bg-white/20 sm:block" />
-          <div className="flex items-center gap-2">
-            <span className="text-[13px] text-gray-400">이메일</span>
-            <Link
-              href={`mailto:${BRAND.email}`}
+              href="mailto:sd@dandikorea.com"
               className="text-[13px] text-gray-300 transition-colors hover:text-white"
             >
-              {BRAND.email}
+              sd@dandikorea.com
             </Link>
           </div>
-          <div className="hidden h-3 w-px bg-white/20 sm:block" />
           <div className="flex items-center gap-2">
-            <span className="text-[13px] text-gray-400">FAX</span>
-            <span className="text-[13px] text-gray-300">{BRAND.fax}</span>
+            <span className="text-[13px] text-gray-400">마케팅 제안</span>
+            <Link
+              href="mailto:mkt@dandikorea.com"
+              className="text-[13px] text-gray-300 transition-colors hover:text-white"
+            >
+              mkt@dandikorea.com
+            </Link>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="text-[13px] text-gray-400">메뉴·제품제안</span>
+            <Link
+              href="mailto:tax_dandi@dandikorea.com"
+              className="text-[13px] text-gray-300 transition-colors hover:text-white"
+            >
+              tax_dandi@dandikorea.com
+            </Link>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="text-[13px] text-gray-400">대표번호</span>
+            <span className="text-[13px] text-gray-300">{BRAND.phone}</span>
           </div>
         </div>
       </div>

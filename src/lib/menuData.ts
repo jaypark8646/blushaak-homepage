@@ -21,14 +21,6 @@ export const MENU_ITEMS: MenuItem[] = [
     nutrition: { calories: 150.3, sodium: 78.2, sugar: 14.1, saturatedFat: 5.6, protein: 4.6, caffeine: 85.1, allergens: "우유/대두" },
   },
   {
-    id: "americano",
-    name: "Americano",
-    nameKo: "아메리카노",
-    category: "coffee",
-    image: "/images/menu/americano.jpg",
-    nutrition: null,
-  },
-  {
     id: "peanut-latte",
     name: "Peanut Latte",
     nameKo: "피넛라떼",

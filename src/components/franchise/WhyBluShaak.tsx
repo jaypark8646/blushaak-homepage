@@ -18,14 +18,14 @@ export default function WhyBluShaak() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
           {WHY_BLU_SHAAK.map((item, index) => (
             <ScrollReveal key={item.number} delay={0.1 * index}>
-              <div className="group bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
+              <div className="group flex h-full flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-shadow duration-300 hover:shadow-lg">
                 {/* Image */}
                 <div className="h-[200px] w-full overflow-hidden">
                   <img src={`/images/franchise/why-${index + 1}.jpg`} alt={item.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 </div>
 
                 {/* Content */}
-                <div className="p-6 sm:p-8">
+                <div className="flex flex-1 flex-col p-6 sm:p-8">
                   {/* Number badge */}
                   <div className="w-10 h-10 rounded-full bg-blu-500 flex items-center justify-center mb-4">
                     <span className="text-white text-sm font-bold font-[family-name:var(--font-dm-sans)]">

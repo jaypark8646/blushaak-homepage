@@ -16,10 +16,10 @@ export const BRAND = {
   instagram: "@blushaak_coffee",
   instagramUrl: "https://www.instagram.com/blushaak_coffee",
   phone: "1644-8067",
-  email: "tax@dandikorea.com",
+  email: "sd@dandikorea.com",
   fax: "051-819-7861",
   headquarters: {
-    seoul: "서울특별시 금천구 가산디지털1로 189, LG가산디지털센터 10F 1002호",
+    seoul: "서울 금천구 가산디지털1로 205-28 대신IT타워, 4층 블루샥",
     busan:
       "부산광역시 해운대구 센텀중앙로 48, 8층 805,806호 (우동, 에이스하이테크21)",
   },

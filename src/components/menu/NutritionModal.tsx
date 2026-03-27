@@ -23,9 +23,6 @@ export default function NutritionModal({ item, onClose }: NutritionModalProps) {
     };
   }, [item, onClose]);
 
-  const fmt = (v: number | null, unit: string) =>
-    v !== null && v !== undefined ? `${v}${unit}` : "-";
-
   return (
     <AnimatePresence>
       {item && (
@@ -51,15 +48,15 @@ export default function NutritionModal({ item, onClose }: NutritionModalProps) {
             className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none"
           >
             <div
-              className="pointer-events-auto w-full max-w-sm rounded-3xl bg-white shadow-2xl overflow-hidden"
+              className="pointer-events-auto w-full max-w-md overflow-hidden rounded-3xl bg-white shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Header with image */}
-              <div className="relative h-48 bg-warm-50 overflow-hidden">
+              <div className="relative h-56 overflow-hidden bg-warm-50">
                 <img
                   src={item.image}
                   alt={item.nameKo}
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="absolute inset-0 h-full w-full object-contain p-4"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <button

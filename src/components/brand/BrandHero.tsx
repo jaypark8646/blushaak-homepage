@@ -6,19 +6,19 @@ import Image from "next/image";
 
 const HERO_SLIDES = [
   {
-    image: "/images/brand/hero-1.jpg",
-    label: "Signature Latte",
-    labelKo: "시그니처 라떼",
+    image: "/images/brand/hero-4.jpg",
+    label: "Brewed Daily",
+    labelKo: "매일 갓 내린 커피",
   },
   {
-    image: "/images/brand/hero-2.jpg",
-    label: "Specialty Coffee",
-    labelKo: "스페셜티 커피",
+    image: "/images/brand/coffee-cup.jpg",
+    label: "Signature Beverage",
+    labelKo: "시그니처 음료",
   },
   {
-    image: "/images/brand/hero-3.jpg",
-    label: "Crafted with Care",
-    labelKo: "정성을 담은 한 잔",
+    image: "/images/brand/roasting.jpg",
+    label: "Roasted with Care",
+    labelKo: "정성껏 로스팅한 원두",
   },
 ];
 
