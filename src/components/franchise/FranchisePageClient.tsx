@@ -28,12 +28,12 @@ export default function FranchisePageClient() {
         <WhyBluShaak />
         <HQSupport />
         <TrainingSystem />
+        <RevenueAnalysis />
         <DriveThru />
+        <FranchiseHistory />
         <div id="global">
           <MasterFranchise />
         </div>
-        <FranchiseHistory />
-        <RevenueAnalysis />
         <OpeningProcedure />
         <CostTable />
         <div id="inquiry">
