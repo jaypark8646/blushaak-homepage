@@ -9,6 +9,7 @@ import WhyBluShaak from "@/components/franchise/WhyBluShaak";
 import HQSupport from "@/components/franchise/HQSupport";
 import TrainingSystem from "@/components/franchise/TrainingSystem";
 import DriveThru from "@/components/franchise/DriveThru";
+import DTStoreGallery from "@/components/franchise/DTStoreGallery";
 import MasterFranchise from "@/components/franchise/MasterFranchise";
 import FranchiseHistory from "@/components/franchise/FranchiseHistory";
 import RevenueAnalysis from "@/components/franchise/RevenueAnalysis";
@@ -29,6 +30,7 @@ export default function FranchisePageClient() {
         <HQSupport />
         <TrainingSystem />
         <RevenueAnalysis />
+        <DTStoreGallery />
         <DriveThru />
         <FranchiseHistory />
         <div id="global">
