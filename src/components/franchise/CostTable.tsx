@@ -5,7 +5,10 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 import { COST_TABLE } from "@/lib/franchiseData";
 
 export default function CostTable() {
-  const [openNotes, setOpenNotes] = useState<Record<string, boolean>>({});
+  const highlightedCategory = "기기 및 장비 (2G 기준)";
+  const [openNotes, setOpenNotes] = useState<Record<string, boolean>>({
+    [highlightedCategory]: true,
+  });
 
   const toggleNote = (category: string) => {
     setOpenNotes((prev) => ({ ...prev, [category]: !prev[category] }));
@@ -39,6 +42,32 @@ export default function CostTable() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.1}>
+          <div className="mb-6 rounded-2xl border border-blu-100 bg-gradient-to-r from-blu-500 to-cyan-500 p-[1px] shadow-sm">
+            <div className="flex flex-col gap-3 rounded-[15px] bg-white px-5 py-5 sm:px-6 sm:py-6 md:flex-row md:items-center md:justify-between">
+              <div>
+                <p className="mb-2 inline-flex items-center rounded-full bg-blu-50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-blu-600">
+                  지원 혜택
+                </p>
+                <p className="text-lg font-bold text-dark-800 sm:text-xl">
+                  커피머신 포함 핵심 장비를 본사 지원 항목으로 바로 확인할 수 있습니다.
+                </p>
+                <p className="mt-1 text-sm text-gray-600">
+                  오븐기, 비닝 쇼케이스, 그라인더 3대 포함
+                </p>
+              </div>
+              <div className="inline-flex items-center justify-center self-start rounded-2xl bg-blu-50 px-4 py-3 text-left md:self-center">
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-blu-600">
+                    지원 대상
+                  </p>
+                  <p className="mt-1 text-base font-bold text-dark-800">
+                    기기 및 장비 35,800,000원
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
             <div className="overflow-x-auto">
               <table className="w-full text-xs sm:text-sm">
@@ -59,34 +88,62 @@ export default function CostTable() {
                   {COST_TABLE.map((item) => {
                     const isFirst = item.category === "가맹비";
                     const isEducation = item.category === "교육비";
+                    const isHighlighted = item.category === highlightedCategory;
                     const hasNote = !!item.note;
                     const isOpen = !!openNotes[item.category];
 
                     return (
                       <React.Fragment key={item.category}>
-                        <tr className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors">
+                        <tr
+                          className={`border-b transition-colors ${
+                            isHighlighted
+                              ? "border-blu-100 bg-gradient-to-r from-blu-50 via-white to-cyan-50 hover:from-blu-100 hover:to-cyan-100"
+                              : "border-gray-100 hover:bg-gray-50/50"
+                          }`}
+                        >
                           {/* Category + ? button */}
                           <td className="px-3 sm:px-6 py-3 sm:py-4 font-medium text-dark-800 text-center">
-                            <div className="flex items-center justify-center gap-1.5">
-                              <span>{item.category}</span>
-                              {hasNote && (
-                                <button
-                                  onClick={() => toggleNote(item.category)}
-                                  className={`inline-flex items-center justify-center w-5 h-5 rounded-full text-[10px] font-bold transition-colors flex-shrink-0 ${
-                                    isOpen
-                                      ? "bg-blu-500 text-white"
-                                      : "bg-gray-200 text-gray-500 hover:bg-blu-100 hover:text-blu-600"
-                                  }`}
-                                  aria-label="상세 내용 보기"
-                                >
-                                  ?
-                                </button>
+                            <div className="flex flex-col items-center gap-2 sm:flex-row sm:justify-center">
+                              {isHighlighted && (
+                                <span className="inline-flex items-center gap-1 rounded-full bg-blu-500 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-white shadow-sm">
+                                  <svg
+                                    aria-hidden="true"
+                                    viewBox="0 0 20 20"
+                                    className="h-3.5 w-3.5"
+                                    fill="currentColor"
+                                  >
+                                    <path d="M3 8.75A1.75 1.75 0 0 1 4.75 7h10.5A1.75 1.75 0 0 1 17 8.75V10H3V8.75Z" />
+                                    <path d="M4 11.5h5.25V17H5.75A1.75 1.75 0 0 1 4 15.25V11.5Zm6.75 0H16v3.75A1.75 1.75 0 0 1 14.25 17h-3.5v-5.5Z" />
+                                    <path d="M10 7a.75.75 0 0 1-.75-.75V4.9a1.4 1.4 0 1 0-2.8 0 .75.75 0 0 1-1.5 0 2.9 2.9 0 1 1 5.05 1.95A.74.74 0 0 1 10 7Zm0 0a.75.75 0 0 0 .75-.75V4.9a1.4 1.4 0 1 1 2.8 0 .75.75 0 0 0 1.5 0A2.9 2.9 0 1 0 10 6.85V7Z" />
+                                  </svg>
+                                  혜택
+                                </span>
                               )}
+                              <div className="flex items-center justify-center gap-1.5">
+                                <span>{item.category}</span>
+                                {hasNote && (
+                                  <button
+                                    onClick={() => toggleNote(item.category)}
+                                    className={`inline-flex items-center justify-center w-5 h-5 rounded-full text-[10px] font-bold transition-colors flex-shrink-0 ${
+                                      isOpen
+                                        ? "bg-blu-500 text-white"
+                                        : "bg-gray-200 text-gray-500 hover:bg-blu-100 hover:text-blu-600"
+                                    }`}
+                                    aria-label="상세 내용 보기"
+                                  >
+                                    ?
+                                  </button>
+                                )}
+                              </div>
                             </div>
                           </td>
 
                           {/* 10평 */}
-                          <td className="px-3 sm:px-6 py-4 text-center text-dark-700">
+                          <td
+                            className={`px-3 sm:px-6 py-4 text-center ${
+                              isHighlighted ? "font-bold text-dark-900" : "text-dark-700"
+                            }`}
+                          >
                             {isFirst ? (
                               <div className="flex flex-col items-center gap-1">
                                 <span className="line-through text-gray-300 text-xs">
@@ -107,7 +164,11 @@ export default function CostTable() {
                           </td>
 
                           {/* 15평 */}
-                          <td className="px-3 sm:px-6 py-4 text-center text-dark-700">
+                          <td
+                            className={`px-3 sm:px-6 py-4 text-center ${
+                              isHighlighted ? "font-bold text-dark-900" : "text-dark-700"
+                            }`}
+                          >
                             {isFirst ? (
                               <div className="flex flex-col items-center gap-1">
                                 <span className="line-through text-gray-300 text-xs">
@@ -151,8 +212,21 @@ export default function CostTable() {
 
                         {/* Note row — 토글 */}
                         {hasNote && isOpen && (
-                          <tr className="bg-blu-50/60 border-b border-blu-100">
-                            <td colSpan={3} className="px-4 sm:px-8 py-2.5 text-xs text-blu-700 leading-relaxed text-center">
+                          <tr
+                            className={`border-b ${
+                              isHighlighted
+                                ? "bg-blu-50 border-blu-100"
+                                : "bg-blu-50/60 border-blu-100"
+                            }`}
+                          >
+                            <td
+                              colSpan={3}
+                              className={`px-4 sm:px-8 py-2.5 text-center leading-relaxed ${
+                                isHighlighted
+                                  ? "text-sm font-semibold text-blu-700"
+                                  : "text-xs text-blu-700"
+                              }`}
+                            >
                               {item.note}
                             </td>
                           </tr>
