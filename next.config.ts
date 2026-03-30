@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 const isGithubActions = process.env.GITHUB_ACTIONS === "true";
 
 const nextConfig: NextConfig = {
-  output: "export",
+  output: isGithubActions ? "export" : undefined,
   ...(isGithubActions && { basePath: "/blushaak-homepage" }),
   images: {
     unoptimized: true,
