@@ -254,14 +254,6 @@ export const MENU_ITEMS: MenuItem[] = [
     nutrition: { calories: 212.7, sodium: 97.7, sugar: 29.8, saturatedFat: 1.8, protein: 5.8, caffeine: 18.9, allergens: "우유" },
   },
   {
-    id: "real-chocolat",
-    name: "Real Chocolat",
-    nameKo: "리얼 쇼콜라",
-    category: "beverage",
-    image: "/images/menu/real-chocolat.jpg",
-    nutrition: { calories: 460.9, sodium: 140.3, sugar: 50.2, saturatedFat: 4.0, protein: 10.2, caffeine: 13.5, allergens: "우유/대두" },
-  },
-  {
     id: "mango-latte",
     name: "Mango Latte",
     nameKo: "망고 라떼",
@@ -276,14 +268,6 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "beverage",
     image: "/images/menu/banana-bubble-tea.jpg",
     nutrition: { calories: 234.9, sodium: 76.4, sugar: 33.3, saturatedFat: 3.6, protein: 5.3, caffeine: null, allergens: null },
-  },
-  {
-    id: "white-peach-oolong",
-    name: "White Peach Oolong",
-    nameKo: "백도 우롱",
-    category: "beverage",
-    image: "/images/menu/white-peach-oolong.jpg",
-    nutrition: null,
   },
   {
     id: "berry-hibiscus",
@@ -380,14 +364,6 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "beverage",
     image: "/images/menu/green-grape-ade.jpg",
     nutrition: { calories: 163.4, sodium: 28.0, sugar: 27.1, saturatedFat: 0.0, protein: 0.4, caffeine: null, allergens: null },
-  },
-  {
-    id: "peach-boy",
-    name: "Peach Boy",
-    nameKo: "피치보이",
-    category: "beverage",
-    image: "/images/menu/peach-boy.jpg",
-    nutrition: null,
   },
   {
     id: "honey-chamomile",
