@@ -335,8 +335,8 @@ export const MENU_ITEMS: MenuItem[] = [
   },
   {
     id: "jeju-misutgaru",
-    name: "Jeju Misutgaru",
-    nameKo: "제주 미숫가루",
+    name: "Barley Misutgaru",
+    nameKo: "보리 미숫가루",
     category: "beverage",
     image: "/images/menu/jeju-misutgaru.jpg",
     nutrition: { calories: 277.1, sodium: 72.8, sugar: 28.9, saturatedFat: 2.7, protein: 8.0, caffeine: null, allergens: "우유/대두" },
