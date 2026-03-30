@@ -34,13 +34,13 @@ export const FRANCHISE_STRENGTHS: FranchiseStrength[] = [
     number: "05",
     title: "본사 밀착 지원",
     description: "전담 슈퍼바이저 배치\n정기 점검 및 빠른 피드백",
-    image: "/images/franchise/strength-5.jpg",
+    image: "/images/franchise/strength-4.jpg",
   },
   {
     number: "06",
     title: "트렌드 선도력",
     description: "두쫀쿠 등 품귀 메뉴 본사 차원 빠른 도입\n매출 증대 기회 선점",
-    image: "/images/franchise/strength-6.jpg",
+    image: "/images/franchise/strength-3.jpg",
   },
 ];
 

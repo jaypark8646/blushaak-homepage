@@ -3,6 +3,7 @@ import { join, extname } from "path";
 
 const BASE_PATH = "/blushaak-homepage";
 const OUT_DIR = join(process.cwd(), "out");
+const isGithubActions = process.env.GITHUB_ACTIONS === "true";
 
 async function* walk(dir) {
   const entries = await readdir(dir, { withFileTypes: true });
@@ -14,6 +15,11 @@ async function* walk(dir) {
 }
 
 async function fixPaths() {
+  if (!isGithubActions) {
+    console.log("Skipping asset path fixes outside GitHub Pages builds");
+    return;
+  }
+
   let count = 0;
   for await (const filePath of walk(OUT_DIR)) {
     const ext = extname(filePath);

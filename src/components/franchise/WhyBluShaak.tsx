@@ -21,7 +21,7 @@ export default function WhyBluShaak() {
               <div className="group flex h-full flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-shadow duration-300 hover:shadow-lg">
                 {/* Image */}
                 <div className="h-[200px] w-full overflow-hidden">
-                  <img src={`/images/franchise/why-${index + 1}.jpg`} alt={item.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 </div>
 
                 {/* Content */}
