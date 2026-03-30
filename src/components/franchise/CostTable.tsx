@@ -58,6 +58,7 @@ export default function CostTable() {
                 <tbody>
                   {COST_TABLE.map((item) => {
                     const isFirst = item.category === "가맹비";
+                    const isEducation = item.category === "교육비";
                     const hasNote = !!item.note;
                     const isOpen = !!openNotes[item.category];
 
@@ -93,6 +94,13 @@ export default function CostTable() {
                                 </span>
                                 <span className="font-semibold">{item.cost10}</span>
                               </div>
+                            ) : isEducation ? (
+                              <div className="flex flex-col items-center gap-1">
+                                <span className="line-through text-gray-300 text-xs">
+                                  3,000,000
+                                </span>
+                                <span className="font-semibold">{item.cost10}</span>
+                              </div>
                             ) : (
                               <span>{displayCost(item.cost10)}</span>
                             )}
@@ -107,6 +115,13 @@ export default function CostTable() {
                                 </span>
                                 <span className="font-semibold">{item.cost15}</span>
                               </div>
+                            ) : isEducation ? (
+                              <div className="flex flex-col items-center gap-1">
+                                <span className="line-through text-gray-300 text-xs">
+                                  3,000,000
+                                </span>
+                                <span className="font-semibold">{item.cost15}</span>
+                              </div>
                             ) : (
                               <span>{displayCost(item.cost15)}</span>
                             )}
@@ -118,7 +133,17 @@ export default function CostTable() {
                           <tr>
                             <td colSpan={3} className="px-0 py-0">
                               <div className="bg-cta-500 text-white text-center py-2 text-xs sm:text-sm font-bold tracking-wide">
-                                한시적 할인 중 (정가 10,000,000원)
+                                한시적 면제 중 (정가 10,000,000원)
+                              </div>
+                            </td>
+                          </tr>
+                        )}
+
+                        {isEducation && (
+                          <tr>
+                            <td colSpan={3} className="px-0 py-0">
+                              <div className="bg-cta-500 text-white text-center py-2 text-xs sm:text-sm font-bold tracking-wide">
+                                한시적 면제 중 (정가 3,000,000원)
                               </div>
                             </td>
                           </tr>

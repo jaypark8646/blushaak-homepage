@@ -184,14 +184,15 @@ export const OPENING_STEPS: OpeningStep[] = [
 export const COST_TABLE: CostItem[] = [
   {
     category: "가맹비",
-    cost10: "5,000,000",
-    cost15: "5,000,000",
-    note: "한시적 할인 (정가 10,000,000원)",
+    cost10: "면제",
+    cost15: "면제",
+    note: "한시적 면제 (정가 10,000,000원)",
   },
   {
     category: "교육비",
-    cost10: "3,000,000",
-    cost15: "3,000,000",
+    cost10: "면제",
+    cost15: "면제",
+    note: "한시적 면제 (정가 3,000,000원)",
   },
   {
     category: "인테리어",
@@ -209,7 +210,7 @@ export const COST_TABLE: CostItem[] = [
     category: "기기 및 장비 (2G 기준)",
     cost10: "35,800,000",
     cost15: "35,800,000",
-    note: "오븐기/비닝 쇼케이스/그라인더 3대 포함",
+    note: "커피머신 지원 · 오븐기/비닝 쇼케이스/그라인더 3대 포함",
   },
   {
     category: "초도비품",
