@@ -9,3 +9,4 @@
 - [x] Task 003 [codex]: NutritionModal 컴포넌트 구현 (src/components/menu/NutritionModal.tsx)
 - [x] Task 004 [codex]: MenuCard 클릭 핸들러 + 모달 연동
 - [x] Task 005 [claude-sonnet]: 빌드 검증 완료 (Next.js 16.1.6 Turbopack, 24개 페이지 정상 생성)
+- [x] Task 006 [codex]: GitHub Pages 배포 수정 (next.config.ts에 `output: 'export'`, `basePath: '/blushaak-homepage'` 추가 후 `out/` 생성 검증)
