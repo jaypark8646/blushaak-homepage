@@ -53,6 +53,14 @@ export const MENU_ITEMS: MenuItem[] = [
     nutrition: { calories: 12.0, sodium: 5.0, sugar: 0.0, saturatedFat: 0.0, protein: 0.0, caffeine: 18.0, allergens: null },
   },
   {
+    id: "white-americano",
+    name: "White Americano",
+    nameKo: "화이트 아메리카노",
+    category: "coffee",
+    image: "/images/menu/white-americano.jpg",
+    nutrition: null,
+  },
+  {
     id: "cafe-latte",
     name: "Cafe Latte",
     nameKo: "카페 라떼",
@@ -91,6 +99,14 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "coffee",
     image: "/images/menu/banana-cold-brew-oat-latte.jpg",
     nutrition: { calories: 203.3, sodium: 94.6, sugar: 23.7, saturatedFat: 0.0, protein: 0.0, caffeine: 86.6, allergens: null },
+  },
+  {
+    id: "hazelnut-oat-latte",
+    name: "Hazlenut Oat Latte",
+    nameKo: "헤이즐넛 오트라떼",
+    category: "coffee",
+    image: "/images/menu/hazelnut-oat-latte.jpg",
+    nutrition: null,
   },
   {
     id: "cinnamon-cafe-latte",
