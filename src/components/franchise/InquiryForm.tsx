@@ -6,6 +6,7 @@ import Button from "@/components/ui/Button";
 import ToggleButton from "@/components/ui/ToggleButton";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { REFERRAL_SOURCES } from "@/lib/constants";
+import { getTrackingParamsFromBrowser } from "@/lib/tracking";
 
 interface FormState {
   name: string;
@@ -44,6 +45,8 @@ const initialState: FormState = {
 export default function InquiryForm() {
   const [form, setForm] = useState<FormState>(initialState);
   const [errors, setErrors] = useState<Partial<Record<keyof FormState, string>>>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState<string | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -77,13 +80,66 @@ export default function InquiryForm() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const buildInquiryMessage = () => {
+    const detailLines = [
+      form.details.trim(),
+      form.estimatedBudget && `예상창업비용: ${form.estimatedBudget}만원`,
+      form.preferredSize && `창업희망 평수: ${form.preferredSize}`,
+      form.ageGroup && `연령대: ${form.ageGroup}`,
+      form.hasFranchiseExp && `프랜차이즈 경험: ${form.hasFranchiseExp}`,
+      (form.openYear || form.openMonth) &&
+        `오픈희망 시기: ${[form.openYear, form.openMonth && `${form.openMonth}월`]
+          .filter(Boolean)
+          .join(" ")}`,
+      form.hasStore && `점포보유유무: ${form.hasStore}`,
+      form.referralSource && `직접 입력 유입경로: ${form.referralSource}`,
+      form.locationType && `예상상권타입: ${form.locationType}`,
+    ].filter(Boolean);
+
+    return detailLines.join("\n");
+  };
+
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
 
-    console.log("Franchise Inquiry Form Data:", form);
-    alert("문의가 접수되었습니다");
-    setForm(initialState);
+    setIsSubmitting(true);
+    setSubmitMessage(null);
+
+    try {
+      const trackingParams = getTrackingParamsFromBrowser(new URLSearchParams(window.location.search));
+      const response = await fetch("/api/leads", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: form.name,
+          phone: form.phone,
+          region: form.preferredArea,
+          message: buildInquiryMessage(),
+          ref: trackingParams.ref,
+          utm_source: trackingParams.utm_source,
+          utm_medium: trackingParams.utm_medium,
+          utm_campaign: trackingParams.utm_campaign,
+          page_url: window.location.href,
+        }),
+      });
+
+      if (!response.ok) {
+        const payload = (await response.json().catch(() => null)) as { message?: string } | null;
+        throw new Error(payload?.message || "문의 저장 중 오류가 발생했습니다.");
+      }
+
+      setSubmitMessage("문의가 접수되었습니다. 담당자가 확인 후 연락드리겠습니다.");
+      setForm(initialState);
+    } catch (error) {
+      const message =
+        error instanceof Error ? error.message : "문의 저장 중 오류가 발생했습니다.";
+      setSubmitMessage(message);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const inputClasses =
@@ -344,10 +400,16 @@ export default function InquiryForm() {
                 type="submit"
                 variant="cta"
                 size="lg"
+                disabled={isSubmitting}
                 className="w-full mx-auto block text-lg sm:text-xl py-5 sm:py-6 font-extrabold tracking-wide shadow-lg shadow-cta-300/50 hover:scale-[1.02] transition-transform"
               >
-                🚀 창업 상담 문의하기
+                {isSubmitting ? "접수 중..." : "창업 상담 문의하기"}
               </Button>
+              {submitMessage && (
+                <p className={`text-sm leading-6 ${submitMessage.includes("접수") ? "text-blu-600" : "text-cta-500"}`}>
+                  {submitMessage}
+                </p>
+              )}
             </div>
           </form>
         </ScrollReveal>

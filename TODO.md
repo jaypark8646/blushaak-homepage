@@ -10,3 +10,9 @@
 - [x] Task 004 [codex]: MenuCard 클릭 핸들러 + 모달 연동
 - [x] Task 005 [claude-sonnet]: 빌드 검증 완료 (Next.js 16.1.6 Turbopack, 24개 페이지 정상 생성)
 - [x] Task 006 [codex]: GitHub Pages 배포 수정 (next.config.ts에 `output: 'export'`, `basePath: '/blushaak-homepage'` 추가 후 `out/` 생성 검증)
+
+## 완료 기록 — UTM/Ref 광고 매체 트래킹
+- [x] Task 007 [codex]: `ref`, `utm_source`, `utm_medium`, `utm_campaign` 전역 캡처 및 sessionStorage/cookie 30일 유지
+- [x] Task 008 [codex]: 가맹 문의 폼을 Google Sheets 저장 API와 연결하고 ref/utm/page_url 포함 제출
+- [x] Task 009 [codex]: `/admin/leads` 비밀번호 보호 페이지 및 CSV 다운로드 구현
+- [x] Task 010 [codex]: Google Sheets/Admin 환경변수 설정 요청 문서 생성 및 Vercel 대응 빌드 구조 정리
