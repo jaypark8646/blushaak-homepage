@@ -258,7 +258,7 @@ export const MENU_ITEMS: MenuItem[] = [
     name: "Valrhona Chocolate",
     nameKo: "발로나 초콜릿",
     category: "beverage",
-    image: "/images/menu/valrhona-chocolate.jpg",
+    image: "/images/menu/valrhona-chocolate-20260330.jpg",
     nutrition: null,
   },
   {
@@ -378,7 +378,7 @@ export const MENU_ITEMS: MenuItem[] = [
     name: "Toffee Nut Latte",
     nameKo: "토피넛 라떼",
     category: "beverage",
-    image: "/images/menu/toffee-nut-latte.jpg",
+    image: "/images/menu/toffee-nut-latte-20260330.jpg",
     nutrition: null,
   },
   {
@@ -386,7 +386,7 @@ export const MENU_ITEMS: MenuItem[] = [
     name: "Earl Grey Vanilla Tea Latte",
     nameKo: "얼그레이 바닐라 티 라떼",
     category: "beverage",
-    image: "/images/menu/earl-grey-vanilla-tea-latte.jpg",
+    image: "/images/menu/earl-grey-vanilla-tea-latte-20260330.jpg",
     nutrition: null,
   },
   {
@@ -394,7 +394,7 @@ export const MENU_ITEMS: MenuItem[] = [
     name: "Brown Sugar Bubble Tea",
     nameKo: "흑당 버블티",
     category: "beverage",
-    image: "/images/menu/brown-sugar-bubble-tea.jpg",
+    image: "/images/menu/brown-sugar-bubble-tea-20260330.jpg",
     nutrition: null,
   },
   {
@@ -426,7 +426,7 @@ export const MENU_ITEMS: MenuItem[] = [
     name: "Red Apple Yuja Tea",
     nameKo: "홍사과 유자티",
     category: "beverage",
-    image: "/images/menu/red-apple-yuja-tea.jpg",
+    image: "/images/menu/red-apple-yuja-tea-20260330.jpg",
     nutrition: null,
   },
   // Blended
@@ -587,7 +587,7 @@ export const MENU_ITEMS: MenuItem[] = [
     name: "Real Strawberry Juice",
     nameKo: "리얼 딸기 주스",
     category: "blended",
-    image: "/images/menu/real-strawberry-juice.jpg",
+    image: "/images/menu/real-strawberry-juice-20260330.jpg",
     nutrition: null,
   },
   {
@@ -619,7 +619,7 @@ export const MENU_ITEMS: MenuItem[] = [
     name: "Red Apple Tea Smoothie",
     nameKo: "홍사과 티 스무디",
     category: "blended",
-    image: "/images/menu/red-apple-tea-smoothie.jpg",
+    image: "/images/menu/red-apple-tea-smoothie-20260330.jpg",
     nutrition: null,
   },
   {
@@ -627,7 +627,7 @@ export const MENU_ITEMS: MenuItem[] = [
     name: "Apple Smoothie",
     nameKo: "사과 스무디",
     category: "blended",
-    image: "/images/menu/apple-smoothie.jpg",
+    image: "/images/menu/apple-smoothie-20260330.jpg",
     nutrition: null,
   },
   // Bottle
