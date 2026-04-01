@@ -9,7 +9,7 @@ export default function CoffeeBeans() {
   const [hoveredBean, setHoveredBean] = useState<string | null>(null);
 
   return (
-    <section className="py-24 md:py-32 bg-white">
+    <section className="pb-0 pt-24 md:pt-32 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         {/* Title */}
         <ScrollReveal>
@@ -115,7 +115,20 @@ export default function CoffeeBeans() {
             ))}
           </div>
         </ScrollReveal>
+      </div>
 
+      {/* Barista Photo with gradient fade */}
+      <div className="relative mt-16 md:mt-24">
+        <div className="absolute top-0 left-0 right-0 h-32 md:h-48 bg-gradient-to-b from-white to-transparent z-10 pointer-events-none" />
+
+        <div className="w-full overflow-hidden" style={{ maxHeight: "560px" }}>
+          <img
+            src="/images/brand/barista-trophy.jpg"
+            alt="World Barista Champion"
+            className="w-full h-full object-cover object-center"
+            style={{ maxHeight: "560px" }}
+          />
+        </div>
       </div>
     </section>
   );
