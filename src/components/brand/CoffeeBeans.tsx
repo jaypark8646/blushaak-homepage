@@ -121,11 +121,11 @@ export default function CoffeeBeans() {
       <div className="relative mt-16 md:mt-24">
         <div className="absolute top-0 left-0 right-0 h-32 md:h-48 bg-gradient-to-b from-white to-transparent z-10 pointer-events-none" />
 
-        <div className="w-full max-h-[320px] overflow-hidden md:max-h-[420px]">
+        <div className="w-full max-h-[320px] overflow-hidden md:max-h-[600px]">
           <img
             src="/images/brand/barista-trophy.jpg"
             alt="World Barista Champion"
-            className="h-full w-full max-h-[320px] object-cover object-center md:max-h-[420px]"
+            className="h-full w-full max-h-[320px] object-cover object-center md:max-h-[600px]"
           />
         </div>
       </div>
