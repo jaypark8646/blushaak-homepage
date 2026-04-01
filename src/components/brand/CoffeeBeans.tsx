@@ -31,10 +31,24 @@ export default function CoffeeBeans() {
             {COFFEE_BEANS.map((bean) => (
               <div
                 key={bean.id}
-                className="relative flex flex-col items-center"
+                className="relative flex flex-col items-center overflow-visible"
                 onMouseEnter={() => setHoveredBean(bean.id)}
                 onMouseLeave={() => setHoveredBean(null)}
               >
+                {bean.id === "colombian-fruity" && (
+                  <div className="absolute -top-4 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap">
+                    <div className="flex items-center gap-1 rounded-full border border-amber-100 bg-white px-3 py-1 shadow-md">
+                      <span className="text-[11px] leading-none text-amber-500">
+                        ★★★
+                      </span>
+                      <span className="text-sm leading-none">🏆</span>
+                      <span className="font-[family-name:var(--font-dm-sans)] text-[11px] font-semibold tracking-wide text-amber-700">
+                        Champion-Selected
+                      </span>
+                    </div>
+                  </div>
+                )}
+
                 {/* Bean bag circle */}
                 <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden transition-transform duration-300 hover:scale-105 cursor-pointer shadow-lg">
                   <img
