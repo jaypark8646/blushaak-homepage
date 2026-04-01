@@ -73,7 +73,7 @@ function NewsPageContent() {
                       alt={`블루샥 매장 사진 ${i + 1}`}
                       width={400}
                       height={260}
-                      className="h-28 w-full rounded-xl object-cover md:h-36"
+                      className="h-44 w-full rounded-xl object-cover md:h-56"
                     />
                   </div>
                 ))}
