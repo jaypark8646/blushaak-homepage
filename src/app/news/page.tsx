@@ -3,6 +3,7 @@
 import { useState, useMemo, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { GNB, Footer, FloatingSidebar } from "@/components/layout";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { useScrollPosition } from "@/hooks/useScrollPosition";
@@ -13,6 +14,14 @@ import {
   categoryLabels,
   type NewsTab,
 } from "@/lib/newsData";
+
+const STORE_IMAGES = [
+  "/images/store/news_store_01.jpg",
+  "/images/store/news_store_02.jpg",
+  "/images/store/news_store_03.jpg",
+  "/images/store/news_store_04.jpg",
+  "/images/store/news_store_05.jpg",
+];
 
 function NewsPageContent() {
   const searchParams = useSearchParams();
@@ -45,6 +54,30 @@ function NewsPageContent() {
               <p className="mt-4 text-center text-lg text-gray-500">
                 블루샥의 최신 소식
               </p>
+            </ScrollReveal>
+          </div>
+        </section>
+
+        {/* Store Photo Gallery */}
+        <section className="bg-white py-10">
+          <div className="mx-auto max-w-7xl px-4">
+            <ScrollReveal>
+              <div className="flex gap-3 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-2 md:grid md:grid-cols-5 md:overflow-visible">
+                {STORE_IMAGES.map((src, i) => (
+                  <div
+                    key={src}
+                    className="w-64 flex-shrink-0 snap-start md:w-auto"
+                  >
+                    <Image
+                      src={src}
+                      alt={`블루샥 매장 사진 ${i + 1}`}
+                      width={400}
+                      height={260}
+                      className="h-44 w-full rounded-xl object-cover md:h-56"
+                    />
+                  </div>
+                ))}
+              </div>
             </ScrollReveal>
           </div>
         </section>
