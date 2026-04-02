@@ -36,16 +36,22 @@ export default function CoffeeBeans() {
                 onMouseLeave={() => setHoveredBean(null)}
               >
                 {bean.id === "colombian-fruity" && (
-                  <div className="absolute -top-4 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap">
-                    <div className="flex items-center gap-1 rounded-full border border-amber-100 bg-white px-3 py-1 shadow-md">
-                      <span className="text-[11px] leading-none text-amber-500">
-                        ★★★
-                      </span>
-                      <span className="text-sm leading-none">🏆</span>
-                      <span className="font-[family-name:var(--font-dm-sans)] text-[11px] font-semibold tracking-wide text-amber-700">
-                        Champion-Selected
-                      </span>
+                  <div className="flex flex-col items-center mb-2">
+                    {/* Trophy + stars */}
+                    <div className="flex items-center justify-center gap-1">
+                      <span className="text-amber-500 text-xs md:text-sm leading-none">★★</span>
+                      <img
+                        src="/images/brand/trophy.jpg"
+                        alt="Champion Trophy"
+                        className="w-10 h-12 md:w-14 md:h-16 object-contain"
+                        style={{ mixBlendMode: "multiply" }}
+                      />
+                      <span className="text-amber-500 text-xs md:text-sm leading-none">★★</span>
                     </div>
+                    {/* Champion text */}
+                    <span className="font-[family-name:var(--font-dm-sans)] text-[10px] md:text-[11px] font-semibold tracking-wider text-amber-700 mt-1">
+                      Champion-Selected
+                    </span>
                   </div>
                 )}
 
