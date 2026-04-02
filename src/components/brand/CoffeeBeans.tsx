@@ -35,7 +35,7 @@ export default function CoffeeBeans() {
                 onMouseEnter={() => setHoveredBean(bean.id)}
                 onMouseLeave={() => setHoveredBean(null)}
               >
-                {bean.id === "colombian-fruity" && (
+                {bean.id === "colombian-fruity" ? (
                   <div className="flex flex-col items-center mb-2">
                     {/* Trophy + stars */}
                     <div className="flex items-center justify-center gap-1">
@@ -53,6 +53,8 @@ export default function CoffeeBeans() {
                       Champion-Selected
                     </span>
                   </div>
+                ) : (
+                  <div className="h-[84px] md:h-[100px]" aria-hidden="true" />
                 )}
 
                 {/* Bean bag circle */}
