@@ -16,3 +16,8 @@
 - [x] Task 008 [codex]: 가맹 문의 폼을 Google Sheets 저장 API와 연결하고 ref/utm/page_url 포함 제출
 - [x] Task 009 [codex]: `/admin/leads` 비밀번호 보호 페이지 및 CSV 다운로드 구현
 - [x] Task 010 [codex]: Google Sheets/Admin 환경변수 설정 요청 문서 생성 및 Vercel 대응 빌드 구조 정리
+
+## 완료 기록 — 홈페이지 리뉴얼 레이아웃
+- [x] Task 011 [codex]: 홈페이지 섹션 순서를 BrandHero → CoffeePrinciple → Franchise 전체 → BrandIntro → CoffeeBeans → BrandDirection → Menu → News → 가맹 문의 폼 순으로 재배치
+- [x] Task 012 [codex]: 홈페이지 자동 노출 개설비용 팝업 구현 (sessionStorage 세션당 1회, 혜택/비용표/토글 설명/CTA 스크롤 포함)
+- [x] Task 013 [codex]: 섹션 재배치 후 사이드바/프로그레스바 섹션 판별 로직 보정
