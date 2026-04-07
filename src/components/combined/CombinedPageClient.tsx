@@ -1,11 +1,12 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { GNB } from "@/components/layout/GNB";
 import { FloatingSidebar } from "@/components/layout/FloatingSidebar";
 import { ScrollProgressBar } from "@/components/layout/ScrollProgressBar";
 import { SectionJumpButtons } from "@/components/layout/SectionJumpButtons";
 import { BrandFranchiseDivider } from "@/components/combined/BrandFranchiseDivider";
+import OpeningCostPopup from "@/components/combined/OpeningCostPopup";
 import { useScrollPosition } from "@/hooks/useScrollPosition";
 
 // Brand sections
@@ -33,31 +34,36 @@ import InquiryForm from "@/components/franchise/InquiryForm";
 export default function CombinedPageClient() {
   const { isScrolled } = useScrollPosition();
   const franchiseRef = useRef<HTMLDivElement>(null);
+  const postFranchiseRef = useRef<HTMLDivElement>(null);
   const [sidebarVariant, setSidebarVariant] = useState<"brand" | "franchise">("brand");
 
   useEffect(() => {
     const handleScroll = () => {
-      if (!franchiseRef.current) return;
-      const rect = franchiseRef.current.getBoundingClientRect();
-      setSidebarVariant(rect.top <= window.innerHeight / 2 ? "franchise" : "brand");
+      if (!franchiseRef.current || !postFranchiseRef.current) return;
+
+      const threshold = window.innerHeight / 2;
+      const franchiseTop = franchiseRef.current.getBoundingClientRect().top;
+      const postFranchiseTop = postFranchiseRef.current.getBoundingClientRect().top;
+      const isFranchiseSection = franchiseTop <= threshold && postFranchiseTop > threshold;
+
+      setSidebarVariant(isFranchiseSection ? "franchise" : "brand");
     };
+
     window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <>
+      <OpeningCostPopup />
       <ScrollProgressBar currentSection={sidebarVariant} />
       <GNB isScrolled={isScrolled} />
 
       <main className="pb-20 md:pb-0">
         <BrandHero />
-        <BrandIntro />
         <CoffeePrinciple />
-        <CoffeeBeans />
-        <BrandDirection />
-        <MenuCarousel />
-        <NewsPreview />
 
         <BrandFranchiseDivider />
 
@@ -77,6 +83,15 @@ export default function CombinedPageClient() {
         <div id="cost">
           <CostTable />
         </div>
+
+        <div ref={postFranchiseRef}>
+          <BrandIntro />
+        </div>
+        <CoffeeBeans />
+        <BrandDirection />
+        <MenuCarousel />
+        <NewsPreview />
+
         <div id="inquiry">
           <InquiryForm />
         </div>
