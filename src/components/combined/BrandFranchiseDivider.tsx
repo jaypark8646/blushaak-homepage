@@ -120,10 +120,7 @@ export function BrandFranchiseDivider() {
               ))}
             </div>
 
-            <div className="pointer-events-none absolute inset-x-0 top-0 flex items-center justify-between p-4 sm:p-5">
-              <span className="rounded-full border border-white/15 bg-black/25 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.24em] text-white/75 backdrop-blur-sm">
-                Photo Carousel
-              </span>
+            <div className="pointer-events-none absolute inset-x-0 top-0 flex items-center justify-end p-4 sm:p-5">
               <span className="rounded-full border border-white/15 bg-black/25 px-3 py-1 text-xs text-white/75 backdrop-blur-sm">
                 {String(currentIndex + 1).padStart(2, "0")} / {String(FRANCHISE_STORE_IMAGES.length).padStart(2, "0")}
               </span>
