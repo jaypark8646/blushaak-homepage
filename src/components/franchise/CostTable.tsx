@@ -65,8 +65,8 @@ export default function CostTable() {
                     <p className="mt-2 text-base font-bold text-dark-800">
                       가맹비 · 교육비 면제
                     </p>
-                    <p className="mt-1 text-sm text-gray-600">
-                      정가 기준 1,300만원 절감 혜택 반영
+                    <p className="mt-1 text-base font-bold text-dark-800">
+                      커피머신 지원
                     </p>
                   </div>
                 </div>
