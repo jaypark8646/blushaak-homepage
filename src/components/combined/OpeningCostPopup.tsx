@@ -18,9 +18,10 @@ const POPUP_CATEGORIES = [
 const POPUP_NOTES: Partial<Record<(typeof POPUP_CATEGORIES)[number], string>> = {
   "가맹비": "한시적 면제 중 (정가 10,000,000원)",
   "교육비": "한시적 면제 중 (정가 3,000,000원)",
-  "기기 및 장비 (2G 기준)":
-    "커피머신 지원 · 오븐기/비닝 쇼케이스/그라인더 3대 포함",
+  "기기 및 장비 (2G 기준)": "오븐기/비닝 쇼케이스/그라인더 3대 포함",
 };
+
+const EQUIPMENT_SUPPORT_LABEL = "커피머신 지원";
 
 const TOTALS = {
   10: "72,300,000",
@@ -88,8 +89,10 @@ export default function OpeningCostPopup() {
   }
 
   const handleConsultClick = () => {
-    document.getElementById("franchise")?.scrollIntoView({ behavior: "smooth", block: "start" });
     setIsOpen(false);
+    setTimeout(() => {
+      document.getElementById("inquiry")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 150);
   };
 
   const toggleNote = (category: string) => {
@@ -141,13 +144,24 @@ export default function OpeningCostPopup() {
                   </tr>
                 </thead>
                 <tbody>
+                  <tr className="border-t border-blu-100 bg-gradient-to-r from-blu-600 via-blu-500 to-cyan-500 text-white">
+                    <td colSpan={3} className="px-5 py-4">
+                      <div className="flex flex-col items-center justify-center gap-2 text-center sm:flex-row sm:gap-3">
+                        <span className="inline-flex items-center rounded-full bg-white/15 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-white/90">
+                          신규 가맹 혜택
+                        </span>
+                        <span className="text-base font-black sm:text-lg">
+                          {EQUIPMENT_SUPPORT_LABEL}
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
                   {popupRows.map((item) => {
                     const note = POPUP_NOTES[item.category as keyof typeof POPUP_NOTES];
                     const isExempted = item.category === "가맹비" || item.category === "교육비";
                     const isBenefit = item.category === "전기증설/에어컨";
                     const isEquipment = item.category === "기기 및 장비 (2G 기준)";
                     const isOpenNote = !!openNotes[item.category];
-                    const showNoteInline = note && isEquipment;
 
                     return (
                       <Fragment key={item.category}>
@@ -155,32 +169,27 @@ export default function OpeningCostPopup() {
                           <td className="px-5 py-4 text-center font-semibold text-dark-800">
                             <div className="flex flex-col items-center justify-center gap-2">
                               <div className="flex items-center justify-center gap-2">
-                              {isBenefit && (
-                                <span className="inline-flex rounded-full bg-blu-500 px-2.5 py-1 text-[10px] font-bold tracking-[0.16em] text-white">
-                                  혜택
-                                </span>
-                              )}
-                              <span>{item.category}</span>
-                              {note && !isEquipment && (
-                                <button
-                                  type="button"
-                                  onClick={() => toggleNote(item.category)}
-                                  aria-label={`${item.category} 설명 보기`}
-                                  className={`inline-flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-bold transition-colors ${
-                                    isOpenNote
-                                      ? "bg-blu-500 text-white"
-                                      : "bg-gray-200 text-gray-600 hover:bg-blu-100 hover:text-blu-600"
-                                  }`}
-                                >
-                                  ?
-                                </button>
-                              )}
+                                {isBenefit && (
+                                  <span className="inline-flex rounded-full bg-blu-500 px-2.5 py-1 text-[10px] font-bold tracking-[0.16em] text-white">
+                                    혜택
+                                  </span>
+                                )}
+                                <span>{item.category}</span>
+                                {note && !isEquipment && (
+                                  <button
+                                    type="button"
+                                    onClick={() => toggleNote(item.category)}
+                                    aria-label={`${item.category} 설명 보기`}
+                                    className={`inline-flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-bold transition-colors ${
+                                      isOpenNote
+                                        ? "bg-blu-500 text-white"
+                                        : "bg-gray-200 text-gray-600 hover:bg-blu-100 hover:text-blu-600"
+                                    }`}
+                                  >
+                                    ?
+                                  </button>
+                                )}
                               </div>
-                              {showNoteInline && (
-                                <span className="inline-flex items-center rounded-full border border-blu-200 bg-white px-3 py-1 text-[11px] font-bold text-blu-700 shadow-sm">
-                                  커피머신 지원 포함
-                                </span>
-                              )}
                             </div>
                           </td>
                           <td className="px-5 py-4 text-center text-dark-800">
