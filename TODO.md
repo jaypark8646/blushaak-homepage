@@ -25,3 +25,6 @@
 
 ## 완료 기록 — franchise 페이지 섹션 조정
 - [x] Task 015 [codex]: franchise 페이지에서 "Vacation in the CITY" 히어로 섹션(`FranchiseIntro`)을 개설 비용 섹션 아래로 이동
+
+## 완료 기록 — 개설비용 팝업 후속 조정
+- [x] Task 016 [codex]: OpeningCostPopup에서 `커피머신 지원`을 별도 혜택 행으로 분리하고 `오븐기/비닝 쇼케이스/그라인더 3대 포함`을 `기기 및 장비` 하위 포함 문구로 이동
