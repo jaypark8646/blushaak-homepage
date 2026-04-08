@@ -76,7 +76,7 @@ export function BrandFranchiseDivider() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[linear-gradient(180deg,#071624_0%,#0d2238_100%)] px-6 py-20 text-white md:px-10 md:py-28">
+    <section className="relative overflow-hidden bg-[linear-gradient(180deg,#071624_0%,#0d2238_100%)] px-6 py-20 text-white md:px-10 md:py-24 lg:py-16">
       <div className="absolute inset-0 opacity-[0.06]">
         {Array.from({ length: 11 }).map((_, index) => (
           <div
@@ -169,20 +169,20 @@ export function BrandFranchiseDivider() {
             </div>
           </div>
 
-          <div className="grid grid-cols-5 gap-3 lg:grid-cols-1">
+          <div className="grid grid-cols-5 gap-3 lg:h-full lg:grid-cols-1 lg:grid-rows-5">
             {FRANCHISE_STORE_IMAGES.map((image, index) => (
               <button
                 key={image.src}
                 type="button"
                 onClick={() => goToSlide(index)}
-                className={`group relative overflow-hidden rounded-[18px] border transition ${
+                className={`group relative overflow-hidden rounded-[18px] border transition lg:min-h-0 ${
                   index === currentIndex
                     ? "border-cyan-300 shadow-[0_18px_40px_rgba(61,203,168,0.16)]"
                     : "border-white/10 hover:border-white/25"
                 }`}
                 aria-label={`${image.alt} 선택`}
               >
-                <div className="relative aspect-[4/5] bg-[#0d2238]">
+                <div className="relative aspect-[4/5] bg-[#0d2238] lg:h-full lg:aspect-auto">
                   <Image
                     src={image.src}
                     alt={image.alt}
