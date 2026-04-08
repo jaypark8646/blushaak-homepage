@@ -42,3 +42,6 @@
 - [x] Task 022 [codex]: 메인 `BrandHero` 섹션을 개설비용 표(`CostTable`) 하단으로 이동하고 브랜드 섹션 전환 기준 보정
 - [x] Task 023 [codex]: 홈페이지 첫 섹션을 `FranchiseIntro`로 재배치하고 `BrandFranchiseDivider` 텍스트를 제거해 사진 캐러셀만 남김
 - [x] Task 024 [codex]: `BrandFranchiseDivider` 데스크탑 썸네일 높이를 캐러셀 높이에 맞춰 정렬하고 PC 전용 하단 여백 축소
+
+## 완료 기록 — franchise 팝업 모바일 대응
+- [x] Task 025 [codex]: `OpeningCostPopup`를 모바일 뷰포트 기준 전체 높이/내부 스크롤 구조로 조정해 `/franchise` 팝업 잘림 현상 수정

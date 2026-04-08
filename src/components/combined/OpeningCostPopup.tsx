@@ -96,18 +96,19 @@ export default function OpeningCostPopup() {
 
   return (
     <div
-      className="fixed inset-0 z-[80] flex items-center justify-center bg-blu-900/70 px-4 py-6 backdrop-blur-[3px]"
+      className="fixed inset-0 z-[80] overflow-y-auto bg-blu-900/70 backdrop-blur-[3px]"
       role="dialog"
       aria-modal="true"
       aria-labelledby="opening-cost-popup-title"
     >
-      <div className="relative w-full max-w-4xl overflow-hidden rounded-[32px] border border-white/20 bg-white shadow-[0_30px_80px_rgba(6,27,49,0.35)]">
-        <div className="bg-gradient-to-r from-blu-700 via-blu-600 to-cyan-500 px-6 py-6 text-white sm:px-8">
+      <div className="flex min-h-full items-end justify-center p-0 sm:items-center sm:px-4 sm:py-6">
+        <div className="relative flex w-full max-w-4xl flex-col overflow-hidden rounded-t-[28px] border border-white/20 bg-white shadow-[0_30px_80px_rgba(6,27,49,0.35)] min-h-[100dvh] max-h-[100dvh] sm:min-h-0 sm:max-h-[calc(100dvh-48px)] sm:rounded-[32px]">
+        <div className="bg-gradient-to-r from-blu-700 via-blu-600 to-cyan-500 px-5 py-5 text-white sm:px-8 sm:py-6">
           <button
             type="button"
             onClick={() => setIsOpen(false)}
             aria-label="팝업 닫기"
-            className="absolute right-5 top-5 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-colors hover:bg-white/20"
+            className="absolute right-4 top-4 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-colors hover:bg-white/20 sm:right-5 sm:top-5"
           >
             <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M6 6l12 12M18 6 6 18" />
@@ -116,12 +117,12 @@ export default function OpeningCostPopup() {
           <p className="mb-2 text-[11px] font-bold uppercase tracking-[0.24em] text-white/75">
             Opening Benefit
           </p>
-          <h2 id="opening-cost-popup-title" className="pr-12 text-2xl font-black leading-tight sm:text-[32px]">
+          <h2 id="opening-cost-popup-title" className="pr-12 text-xl font-black leading-tight sm:text-[32px]">
             신규 가맹 혜택 | 최대 2300만원 지원
           </h2>
         </div>
 
-        <div className="max-h-[calc(100vh-180px)] overflow-y-auto px-4 py-5 sm:px-8 sm:py-7">
+        <div className="flex-1 overflow-y-auto px-4 py-4 pb-[calc(env(safe-area-inset-bottom)+16px)] sm:px-8 sm:py-7">
           <div className="overflow-hidden rounded-3xl border border-blu-100 bg-white shadow-sm">
             <div className="overflow-x-auto">
               <table className="w-full min-w-[640px] text-sm">
@@ -252,14 +253,15 @@ export default function OpeningCostPopup() {
           </p>
 
           <div className="mt-6 flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
-            <Button type="button" variant="ghost" className="border border-gray-200 px-5 py-3 text-sm text-gray-600 hover:bg-gray-50" onClick={() => setIsOpen(false)}>
+            <Button type="button" variant="ghost" className="w-full border border-gray-200 px-5 py-3 text-sm text-gray-600 hover:bg-gray-50 sm:w-auto" onClick={() => setIsOpen(false)}>
               닫기
             </Button>
-            <Button type="button" variant="primary" className="px-6 py-3 text-sm font-bold shadow-[0_12px_30px_rgba(26,115,181,0.24)]" onClick={handleConsultClick}>
+            <Button type="button" variant="primary" className="w-full px-6 py-3 text-sm font-bold shadow-[0_12px_30px_rgba(26,115,181,0.24)] sm:w-auto" onClick={handleConsultClick}>
               창업 상담 문의하기
             </Button>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );
