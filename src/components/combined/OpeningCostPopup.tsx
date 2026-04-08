@@ -10,7 +10,6 @@ const POPUP_CATEGORIES = [
   "가맹비",
   "교육비",
   "인테리어",
-  "전기증설/에어컨",
   "기기 및 장비 (2G 기준)",
   "초도비품",
 ] as const;
@@ -28,11 +27,7 @@ const TOTALS = {
   15: "84,800,000",
 };
 
-function formatCellValue(category: string, value: string) {
-  if (category === "전기증설/에어컨") {
-    return "혜택";
-  }
-
+function formatCellValue(_: string, value: string) {
   return value;
 }
 
@@ -159,21 +154,15 @@ export default function OpeningCostPopup() {
                   {popupRows.map((item) => {
                     const note = POPUP_NOTES[item.category as keyof typeof POPUP_NOTES];
                     const isExempted = item.category === "가맹비" || item.category === "교육비";
-                    const isBenefit = item.category === "전기증설/에어컨";
                     const isEquipment = item.category === "기기 및 장비 (2G 기준)";
                     const isOpenNote = !!openNotes[item.category];
 
                     return (
                       <Fragment key={item.category}>
-                        <tr className={`border-t border-gray-100 ${isEquipment ? "bg-gradient-to-r from-blu-50 via-white to-cyan-50" : "bg-white"}`}>
+                        <tr className="border-t border-gray-100 bg-white">
                           <td className="px-5 py-4 text-center font-semibold text-dark-800">
                             <div className="flex flex-col items-center justify-center gap-2">
                               <div className="flex items-center justify-center gap-2">
-                                {isBenefit && (
-                                  <span className="inline-flex rounded-full bg-blu-500 px-2.5 py-1 text-[10px] font-bold tracking-[0.16em] text-white">
-                                    혜택
-                                  </span>
-                                )}
                                 <span>{item.category}</span>
                                 {note && !isEquipment && (
                                   <button
@@ -200,14 +189,15 @@ export default function OpeningCostPopup() {
                                 </span>
                                 <span className="font-bold text-cta-500">{formatCellValue(item.category, item.cost10)}</span>
                               </div>
-                            ) : isBenefit ? (
-                              <span className="inline-flex rounded-full bg-mint-50 px-3 py-1 text-xs font-bold text-mint-700">
-                                혜택
-                              </span>
                             ) : (
-                              <span className={isEquipment ? "font-bold text-dark-900" : ""}>
-                                {formatCellValue(item.category, item.cost10)}
-                              </span>
+                              <div className={isEquipment ? "flex flex-col items-end gap-1 text-right" : ""}>
+                                <span>{formatCellValue(item.category, item.cost10)}</span>
+                                {isEquipment && note && (
+                                  <span className="text-xs font-normal leading-relaxed text-gray-500">
+                                    {note}
+                                  </span>
+                                )}
+                              </div>
                             )}
                           </td>
                           <td className="px-5 py-4 text-center text-dark-800">
@@ -218,22 +208,23 @@ export default function OpeningCostPopup() {
                                 </span>
                                 <span className="font-bold text-cta-500">{formatCellValue(item.category, item.cost15)}</span>
                               </div>
-                            ) : isBenefit ? (
-                              <span className="inline-flex rounded-full bg-mint-50 px-3 py-1 text-xs font-bold text-mint-700">
-                                혜택
-                              </span>
                             ) : (
-                              <span className={isEquipment ? "font-bold text-dark-900" : ""}>
-                                {formatCellValue(item.category, item.cost15)}
-                              </span>
+                              <div className={isEquipment ? "flex flex-col items-end gap-1 text-right" : ""}>
+                                <span>{formatCellValue(item.category, item.cost15)}</span>
+                                {isEquipment && note && (
+                                  <span className="text-xs font-normal leading-relaxed text-gray-500">
+                                    {note}
+                                  </span>
+                                )}
+                              </div>
                             )}
                           </td>
                         </tr>
-                        {note && (isEquipment || isOpenNote) && (
-                          <tr className={`border-t border-blu-100 ${isEquipment ? "bg-gradient-to-r from-blu-50 via-cyan-50/50 to-white" : "bg-blu-50/70"}`}>
+                        {note && !isEquipment && isOpenNote && (
+                          <tr className="border-t border-blu-100 bg-blu-50/70">
                             <td
                               colSpan={3}
-                              className={`px-6 py-3 text-center leading-relaxed text-blu-700 ${isEquipment ? "text-sm font-bold sm:text-[15px]" : "text-xs font-medium sm:text-sm"}`}
+                              className="px-6 py-3 text-center text-xs font-medium leading-relaxed text-blu-700 sm:text-sm"
                             >
                               {note}
                             </td>
