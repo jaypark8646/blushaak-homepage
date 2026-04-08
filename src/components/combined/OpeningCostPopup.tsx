@@ -37,7 +37,9 @@ function formatCellValue(category: string, value: string) {
 
 export default function OpeningCostPopup() {
   const [isOpen, setIsOpen] = useState(false);
-  const [openNotes, setOpenNotes] = useState<Record<string, boolean>>({});
+  const [openNotes, setOpenNotes] = useState<Record<string, boolean>>({
+    "기기 및 장비 (2G 기준)": true,
+  });
 
   const popupRows = useMemo(
     () => COST_TABLE.filter((item) => POPUP_CATEGORIES.includes(item.category as (typeof POPUP_CATEGORIES)[number])),
@@ -119,9 +121,6 @@ export default function OpeningCostPopup() {
           <h2 id="opening-cost-popup-title" className="pr-12 text-2xl font-black leading-tight sm:text-[32px]">
             신규 가맹 혜택 | 최대 2300만원 지원
           </h2>
-          <p className="mt-3 max-w-2xl text-sm text-white/85 sm:text-[15px]">
-            블루샥의 신규 가맹 혜택과 기본 개설비용을 한눈에 확인하고 바로 창업 상담으로 이어질 수 있도록 구성했습니다.
-          </p>
         </div>
 
         <div className="max-h-[calc(100vh-180px)] overflow-y-auto px-4 py-5 sm:px-8 sm:py-7">
@@ -148,19 +147,21 @@ export default function OpeningCostPopup() {
                     const isBenefit = item.category === "전기증설/에어컨";
                     const isEquipment = item.category === "기기 및 장비 (2G 기준)";
                     const isOpenNote = !!openNotes[item.category];
+                    const showNoteInline = note && isEquipment;
 
                     return (
                       <Fragment key={item.category}>
                         <tr className={`border-t border-gray-100 ${isEquipment ? "bg-gradient-to-r from-blu-50 via-white to-cyan-50" : "bg-white"}`}>
                           <td className="px-5 py-4 text-center font-semibold text-dark-800">
-                            <div className="flex items-center justify-center gap-2">
+                            <div className="flex flex-col items-center justify-center gap-2">
+                              <div className="flex items-center justify-center gap-2">
                               {isBenefit && (
                                 <span className="inline-flex rounded-full bg-blu-500 px-2.5 py-1 text-[10px] font-bold tracking-[0.16em] text-white">
                                   혜택
                                 </span>
                               )}
                               <span>{item.category}</span>
-                              {note && (
+                              {note && !isEquipment && (
                                 <button
                                   type="button"
                                   onClick={() => toggleNote(item.category)}
@@ -173,6 +174,12 @@ export default function OpeningCostPopup() {
                                 >
                                   ?
                                 </button>
+                              )}
+                              </div>
+                              {showNoteInline && (
+                                <span className="inline-flex items-center rounded-full border border-blu-200 bg-white px-3 py-1 text-[11px] font-bold text-blu-700 shadow-sm">
+                                  커피머신 지원 포함
+                                </span>
                               )}
                             </div>
                           </td>
@@ -213,9 +220,12 @@ export default function OpeningCostPopup() {
                             )}
                           </td>
                         </tr>
-                        {note && isOpenNote && (
-                          <tr className="border-t border-blu-100 bg-blu-50/70">
-                            <td colSpan={3} className="px-6 py-3 text-center text-xs font-medium leading-relaxed text-blu-700 sm:text-sm">
+                        {note && (isEquipment || isOpenNote) && (
+                          <tr className={`border-t border-blu-100 ${isEquipment ? "bg-gradient-to-r from-blu-50 via-cyan-50/50 to-white" : "bg-blu-50/70"}`}>
+                            <td
+                              colSpan={3}
+                              className={`px-6 py-3 text-center leading-relaxed text-blu-700 ${isEquipment ? "text-sm font-bold sm:text-[15px]" : "text-xs font-medium sm:text-sm"}`}
+                            >
                               {note}
                             </td>
                           </tr>

@@ -21,3 +21,4 @@
 - [x] Task 011 [codex]: 홈페이지 섹션 순서를 BrandHero → CoffeePrinciple → Franchise 전체 → BrandIntro → CoffeeBeans → BrandDirection → Menu → News → 가맹 문의 폼 순으로 재배치
 - [x] Task 012 [codex]: 홈페이지 자동 노출 개설비용 팝업 구현 (sessionStorage 세션당 1회, 혜택/비용표/토글 설명/CTA 스크롤 포함)
 - [x] Task 013 [codex]: 섹션 재배치 후 사이드바/프로그레스바 섹션 판별 로직 보정
+- [x] Task 014 [codex]: 개설비용 팝업 소개 문구 삭제 및 커피머신 지원 문구 상시 강조 노출
