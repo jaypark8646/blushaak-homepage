@@ -62,7 +62,6 @@ export default function CombinedPageClient() {
       <GNB isScrolled={isScrolled} />
 
       <main className="pb-20 md:pb-0">
-        <BrandHero />
         <CoffeePrinciple />
 
         <BrandFranchiseDivider />
@@ -85,6 +84,9 @@ export default function CombinedPageClient() {
         </div>
 
         <div ref={postFranchiseRef}>
+          <BrandHero />
+        </div>
+        <div>
           <BrandIntro />
         </div>
         <CoffeeBeans />

@@ -35,3 +35,8 @@
 
 ## 완료 기록 — 홈페이지 후속 수정
 - [x] Task 019 [codex]: 개설비용 팝업 장비 포함 문구 우측 정렬 조정 및 `BrandFranchiseDivider` 캐러셀 이미지 렌더링 경로/레이아웃 보정
+
+## 완료 기록 — 홈페이지 레이아웃 후속 수정
+- [x] Task 020 [codex]: OpeningCostPopup에서 `기기 및 장비 (2G 기준)`의 `35,800,000` 금액 두 셀만 가운데 정렬되도록 조정
+- [x] Task 021 [codex]: 홈페이지 `BrandFranchiseDivider` 기존 캐러셀을 프로젝트 내 매장 사진 파일 기반 사진 캐러셀로 교체
+- [x] Task 022 [codex]: 메인 `BrandHero` 섹션을 개설비용 표(`CostTable`) 하단으로 이동하고 브랜드 섹션 전환 기준 보정

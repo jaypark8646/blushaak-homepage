@@ -190,8 +190,10 @@ export default function OpeningCostPopup() {
                                 <span className="font-bold text-cta-500">{formatCellValue(item.category, item.cost10)}</span>
                               </div>
                             ) : (
-                              <div className={isEquipment ? "flex flex-col items-end gap-1 text-right" : ""}>
-                                <span>{formatCellValue(item.category, item.cost10)}</span>
+                              <div className={isEquipment ? "flex flex-col gap-1" : ""}>
+                                <span className={isEquipment ? "block w-full text-center font-semibold" : ""}>
+                                  {formatCellValue(item.category, item.cost10)}
+                                </span>
                                 {isEquipment && note && (
                                   <span className="w-full pr-1 text-right text-xs font-normal leading-relaxed text-gray-500 sm:pr-4">
                                     {note}
@@ -209,8 +211,10 @@ export default function OpeningCostPopup() {
                                 <span className="font-bold text-cta-500">{formatCellValue(item.category, item.cost15)}</span>
                               </div>
                             ) : (
-                              <div className={isEquipment ? "flex flex-col items-end gap-1 text-right" : ""}>
-                                <span>{formatCellValue(item.category, item.cost15)}</span>
+                              <div className={isEquipment ? "flex flex-col gap-1" : ""}>
+                                <span className={isEquipment ? "block w-full text-center font-semibold" : ""}>
+                                  {formatCellValue(item.category, item.cost15)}
+                                </span>
                                 {isEquipment && note && (
                                   <span className="w-full pr-1 text-right text-xs font-normal leading-relaxed text-gray-500 sm:pr-4">
                                     {note}
