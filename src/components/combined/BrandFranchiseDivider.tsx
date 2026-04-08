@@ -87,20 +87,7 @@ export function BrandFranchiseDivider() {
         ))}
       </div>
 
-      <div className="relative mx-auto flex max-w-7xl flex-col gap-10">
-        <div className="max-w-3xl text-center md:text-left">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.34em] text-white/45">
-            Blu Shaak Coffee
-          </p>
-          <h2 className="mt-4 text-3xl font-black uppercase tracking-[0.14em] text-white md:text-5xl">
-            Franchise
-          </h2>
-          <p className="mt-4 text-sm leading-relaxed text-white/65 md:text-base">
-            블루샥과 함께하는 창업 파트너십. 이전에 전달된 매장 사진들을 메인 비주얼로 구성해
-            실제 공간 분위기를 바로 확인할 수 있게 정리했습니다.
-          </p>
-        </div>
-
+      <div className="relative mx-auto flex max-w-7xl flex-col">
         <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_220px] lg:items-stretch">
           <div
             className="relative overflow-hidden rounded-[28px] border border-white/10 bg-white/5 shadow-[0_28px_80px_rgba(0,0,0,0.32)]"

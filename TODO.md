@@ -40,3 +40,4 @@
 - [x] Task 020 [codex]: OpeningCostPopup에서 `기기 및 장비 (2G 기준)`의 `35,800,000` 금액 두 셀만 가운데 정렬되도록 조정
 - [x] Task 021 [codex]: 홈페이지 `BrandFranchiseDivider` 기존 캐러셀을 프로젝트 내 매장 사진 파일 기반 사진 캐러셀로 교체
 - [x] Task 022 [codex]: 메인 `BrandHero` 섹션을 개설비용 표(`CostTable`) 하단으로 이동하고 브랜드 섹션 전환 기준 보정
+- [x] Task 023 [codex]: 홈페이지 첫 섹션을 `FranchiseIntro`로 재배치하고 `BrandFranchiseDivider` 텍스트를 제거해 사진 캐러셀만 남김
