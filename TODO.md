@@ -32,3 +32,6 @@
 
 ## 완료 기록 — Franchise 섹션 매장 사진 슬라이더
 - [x] Task 018 [codex]: 홈페이지 `BrandFranchiseDivider` 우측에 매장 사진 5장 기반 스와이프/화살표 지원 캐러셀 추가 및 이미지 자산 정리
+
+## 완료 기록 — 홈페이지 후속 수정
+- [x] Task 019 [codex]: 개설비용 팝업 장비 포함 문구 우측 정렬 조정 및 `BrandFranchiseDivider` 캐러셀 이미지 렌더링 경로/레이아웃 보정

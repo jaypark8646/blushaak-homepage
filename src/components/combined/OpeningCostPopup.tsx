@@ -193,7 +193,7 @@ export default function OpeningCostPopup() {
                               <div className={isEquipment ? "flex flex-col items-end gap-1 text-right" : ""}>
                                 <span>{formatCellValue(item.category, item.cost10)}</span>
                                 {isEquipment && note && (
-                                  <span className="text-xs font-normal leading-relaxed text-gray-500">
+                                  <span className="w-full pr-1 text-right text-xs font-normal leading-relaxed text-gray-500 sm:pr-4">
                                     {note}
                                   </span>
                                 )}
@@ -212,7 +212,7 @@ export default function OpeningCostPopup() {
                               <div className={isEquipment ? "flex flex-col items-end gap-1 text-right" : ""}>
                                 <span>{formatCellValue(item.category, item.cost15)}</span>
                                 {isEquipment && note && (
-                                  <span className="text-xs font-normal leading-relaxed text-gray-500">
+                                  <span className="w-full pr-1 text-right text-xs font-normal leading-relaxed text-gray-500 sm:pr-4">
                                     {note}
                                   </span>
                                 )}

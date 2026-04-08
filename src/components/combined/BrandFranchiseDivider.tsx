@@ -1,31 +1,37 @@
 "use client";
 
 import Image from "next/image";
+import type { StaticImageData } from "next/image";
 import type { PointerEvent } from "react";
 import { useEffect, useRef, useState } from "react";
+import storeImage1 from "../../../public/images/franchise/stores/store-1.jpg";
+import storeImage2 from "../../../public/images/franchise/stores/store-2.jpg";
+import storeImage3 from "../../../public/images/franchise/stores/store-3.jpg";
+import storeImage4 from "../../../public/images/franchise/stores/store-4.jpg";
+import storeImage5 from "../../../public/images/franchise/stores/store-5.jpg";
 
 const FRANCHISE_STORE_IMAGES = [
   {
-    src: "/images/franchise/stores/store-1.jpg",
+    src: storeImage1,
     alt: "블루샥 매장 내부 전경 1",
   },
   {
-    src: "/images/franchise/stores/store-2.jpg",
+    src: storeImage2,
     alt: "블루샥 매장 내부 전경 2",
   },
   {
-    src: "/images/franchise/stores/store-3.jpg",
+    src: storeImage3,
     alt: "블루샥 매장 내부 전경 3",
   },
   {
-    src: "/images/franchise/stores/store-4.jpg",
+    src: storeImage4,
     alt: "블루샥 매장 내부 전경 4",
   },
   {
-    src: "/images/franchise/stores/store-5.jpg",
+    src: storeImage5,
     alt: "블루샥 매장 내부 전경 5",
   },
-];
+] satisfies { src: StaticImageData; alt: string }[];
 
 export function BrandFranchiseDivider() {
   const ref = useRef<HTMLDivElement>(null);
@@ -147,7 +153,7 @@ export function BrandFranchiseDivider() {
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
-          <div className="relative ml-auto w-full max-w-[560px] overflow-hidden rounded-[28px] border border-white/10 bg-white/6 p-3 shadow-[0_24px_70px_rgba(0,0,0,0.32)] backdrop-blur-sm">
+          <div className="relative ml-auto w-full max-w-[560px] overflow-hidden rounded-[28px] border border-white/10 bg-white/6 p-3 shadow-[0_24px_70px_rgba(0,0,0,0.32)] backdrop-blur-sm lg:w-[560px] lg:shrink-0">
             <div
               className="group relative aspect-[5/4] overflow-hidden rounded-[20px] bg-[#102038] touch-pan-y"
               onPointerDown={handlePointerDown}
@@ -162,7 +168,7 @@ export function BrandFranchiseDivider() {
               >
                 {FRANCHISE_STORE_IMAGES.map((image, index) => (
                   <div
-                    key={image.src}
+                    key={image.alt}
                     className="relative h-full min-w-full"
                     aria-hidden={index !== current}
                   >
@@ -216,7 +222,7 @@ export function BrandFranchiseDivider() {
                   <div className="pointer-events-auto flex gap-2 rounded-full border border-white/12 bg-black/20 px-3 py-2 backdrop-blur-sm">
                     {FRANCHISE_STORE_IMAGES.map((image, index) => (
                       <button
-                        key={image.src}
+                        key={image.alt}
                         type="button"
                         onClick={() => setCurrent(index)}
                         className={`h-2 rounded-full transition-all duration-300 ${
