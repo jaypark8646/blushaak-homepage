@@ -25,7 +25,6 @@ export default function FranchisePageClient() {
       <GNB isScrolled={isScrolled} />
 
       <main>
-        <FranchiseIntro />
         <WhyBluShaak />
         <HQSupport />
         <TrainingSystem />
@@ -38,6 +37,7 @@ export default function FranchisePageClient() {
         </div>
         <OpeningProcedure />
         <CostTable />
+        <FranchiseIntro />
         <div id="inquiry">
           <InquiryForm />
         </div>
