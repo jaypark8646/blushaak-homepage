@@ -55,24 +55,9 @@ export default function CostTable() {
                   <p className="mt-2 text-xl font-bold sm:text-2xl">
                     지원
                   </p>
-                  <p className="mt-4 text-sm text-white/85 sm:text-base">
-                    창업 초기 부담을 낮추는 본사 지원 혜택을 개설비용표에서 바로 확인할 수 있습니다.
-                  </p>
                 </div>
 
                 <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
-                  <div className="rounded-2xl border border-blu-100 bg-blu-50 px-5 py-4">
-                    <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-blu-600">
-                      핵심 장비 지원
-                    </p>
-                    <p className="mt-2 text-lg font-bold text-dark-800">
-                      커피머신 포함 35,800,000원
-                    </p>
-                    <p className="mt-1 text-sm text-gray-600">
-                      오븐기, 비닝 쇼케이스, 그라인더 3대 포함
-                    </p>
-                  </div>
-
                   <div className="rounded-2xl border border-cyan-100 bg-white px-5 py-4">
                     <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-cyan-700">
                       한시적 추가 혜택
@@ -84,32 +69,6 @@ export default function CostTable() {
                       정가 기준 1,300만원 절감 혜택 반영
                     </p>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="mb-6 rounded-2xl border border-blu-100 bg-gradient-to-r from-blu-500 to-cyan-500 p-[1px] shadow-sm">
-            <div className="flex flex-col gap-3 rounded-[15px] bg-white px-5 py-5 sm:px-6 sm:py-6 md:flex-row md:items-center md:justify-between">
-              <div>
-                <p className="mb-2 inline-flex items-center rounded-full bg-blu-50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-blu-600">
-                  지원 혜택
-                </p>
-                <p className="text-lg font-bold text-dark-800 sm:text-xl">
-                  커피머신 포함 핵심 장비를 본사 지원 항목으로 바로 확인할 수 있습니다.
-                </p>
-                <p className="mt-1 text-sm text-gray-600">
-                  오븐기, 비닝 쇼케이스, 그라인더 3대 포함
-                </p>
-              </div>
-              <div className="inline-flex items-center justify-center self-start rounded-2xl bg-blu-50 px-4 py-3 text-left md:self-center">
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-blu-600">
-                    지원 대상
-                  </p>
-                  <p className="mt-1 text-base font-bold text-dark-800">
-                    기기 및 장비 35,800,000원
-                  </p>
                 </div>
               </div>
             </div>
