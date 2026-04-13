@@ -45,3 +45,6 @@
 
 ## 완료 기록 — franchise 팝업 모바일 대응
 - [x] Task 025 [codex]: `OpeningCostPopup`를 모바일 뷰포트 기준 전체 높이/내부 스크롤 구조로 조정해 `/franchise` 팝업 잘림 현상 수정
+
+## 완료 기록 — store 전화번호 제거
+- [x] Task 026 [codex]: `Store` 타입 및 `stores.ts` 데이터에서 전화번호 필드를 제거하고 `/store` 리스트/지도 InfoWindow에서 전화번호 렌더링을 삭제

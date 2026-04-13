@@ -122,7 +122,6 @@ export default function StoreMap({ stores, selectedStoreId, onStoreSelect }: Sto
                 <div className="w-[248px] p-2">
                   <h3 className="mb-1 text-sm font-bold text-gray-900">{store.name}</h3>
                   <p className="mb-1 text-xs leading-relaxed text-gray-500">{store.address}</p>
-                  <p className="mb-1 text-xs text-gray-500">{store.phone}</p>
                   <p className="text-xs text-gray-400">{store.hours}</p>
                   {store.hasDriveThru && (
                     <span className="mt-1 inline-block rounded bg-blue-50 px-1.5 py-0.5 text-[10px] font-semibold text-blue-600">
