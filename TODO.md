@@ -48,3 +48,6 @@
 
 ## 완료 기록 — store 전화번호 제거
 - [x] Task 026 [codex]: `Store` 타입 및 `stores.ts` 데이터에서 전화번호 필드를 제거하고 `/store` 리스트/지도 InfoWindow에서 전화번호 렌더링을 삭제
+
+## 완료 기록 — store 운영시간 제거
+- [x] Task 027 [codex]: `Store` 타입 및 `stores.ts` 데이터에서 운영시간 필드를 제거하고 `/store` 리스트/지도 InfoWindow에서 운영시간 렌더링을 삭제

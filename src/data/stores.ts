@@ -7,7 +7,6 @@ export const STORES: Store[] = [
     address: "서울특별시 영등포구 국제금융로8길 19 중앙빌딩 116호(여의도동)",
     lat: 37.5208057,
     lng: 126.9292819,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -16,7 +15,6 @@ export const STORES: Store[] = [
     address: "부산광역시 연제구 시청로 12 1층 104호(연산동, 부산 더샵 시티애비",
     lat: 35.1812229,
     lng: 129.0759425,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -25,7 +23,6 @@ export const STORES: Store[] = [
     address: "서울특별시 금천구 디지털로 121 제1층 제108호(가산동,에이스가산타워",
     lat: 37.4760213,
     lng: 126.8801122,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -34,7 +31,6 @@ export const STORES: Store[] = [
     address: "부산광역시 부산진구 중앙대로 786 101동 1층 125호(전포동,에메랄",
     lat: 35.1561871,
     lng: 129.0748045,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -43,7 +39,6 @@ export const STORES: Store[] = [
     address: "서울특별시 영등포구 국회대로74길 20 맨하탄21리빙텔 1층 109호(여",
     lat: 37.5296107,
     lng: 126.9215558,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -52,7 +47,6 @@ export const STORES: Store[] = [
     address: "경기도 광명시 철산로29번길 9 효도프라자 1층 15호(철산동)",
     lat: 37.477495,
     lng: 126.8687092,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -61,7 +55,6 @@ export const STORES: Store[] = [
     address: "서울특별시 강동구 동남로75길 13 은현빌딩 1층 103호(명일동)",
     lat: 37.5541784,
     lng: 127.1555359,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -70,7 +63,6 @@ export const STORES: Store[] = [
     address: "부산광역시 남구 진남로 46 (대연동, 늘편한내과)   1층",
     lat: 35.13535220000001,
     lng: 129.0920107,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -79,7 +71,6 @@ export const STORES: Store[] = [
     address: "대전광역시 서구 대덕대로233번길 17 (둔산동)   1층 일부호",
     lat: 36.35341349999999,
     lng: 127.378256,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -88,7 +79,6 @@ export const STORES: Store[] = [
     address: "부산광역시 해운대구 해운대해변로298번길 24 1층 115호(중동,팔레드",
     lat: 35.160128,
     lng: 129.1665765,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -97,7 +87,6 @@ export const STORES: Store[] = [
     address: "경상남도 사천시 해안관광로 8-6 (실안동)",
     lat: 34.9406636,
     lng: 128.0444986,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: true,
   },
   {
@@ -106,7 +95,6 @@ export const STORES: Store[] = [
     address: "경상북도 김천시 신음새동네길 1 (신음동)   1층",
     lat: 36.1347895,
     lng: 128.1179181,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -115,7 +103,6 @@ export const STORES: Store[] = [
     address: "경상남도 통영시 광도면 죽림해안로 136 (죽림리, 덕원빌딩)   1층",
     lat: 34.8790009,
     lng: 128.4221154,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -124,7 +111,6 @@ export const STORES: Store[] = [
     address: "경상남도 김해시 율하2로97번길 18 1층 104-2호(율하동,샹그릴라빌",
     lat: 35.1718046,
     lng: 128.8134517,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -133,7 +119,6 @@ export const STORES: Store[] = [
     address: "경상남도 창원시 성산구 용지로169번길 13 (용호동, 라이크빌-1)",
     lat: 35.23043,
     lng: 128.6809221,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -142,7 +127,6 @@ export const STORES: Store[] = [
     address: "부산광역시 부산진구 서면문화로 20 (부전동)   1층",
     lat: 35.1592588,
     lng: 129.056891,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -151,7 +135,6 @@ export const STORES: Store[] = [
     address: "부산광역시 남구 못골로41번길 13 (대연동, 대연2차동원로얄듀크)",
     lat: 35.1366398,
     lng: 129.0860763,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -160,7 +143,6 @@ export const STORES: Store[] = [
     address: "경상남도 김해시 김해대로 2479 (삼정동)   김해대로 2477-1",
     lat: 35.2258305,
     lng: 128.8989151,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: true,
   },
   {
@@ -169,7 +151,6 @@ export const STORES: Store[] = [
     address: "경상남도 창원시 마산회원구 율림교로 7 (양덕동)   103호",
     lat: 35.229386,
     lng: 128.5840794,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -178,7 +159,6 @@ export const STORES: Store[] = [
     address: "경기도 고양시 일산동구 무궁화로 31-1 (장항동, 텐폴드프라자)   1",
     lat: 37.6627443,
     lng: 126.7674303,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -187,7 +167,6 @@ export const STORES: Store[] = [
     address: "경상남도 양산시 물금읍 부산대학로 150 (범어리)   111호",
     lat: 35.3157805,
     lng: 129.0114434,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -196,7 +175,6 @@ export const STORES: Store[] = [
     address: "부산광역시 북구 금곡대로303번길 36 (화명동)   1층 102호",
     lat: 35.2358278,
     lng: 129.011989,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -205,7 +183,6 @@ export const STORES: Store[] = [
     address: "대전광역시 유성구 은구비남로33번길 32 지상1층(지족동) 102호",
     lat: 36.3736786,
     lng: 127.319516,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -214,7 +191,6 @@ export const STORES: Store[] = [
     address: "경상북도 포항시 남구 대이로 141 (이동)   1층",
     lat: 36.0276098,
     lng: 129.3400193,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -223,7 +199,6 @@ export const STORES: Store[] = [
     address: "경남 김해시 계동로 178 102호",
     lat: 35.188925,
     lng: 128.7980287,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -232,7 +207,6 @@ export const STORES: Store[] = [
     address: "경상북도 경주시 유림로97번길 9 302동 208호(황성동, 황성 베스티",
     lat: 35.8708605,
     lng: 129.2172959,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -241,7 +215,6 @@ export const STORES: Store[] = [
     address: "부산광역시 북구 대천천길 15 (화명동)   1층",
     lat: 35.2405692,
     lng: 129.0149051,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -250,7 +223,6 @@ export const STORES: Store[] = [
     address: "경상남도 창원시 진해구 중원동로 33 (광화동, 진해미진이지비아)   1",
     lat: 35.1482617,
     lng: 128.6594527,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -259,7 +231,6 @@ export const STORES: Store[] = [
     address: "전라남도 여수시 통제영3길 12-16 (교동) 1층",
     lat: 34.74082170000001,
     lng: 127.7348135,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -268,7 +239,6 @@ export const STORES: Store[] = [
     address: "부산광역시 수영구 연수로315번길 24 상가102호(망미동,더샵파크리치)",
     lat: 35.1731453,
     lng: 129.106496,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -277,7 +247,6 @@ export const STORES: Store[] = [
     address: "울산광역시 남구 돋질로 263 1층",
     lat: 35.5439866,
     lng: 129.3335553,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -286,7 +255,6 @@ export const STORES: Store[] = [
     address: "울산광역시 중구 복산1길 1 (복산동, 번영로센트리지)   E블럭(3단지",
     lat: 35.56004,
     lng: 129.3356083,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -295,7 +263,6 @@ export const STORES: Store[] = [
     address: "부산광역시 강서구 신호산단2로 53 (신호동)   1층",
     lat: 35.084124,
     lng: 128.8777062,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -304,7 +271,6 @@ export const STORES: Store[] = [
     address: "경상남도 김해시 내외중앙로 69 1층 106호(내동)",
     lat: 35.2362619,
     lng: 128.8666505,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -313,7 +279,6 @@ export const STORES: Store[] = [
     address: "충북 청주시 상당구 수영로 295 양화타워 1층 102호",
     lat: 36.6309178,
     lng: 127.5060941,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -322,7 +287,6 @@ export const STORES: Store[] = [
     address: "부산광역시 남구 신선로 566 (용호동, GS하이츠자이)   401동 1",
     lat: 35.1327668,
     lng: 129.1109547,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -331,7 +295,6 @@ export const STORES: Store[] = [
     address: "부산광역시 부산진구 중앙대로635번길 14 (범천동)   1층",
     lat: 35.1494339,
     lng: 129.0583274,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -340,7 +303,6 @@ export const STORES: Store[] = [
     address: "부산광역시 해운대구 좌동순환로 76 (좌동, 신도프라자)   1층 일부호",
     lat: 35.1730723,
     lng: 129.1675109,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -349,7 +311,6 @@ export const STORES: Store[] = [
     address: "부산광역시 남구 황령대로492번길 10 (대연동)   1층",
     lat: 35.138067,
     lng: 129.1067432,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -358,7 +319,6 @@ export const STORES: Store[] = [
     address: "광주광역시 북구 설죽로 506-3 (일곡동)   1층",
     lat: 35.2045444,
     lng: 126.8984902,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -367,7 +327,6 @@ export const STORES: Store[] = [
     address: "부산광역시 동래구 명륜로 179 1층(명륜동)",
     lat: 35.2098204,
     lng: 129.0822271,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -376,7 +335,6 @@ export const STORES: Store[] = [
     address: "부산광역시 수영구 남천동로 110-1 (남천동)   1층",
     lat: 35.1458418,
     lng: 129.1115377,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -385,7 +343,6 @@ export const STORES: Store[] = [
     address: "경기도 수원시 팔달구 중부대로 251 1층(우만동)",
     lat: 37.2751877,
     lng: 127.0435669,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -394,7 +351,6 @@ export const STORES: Store[] = [
     address: "서울특별시 송파구 법원로8길 8 (문정동, 문정역2차SKV1)   1층",
     lat: 37.4903018,
     lng: 127.132242,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -403,7 +359,6 @@ export const STORES: Store[] = [
     address: "울산광역시 남구 삼산로 231 (달동, 울산센트럴자이)   1층 124호",
     lat: 35.5388821,
     lng: 129.3326796,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -412,7 +367,6 @@ export const STORES: Store[] = [
     address: "울산광역시 중구 종가로 310 (우정동, M빌딩)   지하1층 M123호",
     lat: 35.5637797,
     lng: 129.3108466,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -421,7 +375,6 @@ export const STORES: Store[] = [
     address: "부산광역시 서구 대영로18번길 22 (서대신동2가)   1층",
     lat: 35.1092526,
     lng: 129.0131132,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -430,7 +383,6 @@ export const STORES: Store[] = [
     address: "경상북도 포항시 남구 효성로 27-1 1층(효자동) 블루샥",
     lat: 36.0065069,
     lng: 129.3366675,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -439,7 +391,6 @@ export const STORES: Store[] = [
     address: "대구광역시 중구 중앙대로 413 (남일동)   1층",
     lat: 35.8694116,
     lng: 128.5936556,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -448,7 +399,6 @@ export const STORES: Store[] = [
     address: "울산광역시 북구 산하중앙2로 275 (산하동, 월드프라자)   지하1층",
     lat: 35.6207175,
     lng: 129.4405352,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -457,7 +407,6 @@ export const STORES: Store[] = [
     address: "부산광역시 수영구 광안로 20 (광안동, 부산광안동쌍용예가디오션)   1",
     lat: 35.1552983,
     lng: 129.1152895,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -466,7 +415,6 @@ export const STORES: Store[] = [
     address: "경상남도 창원시 마산합포구 월영동서로 20 (해운동)   1층",
     lat: 35.1796319,
     lng: 128.560642,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -475,7 +423,6 @@ export const STORES: Store[] = [
     address: "부산광역시 기장군 정관읍 정관로 391 B1층 102호(하나프라자)",
     lat: 35.334488,
     lng: 129.1658264,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -484,7 +431,6 @@ export const STORES: Store[] = [
     address: "경상북도 포항시 북구 양덕로 43 1층",
     lat: 36.0824961,
     lng: 129.4015488,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -493,7 +439,6 @@ export const STORES: Store[] = [
     address: "대구광역시 수성구 상록로 15 판매시설동 1층 128호(범어동,범어센트럴",
     lat: 35.8607663,
     lng: 128.6232621,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -502,7 +447,6 @@ export const STORES: Store[] = [
     address: "경기도 고양시 일산동구 위시티로 55 (식사동)   지하1층 B01호",
     lat: 37.6782617,
     lng: 126.8104666,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -511,7 +455,6 @@ export const STORES: Store[] = [
     address: "경기도 수원시 권선구 권광로 55 (권선동, 권선자이이편한세상)   상가",
     lat: 37.2529151,
     lng: 127.0264176,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -520,7 +463,6 @@ export const STORES: Store[] = [
     address: "울산광역시 남구 삼산로 10 (신정동)   1층",
     lat: 35.5323421,
     lng: 129.3091495,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -529,7 +471,6 @@ export const STORES: Store[] = [
     address: "대구광역시 달서구 조암남로 158 (유천동, 그랑에비뉴)   그랑에비뉴",
     lat: 35.8165352,
     lng: 128.5174092,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -538,7 +479,6 @@ export const STORES: Store[] = [
     address: "서울특별시 마포구 월드컵북로 396, 1층 R114호",
     lat: 37.579406,
     lng: 126.8904194,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -547,7 +487,6 @@ export const STORES: Store[] = [
     address: "경상북도 경주시 충효녹지길 132 1층(충효동)",
     lat: 35.8447931,
     lng: 129.1769154,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -556,7 +495,6 @@ export const STORES: Store[] = [
     address: "부산광역시 동구 범일로 21 (범일동, 두산위브더제니스하버시티)   상가",
     lat: 35.1322188,
     lng: 129.0586514,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -565,7 +503,6 @@ export const STORES: Store[] = [
     address: "서울특별시 중랑구 망우로 394 (망우동, 보경빌딩)   1층 101호",
     lat: 37.59863720000001,
     lng: 127.0960493,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -574,7 +511,6 @@ export const STORES: Store[] = [
     address: "경상남도 진주시 충의로 20-4 (충무공동)   1층 103호",
     lat: 35.1762867,
     lng: 128.1470944,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -583,7 +519,6 @@ export const STORES: Store[] = [
     address: "인천광역시 서구 발산로 41 (원당동, 정석프라자)   106호",
     lat: 37.5929794,
     lng: 126.7119811,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -592,7 +527,6 @@ export const STORES: Store[] = [
     address: "부산광역시 부산진구 중앙대로692번길 16 1층",
     lat: 35.1542007,
     lng: 129.0600191,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -601,7 +535,6 @@ export const STORES: Store[] = [
     address: "경상남도 거제시 수양로 442 (수월동, 거제자이)   상가1동 110호",
     lat: 34.8924169,
     lng: 128.6433209,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -610,7 +543,6 @@ export const STORES: Store[] = [
     address: "서울특별시 강서구 마곡동로 55 (마곡동, 마커스빌딩)   1층 102호",
     lat: 37.5599875,
     lng: 126.8330319,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -619,7 +551,6 @@ export const STORES: Store[] = [
     address: "부산광역시 연제구 법원북로 79-2 (거제동)   1층",
     lat: 35.19268,
     lng: 129.0752018,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -628,7 +559,6 @@ export const STORES: Store[] = [
     address: "경상남도 김해시 장유로 500 301동 J102호(신문동,더스카이시티 제",
     lat: 35.1837017,
     lng: 128.8219087,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -637,7 +567,6 @@ export const STORES: Store[] = [
     address: "부산광역시 남구 분포로 113 1005동 1층 122호(용호동,엘지메트로",
     lat: 35.1282152,
     lng: 129.1123626,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -646,7 +575,6 @@ export const STORES: Store[] = [
     address: "부산광역시 중구 광복중앙로24번길 8-1 (대청동2가)   1층",
     lat: 35.1019992,
     lng: 129.0313569,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -655,7 +583,6 @@ export const STORES: Store[] = [
     address: "충청북도 청주시 서원구 산남로 60 (산남동, RS타워)   1층 104",
     lat: 36.61140820000001,
     lng: 127.4675501,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -664,7 +591,6 @@ export const STORES: Store[] = [
     address: "부산광역시 사상구 광장로 54 (괘법동, 사상역포르투나더테라스)   10",
     lat: 35.1618557,
     lng: 128.982279,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -673,7 +599,6 @@ export const STORES: Store[] = [
     address: "경상남도 창원시 의창구 북면 감계로110번길 54-19 (감계리)   1",
     lat: 35.3015766,
     lng: 128.5945922,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -682,7 +607,6 @@ export const STORES: Store[] = [
     address: "부산광역시 동래구 중앙대로 1523 상가1층 B1-6(온천동, SK HU",
     lat: 35.2212937,
     lng: 129.0855784,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -691,7 +615,6 @@ export const STORES: Store[] = [
     address: "부산광역시 동래구 안연로 82 (안락동, 동래대중탕)   1층",
     lat: 35.1946773,
     lng: 129.0984446,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -700,7 +623,6 @@ export const STORES: Store[] = [
     address: "울산광역시 울주군 범서읍 점촌3길 10-1 (구영리)   1층 105호",
     lat: 35.5734498,
     lng: 129.2405516,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -709,7 +631,6 @@ export const STORES: Store[] = [
     address: "경상남도 통영시 무전5길 11-24 1층(무전동)",
     lat: 34.8608636,
     lng: 128.4251995,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -718,7 +639,6 @@ export const STORES: Store[] = [
     address: "부산광역시 강서구 과학산단2로20번길 20 (지사동, 행복메디컬빌딩)",
     lat: 35.1504535,
     lng: 128.8327003,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -727,7 +647,6 @@ export const STORES: Store[] = [
     address: "부산광역시 부산진구 중앙대로 846 (전포동, 천우스카이뷰2차)   10",
     lat: 35.16635,
     lng: 129.0667123,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -736,7 +655,6 @@ export const STORES: Store[] = [
     address: "경상남도 사천시 해안관광로 8-6 1층",
     lat: 34.9406636,
     lng: 128.0444986,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: true,
   },
   {
@@ -745,7 +663,6 @@ export const STORES: Store[] = [
     address: "울산광역시 중구 남외3길 7 1층 102호(남외동)",
     lat: 35.564932,
     lng: 129.350805,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -754,7 +671,6 @@ export const STORES: Store[] = [
     address: "부산광역시 연제구 경기장로 21 (거제동)   1층 102호",
     lat: 35.1881776,
     lng: 129.0533543,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -763,7 +679,6 @@ export const STORES: Store[] = [
     address: "서울특별시 서초구 반포대로 109 (서초동, 서초빌딩)   1층 101호",
     lat: 37.4897062,
     lng: 127.0083531,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -772,7 +687,6 @@ export const STORES: Store[] = [
     address: "부산광역시 금정구 구서로 13 (구서동)   1층",
     lat: 35.2465586,
     lng: 129.0894738,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -781,7 +695,6 @@ export const STORES: Store[] = [
     address: "전라남도 순천시 팔마4길 8 1층(연향동)",
     lat: 34.9335109,
     lng: 127.51704,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -790,7 +703,6 @@ export const STORES: Store[] = [
     address: "경상북도 포항시 남구 대이로46번길 3 (대잠동)   1층",
     lat: 36.0197341,
     lng: 129.3419377,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -799,7 +711,6 @@ export const STORES: Store[] = [
     address: "부산광역시 해운대구 해운대로 802 (좌동, 웅신시네아트)   1층 15",
     lat: 35.1691965,
     lng: 129.1766324,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -808,7 +719,6 @@ export const STORES: Store[] = [
     address: "울산광역시 남구 화합로194번길 18 (삼산동)   1층",
     lat: 35.541785,
     lng: 129.341428,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -817,7 +727,6 @@ export const STORES: Store[] = [
     address: "울산광역시 남구 중앙로 185 (신정동)   1층",
     lat: 35.5374547,
     lng: 129.3128651,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -826,7 +735,6 @@ export const STORES: Store[] = [
     address: "경상남도 창원시 진해구 신항4로 49 (용원동, 신항센텀빌딩)   1층",
     lat: 35.0877332,
     lng: 128.8179224,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -835,7 +743,6 @@ export const STORES: Store[] = [
     address: "전북특별자치도 군산시 계산로 51 (지곡동)   1층 107호",
     lat: 35.9487933,
     lng: 126.71292,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -844,7 +751,6 @@ export const STORES: Store[] = [
     address: "경상남도 거창군 거창읍 거열로 126 (상림리)   1층",
     lat: 35.6888285,
     lng: 127.9076073,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -853,7 +759,6 @@ export const STORES: Store[] = [
     address: "경상남도 김해시 능동로149번길 8 (부곡동, 일진프라자)   1층 10",
     lat: 35.2028124,
     lng: 128.807398,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -862,7 +767,6 @@ export const STORES: Store[] = [
     address: "세종특별자치시 국책연구원3로 6 (반곡동, 씨즈파크뷰)   1층 101호",
     lat: 36.4921279,
     lng: 127.3036062,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -871,7 +775,6 @@ export const STORES: Store[] = [
     address: "인천광역시 부평구 주부토로 236 (갈산동)   A동 1층 156호",
     lat: 37.5153222,
     lng: 126.7273105,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -880,7 +783,6 @@ export const STORES: Store[] = [
     address: "울산광역시 남구 신정로 15 상가106동 101호(달동,달동삼성아파트)",
     lat: 35.5329094,
     lng: 129.3223777,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -889,7 +791,6 @@ export const STORES: Store[] = [
     address: "경상남도 거제시 거제대로 3443 (아주동)   1동 1층",
     lat: 34.8671883,
     lng: 128.6938107,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -898,7 +799,6 @@ export const STORES: Store[] = [
     address: "경상남도 창원시 성산구 원이대로473번길 19-9 (반림동)   1층",
     lat: 35.23552129999999,
     lng: 128.6697508,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -907,7 +807,6 @@ export const STORES: Store[] = [
     address: "경상북도 경주시 외동읍 입실로 10-18 (구어리)   1층",
     lat: 35.7080063,
     lng: 129.3265639,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -916,7 +815,6 @@ export const STORES: Store[] = [
     address: "경상남도 양산시 물금읍 화합길 37 (범어리, 나래월드빌딩)   110호",
     lat: 35.3312089,
     lng: 129.0110896,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -925,7 +823,6 @@ export const STORES: Store[] = [
     address: "부산광역시 해운대구 센텀3로 26 (우동, 센텀스퀘어)   1층 104-",
     lat: 35.16713230000001,
     lng: 129.1334539,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -934,7 +831,6 @@ export const STORES: Store[] = [
     address: "부산광역시 연제구 과정로 307 1층(연산동)",
     lat: 35.188649,
     lng: 129.0937381,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -943,7 +839,6 @@ export const STORES: Store[] = [
     address: "울산광역시 북구 가재길 82 (천곡동, 리더스빌딩)   106호",
     lat: 35.6334725,
     lng: 129.3326834,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -952,7 +847,6 @@ export const STORES: Store[] = [
     address: "부산광역시 금정구 부곡동 386-12 1층",
     lat: 35.2204514,
     lng: 129.0885326,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -961,7 +855,6 @@ export const STORES: Store[] = [
     address: "경기도 김포시 김포한강2로23번길 60, 1층",
     lat: 37.6405922,
     lng: 126.679891,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -970,7 +863,6 @@ export const STORES: Store[] = [
     address: "부산광역시 금정구 중앙대로1793번길 54 1층(부곡동,성림빌딩) 블루샥",
     lat: 35.2425156,
     lng: 129.0915739,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -979,7 +871,6 @@ export const STORES: Store[] = [
     address: "부산광역시 기장군 일광읍 해빛로 39-14 (삼성리)   1층 101호",
     lat: 35.2665899,
     lng: 129.2232311,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -988,7 +879,6 @@ export const STORES: Store[] = [
     address: "경상남도 김해시 주촌면 천곡로 10 (천곡리)   1층 102호",
     lat: 35.2342145,
     lng: 128.838653,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -997,7 +887,6 @@ export const STORES: Store[] = [
     address: "부산광역시 동래구 사직북로 13 (사직동)   1층",
     lat: 35.1970842,
     lng: 129.0604442,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1006,7 +895,6 @@ export const STORES: Store[] = [
     address: "전북특별자치도 익산시 선화로3길 31-3 (모현동1가)   101호",
     lat: 35.9515099,
     lng: 126.9399998,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1015,7 +903,6 @@ export const STORES: Store[] = [
     address: "인천광역시 중구 자연대로 29 (중산동)   104호",
     lat: 37.487744,
     lng: 126.5605376,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1024,7 +911,6 @@ export const STORES: Store[] = [
     address: "제주특별자치도 제주시 중앙로 326 (이도이동, 해피트리)   1층",
     lat: 33.5048816,
     lng: 126.5374299,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1033,7 +919,6 @@ export const STORES: Store[] = [
     address: "대구광역시 중구 국채보상로140길 24 (동인동2가)   나동 1층",
     lat: 35.8695891,
     lng: 128.6001688,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1042,7 +927,6 @@ export const STORES: Store[] = [
     address: "부산광역시 연제구 과정로 148 (연산동)   1층",
     lat: 35.18465620000001,
     lng: 129.1073676,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1051,7 +935,6 @@ export const STORES: Store[] = [
     address: "대구광역시 수성구 달구벌대로 2528 (범어동)   1층 102호",
     lat: 35.8578459,
     lng: 128.6312963,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1060,7 +943,6 @@ export const STORES: Store[] = [
     address: "경상북도 포항시 북구 장량중앙로 55 (양덕동)   103호(양덕동)",
     lat: 36.0903213,
     lng: 129.3882083,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1069,7 +951,6 @@ export const STORES: Store[] = [
     address: "경상북도 포항시 북구 죽도시장길 26 (죽도동)   1층",
     lat: 36.0350587,
     lng: 129.3682465,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1078,7 +959,6 @@ export const STORES: Store[] = [
     address: "경상남도 통영시 통영해안로 337-2 (중앙동)   1층",
     lat: 34.8448293,
     lng: 128.4245709,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1087,7 +967,6 @@ export const STORES: Store[] = [
     address: "울산광역시 중구 화진1길 3 (태화동)   1층",
     lat: 35.556289,
     lng: 129.3075895,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1096,7 +975,6 @@ export const STORES: Store[] = [
     address: "광주광역시 서구 상무번영로 11 (치평동)   1층 106호",
     lat: 35.1507689,
     lng: 126.8527197,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1105,7 +983,6 @@ export const STORES: Store[] = [
     address: "부산광역시 금정구 학산로 14 (남산동), 1층",
     lat: 35.2647203,
     lng: 129.0914843,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1114,7 +991,6 @@ export const STORES: Store[] = [
     address: "부산광역시 영도구 동삼오션로 30 (동삼동)   1층 163호",
     lat: 35.068379,
     lng: 129.0830071,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1123,7 +999,6 @@ export const STORES: Store[] = [
     address: "경상남도 김해시 계동로 178 102호(대청동)",
     lat: 35.188925,
     lng: 128.7980287,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1132,7 +1007,6 @@ export const STORES: Store[] = [
     address: "부산광역시 해운대구 센텀동로 123 (재송동, 더샵센텀스타아파트)   상",
     lat: 35.1778233,
     lng: 129.1245186,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1141,7 +1015,6 @@ export const STORES: Store[] = [
     address: "부산광역시 영도구 봉래나루로 62 1층",
     lat: 35.0936566,
     lng: 129.0388375,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1150,7 +1023,6 @@ export const STORES: Store[] = [
     address: "충청북도 청주시 흥덕구 대농로 39 (복대동)   A동 110호",
     lat: 36.6423613,
     lng: 127.4267399,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1159,7 +1031,6 @@ export const STORES: Store[] = [
     address: "서울특별시 금천구 가산디지털1로 189. LG가산디지털 10층 1002호",
     lat: 37.4821428,
     lng: 126.8798551,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1168,7 +1039,6 @@ export const STORES: Store[] = [
     address: "부산광역시 남구 유엔평화로 11 (대연동) 1층 블루샥",
     lat: 35.1339339,
     lng: 129.0921458,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1177,7 +1047,6 @@ export const STORES: Store[] = [
     address: "대구광역시 수성구 교학로19길 19 (만촌동, 만촌자이르네)   근린생활",
     lat: 35.848232,
     lng: 128.6506617,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1186,7 +1055,6 @@ export const STORES: Store[] = [
     address: "울산광역시 남구 팔등로 85 (신정동, 울산신정푸르지오)   상가501동",
     lat: 35.5475155,
     lng: 129.3153033,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1195,7 +1063,6 @@ export const STORES: Store[] = [
     address: "경기도 성남시 분당구 판교로255번길 9-22 (삼평동, 판교우림W-CI",
     lat: 37.40378750000001,
     lng: 127.0999418,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1204,7 +1071,6 @@ export const STORES: Store[] = [
     address: "광주광역시 서구 화개1로79번길 8 (금호동)   1층",
     lat: 35.13129869999999,
     lng: 126.8541194,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1213,7 +1079,6 @@ export const STORES: Store[] = [
     address: "부산광역시 남구 지게골로 50 (문현동, 부산은행)   1층",
     lat: 35.1354186,
     lng: 129.0705734,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1222,7 +1087,6 @@ export const STORES: Store[] = [
     address: "경상남도 하동군 하동읍 중앙로 13 (읍내리, 삼성의료)",
     lat: 35.0702184,
     lng: 127.7510137,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1231,7 +1095,6 @@ export const STORES: Store[] = [
     address: "대구광역시 수성구 청솔로14길 15 (범어동, 범어에일린의뜰)   상가동",
     lat: 35.8523171,
     lng: 128.6219925,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1240,7 +1103,6 @@ export const STORES: Store[] = [
     address: "경상남도 김해시 진영읍 본산로 23-9 (여래리)   1층 118호",
     lat: 35.3073438,
     lng: 128.7370239,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1249,7 +1111,6 @@ export const STORES: Store[] = [
     address: "경상북도 경주시 양정로 254-8 1층(동천동)",
     lat: 35.8553863,
     lng: 129.2251669,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1258,7 +1119,6 @@ export const STORES: Store[] = [
     address: "경상남도 김해시 금관대로 1049 (풍유동)   1층",
     lat: 35.214927,
     lng: 128.8462535,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: true,
   },
   {
@@ -1267,7 +1127,6 @@ export const STORES: Store[] = [
     address: "충청북도 청주시 청원구 율량로190번길 71 (율량동)   1층 101호",
     lat: 36.6654906,
     lng: 127.4947642,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1276,7 +1135,6 @@ export const STORES: Store[] = [
     address: "경상북도 경주시 현곡면 새안현로 21 (하구리, 경주자이르네)   상가B",
     lat: 35.886966,
     lng: 129.1656256,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1285,7 +1143,6 @@ export const STORES: Store[] = [
     address: "인천광역시 부평구 원적로 295 (산곡동)   1층 105호 104호,",
     lat: 37.4991389,
     lng: 126.7133985,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1294,7 +1151,6 @@ export const STORES: Store[] = [
     address: "경상남도 양산시 덕계로 42 (덕계동, 조영빌딩)   1층",
     lat: 35.3719669,
     lng: 129.1494242,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1303,7 +1159,6 @@ export const STORES: Store[] = [
     address: "부산광역시 사하구 다대로 700 (다대동), 1층",
     lat: 35.0486828,
     lng: 128.9649303,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1312,7 +1167,6 @@ export const STORES: Store[] = [
     address: "서울특별시 광진구 아차산로 382 (자양동)   1층",
     lat: 37.531692,
     lng: 127.074516,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1321,7 +1175,6 @@ export const STORES: Store[] = [
     address: "울산광역시 중구 종가2길 1-2 (유곡동)   108호",
     lat: 35.5600009,
     lng: 129.2956483,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1330,7 +1183,6 @@ export const STORES: Store[] = [
     address: "부산광역시 해운대구 해운대해변로 141 (우동,대우마리나2차아파트) 상가",
     lat: 35.159427,
     lng: 129.1485102,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1339,7 +1191,6 @@ export const STORES: Store[] = [
     address: "경상남도 창원시 의창구 우곡로217번길 10 (명서동, 더큰병원)   1",
     lat: 35.2397067,
     lng: 128.6487478,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1348,7 +1199,6 @@ export const STORES: Store[] = [
     address: "경상남도 거제시 능포로 52 (장승포동)  1층",
     lat: 34.8695691,
     lng: 128.7270071,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1357,7 +1207,6 @@ export const STORES: Store[] = [
     address: "대구광역시 달서구 와룡로33길 20 (감삼동, 죽전역해링턴플레이스더베스트",
     lat: 35.8477428,
     lng: 128.5348269,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1366,7 +1215,6 @@ export const STORES: Store[] = [
     address: "서울특별시 금천구 가산디지털1로 205-28 1층 103호(가산동)",
     lat: 37.4835719,
     lng: 126.8784851,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1375,7 +1223,6 @@ export const STORES: Store[] = [
     address: "서울특별시 마포구 매봉산로 75 지하1층 105호(푸드코트18호)",
     lat: 37.5784536,
     lng: 126.8929138,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1384,7 +1231,6 @@ export const STORES: Store[] = [
     address: "부산광역시 중구 광복로 34-1 (창선동2가)   1층",
     lat: 35.099924,
     lng: 129.0281219,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1393,7 +1239,6 @@ export const STORES: Store[] = [
     address: "경상남도 창원시 의창구 도계로50번길 5-16 (도계동)   1층",
     lat: 35.2590594,
     lng: 128.6370979,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1402,7 +1247,6 @@ export const STORES: Store[] = [
     address: "울산광역시 중구 화합로 426 (반구동)   1층 113호",
     lat: 35.5630863,
     lng: 129.3373112,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1411,7 +1255,6 @@ export const STORES: Store[] = [
     address: "서울특별시 금천구 가산디지털2로 144 103호",
     lat: 37.4778193,
     lng: 126.8794248,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1420,7 +1263,6 @@ export const STORES: Store[] = [
     address: "울산광역시 동구 방어진순환도로 863 (전하동, 스위첸웰츠타워1차 상가)",
     lat: 35.5144206,
     lng: 129.4295024,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1429,7 +1271,6 @@ export const STORES: Store[] = [
     address: "경기도 성남시 분당구 판교역로 152 B1층 101호",
     lat: 37.3942237,
     lng: 127.1103225,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1438,7 +1279,6 @@ export const STORES: Store[] = [
     address: "세종특별자치시 한누리대로 234 (나성동, 르네상스)   1동 1층 10",
     lat: 36.4853417,
     lng: 127.2638064,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1447,7 +1287,6 @@ export const STORES: Store[] = [
     address: "전라남도 순천시 태봉길 31 (조례동, 골드클래스시그니처)   211(상",
     lat: 34.9588963,
     lng: 127.5132868,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1456,7 +1295,6 @@ export const STORES: Store[] = [
     address: "경상남도 창원시 진해구 냉천로 107 (석동, 룸타워)   1층 106호",
     lat: 35.1539593,
     lng: 128.70836,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1465,7 +1303,6 @@ export const STORES: Store[] = [
     address: "울산광역시 울주군 언양읍 헌양길 37 (남부리)   1층",
     lat: 35.5609463,
     lng: 129.1308813,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1474,7 +1311,6 @@ export const STORES: Store[] = [
     address: "전라남도 광양시 눈소5길 80 (마동)   1층",
     lat: 34.9395474,
     lng: 127.710053,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1483,7 +1319,6 @@ export const STORES: Store[] = [
     address: "경상북도 포항시 북구 새천년대로1076번길 4 (두호동)   1층",
     lat: 36.0639586,
     lng: 129.3718824,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1492,7 +1327,6 @@ export const STORES: Store[] = [
     address: "서울특별시 서초구 효령로51길 18 (서초동)   1층",
     lat: 37.4852037,
     lng: 127.0125611,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1501,7 +1335,6 @@ export const STORES: Store[] = [
     address: "충청북도 청주시 상당구 수영로 295 1층 102호(용담동,양화타워)",
     lat: 36.6364688,
     lng: 127.5068915,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1510,7 +1343,6 @@ export const STORES: Store[] = [
     address: "경상남도 김해시 금관대로 1407 근린생활시설동 지하3층 B104호(내동",
     lat: 35.2476713,
     lng: 128.8660562,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1519,7 +1351,6 @@ export const STORES: Store[] = [
     address: "경상남도 거제시 장평로 33 (장평동)   1층 102호",
     lat: 34.8909584,
     lng: 128.6136724,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1528,7 +1359,6 @@ export const STORES: Store[] = [
     address: "울산광역시 동구 서부로 51 (서부동)   1동 B515호",
     lat: 35.5389919,
     lng: 129.4172893,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1537,7 +1367,6 @@ export const STORES: Store[] = [
     address: "부산광역시 수영구 수영로 389 (남천동, 더샵남천프레스티지)   106",
     lat: 35.1414586,
     lng: 129.1068499,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1546,7 +1375,6 @@ export const STORES: Store[] = [
     address: "부산광역시 북구 만덕대로 15 (덕천동)   1층",
     lat: 35.2107174,
     lng: 129.0066976,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1555,7 +1383,6 @@ export const STORES: Store[] = [
     address: "경상남도 창원시 성산구 대원로 87 (대원동)   주건축물제1동 1층 1",
     lat: 35.2225954,
     lng: 128.6428992,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1564,7 +1391,6 @@ export const STORES: Store[] = [
     address: "부산광역시 수영구 연수로 411 (수영동, SK강일주유소)   1~2층",
     lat: 35.16830059999999,
     lng: 129.1143225,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1573,7 +1399,6 @@ export const STORES: Store[] = [
     address: "부산광역시 금정구 중앙대로1629번길 16 (부곡동, 삼한골든뷰에듀스테이",
     lat: 35.2602069,
     lng: 129.0909769,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1582,7 +1407,6 @@ export const STORES: Store[] = [
     address: "부산광역시 연제구 중앙대로 1085 (연산동, 오오빌딩) 1층",
     lat: 35.1848978,
     lng: 129.0803625,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1591,7 +1415,6 @@ export const STORES: Store[] = [
     address: "부산광역시 부산진구 가야대로 538 (가야동, 가야롯데캐슬골드아너)",
     lat: 35.1526749,
     lng: 129.0305687,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1600,7 +1423,6 @@ export const STORES: Store[] = [
     address: "경상남도 고성군 고성읍 동외로 166 (동외리), 1층",
     lat: 34.9760376,
     lng: 128.326321,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1609,7 +1431,6 @@ export const STORES: Store[] = [
     address: "경기도 성남시 중원구 금광로 71 (금광동, e편한세상금빛그랑메종4단지)",
     lat: 37.4501634,
     lng: 127.1599273,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1618,7 +1439,6 @@ export const STORES: Store[] = [
     address: "경기도 안양시 동안구 시민대로 317 (관양동, 대한스마트타워)   1층",
     lat: 37.395911,
     lng: 126.9658696,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1627,7 +1447,6 @@ export const STORES: Store[] = [
     address: "경기도 성남시 분당구 성남대로331번길 9-14 1층 101호(정자동,",
     lat: 37.3645011,
     lng: 127.1067565,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1636,7 +1455,6 @@ export const STORES: Store[] = [
     address: "부산광역시 동구 조방로 14 (범일동, 동일타워)   판매2-122호",
     lat: 35.1386383,
     lng: 129.0634722,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1645,7 +1463,6 @@ export const STORES: Store[] = [
     address: "대구광역시 수성구 청수로 127 401동 104호(황금동,힐스테이트 황금",
     lat: 35.8366495,
     lng: 128.6337478,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1654,7 +1471,6 @@ export const STORES: Store[] = [
     address: "경기도 수원시 영통구 광교호수공원로 20 (원천동, 더샵광교레이크시티)",
     lat: 37.2719159,
     lng: 127.0604244,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1663,7 +1479,6 @@ export const STORES: Store[] = [
     address: "부산광역시 부산진구 새싹로 244 (초읍동)   1층",
     lat: 35.1779039,
     lng: 129.0484277,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1672,7 +1487,6 @@ export const STORES: Store[] = [
     address: "경상남도 진주시 관문로 7 (가좌동, 율곡스퀘어프런티어)   109호",
     lat: 35.1522038,
     lng: 128.116816,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1681,7 +1495,6 @@ export const STORES: Store[] = [
     address: "부산광역시 동래구 수안로8번길 38 (수안동, 온천천경동리인타워2차)",
     lat: 35.1945064,
     lng: 129.0897295,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1690,7 +1503,6 @@ export const STORES: Store[] = [
     address: "제주특별자치도 서귀포시 문부로 3, 1층",
     lat: 33.2521936,
     lng: 126.5681964,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1699,7 +1511,6 @@ export const STORES: Store[] = [
     address: "대구광역시 서구 서대구로29길 30 7110동 1층 7.8호(평리동,서대",
     lat: 35.8708491,
     lng: 128.5515257,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1708,7 +1519,6 @@ export const STORES: Store[] = [
     address: "경상남도 양산시 물금읍 서들로 148 (가촌리, 채움)   112호",
     lat: 35.3117891,
     lng: 129.0066806,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1717,7 +1527,6 @@ export const STORES: Store[] = [
     address: "부산광역시 중구 충장대로9번길 28 (중앙동4가)   1층",
     lat: 35.1076903,
     lng: 129.0378731,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1726,7 +1535,6 @@ export const STORES: Store[] = [
     address: "울산광역시 남구 북부순환도로13번길 17 1층(무거동)",
     lat: 35.5518715,
     lng: 129.263487,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1735,7 +1543,6 @@ export const STORES: Store[] = [
     address: "서울특별시 강남구 테헤란로33길 5 (역삼동, JLK타워)   1층",
     lat: 37.5021774,
     lng: 127.0393793,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1744,7 +1551,6 @@ export const STORES: Store[] = [
     address: "부산광역시 남구 용소로 22-1 (대연동)   1층",
     lat: 35.13531020000001,
     lng: 129.1005727,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1753,7 +1559,6 @@ export const STORES: Store[] = [
     address: "경상남도 양산시 덕계로 42 1층(덕계동) 블루샥",
     lat: 35.3719669,
     lng: 129.1494242,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1762,7 +1567,6 @@ export const STORES: Store[] = [
     address: "경상남도 통영시 동호로 21 (정량동, 대성상회)",
     lat: 34.8453065,
     lng: 128.4335688,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1771,7 +1575,6 @@ export const STORES: Store[] = [
     address: "부산광역시 부산진구 당감로34번길 7 (당감동)   1층",
     lat: 35.16482999999999,
     lng: 129.0396423,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1780,7 +1583,6 @@ export const STORES: Store[] = [
     address: "충청남도 천안시 서북구 불당26로 50 (불당동, 천안불당지웰시티푸르지오",
     lat: 36.8115555,
     lng: 127.1056848,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1789,7 +1591,6 @@ export const STORES: Store[] = [
     address: "대구광역시 동구 효목로 20-1 (효목동)   1층 101호",
     lat: 35.8751842,
     lng: 128.6399005,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1798,7 +1599,6 @@ export const STORES: Store[] = [
     address: "부산광역시 동래구 미남로132번길 112 (온천동)   1층",
     lat: 35.2052513,
     lng: 129.0754332,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1807,7 +1607,6 @@ export const STORES: Store[] = [
     address: "부산광역시 해운대구 반여로 43 (반여동)   1층",
     lat: 35.1960854,
     lng: 129.1212846,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1816,7 +1615,6 @@ export const STORES: Store[] = [
     address: "강원특별자치도 강릉시 지변길 2 (지변동)   1층 일부",
     lat: 37.7733509,
     lng: 128.8746941,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1825,7 +1623,6 @@ export const STORES: Store[] = [
     address: "부산광역시 해운대구 중동1로 25 (중동)   지상1 일부층",
     lat: 35.1630836,
     lng: 129.1623707,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1834,7 +1631,6 @@ export const STORES: Store[] = [
     address: "부산광역시 연제구 거제천로255번길 54 (거제동)   1층",
     lat: 35.1923932,
     lng: 129.0852514,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1843,7 +1639,6 @@ export const STORES: Store[] = [
     address: "포항시 남구 중원로16 힐스테이트포항 304동 105호 블루샥",
     lat: 35.9741014,
     lng: 129.3997096,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1852,7 +1647,6 @@ export const STORES: Store[] = [
     address: "경상남도 김해시 호계로422번길 14 (부원동)   1층 (부원동)",
     lat: 35.2281658,
     lng: 128.8867612,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1861,7 +1655,6 @@ export const STORES: Store[] = [
     address: "부산광역시 동래구 금강로124번길 2 (온천동)   1층",
     lat: 35.21970719999999,
     lng: 129.0802468,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1870,7 +1663,6 @@ export const STORES: Store[] = [
     address: "서울특별시 영등포구 선유서로 115 (양평동3가, 삼천리아파트)101호",
     lat: 37.5261328,
     lng: 126.8855823,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1879,7 +1671,6 @@ export const STORES: Store[] = [
     address: "대구광역시 달서구 조암로 8 (월성동)   1층 103호",
     lat: 35.8260187,
     lng: 128.5286012,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1888,7 +1679,6 @@ export const STORES: Store[] = [
     address: "부산광역시 강서구 명지오션시티4로 69 (명지동)   103호",
     lat: 35.0827852,
     lng: 128.9039263,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1897,7 +1687,6 @@ export const STORES: Store[] = [
     address: "경기도 안양시 만안구 태평로60번길 42 (안양동, 센트럴타워2)   1",
     lat: 37.3962881,
     lng: 126.9307118,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1906,7 +1695,6 @@ export const STORES: Store[] = [
     address: "부산광역시 사상구 사상로 249 (괘법동, 대흥약국)   1층",
     lat: 35.1669988,
     lng: 128.9820951,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1915,7 +1703,6 @@ export const STORES: Store[] = [
     address: "부산광역시 동래구 충렬대로237번길 90 (복천동)   1층",
     lat: 35.2052296,
     lng: 129.0841263,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1924,7 +1711,6 @@ export const STORES: Store[] = [
     address: "부산광역시 사하구 낙동대로249번길 33-1 (괴정동)   1층 (괴정동",
     lat: 35.097945,
     lng: 128.9909443,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1933,7 +1719,6 @@ export const STORES: Store[] = [
     address: "울산광역시 동구 등대로 42 (방어동)   1층",
     lat: 35.4902926,
     lng: 129.4302415,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1942,7 +1727,6 @@ export const STORES: Store[] = [
     address: "부산광역시 서구 송도해변로 97 (암남동, 베스트웨스턴플러스부산송도호텔)",
     lat: 35.0771534,
     lng: 129.0176114,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1951,7 +1735,6 @@ export const STORES: Store[] = [
     address: "부산광역시 연제구 연수로 103 (연산동, 시청스마트더블유아파트) 101",
     lat: 35.1756977,
     lng: 129.0822125,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1960,7 +1743,6 @@ export const STORES: Store[] = [
     address: "부산광역시 부산진구 서전로10번길 7 (부전동)   1층",
     lat: 35.1573125,
     lng: 129.0607956,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1969,7 +1751,6 @@ export const STORES: Store[] = [
     address: "부산광역시 남구 수영로325번길 11 (대연동, 마로니에타운)   1층",
     lat: 35.1385724,
     lng: 129.1009874,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1978,7 +1759,6 @@ export const STORES: Store[] = [
     address: "부산광역시 수영구 광남로 202 (민락동)   1층",
     lat: 35.1584355,
     lng: 129.1209988,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1987,7 +1767,6 @@ export const STORES: Store[] = [
     address: "부산광역시 서구 구덕로 115-2 (충무동1가)   1층",
     lat: 35.0959533,
     lng: 129.0259678,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -1996,7 +1775,6 @@ export const STORES: Store[] = [
     address: "부산광역시 기장군 정관읍 정관7로 3 (매학리, 광장아울렛)   1층 1",
     lat: 35.3224006,
     lng: 129.1759338,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -2005,7 +1783,6 @@ export const STORES: Store[] = [
     address: "경상남도 김해시 율하로 488-1 (장유동)   1층 106호",
     lat: 35.1655008,
     lng: 128.8195424,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -2014,7 +1791,6 @@ export const STORES: Store[] = [
     address: "울산광역시 동구 봉수로 290 (전하동, e편한세상전하)   상가동 제B",
     lat: 35.5170781,
     lng: 129.4244317,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -2023,7 +1799,6 @@ export const STORES: Store[] = [
     address: "경상북도 경주시 용황로7길 7 (용강동)   가동 104호",
     lat: 35.883617,
     lng: 129.2256132,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -2032,7 +1807,6 @@ export const STORES: Store[] = [
     address: "부산 부산진구 자유평화로 7 평화도매시장 1층 98,99호, 13호문앞",
     lat: 35.1416917,
     lng: 129.0606173,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -2041,7 +1815,6 @@ export const STORES: Store[] = [
     address: "경상남도 진주시 진양호로 74-1 (평거동)   1층 일부",
     lat: 35.1668123,
     lng: 128.0478552,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -2050,7 +1823,6 @@ export const STORES: Store[] = [
     address: "부산광역시 사하구 낙동대로 412 (당리동)   1층",
     lat: 35.1039611,
     lng: 128.9732608,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
   {
@@ -2059,7 +1831,6 @@ export const STORES: Store[] = [
     address: "부산광역시 해운대구 센텀중앙로 48 (우동, 에이스하이테크21), 805호",
     lat: 35.1729615,
     lng: 129.1299186,
-    hours: "매일 08:00 - 22:00",
     hasDriveThru: false,
   },
 ];

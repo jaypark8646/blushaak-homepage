@@ -58,7 +58,6 @@ export interface Store {
   address: string;
   lat: number;
   lng: number;
-  hours: string;
   hasDriveThru?: boolean;
 }
 
