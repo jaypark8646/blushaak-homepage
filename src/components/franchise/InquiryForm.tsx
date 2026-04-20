@@ -108,34 +108,34 @@ export default function InquiryForm() {
 
     try {
       const trackingParams = getTrackingParamsFromBrowser(new URLSearchParams(window.location.search));
-      const response = await fetch("/api/leads", {
+      const data = new FormData();
+      data.append("성함", form.name);
+      data.append("연락처", form.phone);
+      data.append("창업희망지역", form.preferredArea);
+      data.append("상세내용", buildInquiryMessage());
+      if (trackingParams.ref) data.append("ref", trackingParams.ref);
+      if (trackingParams.utm_source) data.append("utm_source", trackingParams.utm_source);
+      if (trackingParams.utm_medium) data.append("utm_medium", trackingParams.utm_medium);
+      if (trackingParams.utm_campaign) data.append("utm_campaign", trackingParams.utm_campaign);
+      data.append("페이지URL", window.location.href);
+      data.append("_subject", `[블루샥 창업문의] ${form.name} - ${form.preferredArea}`);
+      data.append("_captcha", "false");
+      data.append("_template", "table");
+
+      const response = await fetch("https://formsubmit.co/sd@dandikorea.com", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: form.name,
-          phone: form.phone,
-          region: form.preferredArea,
-          message: buildInquiryMessage(),
-          ref: trackingParams.ref,
-          utm_source: trackingParams.utm_source,
-          utm_medium: trackingParams.utm_medium,
-          utm_campaign: trackingParams.utm_campaign,
-          page_url: window.location.href,
-        }),
+        body: data,
       });
 
       if (!response.ok) {
-        const payload = (await response.json().catch(() => null)) as { message?: string } | null;
-        throw new Error(payload?.message || "문의 저장 중 오류가 발생했습니다.");
+        throw new Error("문의 전송 중 오류가 발생했습니다.");
       }
 
       setSubmitMessage("문의가 접수되었습니다. 담당자가 확인 후 연락드리겠습니다.");
       setForm(initialState);
     } catch (error) {
       const message =
-        error instanceof Error ? error.message : "문의 저장 중 오류가 발생했습니다.";
+        error instanceof Error ? error.message : "문의 전송 중 오류가 발생했습니다.";
       setSubmitMessage(message);
     } finally {
       setIsSubmitting(false);
