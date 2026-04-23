@@ -50,7 +50,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "디카페인 아메리카노",
     category: "coffee",
     image: "/images/menu/americano.jpg",
-    nutrition: { calories: 12.0, sodium: 5.0, sugar: 0.0, saturatedFat: 0.0, protein: 0.0, caffeine: 18.0, allergens: null },
+    nutrition: { calories: 12.0, sodium: 5.0, sugar: 0.0, saturatedFat: 0.0, protein: 0.0, caffeine: 2.29, allergens: null },
   },
   {
     id: "white-americano",

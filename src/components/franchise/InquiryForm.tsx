@@ -12,10 +12,7 @@ interface FormState {
   name: string;
   phone: string;
   preferredArea: string;
-  estimatedBudget: string;
   preferredSize: string;
-  ageGroup: string;
-  hasFranchiseExp: string;
   openYear: string;
   openMonth: string;
   hasStore: string;
@@ -29,10 +26,7 @@ const initialState: FormState = {
   name: "",
   phone: "",
   preferredArea: "",
-  estimatedBudget: "",
   preferredSize: "10평대",
-  ageGroup: "30대",
-  hasFranchiseExp: "없음",
   openYear: "",
   openMonth: "",
   hasStore: "없음",
@@ -83,10 +77,7 @@ export default function InquiryForm() {
   const buildInquiryMessage = () => {
     const detailLines = [
       form.details.trim(),
-      form.estimatedBudget && `예상창업비용: ${form.estimatedBudget}만원`,
       form.preferredSize && `창업희망 평수: ${form.preferredSize}`,
-      form.ageGroup && `연령대: ${form.ageGroup}`,
-      form.hasFranchiseExp && `프랜차이즈 경험: ${form.hasFranchiseExp}`,
       (form.openYear || form.openMonth) &&
         `오픈희망 시기: ${[form.openYear, form.openMonth && `${form.openMonth}월`]
           .filter(Boolean)
@@ -230,27 +221,6 @@ export default function InquiryForm() {
                 )}
               </div>
 
-              {/* 예상창업비용 */}
-              <div>
-                <label htmlFor="estimatedBudget" className={labelClasses}>
-                  예상창업비용
-                </label>
-                <div className="relative">
-                  <input
-                    id="estimatedBudget"
-                    name="estimatedBudget"
-                    type="number"
-                    value={form.estimatedBudget}
-                    onChange={handleChange}
-                    placeholder="5000"
-                    className={`${inputClasses} pr-12`}
-                  />
-                  <span className="absolute right-4 top-1/2 -translate-y-1/2 text-sm text-gray-400">
-                    만원
-                  </span>
-                </div>
-              </div>
-
               {/* 창업희망 평수 */}
               <div>
                 <label className={labelClasses}>창업희망 평수</label>
@@ -258,26 +228,6 @@ export default function InquiryForm() {
                   options={["10평미만", "10평대", "20평대", "30평대 이상"]}
                   value={form.preferredSize}
                   onChange={(val) => setForm((prev) => ({ ...prev, preferredSize: val }))}
-                />
-              </div>
-
-              {/* 연령대 */}
-              <div>
-                <label className={labelClasses}>연령대</label>
-                <ToggleButton
-                  options={["20대", "30대", "40대", "50대 이상"]}
-                  value={form.ageGroup}
-                  onChange={(val) => setForm((prev) => ({ ...prev, ageGroup: val }))}
-                />
-              </div>
-
-              {/* 프랜차이즈 경험 */}
-              <div>
-                <label className={labelClasses}>프랜차이즈 경험</label>
-                <ToggleButton
-                  options={["있음", "없음"]}
-                  value={form.hasFranchiseExp}
-                  onChange={(val) => setForm((prev) => ({ ...prev, hasFranchiseExp: val }))}
                 />
               </div>
 

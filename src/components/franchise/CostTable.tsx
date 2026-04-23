@@ -14,13 +14,8 @@ export default function CostTable() {
     setOpenNotes((prev) => ({ ...prev, [category]: !prev[category] }));
   };
 
-  const parseNumber = (val: string) => {
-    const n = parseInt(val.replace(/,/g, ""), 10);
-    return isNaN(n) ? 0 : n;
-  };
-
-  const total10 = COST_TABLE.reduce((sum, item) => sum + parseNumber(item.cost10), 0);
-  const total15 = COST_TABLE.reduce((sum, item) => sum + parseNumber(item.cost15), 0);
+  const total10 = 63_900_000;
+  const total15 = 76_400_000;
 
   const formatNumber = (n: number) => {
     if (n === 0) return "";
@@ -65,7 +60,7 @@ export default function CostTable() {
                     <p className="mt-2 text-base font-bold text-dark-800">
                       가맹비 · 교육비 면제
                     </p>
-                    <p className="mt-1 text-base font-bold text-dark-800">
+                    <p className="mt-1 text-lg font-black text-cta-500 sm:text-xl">
                       커피머신 지원
                     </p>
                   </div>
@@ -95,6 +90,7 @@ export default function CostTable() {
                     const isFirst = item.category === "가맹비";
                     const isEducation = item.category === "교육비";
                     const isHighlighted = item.category === highlightedCategory;
+                    const isPosKiosk = item.category === "포스/키오스크";
                     const hasNote = !!item.note;
                     const isOpen = !!openNotes[item.category];
 
@@ -147,7 +143,7 @@ export default function CostTable() {
                           {/* 10평 */}
                           <td
                             className={`px-3 sm:px-6 py-4 text-center ${
-                              isHighlighted ? "font-bold text-dark-900" : "text-dark-700"
+                              isHighlighted || isPosKiosk ? "font-bold text-dark-900" : "text-dark-700"
                             }`}
                           >
                             {isFirst ? (
@@ -172,7 +168,7 @@ export default function CostTable() {
                           {/* 15평 */}
                           <td
                             className={`px-3 sm:px-6 py-4 text-center ${
-                              isHighlighted ? "font-bold text-dark-900" : "text-dark-700"
+                              isHighlighted || isPosKiosk ? "font-bold text-dark-900" : "text-dark-700"
                             }`}
                           >
                             {isFirst ? (
@@ -258,9 +254,23 @@ export default function CostTable() {
             </div>
           </div>
 
-          <p className="mt-4 text-xs text-gray-400 text-center">
-            * 상기 금액은 부가세 별도이며, 매장 상황에 따라 변동될 수 있습니다. &nbsp;* 별도공사비 제외
-          </p>
+          <div className="mt-6 space-y-4 rounded-2xl border border-gray-200 bg-gray-50 px-5 py-5 sm:px-6">
+            <div>
+              <p className="text-sm font-bold text-dark-800">별도사항</p>
+              <p className="mt-2 text-sm leading-6 text-gray-600">
+                전기증설, 냉난방기, 철거, 외부파사드, 간판, 스피커시스템, 의탁자, 어닝, 소방설비, 아이스크림장비 등
+              </p>
+            </div>
+            <div className="rounded-xl border border-amber-200 bg-white px-4 py-3">
+              <p className="text-sm font-semibold text-amber-700">의탁자: 별도</p>
+            </div>
+            <div className="space-y-2 text-xs leading-5 text-gray-500 sm:text-sm">
+              <p>• 로열티는 20만원 VAT별도입니다.</p>
+              <p>• 본 인테리어 비용은 이해를 돕기 위한 예상비용으로 현장 실측 후 정확한 비용이 산출됩니다.</p>
+              <p>• 위 조건은 점포상황(전기증설, 급/배수/외부공사 등)에 따라 상이할 수 있습니다.</p>
+              <p>• 프로모션 혜택은 예고없이 중단될 수 있습니다.</p>
+            </div>
+          </div>
         </ScrollReveal>
       </div>
     </section>
