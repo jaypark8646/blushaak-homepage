@@ -11,6 +11,16 @@ const nextConfig: NextConfig = {
   env: {
     NEXT_PUBLIC_GOOGLE_MAPS_API_KEY: process.env.GOOGLE_MAPS_API_KEY,
   },
+  ...(isGithubActions
+    ? {}
+    : {
+        async rewrites() {
+          return [
+            // Legacy gnuboard URLs → new App Router pages (preserves URL in browser)
+            { source: "/bbs/board.php", destination: "/bbs/board" },
+          ];
+        },
+      }),
 };
 
 export default nextConfig;
