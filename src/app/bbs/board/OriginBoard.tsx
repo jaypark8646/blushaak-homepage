@@ -1,3 +1,5 @@
+"use client";
+
 import { GNB, Footer } from "@/components/layout";
 import { ORIGIN_ITEMS, ORIGIN_FOOTER_NOTE } from "@/lib/originBoardData";
 
