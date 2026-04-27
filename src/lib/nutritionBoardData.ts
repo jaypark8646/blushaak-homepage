@@ -202,6 +202,11 @@ export const NUTRITION_ITEMS: NutritionItem[] = [
   m(I, "흑당 버블 아이스크림", false, 311.2, 76.2, 22.4, 8.3, 4.6, null, ["우유", "대두"]),
 
   // ── BAKERY (1회 제공량 g 순서: calories, sugar, saturatedFat, sodium, protein; no caffeine) ──
+  m(K, "코코넛 르뱅쿠키", false, 503, 152, 26, 10, 6, null),
+  m(K, "크랜베리 르뱅쿠키", false, 483, 143, 31, 4, 5, null),
+  m(K, "말차 르뱅쿠키", false, 472, 152, 36, 7, 6, null),
+  m(K, "얼그레이 르뱅쿠키", false, 464, 124, 33, 7, 6, null),
+  m(K, "오레오 르뱅쿠키", false, 451, 143, 32, 9, 6, null),
   m(K, "밀크 스콘", false, 359, 277, 12, 9.0, 5, null, ["밀", "계란", "견과류"], 85),
   m(K, "월넛 초코 쿠키", false, 546, 152, 24, 10, 7, null, ["밀", "계란", "견과류"], 130),
   m(K, "까눌레", false, 288, 33, 19, 1.0, 5, null, ["밀", "계란", "견과류"], 80),
