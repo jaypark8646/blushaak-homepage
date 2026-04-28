@@ -66,7 +66,7 @@ export interface NewsItem {
   id: string;
   title: string;
   date: string;
-  category: "notice" | "event" | "support";
+  category: "notice" | "news" | "event";
   thumbnail?: string;
   excerpt: string;
   content?: string;

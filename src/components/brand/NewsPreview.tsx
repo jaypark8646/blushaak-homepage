@@ -37,7 +37,7 @@ const NEWS_ITEMS = [
 const CATEGORY_COLORS: Record<string, string> = {
   notice: "bg-blu-50 text-blu-600",
   event: "bg-mint-50 text-mint-700",
-  support: "bg-warm-200 text-dark-800",
+  news: "bg-warm-200 text-dark-800",
 };
 
 export default function NewsPreview() {

@@ -61,9 +61,9 @@ export const NAV_ITEMS: NavItem[] = [
     label: "NEWS",
     href: "/news",
     submenu: [
-      { label: "Notice", href: "/news?tab=notice" },
-      { label: "Event", href: "/news?tab=event" },
-      { label: "Support", href: "/news?tab=support" },
+      { label: "공지", href: "/news?tab=notice" },
+      { label: "NEWS", href: "/news?tab=news" },
+      { label: "EVENT", href: "/news?tab=event" },
     ],
   },
 ];
@@ -72,7 +72,7 @@ export const FOOTER_LINKS = [
   { label: "소식", href: "/news?tab=notice" },
   { label: "이벤트", href: "/news?tab=event" },
   { label: "제휴/제안", href: "/brand#office" },
-  { label: "고객상담", href: "/news?tab=support" },
+  { label: "고객상담", href: "/news?tab=news" },
   { label: "개인정보 처리방침", href: "#" },
   { label: "이용약관", href: "#" },
 ];
@@ -81,7 +81,7 @@ export const BRAND_SIDEBAR_ITEMS = [
   { label: "가맹문의", sublabel: "1644-8067", href: "tel:1644-8067", icon: "phone" },
   { label: "블루샥 앱 주문", href: "#", icon: "app" },
   { label: "가까운 매장찾기", href: "/store", icon: "map" },
-  { label: "문의/접수", href: "/news?tab=support", icon: "inquiry" },
+  { label: "문의/접수", href: "/news?tab=news", icon: "inquiry" },
 ];
 
 export const FRANCHISE_SIDEBAR_ITEMS = [

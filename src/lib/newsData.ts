@@ -1,11 +1,11 @@
 import { NewsItem } from "@/types";
 
-export type NewsTab = "notice" | "event" | "support";
+export type NewsTab = "notice" | "news" | "event";
 
 export const NEWS_TABS: { id: NewsTab; label: string }[] = [
-  { id: "notice", label: "Notice" },
-  { id: "event", label: "Event" },
-  { id: "support", label: "Support" },
+  { id: "notice", label: "공지" },
+  { id: "news", label: "NEWS" },
+  { id: "event", label: "EVENT" },
 ];
 
 export const SAMPLE_NEWS: NewsItem[] = [
@@ -318,7 +318,7 @@ export const SAMPLE_NEWS: NewsItem[] = [
     id: "support-3",
     title: "스페셜티 커피란 무엇인가 — 블루샥이 고집하는 품질 기준",
     date: "2024-06-10",
-    category: "support",
+    category: "news",
     excerpt:
       "블루샥이 추구하는 스페셜티 커피의 기준과 원두 선별 과정을 소개합니다. SCA 점수 80점 이상, 산지 직거래 원두로 만드는 블루샥만의 커피 철학을 알아보세요.",
     content: `블루샥 커피는 창업 초기부터 '스페셜티 커피의 대중화'를 핵심 가치로 삼아왔습니다.
@@ -347,7 +347,7 @@ export const SAMPLE_NEWS: NewsItem[] = [
     id: "support-2",
     title: "블루샥 앱 & 멤버십 이용 안내",
     date: "2024-06-10",
-    category: "support",
+    category: "news",
     excerpt:
       "블루샥 공식 앱을 통해 멤버십 포인트 적립, 모바일 주문, 매장 찾기 등 다양한 혜택을 이용해보세요.",
     content: `블루샥 커피 공식 앱을 통해 더욱 편리하게 블루샥을 이용하세요.
@@ -382,7 +382,7 @@ export const SAMPLE_NEWS: NewsItem[] = [
     id: "support-1",
     title: "블루샥은 어떻게 빠르게 성장하는 커피 브랜드가 되었나",
     date: "2024-06-10",
-    category: "support",
+    category: "news",
     excerpt:
       "부산 소규모 로컬 브랜드에서 시작해 전국 250개 이상 매장으로 성장한 블루샥. 브랜딩, 메뉴 개발, 소비자 중심 경영 — 세 가지 성장 비결을 소개합니다. (출처: 브런치)",
     content: `부산의 소규모 로컬 브랜드에서 시작한 블루샥은 2021년 기준 전국 130개 매장으로 성장했으며, 2024년 현재 250개 이상의 매장 계약을 완료했습니다.
@@ -407,14 +407,14 @@ export const SAMPLE_NEWS: NewsItem[] = [
 
 export const categoryColors: Record<NewsTab, { bg: string; text: string }> = {
   notice: { bg: "bg-blu-50", text: "text-blu-600" },
+  news: { bg: "bg-warm-200", text: "text-amber-700" },
   event: { bg: "bg-mint-50", text: "text-mint-700" },
-  support: { bg: "bg-warm-200", text: "text-amber-700" },
 };
 
 export const categoryLabels: Record<NewsTab, string> = {
   notice: "공지",
-  event: "이벤트",
-  support: "고객지원",
+  news: "NEWS",
+  event: "EVENT",
 };
 
 export function getNewsById(id: string): NewsItem | undefined {
