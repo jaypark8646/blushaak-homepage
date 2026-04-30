@@ -1030,7 +1030,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "로스티드 마카다미아 휘낭시에",
     category: "bakery",
     image: "/images/menu/roasted-macadamia-financier.jpg",
-    nutrition: { calories: 234, sodium: 120, sugar: 12, saturatedFat: 2.9, protein: 3, caffeine: null, allergens: null },
+    nutrition: { calories: 215, sodium: 107, sugar: 11, saturatedFat: 3, protein: 3, caffeine: null, allergens: null },
   },
   {
     id: "dubai-choco-financier",
@@ -1038,7 +1038,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "두바이 초코 휘낭시에",
     category: "bakery",
     image: "/images/menu/dubai-choco-financier.jpg",
-    nutrition: { calories: 271, sodium: 95, sugar: 17, saturatedFat: 5, protein: 4, caffeine: null, allergens: null },
+    nutrition: { calories: 306, sodium: 111, sugar: 20, saturatedFat: 6, protein: 5, caffeine: null, allergens: null },
   },
   {
     id: "pearl-salt-financier",
@@ -1046,7 +1046,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "펄솔트 휘낭시에",
     category: "bakery",
     image: "/images/menu/pearl-salt-financier.jpg",
-    nutrition: { calories: 122, sodium: 65, sugar: 9, saturatedFat: 2.5, protein: 2, caffeine: null, allergens: null },
+    nutrition: { calories: 159, sodium: 82, sugar: 12, saturatedFat: 3, protein: 2, caffeine: null, allergens: null },
   },
   {
     id: "honey-crispy-financier",
@@ -1054,7 +1054,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "허니 크리스피 휘낭시에",
     category: "bakery",
     image: "/images/menu/honey-crispy-financier.jpg",
-    nutrition: { calories: 189, sodium: 65, sugar: 13, saturatedFat: 3.1, protein: 3, caffeine: null, allergens: null },
+    nutrition: { calories: 186, sodium: 66, sugar: 13, saturatedFat: 3, protein: 3, caffeine: null, allergens: null },
   },
   {
     id: "dubai-chewy-cookie",
