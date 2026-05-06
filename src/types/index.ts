@@ -26,7 +26,6 @@ export type MenuCategory =
   | "coffee"
   | "beverage"
   | "blended"
-  | "bottle"
   | "bakery"
   | "ice-cream"
   | "md";

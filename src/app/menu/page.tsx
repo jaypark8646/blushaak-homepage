@@ -15,7 +15,11 @@ import { MenuItem } from "@/types";
 
 function MenuPageContent() {
   const searchParams = useSearchParams();
-  const initialCategory = searchParams.get("category") || "all";
+  const requestedCategory = searchParams.get("category");
+  const initialCategory =
+    requestedCategory && MENU_CATEGORIES.some((category) => category.id === requestedCategory)
+      ? requestedCategory
+      : "all";
   const [activeCategory, setActiveCategory] = useState(initialCategory);
   const [selectedItem, setSelectedItem] = useState<MenuItem | null>(null);
   const { isScrolled } = useScrollPosition();
