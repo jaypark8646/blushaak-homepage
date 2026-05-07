@@ -607,7 +607,7 @@ export const MENU_ITEMS: MenuItem[] = [
   },
   {
     id: "cup-bingsu",
-    name: "Cup Bingsu",
+    name: "Cup Shaved Ice",
     nameKo: "컵빙수",
     category: "blended",
     image: "/images/menu/cup-bingsu.jpg",
