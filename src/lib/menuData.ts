@@ -157,7 +157,7 @@ export const MENU_ITEMS: MenuItem[] = [
   },
   {
     id: "ah-shot-chu",
-    name: "Ah Shot Chu",
+    name: "Peach Iced Tea With Espresso",
     nameKo: "아샷추",
     category: "coffee",
     image: "/images/menu/ah-shot-chu.jpg",
