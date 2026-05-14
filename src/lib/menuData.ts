@@ -753,10 +753,10 @@ export const MENU_ITEMS: MenuItem[] = [
   {
     id: "dubai-chewy-cookie",
     name: "Dubai Chewy Cookie",
-    nameKo: "두바이 쫀득 쿠키",
+    nameKo: "두바이 쫀득쿠키",
     category: "bakery",
     image: "/images/menu/dubai-chewy-cookie.jpg",
-    nutrition: null,
+    nutrition: { calories: 258, sodium: 12.1, sugar: 9.1, saturatedFat: 10, protein: 2.3, caffeine: null, allergens: null },
   },
   {
     id: "canele",
@@ -820,7 +820,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "오리지널 소금빵",
     category: "bakery",
     image: "/images/menu/original-salt-bread.jpg",
-    nutrition: null,
+    nutrition: { calories: 195, sodium: 272, sugar: 2, saturatedFat: 4, protein: 5, caffeine: null, allergens: "밀/계란/우유" },
   },
   {
     id: "egg-mayo-salt-bread-sandwich",
@@ -828,7 +828,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "에그마요 소금빵 샌드위치",
     category: "bakery",
     image: "/images/menu/egg-mayo-salt-bread-sandwich.jpg",
-    nutrition: null,
+    nutrition: { calories: 490, sodium: 692, sugar: 2, saturatedFat: 13, protein: 2, caffeine: null, allergens: "밀/계란/우유/대두" },
   },
   {
     id: "ice-cream-salt-bread",
@@ -836,7 +836,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "아이스크림 소금빵",
     category: "bakery",
     image: "/images/menu/ice-cream-salt-bread.jpg",
-    nutrition: null,
+    nutrition: { calories: 389.6, sodium: 378.1, sugar: 17.1, saturatedFat: 8.3, protein: 8.2, caffeine: null, allergens: "우유/대두/밀/계란" },
   },
   {
     id: "iced-milk-cream-salt-bread",
@@ -844,7 +844,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "아이스 우유 크림 소금빵",
     category: "bakery",
     image: "/images/menu/iced-milk-cream-salt-bread.jpg",
-    nutrition: null,
+    nutrition: { calories: 328, sodium: 330, sugar: 3, saturatedFat: 9, protein: 6, caffeine: null, allergens: "밀/계란/우유" },
   },
   {
     id: "raspberry-jam-scone",
@@ -852,7 +852,7 @@ export const MENU_ITEMS: MenuItem[] = [
     nameKo: "라즈베리잼 스콘",
     category: "bakery",
     image: "/images/menu/raspberry-jam-scone.jpg",
-    nutrition: null,
+    nutrition: { calories: 340, sodium: 190, sugar: 9, saturatedFat: 8, protein: 5, caffeine: null, allergens: "밀/우유/계란" },
   },
   {
     id: "milk-scone",
