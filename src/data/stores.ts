@@ -1826,6 +1826,14 @@ export const STORES: Store[] = [
     hasDriveThru: false,
   },
   {
+    id: "B90001",
+    name: "블루샥(아산배방점)",
+    address: "충청남도 아산시 배방읍 배방로 58-42, 1층 102호",
+    lat: 36.7710707,
+    lng: 127.0501924,
+    hasDriveThru: false,
+  },
+  {
     id: "BBLU01",
     name: "블루샥(부산교육장)",
     address: "부산광역시 해운대구 센텀중앙로 48 (우동, 에이스하이테크21), 805호",
