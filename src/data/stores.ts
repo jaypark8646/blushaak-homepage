@@ -1834,6 +1834,14 @@ export const STORES: Store[] = [
     hasDriveThru: false,
   },
   {
+    id: "B90002",
+    name: "블루샥(문현BIFC2점)",
+    address: "부산광역시 남구 남동천로 128, 1층 107호(문현동, 부산국제금융센터 BIFC II)",
+    lat: 35.1482139,
+    lng: 129.0642611,
+    hasDriveThru: false,
+  },
+  {
     id: "BBLU01",
     name: "블루샥(부산교육장)",
     address: "부산광역시 해운대구 센텀중앙로 48 (우동, 에이스하이테크21), 805호",
