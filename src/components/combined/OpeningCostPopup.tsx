@@ -17,14 +17,13 @@ const POPUP_CATEGORIES = [
 const POPUP_NOTES: Partial<Record<(typeof POPUP_CATEGORIES)[number], string>> = {
   "가맹비": "한시적 면제 중 (정가 10,000,000원)",
   "교육비": "한시적 면제 중 (정가 3,000,000원)",
-  "기기 및 장비 (2G 기준)": "오븐기/비닝 쇼케이스/그라인더 3대 포함",
 };
 
 const EQUIPMENT_SUPPORT_LABEL = "커피머신 지원";
 
 const TOTALS = {
-  10: "72,300,000",
-  15: "84,800,000",
+  10: "54,200,000",
+  15: "66,700,000",
 };
 
 function formatCellValue(_: string, value: string) {
