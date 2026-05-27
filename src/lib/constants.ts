@@ -19,7 +19,7 @@ export const BRAND = {
   email: "sd@dandikorea.com",
   fax: "051-819-7861",
   headquarters: {
-    seoul: "서울 금천구 가산디지털1로 205-28 대신IT타워, 4층 블루샥",
+    seoul: "서울 금천구 가산디지털 1로 205-28 대신IT타워 3층,4층",
     busan:
       "부산광역시 해운대구 센텀중앙로 48, 8층 805,806호 (우동, 에이스하이테크21)",
   },

@@ -1028,7 +1028,7 @@ export const STORES: Store[] = [
   {
     id: "B54387",
     name: "블루샥(서울 가산사무실)",
-    address: "서울특별시 금천구 가산디지털1로 189. LG가산디지털 10층 1002호",
+    address: "서울 금천구 가산디지털 1로 205-28 대신IT타워 3층,4층",
     lat: 37.4821428,
     lng: 126.8798551,
     hasDriveThru: false,
