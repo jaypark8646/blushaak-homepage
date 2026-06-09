@@ -12,14 +12,6 @@ export const MENU_CATEGORIES: MenuCategoryInfo[] = [
 export const MENU_ITEMS: MenuItem[] = [
   // Coffee
   {
-    id: "ube-cold-brew-latte",
-    name: "Ube Cold Brew Latte",
-    nameKo: "우베 콜드브루 라떼",
-    category: "coffee",
-    image: "/images/menu/ube-cold-brew-latte.jpg",
-    nutrition: { calories: 226.0, sodium: 87.8, sugar: 19.8, saturatedFat: 4.8, protein: 5.0, caffeine: 114.8, allergens: "우유" },
-  },
-  {
     id: "shaak-latte",
     name: "Shaak Latte",
     nameKo: "샥라떼",
@@ -204,30 +196,6 @@ export const MENU_ITEMS: MenuItem[] = [
     nutrition: { calories: 2.5, sodium: 6.1, sugar: 0.0, saturatedFat: 0.0, protein: 0.2, caffeine: 124.0, allergens: null },
   },
   // Beverage
-  {
-    id: "ube-latte",
-    name: "Ube Latte",
-    nameKo: "우베 라떼",
-    category: "beverage",
-    image: "/images/menu/ube-latte.jpg",
-    nutrition: { calories: 226.0, sodium: 87.8, sugar: 30.5, saturatedFat: 6.5, protein: 6.6, caffeine: null, allergens: "우유" },
-  },
-  {
-    id: "jasmine-ube-tea-latte",
-    name: "Jasmine Ube Tea Latte",
-    nameKo: "자스민 우베 티 라떼",
-    category: "beverage",
-    image: "/images/menu/jasmine-ube-tea-latte.jpg",
-    nutrition: { calories: 262.7, sodium: 91.0, sugar: 23.9, saturatedFat: 5.0, protein: 5.0, caffeine: null, allergens: "우유" },
-  },
-  {
-    id: "k-rice-cream-ube-latte",
-    name: "K-Rice Cream Ube Latte",
-    nameKo: "K-쌀크림 우베 라떼",
-    category: "beverage",
-    image: "/images/menu/k-rice-cream-ube-latte.jpg",
-    nutrition: { calories: 330.4, sodium: 121.5, sugar: 19.8, saturatedFat: 4.8, protein: 5.0, caffeine: null, allergens: "우유" },
-  },
   {
     id: "golden-yuzu-beauty-elixir",
     name: "Golden Yuzu Beauty Elixir",
@@ -709,14 +677,6 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "bakery",
     image: "/images/menu/butter-rice-cake.jpg",
     nutrition: { calories: 210, sodium: 176, sugar: 11, saturatedFat: 4.0, protein: 2, caffeine: null, allergens: null },
-  },
-  {
-    id: "ube-butter-rice-cake",
-    name: "Ube Butter Rice Cake",
-    nameKo: "우베 버터떡",
-    category: "bakery",
-    image: "/images/menu/ube-butter-rice-cake.jpg",
-    nutrition: { calories: 224, sodium: 166, sugar: 13, saturatedFat: 4.0, protein: 2, caffeine: null, allergens: null },
   },
   {
     id: "roasted-macadamia-financier",
