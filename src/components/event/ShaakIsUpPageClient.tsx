@@ -19,6 +19,19 @@ const challengeImages = [
   },
 ];
 
+const campaignImages = [
+  {
+    src: "/images/event/shaak-is-up-01.jpg",
+    alt: "블루샥 사이즈업 캠페인 메인 비주얼",
+    label: "Campaign Visual 01",
+  },
+  {
+    src: "/images/event/shaak-is-up-02.jpg",
+    alt: "샥이즈업 인스타그램 챌린지 안내 비주얼",
+    label: "Campaign Visual 02",
+  },
+];
+
 const bestShotPrizes = [
   { rank: "1등", winner: "1명", prize: "아이패드 에어 (iPad Air)" },
   { rank: "2등", winner: "1명", prize: "디올 (Dior) 카드 지갑" },
@@ -45,7 +58,7 @@ export default function ShaakIsUpPageClient() {
     <>
       <GNB isScrolled={isScrolled} />
 
-      <main className="min-h-screen overflow-hidden bg-[linear-gradient(180deg,#dff4ff_0%,#ffffff_24%,#f3fbff_70%,#ffffff_100%)] pt-[72px] text-dark-800">
+      <main className="min-h-screen overflow-hidden bg-[linear-gradient(180deg,#dff4ff_0%,#edf8ff_20%,#0d2f4f_52%,#071a2f_100%)] pt-[72px] text-dark-800">
         <section className="relative isolate">
           <div className="absolute inset-x-0 top-0 -z-10 h-[28rem] bg-[radial-gradient(circle_at_top_left,rgba(77,219,177,0.35),transparent_40%),radial-gradient(circle_at_top_right,rgba(46,156,223,0.4),transparent_36%),linear-gradient(180deg,#0b3152_0%,#1a73b5_44%,#58b2e7_100%)]" />
           <div className="absolute left-[-8rem] top-24 -z-10 h-56 w-56 rounded-full bg-white/15 blur-3xl" />
@@ -108,6 +121,57 @@ export default function ShaakIsUpPageClient() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-5 py-14 md:px-8 lg:px-10 lg:py-20">
+          <div className="mb-10 max-w-3xl">
+            <span className="inline-flex rounded-full bg-white px-4 py-1 text-sm font-semibold text-blu-700 ring-1 ring-blu-100">
+              Campaign Story
+            </span>
+            <h2 className="mt-4 text-3xl font-black md:text-5xl">
+              더 크게, 더 시원하게
+              <br />
+              블루샥의 여름을 담았습니다
+            </h2>
+            <div className="mt-6 space-y-3 text-base leading-8 text-gray-700 md:text-lg">
+              <p>
+                언제나 최고의 맛을 전해드리기 위해 고민하는 블루샥이
+                올여름 특별한 캠페인으로 찾아왔습니다.
+              </p>
+              <p>
+                매일 마시는 맛있는 음료를 일상에서 더 크고 넉넉하게 즐기실
+                수 있도록, 용량을 시원하게 키웠습니다.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid gap-5 lg:grid-cols-2">
+            {campaignImages.map((image) => (
+              <article
+                key={image.src}
+                className="overflow-hidden rounded-[2rem] bg-white/90 shadow-[0_20px_48px_rgba(16,71,115,0.14)] ring-1 ring-white/70 backdrop-blur-sm"
+              >
+                <div className="relative aspect-[4/5]">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 1024px) 50vw, 100vw"
+                    priority
+                  />
+                </div>
+                <div className="bg-[linear-gradient(135deg,#08233d_0%,#114a78_100%)] px-6 py-5 text-white">
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-mint-100">
+                    {image.label}
+                  </p>
+                  <p className="mt-2 text-lg font-bold leading-relaxed">
+                    블루샥의 프리미엄 음료를 더 커진 사이즈로 만나보세요.
+                  </p>
+                </div>
+              </article>
+            ))}
           </div>
         </section>
 
@@ -271,14 +335,18 @@ export default function ShaakIsUpPageClient() {
         </section>
 
         <section className="mx-auto max-w-7xl px-5 pb-20 md:px-8 lg:px-10">
-          <div className="rounded-[2rem] border border-blu-100 bg-white p-6 shadow-[0_16px_36px_rgba(16,71,115,0.08)] md:p-8">
-            <h2 className="text-2xl font-black text-dark-800 md:text-3xl">
+          <div className="rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,#08233d_0%,#0f3e68_52%,#15588d_100%)] p-6 text-white shadow-[0_16px_36px_rgba(6,27,49,0.22)] md:p-8">
+            <h2 className="text-2xl font-black md:text-3xl">
               유의사항
             </h2>
-            <ul className="mt-5 space-y-3 text-base leading-7 text-gray-700">
+            <p className="mt-3 max-w-3xl text-sm leading-7 text-white/78 md:text-base">
+              캠페인 참여 전 아래 내용을 확인해 주세요. 보다 정확한 운영을 위해
+              게시물 공개 여부와 태그 표기를 꼭 점검해 주셔야 합니다.
+            </p>
+            <ul className="mt-5 space-y-3 text-base leading-7 text-white/88">
               {noticeItems.map((item) => (
                 <li key={item} className="flex gap-3">
-                  <span className="mt-2 h-2.5 w-2.5 flex-none rounded-full bg-blu-400" />
+                  <span className="mt-2 h-2.5 w-2.5 flex-none rounded-full bg-mint-200" />
                   <span>{item}</span>
                 </li>
               ))}
