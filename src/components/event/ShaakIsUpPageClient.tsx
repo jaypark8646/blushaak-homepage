@@ -115,11 +115,11 @@ export default function ShaakIsUpPageClient() {
         </section>
 
         <section className="mx-auto max-w-7xl px-5 py-14 md:px-8 lg:px-10 lg:py-20">
-          <div className="mb-10 max-w-3xl">
+          <div className="mb-10 max-w-3xl rounded-[2rem] bg-white/82 p-6 shadow-[0_18px_48px_rgba(16,71,115,0.12)] ring-1 ring-white/70 backdrop-blur-sm md:p-8">
             <span className="inline-flex rounded-full bg-white px-4 py-1 text-sm font-semibold text-blu-700 ring-1 ring-blu-100">
               Campaign Story
             </span>
-            <h2 className="mt-4 text-3xl font-black md:text-5xl">
+            <h2 className="mt-4 text-3xl font-black text-dark-800 md:text-5xl">
               더 크게, 더 시원하게
               <br />
               블루샥의 여름을 담았습니다
@@ -170,12 +170,12 @@ export default function ShaakIsUpPageClient() {
             <span className="inline-flex rounded-full bg-blu-100 px-4 py-1 text-sm font-semibold text-blu-700">
               Section 1
             </span>
-            <h2 className="mt-4 text-3xl font-black md:text-5xl">
+            <h2 className="mt-4 text-3xl font-black text-white md:text-5xl">
               샥이즈업(SHAAK IS UP)
               <br />
               인스타그램 챌린지
             </h2>
-            <div className="mt-6 space-y-3 text-base leading-8 text-gray-700 md:text-lg">
+            <div className="mt-6 space-y-3 text-base leading-8 text-blu-50/92 md:text-lg">
               <p>
                 더 커진 블루샥 음료와 함께하는 여러분의 시원한 일상을 공유해
                 주세요!
