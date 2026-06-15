@@ -83,9 +83,9 @@ export default function ShaakIsUpPageClient() {
               </div>
             </div>
 
-            <div className="rounded-[2rem] border border-white/20 bg-white/14 p-4 shadow-[0_30px_80px_rgba(6,27,49,0.28)] backdrop-blur-md md:p-6">
+            <div className="rounded-[2rem] border border-white/20 bg-[linear-gradient(135deg,#0a0f3d_0%,#1e6fcf_100%)] p-4 shadow-[0_30px_80px_rgba(6,27,49,0.28)] md:p-6">
               <div className="grid gap-4 sm:grid-cols-2">
-                <div className="rounded-[1.5rem] bg-white/18 p-5 text-white sm:col-span-2">
+                <div className="rounded-[1.5rem] bg-white/12 p-5 text-white ring-1 ring-white/16 sm:col-span-2">
                   <p className="text-sm font-semibold uppercase tracking-[0.2em] text-mint-100">
                     참여 기간
                   </p>
@@ -95,14 +95,14 @@ export default function ShaakIsUpPageClient() {
                     ~ 2026년 7월 31일 (금)
                   </p>
                 </div>
-                <div className="rounded-[1.5rem] bg-white p-5 text-dark-800">
-                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-blu-500">
+                <div className="rounded-[1.5rem] bg-white/12 p-5 text-white ring-1 ring-white/16">
+                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-mint-100">
                     필수 태그
                   </p>
                   <p className="mt-3 text-lg font-bold">@blushaak__coffee</p>
                 </div>
-                <div className="rounded-[1.5rem] bg-mint-50 p-5 text-dark-800">
-                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-mint-700">
+                <div className="rounded-[1.5rem] bg-white/12 p-5 text-white ring-1 ring-white/16">
+                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-mint-100">
                     필수 해시태그
                   </p>
                   <p className="mt-3 text-lg font-bold leading-relaxed">
@@ -200,8 +200,8 @@ export default function ShaakIsUpPageClient() {
           </article>
 
           <div className="mt-10 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
-            <div className="rounded-[2rem] bg-white p-6 shadow-[0_16px_36px_rgba(16,71,115,0.08)] ring-1 ring-blu-100 md:p-8">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-blu-500">
+            <div className="rounded-[2rem] bg-[linear-gradient(135deg,#0a0f3d_0%,#2563eb_100%)] p-6 text-white shadow-[0_16px_36px_rgba(10,15,61,0.28)] ring-1 ring-white/12 md:p-8">
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-mint-100">
                 참여 기간
               </p>
               <p className="mt-3 text-2xl font-black leading-snug md:text-3xl">
@@ -209,11 +209,11 @@ export default function ShaakIsUpPageClient() {
               </p>
             </div>
 
-            <div className="rounded-[2rem] bg-[#e9f8ff] p-6 shadow-[0_16px_36px_rgba(16,71,115,0.08)] ring-1 ring-white md:p-8">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-blu-700">
+            <div className="rounded-[2rem] bg-[linear-gradient(135deg,#0a0f3d_0%,#1e6fcf_100%)] p-6 text-white shadow-[0_16px_36px_rgba(10,15,61,0.28)] ring-1 ring-white/12 md:p-8">
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-mint-100">
                 참여 방법
               </p>
-              <ol className="mt-4 space-y-4 text-base leading-7 text-gray-700">
+              <ol className="mt-4 space-y-4 text-base leading-7 text-white/90">
                 <li>
                   1. 더 크고 넉넉해진 블루샥 음료와 함께하는 일상을 내
                   취향껏 촬영한다.
@@ -223,13 +223,13 @@ export default function ShaakIsUpPageClient() {
                   인스타그램(게시물 또는 스토리)에 업로드하면 끝!
                 </li>
               </ol>
-              <div className="mt-6 rounded-[1.5rem] bg-white p-5 ring-1 ring-blu-100">
-                <p className="font-semibold text-blu-700">필수 태그</p>
-                <p className="mt-1 text-lg font-bold text-dark-800">
+              <div className="mt-6 rounded-[1.5rem] bg-white/12 p-5 ring-1 ring-white/16">
+                <p className="font-semibold text-mint-100">필수 태그</p>
+                <p className="mt-1 text-lg font-bold text-white">
                   @blushaak__coffee
                 </p>
-                <p className="mt-4 font-semibold text-blu-700">필수 해시태그</p>
-                <p className="mt-1 text-lg font-bold text-dark-800">
+                <p className="mt-4 font-semibold text-mint-100">필수 해시태그</p>
+                <p className="mt-1 text-lg font-bold text-white">
                   #블루샥 #블루샥커피 #샥이즈업
                 </p>
               </div>
