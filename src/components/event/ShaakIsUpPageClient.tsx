@@ -4,20 +4,10 @@ import Image from "next/image";
 import { GNB } from "@/components/layout";
 import { useScrollPosition } from "@/hooks/useScrollPosition";
 
-const challengeImages = [
-  {
-    src: "/images/menu/real-watermelon-juice.jpg",
-    alt: "시원한 블루샥 수박 주스",
-  },
-  {
-    src: "/images/menu/strawberry-yuzu-smoothie.jpg",
-    alt: "여름 시즌 스무디",
-  },
-  {
-    src: "/images/menu/lemon-ade.jpg",
-    alt: "청량한 블루샥 레몬에이드",
-  },
-];
+const challengeImage = {
+  src: "/images/event/shaak-is-up-summer-shot.jpg",
+  alt: "샥이즈업 인스타그램 챌린지 대표 이미지",
+};
 
 const campaignImages = [
   {
@@ -197,37 +187,17 @@ export default function ShaakIsUpPageClient() {
             </div>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-3">
-            {challengeImages.map((image, index) => (
-              <article
-                key={image.src}
-                className={`overflow-hidden rounded-[1.75rem] bg-white shadow-[0_18px_40px_rgba(16,71,115,0.12)] ring-1 ring-blu-100 ${
-                  index === 0 ? "md:col-span-2 md:row-span-2" : ""
-                }`}
-              >
-                <div className={`relative ${index === 0 ? "h-[22rem] md:h-full" : "h-72"}`}>
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    className="object-cover"
-                    sizes={
-                      index === 0
-                        ? "(min-width: 768px) 66vw, 100vw"
-                        : "(min-width: 768px) 33vw, 100vw"
-                    }
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#061b31]/55 via-transparent to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
-                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-mint-100">
-                      Summer Shot {index + 1}
-                    </p>
-                    <p className="mt-2 text-lg font-bold">{image.alt}</p>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
+          <article className="overflow-hidden rounded-[1.75rem] bg-white shadow-[0_18px_40px_rgba(16,71,115,0.12)] ring-1 ring-blu-100">
+            <div className="relative aspect-[4/5] w-full">
+              <Image
+                src={challengeImage.src}
+                alt={challengeImage.alt}
+                fill
+                className="object-cover"
+                sizes="(min-width: 1024px) 960px, 100vw"
+              />
+            </div>
+          </article>
 
           <div className="mt-10 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
             <div className="rounded-[2rem] bg-white p-6 shadow-[0_16px_36px_rgba(16,71,115,0.08)] ring-1 ring-blu-100 md:p-8">
