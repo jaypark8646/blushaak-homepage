@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import { Playfair_Display, DM_Sans } from "next/font/google";
 import localFont from "next/font/local";
 import TrackingCapture from "@/components/tracking/TrackingCapture";
+import TrackingPixels from "@/components/tracking/TrackingPixels";
 import "./globals.css";
 
 const pretendard = localFont({
@@ -60,6 +61,7 @@ export default function RootLayout({
       <body
         className={`${pretendard.variable} ${playfairDisplay.variable} ${dmSans.variable} antialiased`}
       >
+        <TrackingPixels />
         <Suspense fallback={null}>
           <TrackingCapture />
         </Suspense>
