@@ -122,6 +122,8 @@ export default function InquiryForm() {
         throw new Error("문의 전송 중 오류가 발생했습니다.");
       }
 
+      // Meta Pixel conversion: franchise inquiry submit complete
+      (window as unknown as { fbq?: (...args: unknown[]) => void }).fbq?.("track", "CompleteRegistration");
       setSubmitMessage("문의가 접수되었습니다. 담당자가 확인 후 연락드리겠습니다.");
       setForm(initialState);
     } catch (error) {
