@@ -124,6 +124,19 @@ export default function InquiryForm() {
 
       // Meta Pixel conversion: franchise inquiry submit complete
       (window as unknown as { fbq?: (...args: unknown[]) => void }).fbq?.("track", "CompleteRegistration");
+
+      // NAVER lead + Karrot Lead conversion (fires on inquiry submit complete)
+      const conv = window as unknown as {
+        wcs?: { trans: (o: Record<string, string>) => void };
+        wcs_add?: Record<string, string>;
+        karrotPixel?: { track: (e: string) => void };
+      };
+      if (conv.wcs) {
+        if (!conv.wcs_add) conv.wcs_add = {};
+        conv.wcs_add["wa"] = "s_3fd0bdb9538b";
+        conv.wcs.trans({ type: "lead" });
+      }
+      conv.karrotPixel?.track("Lead");
       setSubmitMessage("문의가 접수되었습니다. 담당자가 확인 후 연락드리겠습니다.");
       setForm(initialState);
     } catch (error) {
