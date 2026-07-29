@@ -23,6 +23,7 @@ export interface MenuItem {
 }
 
 export type MenuCategory =
+  | "new"
   | "coffee"
   | "beverage"
   | "blended"

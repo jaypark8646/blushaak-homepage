@@ -1,6 +1,7 @@
 import { MenuItem, MenuCategoryInfo } from "@/types";
 
 export const MENU_CATEGORIES: MenuCategoryInfo[] = [
+  { id: "new", label: "New", labelKo: "신상" },
   { id: "coffee", label: "Coffee", labelKo: "커피" },
   { id: "beverage", label: "Beverage", labelKo: "음료" },
   { id: "blended", label: "Blended", labelKo: "블렌디드" },
@@ -10,6 +11,61 @@ export const MENU_CATEGORIES: MenuCategoryInfo[] = [
 ];
 
 export const MENU_ITEMS: MenuItem[] = [
+  // New
+  {
+    id: "new-a2-milk-deep-latte",
+    name: "A2 Milk Deep Latte",
+    nameKo: "A2우유 딥 라떼",
+    category: "new",
+    image: "/images/menu/new-a2-milk-deep-latte.jpg",
+    nutrition: null,
+    isNew: true,
+  },
+  {
+    id: "new-red-bean-bingsu",
+    name: "Red Bean Cup Bingsu",
+    nameKo: "레드빈 컵빙수",
+    category: "new",
+    image: "/images/menu/new-red-bean-bingsu.jpg",
+    nutrition: null,
+    isNew: true,
+  },
+  {
+    id: "new-mango-bingsu",
+    name: "Mango Cup Bingsu",
+    nameKo: "망고 컵빙수",
+    category: "new",
+    image: "/images/menu/new-mango-bingsu.jpg",
+    nutrition: null,
+    isNew: true,
+  },
+  {
+    id: "new-wildflower-honey-tomato-juice",
+    name: "Peung Wildflower Honey Tomato Juice",
+    nameKo: "프응 야생화 꿀 토마토 주스",
+    category: "new",
+    image: "/images/menu/new-wildflower-honey-tomato-juice.jpg",
+    nutrition: null,
+    isNew: true,
+  },
+  {
+    id: "new-wildflower-honey-chamoe-juice",
+    name: "Peung Wildflower Honey Chamoe Juice",
+    nameKo: "프응 야생화 꿀 참외 주스",
+    category: "new",
+    image: "/images/menu/new-wildflower-honey-chamoe-juice.jpg",
+    nutrition: null,
+    isNew: true,
+  },
+  {
+    id: "new-wildflower-honey-matcha-lemon-tea",
+    name: "Peung Wildflower Honey Matcha Lemon Tea",
+    nameKo: "프응 야생화 꿀 말차 레몬 티",
+    category: "new",
+    image: "/images/menu/new-wildflower-honey-matcha-lemon-tea.jpg",
+    nutrition: null,
+    isNew: true,
+  },
   // Coffee
   {
     id: "shaak-latte",
