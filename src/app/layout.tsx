@@ -29,6 +29,12 @@ const dmSans = DM_Sans({
   weight: ["300", "400", "500", "600", "700"],
 });
 
+// 네이버 애널리틱스(공동인증키 s_3fd0bdb9538b). 네이버 광고의 스크립트 설치 확인은
+// 렌더링된 DOM이 아니라 초기 HTML 소스에서 <script> 태그를 찾으므로, next/script 를
+// 거치지 않고 <head> 에 원본 태그 그대로 출력한다. 로더 → 초기화 순서는 두 태그가
+// 모두 동기 스크립트이므로 파싱 순서로 보장된다.
+const NAVER_WCS_INIT = `if(!window.wcs_add)window.wcs_add={};window.wcs_add["wa"]="s_3fd0bdb9538b";if(!window._nasa)window._nasa={};if(window.wcs){window.wcs.inflow();window.wcs_do();}`;
+
 export const metadata: Metadata = {
   title: "Blu Shaak COFFEE | Vacation in the CITY",
   description:
@@ -58,6 +64,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
+      <head>
+        {/* NAVER Analytics (wcslog / inflow) */}
+        <script src="//wcs.naver.net/wcslog.js" />
+        <script dangerouslySetInnerHTML={{ __html: NAVER_WCS_INIT }} />
+      </head>
       <body
         className={`${pretendard.variable} ${playfairDisplay.variable} ${dmSans.variable} antialiased`}
       >
