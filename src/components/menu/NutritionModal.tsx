@@ -23,6 +23,21 @@ export default function NutritionModal({ item, onClose }: NutritionModalProps) {
     };
   }, [item, onClose]);
 
+  const nutrition = item?.nutrition;
+  const hasDescription = Boolean(item?.description);
+  const hasMacroNutrition = nutrition
+    ? [
+        nutrition.calories,
+        nutrition.sodium,
+        nutrition.sugar,
+        nutrition.saturatedFat,
+        nutrition.protein,
+        nutrition.caffeine,
+      ].some((value) => value !== null && value !== undefined)
+    : false;
+  const hasAllergens = Boolean(nutrition?.allergens);
+  const hasNutritionContent = hasDescription || hasMacroNutrition || hasAllergens;
+
   return (
     <AnimatePresence>
       {item && (
@@ -76,36 +91,52 @@ export default function NutritionModal({ item, onClose }: NutritionModalProps) {
 
               {/* Nutrition content */}
               <div className="p-5">
-                {item.nutrition ? (
+                {hasNutritionContent ? (
                   <>
-                    <h3 className="text-sm font-semibold text-dark-800 mb-3">영양성분 정보</h3>
-                    <div className="space-y-2">
-                      <NutritionRow
-                        label="칼로리"
-                        unit="kcal"
-                        value={item.nutrition.calories}
-                        highlight
-                      />
-                      <NutritionRow label="나트륨" unit="mg" value={item.nutrition.sodium} />
-                      <NutritionRow label="당류" unit="g" value={item.nutrition.sugar} />
-                      <NutritionRow label="포화지방" unit="g" value={item.nutrition.saturatedFat} />
-                      <NutritionRow label="단백질" unit="g" value={item.nutrition.protein} />
-                      <NutritionRow label="카페인" unit="mg" value={item.nutrition.caffeine} />
-                    </div>
-
-                    {/* Allergens */}
-                    <div className="mt-4 pt-4 border-t border-gray-100">
-                      <div className="flex items-start gap-2">
-                        <span className="text-sm text-gray-500 shrink-0">알레르기 유발물질</span>
-                        <span className="text-sm font-medium text-dark-800 text-right flex-1">
-                          {item.nutrition.allergens ?? "-"}
-                        </span>
+                    {item.description && (
+                      <div className="mb-5 rounded-2xl bg-warm-50 px-4 py-3">
+                        <p className="text-sm leading-relaxed text-dark-700">
+                          {item.description}
+                        </p>
                       </div>
-                    </div>
+                    )}
 
-                    <p className="mt-4 text-[11px] text-gray-400 leading-relaxed">
-                      * 표준 레시피 기준. 주문 내용 및 음료 사이즈에 따라 영양성분이 달라질 수 있습니다.
-                    </p>
+                    {(hasMacroNutrition || hasAllergens) && (
+                      <>
+                        <h3 className="text-sm font-semibold text-dark-800 mb-3">영양성분 정보</h3>
+
+                        {hasMacroNutrition && nutrition && (
+                          <div className="space-y-2">
+                            <NutritionRow
+                              label="칼로리"
+                              unit="kcal"
+                              value={nutrition.calories}
+                              highlight
+                            />
+                            <NutritionRow label="나트륨" unit="mg" value={nutrition.sodium} />
+                            <NutritionRow label="당류" unit="g" value={nutrition.sugar} />
+                            <NutritionRow label="포화지방" unit="g" value={nutrition.saturatedFat} />
+                            <NutritionRow label="단백질" unit="g" value={nutrition.protein} />
+                            <NutritionRow label="카페인" unit="mg" value={nutrition.caffeine} />
+                          </div>
+                        )}
+
+                        {hasAllergens && nutrition?.allergens && (
+                          <div className={`${hasMacroNutrition ? "mt-4 pt-4 border-t border-gray-100" : ""}`}>
+                            <div className="flex items-start gap-2">
+                              <span className="text-sm text-gray-500 shrink-0">알레르기 유발물질</span>
+                              <span className="text-sm font-medium text-dark-800 text-right flex-1">
+                                {nutrition.allergens}
+                              </span>
+                            </div>
+                          </div>
+                        )}
+
+                        <p className="mt-4 text-[11px] text-gray-400 leading-relaxed">
+                          * 표준 레시피 기준. 주문 내용 및 음료 사이즈에 따라 영양성분이 달라질 수 있습니다.
+                        </p>
+                      </>
+                    )}
                   </>
                 ) : (
                   <div className="py-6 text-center">
