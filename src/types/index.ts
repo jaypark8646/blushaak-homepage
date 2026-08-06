@@ -29,7 +29,8 @@ export type MenuCategory =
   | "blended"
   | "bakery"
   | "ice-cream"
-  | "md";
+  | "md"
+  | "deli";
 
 export interface MenuCategoryInfo {
   id: MenuCategory;
