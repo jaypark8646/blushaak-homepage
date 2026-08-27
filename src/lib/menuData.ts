@@ -94,8 +94,8 @@ export const MENU_ITEMS: MenuItem[] = [
   },
   {
     id: "colombian-fruity-americano",
-    name: "Colombian Fruity Americano",
-    nameKo: "콜롬비안 프루티 아메리카노",
+    name: "Summer Blend Americano",
+    nameKo: "썸머블렌드 아메리카노",
     category: "coffee",
     image: "/images/menu/americano.jpg",
     nutrition: null,
